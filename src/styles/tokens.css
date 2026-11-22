@@ -1,0 +1,118 @@
+/* ==========================================================================
+   Tiltas design tokens
+   One source of truth for colour, type, space, shape. Components only use
+   these variables, never raw values. All text/background pairs pass WCAG AA
+   (checked on /design/).
+   ========================================================================== */
+
+:root {
+  /* --- Typeface: Nunito (rounded, covers Latin Extended for ąčęėįšųūž and Cyrillic) --- */
+  --font-ui: 'Nunito Variable', 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* --- Colour (light) --- */
+  --c-bg: #f6f8ff;
+  --c-surface: #ffffff;
+  --c-surface-2: #e8eeff; /* tinted blocks, table heads */
+  --c-ink: #1b2340;
+  --c-muted: #4f5878;
+  --c-line: #d5dcf2;
+
+  --c-brand: #2d5be3; /* bridge blue */
+  --c-on-brand: #ffffff;
+  --c-accent: #ffc24b; /* warm highlight */
+  --c-on-accent: #1b2340;
+  --c-success: #0f7f58;
+  --c-success-bg: #dff5ea;
+  --c-error: #b3261e;
+  --c-error-bg: #fde7e4;
+  --c-hint-bg: #fff4d6;
+
+  /* Subjects (all pass AA with white text) */
+  --c-math: #2d5be3;
+  --c-physics: #7545d6;
+  --c-nature: #0f7f58;
+  --c-lithuanian: #c2410c;
+
+  /* Language chips */
+  --c-lang-lt: #c2410c;
+  --c-lang-ru: #7545d6;
+  --c-lang-en: #2d5be3;
+
+  /* --- Space & shape (scale; bands below change density) --- */
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.5rem;
+  --s-6: 2.25rem;
+  --s-7: 3.5rem;
+
+  --shadow-pop: 0 6px 18px rgb(27 35 64 / 0.1);
+  --focus: 0 0 0 3px var(--c-bg), 0 0 0 6px var(--c-brand);
+
+  --dur: 160ms;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* ---- Grade bands --------------------------------------------------------
+   junior = grades 1-4: bigger type, bigger targets, rounder, chunkier.
+   senior = grades 5-8: denser, calmer, more text per screen.
+   Switched with <html data-band="junior|senior">. */
+:root,
+[data-band='junior'] {
+  --fs-base: 1.25rem; /* 20px */
+  --fs-small: 1rem;
+  --fs-h1: 2.4rem;
+  --fs-h2: 1.65rem;
+  --fs-big: 1.9rem; /* flashcards, answers */
+  --lh: 1.65;
+  --radius: 22px;
+  --radius-sm: 14px;
+  --tap: 3.5rem; /* min target 56px */
+  --border-w: 2px;
+  --chunk: 5px; /* "game" bottom edge on cards and buttons */
+  --weight-body: 600;
+  --weight-head: 900;
+  --gap: 1.25rem;
+}
+[data-band='senior'] {
+  --fs-base: 1.0625rem; /* 17px */
+  --fs-small: 0.875rem;
+  --fs-h1: 2rem;
+  --fs-h2: 1.35rem;
+  --fs-big: 1.5rem;
+  --lh: 1.55;
+  --radius: 14px;
+  --radius-sm: 10px;
+  --tap: 2.75rem; /* min target 44px */
+  --border-w: 1px;
+  --chunk: 2px;
+  --weight-body: 500;
+  --weight-head: 800;
+  --gap: 1rem;
+}
+
+/* ---- Dark ---------------------------------------------------------------- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --c-bg: #10152b;
+    --c-surface: #1a2142;
+    --c-surface-2: #242d58;
+    --c-ink: #e8ecff;
+    --c-muted: #a9b3d6;
+    --c-line: #323c6b;
+    --c-brand: #8fa9ff;
+    --c-on-brand: #10152b;
+    --c-success: #4ade9f;
+    --c-success-bg: #123d2f;
+    --c-error: #ff8a80;
+    --c-error-bg: #43201f;
+    --c-hint-bg: #3b3317;
+    --shadow-pop: 0 6px 18px rgb(0 0 0 / 0.4);
+    --focus: 0 0 0 3px var(--c-bg), 0 0 0 6px var(--c-accent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur: 0ms; }
+}

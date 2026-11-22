@@ -1,0 +1,80 @@
+---
+import '../styles/base.css';
+import Logo from '../components/Logo.astro';
+import Icon from '../components/Icon.astro';
+import { languages, t, type Lang, base } from '../i18n/ui';
+
+interface Props { lang: Lang; title?: string; description?: string; noindex?: boolean }
+const { lang, title, description, noindex } = Astro.props;
+const tr = t(lang);
+const path = Astro.url.pathname;
+const rest = path.slice(base.length).replace(/^\/(ru|en)\//, '');
+const pageTitle = title ? `${title} · Tiltas` : `Tiltas · ${tr.tagline}`;
+const section = rest.split('/')[0];
+---
+<!doctype html>
+<html lang={lang} data-band="junior">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description ?? tr.intro} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="icon" href={`${base}/favicon.svg`} type="image/svg+xml" />
+    {Object.keys(languages).map((l) => (
+      <link rel="alternate" hreflang={l} href={`${base}/${l}/${rest}`} />
+    ))}
+    <script is:inline>
+      // Remember the grade band before first paint (no flash).
+      try {
+        var b = localStorage.getItem('tiltas-band');
+        if (b === 'junior' || b === 'senior') document.documentElement.dataset.band = b;
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <Logo href={`${base}/${lang}/`} />
+        <nav class="nav" aria-label="Main">
+          <a class="nav-link" href={`${base}/${lang}/math/`} aria-current={section === 'math' ? 'page' : undefined}><Icon name="math" />{tr.math}</a>
+          <a class="nav-link" href={`${base}/${lang}/glossary/`} aria-current={section === 'glossary' ? 'page' : undefined}><Icon name="book" />{tr.glossary}</a>
+          <a class="nav-link" href={`${base}/${lang}/links/`} aria-current={section === 'links' ? 'page' : undefined}><Icon name="link" />{tr.links}</a>
+          <span class="seg" role="group" aria-label={tr.bandLabel}>
+            <button type="button" data-band-btn="junior" aria-pressed="true">1–4</button>
+            <button type="button" data-band-btn="senior" aria-pressed="false">5–8</button>
+          </span>
+          <span class="seg" role="group" aria-label="Language">
+            {Object.keys(languages).map((l) => (
+              <a href={`${base}/${l}/${rest}`} aria-current={l === lang ? 'true' : undefined} hreflang={l}>{l.toUpperCase()}</a>
+            ))}
+          </span>
+        </nav>
+      </div>
+    </header>
+    <main class="wrap"><slot /></main>
+    <footer class="site-footer">
+      <div class="wrap">{tr.footer}</div>
+    </footer>
+    <script is:inline>
+      (function () {
+        var root = document.documentElement;
+        function sync() {
+          var cur = root.dataset.band;
+          document.querySelectorAll('[data-band-btn]').forEach(function (btn) {
+            btn.setAttribute('aria-pressed', String(btn.getAttribute('data-band-btn') === cur));
+          });
+        }
+        document.querySelectorAll('[data-band-btn]').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            root.dataset.band = btn.getAttribute('data-band-btn');
+            try { localStorage.setItem('tiltas-band', root.dataset.band); } catch (e) {}
+            sync();
+          });
+        });
+        sync();
+      })();
+    </script>
+  </body>
+</html>

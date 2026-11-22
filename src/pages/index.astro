@@ -1,0 +1,30 @@
+---
+import '../styles/base.css';
+import { base } from '../i18n/ui';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tiltas</title>
+    <link rel="icon" href={`${base}/favicon.svg`} type="image/svg+xml" />
+    <script is:inline define:vars={{ base }}>
+      // Pick a sensible language on first visit.
+      try {
+        var l = (navigator.language || 'ru').slice(0, 2);
+        if (l === 'ru' || l === 'en') location.replace(base + '/' + l + '/');
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <main class="wrap" style="text-align:center;padding-top:4rem">
+      <h1>Til<span style="color:var(--c-brand)">tas</span></h1>
+      <p class="lead">Школьная программа без языкового барьера<br />School curriculum without the language barrier</p>
+      <div class="row" style="justify-content:center;margin-top:1.5rem">
+        <a class="btn" href={`${base}/ru/`}>Русский</a>
+        <a class="btn btn--soft" href={`${base}/en/`}>English</a>
+      </div>
+    </main>
+  </body>
+</html>

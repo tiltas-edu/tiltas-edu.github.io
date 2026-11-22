@@ -1,0 +1,33 @@
+{
+  "subject": "math",
+  "topic": "area-perimeter",
+  "grade": 4,
+  "lt": "Stačiakampio formos darželio perimetras lygus 60 m, o ilgis – 18 m. Apskaičiuok darželio plotą. Užrašyk sprendimą ir atsakymą.",
+  "translation": {
+    "ru": "Периметр прямоугольного огородика равен 60 м, а длина 18 м. Вычисли площадь огородика. Запиши решение и ответ.",
+    "en": "The perimeter of a rectangular garden plot is 60 m and its length is 18 m. Calculate the area of the plot. Write the solution and the answer."
+  },
+  "steps": {
+    "ru": [
+      "Полупериметр: 60 : 2 = 30 (м) — это длина + ширина.",
+      "Ширина: 30 − 18 = 12 (м).",
+      "Площадь: 18 · 12 = 216 (м²)."
+    ],
+    "en": [
+      "Half-perimeter: 60 : 2 = 30 (m), this is length + width.",
+      "Width: 30 − 18 = 12 (m).",
+      "Area: 18 · 12 = 216 (m²)."
+    ]
+  },
+  "answer": "216 m²",
+  "check": [
+    "216"
+  ],
+  "keywords": [
+    "perimetras",
+    "ilgis",
+    "plotą",
+    "sprendimą",
+    "atsakymą"
+  ]
+}

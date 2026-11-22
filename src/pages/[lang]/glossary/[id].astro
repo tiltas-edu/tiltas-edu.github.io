@@ -1,0 +1,40 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Flashcards from '../../../components/Flashcards';
+import { getCollection } from 'astro:content';
+import { languages, t, type Lang, base } from '../../../i18n/ui';
+
+export async function getStaticPaths() {
+  const glossary = await getCollection('glossary');
+  return Object.keys(languages).flatMap((lang) =>
+    glossary.map((g) => ({ params: { lang, id: g.id }, props: { entry: g } })),
+  );
+}
+const lang = Astro.params.lang as Lang;
+const other = lang === 'ru' ? 'en' : 'ru';
+const tr = t(lang);
+const { entry } = Astro.props;
+---
+<Layout lang={lang} title={entry.data.title[lang]}>
+  <p><a href={`${base}/${lang}/glossary/`}>← {tr.glossary}</a></p>
+  <h1>{entry.data.title[lang]}</h1>
+
+  <h2>{tr.flashcards}</h2>
+  <Flashcards client:load terms={entry.data.terms} lang={lang} labels={{
+    flip: tr.flip, know: tr.know, again: tr.again, done: tr.done, restart: tr.restart, card: tr.card,
+  }} />
+
+  <h2>{tr.glossary}</h2>
+  <table class="terms">
+    <thead><tr><th>{tr.lithuanian}</th><th>{lang.toUpperCase()}</th><th>{other.toUpperCase()}</th></tr></thead>
+    <tbody>
+      {entry.data.terms.map((term) => (
+        <tr>
+          <td><strong>{term.lt}</strong></td>
+          <td>{term[lang]}{term.note && <div class="note">{term.note[lang]}</div>}</td>
+          <td>{term[other]}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</Layout>

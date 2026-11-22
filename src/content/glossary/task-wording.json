@@ -1,0 +1,109 @@
+{
+  "subject": "math",
+  "title": {
+    "ru": "Слова из формулировок заданий",
+    "en": "Words from task wording"
+  },
+  "terms": [
+    {
+      "lt": "apskaičiuok",
+      "ru": "вычисли",
+      "en": "calculate"
+    },
+    {
+      "lt": "užrašyk / surašyk",
+      "ru": "запиши",
+      "en": "write down"
+    },
+    {
+      "lt": "įrašyk",
+      "ru": "впиши",
+      "en": "write in"
+    },
+    {
+      "lt": "pažymėk",
+      "ru": "отметь",
+      "en": "mark"
+    },
+    {
+      "lt": "sujunk",
+      "ru": "соедини",
+      "en": "connect / match"
+    },
+    {
+      "lt": "palygink",
+      "ru": "сравни",
+      "en": "compare"
+    },
+    {
+      "lt": "surask",
+      "ru": "найди",
+      "en": "find"
+    },
+    {
+      "lt": "nubraižė",
+      "ru": "начертил",
+      "en": "drew"
+    },
+    {
+      "lt": "atkreipk dėmesį",
+      "ru": "обрати внимание",
+      "en": "pay attention"
+    },
+    {
+      "lt": "teisingas atsakymas",
+      "ru": "верный ответ",
+      "en": "correct answer"
+    },
+    {
+      "lt": "sprendimas",
+      "ru": "решение",
+      "en": "solution"
+    },
+    {
+      "lt": "atsakymas",
+      "ru": "ответ",
+      "en": "answer"
+    },
+    {
+      "lt": "užduotis",
+      "ru": "задание",
+      "en": "task"
+    },
+    {
+      "lt": "mažėjimo tvarka",
+      "ru": "порядок убывания",
+      "en": "descending order"
+    },
+    {
+      "lt": "didėjimo tvarka",
+      "ru": "порядок возрастания",
+      "en": "ascending order"
+    },
+    {
+      "lt": "nelygybė",
+      "ru": "неравенство",
+      "en": "inequality"
+    },
+    {
+      "lt": "lygus",
+      "ru": "равный",
+      "en": "equal to"
+    },
+    {
+      "lt": "didžiausia",
+      "ru": "самая большая",
+      "en": "the largest"
+    },
+    {
+      "lt": "kiek",
+      "ru": "сколько",
+      "en": "how many / how much"
+    },
+    {
+      "lt": "koks / kokia",
+      "ru": "какой / какая",
+      "en": "which / what"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "category": "dictionaries",
+  "order": 2,
+  "items": [
+    {
+      "name": "E. kalba",
+      "url": "https://ekalba.lt/",
+      "desc": {
+        "ru": "Словари литовского языка Института литовского языка, бесплатно.",
+        "en": "Free dictionaries of Lithuanian from the Institute of the Lithuanian Language."
+      },
+      "tags": [
+        "LT"
+      ]
+    },
+    {
+      "name": "Dabartinės lietuvių kalbos žodynas",
+      "url": "http://dlkz.lt/",
+      "desc": {
+        "ru": "Толковый словарь современного литовского: смысл слова простыми словами.",
+        "en": "Explanatory dictionary of modern Lithuanian."
+      },
+      "tags": [
+        "LT"
+      ]
+    },
+    {
+      "name": "VLKK konsultacijos",
+      "url": "https://www.vlkk.lt/konsultacijos",
+      "desc": {
+        "ru": "Как правильно писать и говорить: ответы Государственной комиссии литовского языка.",
+        "en": "How to write and say it correctly: answers from the State Commission of the Lithuanian Language."
+      },
+      "tags": [
+        "LT"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import TaskCheck from '../../../components/TaskCheck';
+import { getCollection } from 'astro:content';
+import { languages, t, type Lang, base } from '../../../i18n/ui';
+
+export async function getStaticPaths() {
+  const tasks = await getCollection('tasks');
+  return Object.keys(languages).flatMap((lang) =>
+    tasks.map((x) => ({ params: { lang, id: x.id }, props: { entry: x } })),
+  );
+}
+const lang = Astro.params.lang as Lang;
+const tr = t(lang);
+const { entry } = Astro.props;
+const d = entry.data;
+
+const glossary = (await getCollection('glossary')).find((g) => g.id === d.topic);
+
+const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]!));
+const rx = d.keywords.length
+  ? new RegExp(`(${d.keywords.map((k) => k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`, 'gi')
+  : null;
+const ltHtml = rx ? esc(d.lt).replace(rx, '<mark>$1</mark>') : esc(d.lt);
+
+// Glossary terms whose first word (minus its ending) shows up in the task text.
+const stem = (w: string) => w.toLowerCase().slice(0, w.length >= 7 ? w.length - 2 : w.length >= 5 ? w.length - 1 : w.length);
+const words = (glossary?.data.terms ?? []).filter((term) =>
+  d.lt.toLowerCase().includes(stem(term.lt.split(/[ (]/)[0])),
+);
+const unit = d.answer.replace(/^[\d\s.,]+/, '');
+---
+<Layout lang={lang} title={`${tr.task}: ${d.translation[lang].slice(0, 50)}`}>
+  <p><a href={`${base}/${lang}/math/`}>← {tr.math}</a></p>
+  <h1>{tr.task}</h1>
+
+  <p class="task-lt" lang="lt" set:html={ltHtml} />
+
+  <h2>{tr.translation}</h2>
+  <p class="task-tr">{d.translation[lang]}</p>
+
+  {words.length > 0 && (
+    <>
+      <h2>{tr.words}</h2>
+      <table class="terms">
+        <tbody>
+          {words.map((w) => (<tr><td><strong>{w.lt}</strong></td><td>{w[lang]}</td></tr>))}
+        </tbody>
+      </table>
+    </>
+  )}
+
+  <h2>{tr.yourAnswer}</h2>
+  <TaskCheck client:load accepted={d.check} unit={unit} labels={{
+    yourAnswer: tr.yourAnswer, check: tr.check, correct: tr.correct, wrong: tr.wrong,
+  }} />
+
+  <details style="margin-top:1rem">
+    <summary><strong>{tr.showSolution}</strong></summary>
+    <h2>{tr.solution}</h2>
+    <ol class="steps">
+      {d.steps[lang].map((s) => <li>{s}</li>)}
+    </ol>
+    <p class="answer">{tr.answer}: {d.answer}</p>
+  </details>
+</Layout>

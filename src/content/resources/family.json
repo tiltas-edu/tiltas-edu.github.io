@@ -1,0 +1,28 @@
+{
+  "category": "family",
+  "order": 4,
+  "items": [
+    {
+      "name": "Eurydice: parama mokiniams",
+      "url": "https://eurydice.eacea.ec.europa.eu/lt/eurypedia/lithuania/parama-mokiniams-ikimokykliniame-priesmokykliniame-ir-bendrajame-ugdyme",
+      "desc": {
+        "ru": "Какая помощь положена ученикам, в том числе детям иностранцев: обучение литовскому и поддержка в школе.",
+        "en": "What support pupils get, including children of foreigners: Lithuanian lessons and school support."
+      },
+      "tags": [
+        "LT"
+      ]
+    },
+    {
+      "name": "Grįžusių piliečių ir atvykusių užsieniečių ugdymas (NŠA, PDF)",
+      "url": "https://www.nsa.smm.lt/wp-content/uploads/2022/07/Grizusiu-Lietuvos-Respublikos-pilieciu-ir-atvykusiu-uzsienieciu-ugdymo-organizavimo-modeliu-aprasas-elektroninis-2022-07-08.pdf",
+      "desc": {
+        "ru": "Описание моделей обучения для вернувшихся граждан и приехавших иностранцев.",
+        "en": "Models of schooling for returning citizens and newly arrived foreigners."
+      },
+      "tags": [
+        "LT"
+      ]
+    }
+  ]
+}

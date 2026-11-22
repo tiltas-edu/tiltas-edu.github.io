@@ -1,0 +1,30 @@
+{
+  "subject": "math",
+  "topic": "area-perimeter",
+  "grade": 4,
+  "lt": "Kvadrato formos kilimo perimetras – 20 m. Apskaičiuok kilimo plotą. Užrašyk sprendimą ir atsakymą.",
+  "translation": {
+    "ru": "Периметр квадратного ковра — 20 м. Вычисли площадь ковра. Запиши решение и ответ.",
+    "en": "The perimeter of a square carpet is 20 m. Calculate the area of the carpet. Write the solution and the answer."
+  },
+  "steps": {
+    "ru": [
+      "Сторона квадрата: 20 : 4 = 5 (м).",
+      "Площадь: 5 · 5 = 25 (м²)."
+    ],
+    "en": [
+      "Side of the square: 20 : 4 = 5 (m).",
+      "Area: 5 · 5 = 25 (m²)."
+    ]
+  },
+  "answer": "25 m²",
+  "check": [
+    "25"
+  ],
+  "keywords": [
+    "kvadrato",
+    "kilimo",
+    "perimetras",
+    "plotą"
+  ]
+}

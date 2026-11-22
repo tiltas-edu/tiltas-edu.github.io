@@ -1,0 +1,96 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Icon from '../../../components/Icon.astro';
+import { icons, type IconName } from '../../../components/icons';
+import { languages, type Lang } from '../../../i18n/ui';
+
+export function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const lang = Astro.params.lang as Lang;
+
+// WCAG contrast, computed at build time so the guide can never lie.
+const lum = (hex: string) => {
+  const [r, g, b] = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16) / 255).map((c) => (c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4));
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+};
+const ratio = (a: string, b: string) => {
+  const [hi, lo] = [lum(a), lum(b)].sort((x, y) => y - x);
+  return (hi + 0.05) / (lo + 0.05);
+};
+const pairs = [
+  { name: 'Text', token: '--c-ink', fg: '#1b2340', bg: '#f6f8ff' },
+  { name: 'Muted text', token: '--c-muted', fg: '#4f5878', bg: '#f6f8ff' },
+  { name: 'Brand button', token: '--c-brand', fg: '#ffffff', bg: '#2d5be3' },
+  { name: 'Accent / highlight', token: '--c-accent', fg: '#1b2340', bg: '#ffc24b' },
+  { name: 'Maths', token: '--c-math', fg: '#ffffff', bg: '#2d5be3' },
+  { name: 'Physics', token: '--c-physics', fg: '#ffffff', bg: '#7545d6' },
+  { name: 'Nature', token: '--c-nature', fg: '#ffffff', bg: '#0f7f58' },
+  { name: 'Lithuanian', token: '--c-lithuanian', fg: '#ffffff', bg: '#c2410c' },
+  { name: 'Success', token: '--c-success', fg: '#0f7f58', bg: '#ffffff' },
+  { name: 'Error', token: '--c-error', fg: '#b3261e', bg: '#ffffff' },
+].map((p) => ({ ...p, r: ratio(p.fg, p.bg) }));
+const iconNames = Object.keys(icons) as IconName[];
+---
+<Layout lang={lang} title="Design system" noindex>
+  <h1>Tiltas design system</h1>
+  <p class="lead">Friendly like a soft game. Two bands: <strong>1–4</strong> (big, round, chunky) and <strong>5–8</strong> (denser, calmer). Use the 1–4 / 5–8 switch in the header to compare. Dark mode follows the device.</p>
+
+  <h2>Colour and contrast (WCAG AA ≥ 4.5)</h2>
+  <div class="grid">
+    {pairs.map((p) => (
+      <div class="card" style={`padding:0;overflow:hidden`}>
+        <div style={`background:${p.bg};color:${p.fg};padding:1rem 1.25rem;font-weight:900`}>{p.name}</div>
+        <div class="note" style="padding:.6rem 1.25rem"><code>{p.token}</code> · {p.r.toFixed(2)}:1 {p.r >= 4.5 ? '✓ AA' : '✗ FAIL'}</div>
+      </div>
+    ))}
+  </div>
+
+  <h2>Typography: Nunito</h2>
+  <div class="card stack">
+    <h1 style="margin:0">Plotas ir perimetras</h1>
+    <p style="margin:0"><span lang="lt">ąčęėįšųūž ĄČĘĖĮŠŲŪŽ</span> · Площадь и периметр · Area and perimeter</p>
+    <p class="note" style="margin:0">Self-hosted variable font. Supports Lithuanian diacritics and Cyrillic; no third-party font requests (privacy for children).</p>
+  </div>
+
+  <h2>Buttons and chips</h2>
+  <div class="cluster">
+    <button class="btn" type="button"><Icon name="check" /> Primary</button>
+    <button class="btn btn--soft" type="button">Soft</button>
+    <button class="btn btn--accent" type="button">Accent</button>
+    <button class="btn" type="button" disabled>Disabled</button>
+  </div>
+  <p class="cluster"><span class="chip chip--lt">LT</span><span class="chip chip--ru">RU</span><span class="chip chip--en">EN</span></p>
+
+  <h2>Subject tiles</h2>
+  <div class="grid">
+    <div class="card tile tile--math"><span class="tile__icon"><Icon name="math" /></span><h3>Maths</h3></div>
+    <div class="card tile tile--physics"><span class="tile__icon"><Icon name="physics" /></span><h3>Physics</h3></div>
+    <div class="card tile tile--nature"><span class="tile__icon"><Icon name="nature" /></span><h3>Nature</h3></div>
+    <div class="card tile tile--lithuanian"><span class="tile__icon"><Icon name="lithuanian" /></span><h3>Lithuanian</h3></div>
+  </div>
+
+  <h2>Feedback</h2>
+  <div class="stack">
+    <p class="callout callout--ok"><Icon name="check" /> <strong>Correct!</strong></p>
+    <p class="callout callout--bad"><Icon name="x" /> Not quite yet. See the solution below.</p>
+    <p class="callout callout--hint"><Icon name="bulb" /> Hint: plotas ≠ plotis.</p>
+  </div>
+
+  <h2>Task block</h2>
+  <p class="task-lt" lang="lt">Kvadrato formos kilimo <mark>perimetras</mark> – 20 m. Apskaičiuok kilimo <mark>plotą</mark>.</p>
+  <p class="task-tr">Периметр квадратного ковра — 20 м. Вычисли площадь ковра.</p>
+
+  <h2>Icons</h2>
+  <div class="cluster" style="font-size:1.8rem">
+    {iconNames.map((n) => <span title={n}><Icon name={n} /></span>)}
+  </div>
+
+  <h2>Rules</h2>
+  <ul>
+    <li>Colour is never the only signal: pair it with an icon and text.</li>
+    <li>Tap targets ≥ 56px (1–4) and ≥ 44px (5–8).</li>
+    <li>One primary action per screen. Praise correct answers; never shame wrong ones.</li>
+    <li>Animation is short and respects <code>prefers-reduced-motion</code>.</li>
+  </ul>
+</Layout>

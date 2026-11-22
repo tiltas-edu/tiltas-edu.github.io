@@ -1,0 +1,23 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import { languages, t, type Lang, base } from '../../../i18n/ui';
+
+export function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const lang = Astro.params.lang as Lang;
+const tr = t(lang);
+const glossary = await getCollection('glossary');
+---
+<Layout lang={lang} title={tr.glossary}>
+  <h1>{tr.glossary}</h1>
+  <div class="grid">
+    {glossary.map((g) => (
+      <a class="card" href={`${base}/${lang}/glossary/${g.id}/`}>
+        <strong>{g.data.title[lang]}</strong>
+        <div class="note">{g.data.terms.length}</div>
+      </a>
+    ))}
+  </div>
+</Layout>

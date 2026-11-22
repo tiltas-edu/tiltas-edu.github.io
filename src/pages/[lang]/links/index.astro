@@ -1,0 +1,34 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Icon from '../../../components/Icon.astro';
+import { getCollection } from 'astro:content';
+import { languages, t, type Lang } from '../../../i18n/ui';
+
+export function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const lang = Astro.params.lang as Lang;
+const tr = t(lang);
+const groups = (await getCollection('resources')).sort((a, b) => a.data.order - b.data.order);
+const catIcon = { platforms: 'tasks', dictionaries: 'book', official: 'flag', family: 'family' } as const;
+const catTitle = { platforms: tr.cat_platforms, dictionaries: tr.cat_dictionaries, official: tr.cat_official, family: tr.cat_family };
+---
+<Layout lang={lang} title={tr.linksTitle}>
+  <h1>{tr.linksTitle}</h1>
+  <p class="lead">{tr.linksIntro}</p>
+
+  {groups.map((g) => (
+    <section>
+      <h2><Icon name={catIcon[g.data.category]} /> {catTitle[g.data.category]}</h2>
+      <div class="grid">
+        {g.data.items.map((item) => (
+          <a class="card link-card" href={item.url} target="_blank" rel="noopener noreferrer">
+            <h3>{item.name} <Icon name="link" label={tr.open} /></h3>
+            <p class="note" style="margin:0">{item.desc[lang]}</p>
+            <span class="tags">{item.tags.map((tag) => <span class={`chip chip--${tag.toLowerCase()}`}>{tag}</span>)}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  ))}
+</Layout>

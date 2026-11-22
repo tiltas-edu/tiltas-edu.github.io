@@ -1,0 +1,32 @@
+{
+  "subject": "math",
+  "topic": "area-perimeter",
+  "grade": 4,
+  "lt": "Šis stačiakampis sudarytas iš 3 vienodų kvadratų. Vieno kvadrato perimetras lygus 40 cm. Apskaičiuok stačiakampio plotą.",
+  "translation": {
+    "ru": "Этот прямоугольник составлен из 3 одинаковых квадратов. Периметр одного квадрата равен 40 см. Вычисли площадь прямоугольника.",
+    "en": "This rectangle is made up of 3 identical squares. The perimeter of one square is 40 cm. Calculate the area of the rectangle."
+  },
+  "steps": {
+    "ru": [
+      "Сторона квадрата: 40 : 4 = 10 (см).",
+      "Площадь одного квадрата: 10 · 10 = 100 (см²).",
+      "Площадь прямоугольника: 100 · 3 = 300 (см²)."
+    ],
+    "en": [
+      "Side of a square: 40 : 4 = 10 (cm).",
+      "Area of one square: 10 · 10 = 100 (cm²).",
+      "Area of the rectangle: 100 · 3 = 300 (cm²)."
+    ]
+  },
+  "answer": "300 cm²",
+  "check": [
+    "300"
+  ],
+  "keywords": [
+    "sudarytas iš",
+    "vienodų",
+    "kvadratų",
+    "perimetras"
+  ]
+}

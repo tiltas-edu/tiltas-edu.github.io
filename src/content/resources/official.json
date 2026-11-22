@@ -1,0 +1,50 @@
+{
+  "category": "official",
+  "order": 3,
+  "items": [
+    {
+      "name": "Bendrosios programos",
+      "url": "https://e-seimas.lrs.lt/rs/legalact/TAD/45f3b02523e311edb36fa1cf41a91fd9/",
+      "desc": {
+        "ru": "Официальные общие программы дошкольного, начального, основного и среднего образования.",
+        "en": "Official general curricula for pre-school, primary, basic and secondary education."
+      },
+      "tags": [
+        "LT"
+      ]
+    },
+    {
+      "name": "Nacionalinė švietimo agentūra",
+      "url": "https://www.nsa.smm.lt/",
+      "desc": {
+        "ru": "Национальное агентство образования: методические материалы и экзамены.",
+        "en": "National Agency for Education: guidance and exams."
+      },
+      "tags": [
+        "LT"
+      ]
+    },
+    {
+      "name": "Ugdymo sodas",
+      "url": "https://www.ugdymosodas.lt/",
+      "desc": {
+        "ru": "Портал агентства образования с учебными материалами.",
+        "en": "Education agency portal with learning materials."
+      },
+      "tags": [
+        "LT"
+      ]
+    },
+    {
+      "name": "Eurydice: pradinis ugdymas",
+      "url": "https://eurydice.eacea.ec.europa.eu/lt/eurypedia/lithuania/pradinis-ugdymas",
+      "desc": {
+        "ru": "Как устроено начальное образование в Литве (европейская справка).",
+        "en": "How primary education works in Lithuania (European overview)."
+      },
+      "tags": [
+        "LT"
+      ]
+    }
+  ]
+}

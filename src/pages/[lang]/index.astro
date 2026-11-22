@@ -1,0 +1,38 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
+import { languages, t, type Lang, base } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const lang = Astro.params.lang as Lang;
+const tr = t(lang);
+const soon = [
+  { key: 'physics', icon: 'physics', ru: 'Физика', en: 'Physics' },
+  { key: 'nature', icon: 'nature', ru: 'Природа', en: 'Nature' },
+  { key: 'lithuanian', icon: 'lithuanian', ru: 'Литовский', en: 'Lithuanian' },
+] as const;
+---
+<Layout lang={lang}>
+  <h1>Tiltas</h1>
+  <p class="lead"><strong>{tr.tagline}</strong></p>
+  <p>{tr.intro}</p>
+
+  <h2>{tr.subjects}</h2>
+  <div class="grid">
+    <a class="card tile tile--math" href={`${base}/${lang}/math/`}>
+      <span class="tile__icon"><Icon name="math" /></span>
+      <h3>{tr.math}</h3>
+    </a>
+    {soon.map((s) => (
+      <div class={`card tile tile--${s.key} card--disabled`}>
+        <span class="tile__icon"><Icon name={s.icon} /></span>
+        <h3>{s[lang]}<span class="badge">{tr.soon}</span></h3>
+      </div>
+    ))}
+  </div>
+
+  <h2>{tr.linksTitle}</h2>
+  <p><a class="btn btn--soft" href={`${base}/${lang}/links/`}><Icon name="link" /> {tr.linksTitle}</a></p>
+</Layout>

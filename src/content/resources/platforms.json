@@ -1,0 +1,50 @@
+{
+  "category": "platforms",
+  "order": 1,
+  "items": [
+    {
+      "name": "EDUKA klasė",
+      "url": "https://klase.eduka.lt/",
+      "desc": {
+        "ru": "Электронные учебники и интерактивные задания, по которым учатся в школе.",
+        "en": "Digital textbooks and interactive tasks used in school."
+      },
+      "tags": [
+        "LT"
+      ]
+    },
+    {
+      "name": "TAMO",
+      "url": "https://www.tamo.lt/",
+      "desc": {
+        "ru": "Электронный дневник: оценки, домашние задания, расписание.",
+        "en": "E-diary: grades, homework, timetable."
+      },
+      "tags": [
+        "LT"
+      ]
+    },
+    {
+      "name": "Mano dienynas",
+      "url": "https://www.manodienynas.lt/",
+      "desc": {
+        "ru": "Электронный дневник, которым пользуются некоторые школы.",
+        "en": "E-diary used by some schools."
+      },
+      "tags": [
+        "LT"
+      ]
+    },
+    {
+      "name": "emokykla.lt",
+      "url": "https://emokykla.lt/",
+      "desc": {
+        "ru": "Национальный образовательный портал с материалами для учителей и учеников.",
+        "en": "National education portal with materials for teachers and students."
+      },
+      "tags": [
+        "LT"
+      ]
+    }
+  ]
+}

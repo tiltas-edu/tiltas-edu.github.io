@@ -1,0 +1,157 @@
+{
+  "subject": "math",
+  "title": {
+    "ru": "Площадь и периметр",
+    "en": "Area and perimeter"
+  },
+  "terms": [
+    {
+      "lt": "plotas",
+      "ru": "площадь",
+      "en": "area",
+      "note": {
+        "ru": "Не путай с plotis (ширина)!",
+        "en": "Don't confuse with plotis (width)!"
+      }
+    },
+    {
+      "lt": "plotis",
+      "ru": "ширина",
+      "en": "width",
+      "note": {
+        "ru": "Похоже на plotas (площадь), но это ширина.",
+        "en": "Looks like plotas (area) but means width."
+      }
+    },
+    {
+      "lt": "ilgis",
+      "ru": "длина",
+      "en": "length"
+    },
+    {
+      "lt": "perimetras",
+      "ru": "периметр",
+      "en": "perimeter"
+    },
+    {
+      "lt": "stačiakampis",
+      "ru": "прямоугольник",
+      "en": "rectangle"
+    },
+    {
+      "lt": "kvadratas",
+      "ru": "квадрат",
+      "en": "square"
+    },
+    {
+      "lt": "kraštinė",
+      "ru": "сторона",
+      "en": "side"
+    },
+    {
+      "lt": "kraštinių ilgių suma",
+      "ru": "сумма длин сторон",
+      "en": "sum of side lengths"
+    },
+    {
+      "lt": "langelis (mn. langeliai)",
+      "ru": "клетка",
+      "en": "grid cell"
+    },
+    {
+      "lt": "figūra",
+      "ru": "фигура",
+      "en": "shape"
+    },
+    {
+      "lt": "aikštelė",
+      "ru": "площадка",
+      "en": "court / playground"
+    },
+    {
+      "lt": "žaidimų aikštelė",
+      "ru": "детская площадка",
+      "en": "playground"
+    },
+    {
+      "lt": "kilimas (mn. kilimai)",
+      "ru": "ковёр",
+      "en": "carpet"
+    },
+    {
+      "lt": "daržas",
+      "ru": "огород",
+      "en": "vegetable garden"
+    },
+    {
+      "lt": "lysvė",
+      "ru": "грядка",
+      "en": "garden bed"
+    },
+    {
+      "lt": "žaidimo lenta",
+      "ru": "игровая доска",
+      "en": "game board"
+    },
+    {
+      "lt": "kvadratinis centimetras (cm²)",
+      "ru": "квадратный сантиметр",
+      "en": "square centimetre"
+    },
+    {
+      "lt": "matavimo vienetas",
+      "ru": "единица измерения",
+      "en": "unit of measurement"
+    },
+    {
+      "lt": "trupmena",
+      "ru": "дробь",
+      "en": "fraction"
+    },
+    {
+      "lt": "viso ploto",
+      "ru": "всей площади",
+      "en": "of the whole area"
+    },
+    {
+      "lt": "vienodi",
+      "ru": "одинаковые",
+      "en": "identical / equal"
+    },
+    {
+      "lt": "sudarytas iš",
+      "ru": "составлен из",
+      "en": "made up of"
+    },
+    {
+      "lt": "didysis",
+      "ru": "большой (главный)",
+      "en": "the large one"
+    },
+    {
+      "lt": "nuspalvintas",
+      "ru": "закрашенный",
+      "en": "coloured in"
+    },
+    {
+      "lt": "pailginsime",
+      "ru": "удлиним",
+      "en": "we will lengthen"
+    },
+    {
+      "lt": "padidinsime 2 kartus",
+      "ru": "увеличим в 2 раза",
+      "en": "we will enlarge 2 times"
+    },
+    {
+      "lt": "pateiktas brėžinys",
+      "ru": "данный чертёж",
+      "en": "the given drawing"
+    },
+    {
+      "lt": "praleisti skaičiai",
+      "ru": "пропущенные числа",
+      "en": "missing numbers"
+    }
+  ]
+}
