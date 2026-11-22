@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "words": "node scripts/word-frequency.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^7.1.9",

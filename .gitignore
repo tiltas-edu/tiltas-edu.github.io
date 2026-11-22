@@ -2,3 +2,5 @@ node_modules/
 dist/
 .astro/
 .DS_Store
+# Real textbook tasks: copyrighted, never publish
+/corpus/
