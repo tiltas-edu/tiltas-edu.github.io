@@ -26,7 +26,14 @@ is public and textbooks are copyrighted. Back up `corpus/` privately.
    }
    ```
 
-3. Run `npm run words` and read `corpus/frequency.md`.
+3. Run `npm run words`. It writes two files:
+   - `corpus/frequency.md`: private report.
+   - `src/data/word-frequency.json`: **public**, shown on `/<lang>/words/`. It holds only lemma,
+     part of speech, translation, forms and the number of tasks.
+4. Read the diff of the public file before committing it. Anything that identifies a child must be
+   marked `name` in the task, which keeps it out of the ranking.
+
+The public file is rebuilt from the local `corpus/` alone: run it only where the whole corpus is.
 
 ## Rules
 

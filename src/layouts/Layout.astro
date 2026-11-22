@@ -38,9 +38,11 @@ const section = rest.split('/')[0];
       <div class="wrap">
         <Logo href={`${base}/${lang}/`} />
         <nav class="nav" aria-label="Main">
+          <a class="nav-link" href={`${base}/${lang}/words/`} aria-current={section === 'words' || section === 'glossary' ? 'page' : undefined}><Icon name="book" />{tr.navWords}</a>
           <a class="nav-link" href={`${base}/${lang}/math/`} aria-current={section === 'math' ? 'page' : undefined}><Icon name="math" />{tr.math}</a>
-          <a class="nav-link" href={`${base}/${lang}/glossary/`} aria-current={section === 'glossary' ? 'page' : undefined}><Icon name="book" />{tr.glossary}</a>
           <a class="nav-link" href={`${base}/${lang}/links/`} aria-current={section === 'links' ? 'page' : undefined}><Icon name="link" />{tr.links}</a>
+        </nav>
+        <div class="prefs">
           <span class="seg" role="group" aria-label={tr.bandLabel}>
             <button type="button" data-band-btn="junior" aria-pressed="true">1–4</button>
             <button type="button" data-band-btn="senior" aria-pressed="false">5–8</button>
@@ -50,7 +52,7 @@ const section = rest.split('/')[0];
               <a href={`${base}/${l}/${rest}`} aria-current={l === lang ? 'true' : undefined} hreflang={l}>{l.toUpperCase()}</a>
             ))}
           </span>
-        </nav>
+        </div>
       </div>
     </header>
     <main class="wrap"><slot /></main>

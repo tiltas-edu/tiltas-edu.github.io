@@ -1,4 +1,6 @@
 // Ranks words from real textbook tasks. Input format: docs/word-frequency.md. Run: npm run words
+// Writes a private report to corpus/ and the public, text-free ranking to src/data/.
+// With a corpus path argument nothing public is written, unless a second path names the output file.
 import { existsSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -18,6 +20,8 @@ const POS = {
 const NOT_RANKED = ['name', 'unit'];
 
 const root = process.argv[2] ?? fileURLToPath(new URL('../corpus', import.meta.url));
+const publicFile =
+  process.argv[3] ?? (process.argv[2] ? null : fileURLToPath(new URL('../src/data/word-frequency.json', import.meta.url)));
 const dir = join(root, 'tasks');
 const files = existsSync(dir) ? readdirSync(dir).filter((f) => f.endsWith('.json')).sort() : [];
 const tokens = (text) => text.normalize('NFC').toLowerCase().match(/[\p{L}\p{M}]+/gu) ?? [];
@@ -42,7 +46,7 @@ for (const file of files) {
 
   for (const { form, lemma, pos, ru, en } of words) {
     if (NOT_RANKED.includes(pos)) continue;
-    if (!POS[pos] || !lemma || !ru || !en) {
+    if (!Object.hasOwn(POS, pos) || !lemma || !ru || !en) {
       errors.push(`${file}: "${form}" needs a valid pos, lemma, ru and en`);
       continue;
     }
@@ -84,3 +88,17 @@ for (const [pos, title] of Object.entries(POS)) {
 }
 writeFileSync(join(root, 'frequency.md'), `${lines.join('\n')}\n`);
 console.log(`${seen.size} tasks, ${ranked.length} words -> ${join(root, 'frequency.md')}`);
+
+if (publicFile) {
+  // Fields are listed one by one so that text, source and word order cannot slip through.
+  const words = ranked.map(({ lemma, pos, ru, en, forms, tasks }) => ({
+    lemma,
+    pos,
+    ru: [...ru].sort().join(', '),
+    en: [...en].sort().join(', '),
+    forms: [...forms].sort(),
+    tasks: tasks.size,
+  }));
+  writeFileSync(publicFile, `${JSON.stringify({ tasks: seen.size, words }, null, 2)}\n`);
+  console.log(`public ranking -> ${publicFile}`);
+}

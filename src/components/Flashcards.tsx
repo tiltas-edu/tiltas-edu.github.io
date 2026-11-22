@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Icon from './Icon';
 
-interface Term { lt: string; ru: string; en: string; note?: { ru: string; en: string } }
+interface Term { lt: string; ru: string; en: string; note?: { ru: string; en: string }; hint?: string; forms?: string }
 interface Props {
   terms: Term[];
   lang: 'ru' | 'en';
@@ -60,10 +60,14 @@ export default function Flashcards({ terms, lang, labels }: Props) {
           <div>
             <strong>{term[lang]}</strong>
             <small>{term[other]}</small>
+            {term.forms && <small lang="lt">{term.lt}: {term.forms}</small>}
             {term.note && <small><Icon name="bulb" /> {term.note[lang]}</small>}
           </div>
         ) : (
-          <div lang="lt">{term.lt}</div>
+          <div>
+            <span lang="lt">{term.lt}</span>
+            {term.hint && <small>{term.hint}</small>}
+          </div>
         )}
       </div>
       <div className="row">

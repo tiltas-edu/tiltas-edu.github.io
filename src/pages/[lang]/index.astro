@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Icon from '../../components/Icon.astro';
+import { topWords } from '../../lib/frequency';
 import { languages, t, type Lang, base } from '../../i18n/ui';
 
 export function getStaticPaths() {
@@ -9,15 +10,23 @@ export function getStaticPaths() {
 const lang = Astro.params.lang as Lang;
 const tr = t(lang);
 const soon = [
-  { key: 'physics', icon: 'physics', ru: 'Физика', en: 'Physics' },
-  { key: 'nature', icon: 'nature', ru: 'Природа', en: 'Nature' },
-  { key: 'lithuanian', icon: 'lithuanian', ru: 'Литовский', en: 'Lithuanian' },
+  { id: 'lithuanian', name: tr.lithuanian },
+  { id: 'nature', name: tr.nature },
+  { id: 'society', name: tr.society },
+  { id: 'physics', name: tr.physics },
 ] as const;
 ---
 <Layout lang={lang}>
   <h1>Tiltas</h1>
   <p class="lead"><strong>{tr.tagline}</strong></p>
-  <p>{tr.intro}</p>
+  <section class="hero">
+    <h2>{tr.topWords}</h2>
+    <p>{tr.topWordsLead}</p>
+    {topWords.length > 0 && (
+      <p class="hero__words" lang="lt">{topWords.map((w) => <span>{w.lemma}</span>)}</p>
+    )}
+    <a class="btn" href={`${base}/${lang}/words/`}><Icon name="book" /> {tr.startLearning}</a>
+  </section>
 
   <h2>{tr.subjects}</h2>
   <div class="grid">
@@ -25,14 +34,11 @@ const soon = [
       <span class="tile__icon"><Icon name="math" /></span>
       <h3>{tr.math}</h3>
     </a>
-    {soon.map((s) => (
-      <div class={`card tile tile--${s.key} card--disabled`}>
-        <span class="tile__icon"><Icon name={s.icon} /></span>
-        <h3>{s[lang]}<span class="badge">{tr.soon}</span></h3>
+    {soon.map(({ id, name }) => (
+      <div class={`card tile tile--${id} card--soon`}>
+        <span class="tile__icon"><Icon name={id} /></span>
+        <h3>{name} <span class="badge">{tr.soon}</span></h3>
       </div>
     ))}
   </div>
-
-  <h2>{tr.linksTitle}</h2>
-  <p><a class="btn btn--soft" href={`${base}/${lang}/links/`}><Icon name="link" /> {tr.linksTitle}</a></p>
 </Layout>

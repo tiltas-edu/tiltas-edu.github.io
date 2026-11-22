@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import WordTabs from '../../../components/WordTabs.astro';
 import { getCollection } from 'astro:content';
 import { languages, t, type Lang, base } from '../../../i18n/ui';
 
@@ -11,7 +12,7 @@ const tr = t(lang);
 const glossary = await getCollection('glossary');
 ---
 <Layout lang={lang} title={tr.glossary}>
-  <h1>{tr.glossary}</h1>
+  <WordTabs lang={lang} current="glossary" />
   <div class="grid">
     {glossary.map((g) => (
       <a class="card" href={`${base}/${lang}/glossary/${g.id}/`}>

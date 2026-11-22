@@ -1,0 +1,16 @@
+---
+import { t, type Lang, base } from '../i18n/ui';
+interface Props { lang: Lang; current: 'words' | 'glossary' }
+const { lang, current } = Astro.props;
+const tr = t(lang);
+const tabs = [
+  { id: 'words', label: tr.byFrequency },
+  { id: 'glossary', label: tr.byTopic },
+] as const;
+---
+<h1>{tr.topWords}</h1>
+<nav class="tabs" aria-label={tr.navWords}>
+  {tabs.map(({ id, label }) => (
+    <a class="tab" href={`${base}/${lang}/${id}/`} aria-current={id === current ? 'page' : undefined}>{label}</a>
+  ))}
+</nav>

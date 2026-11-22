@@ -1,0 +1,40 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import Icon from '../../../components/Icon.astro';
+import WordTabs from '../../../components/WordTabs.astro';
+import WordRanking from '../../../components/WordRanking';
+import { frequency } from '../../../lib/frequency';
+import { languages, t, type Lang, base } from '../../../i18n/ui';
+
+// Below this the order still jumps around with every new task.
+const ENOUGH_TASKS = 10;
+
+export function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const lang = Astro.params.lang as Lang;
+const tr = t(lang);
+const { tasks, words } = frequency;
+const based = new Intl.PluralRules(lang).select(tasks) === 'one' ? tr.basedOnOne : tr.basedOnMany;
+---
+<Layout lang={lang} title={tr.topWords} description={tr.topWordsLead}>
+  <WordTabs lang={lang} current="words" />
+  {words.length === 0 ? (
+    <div class="callout callout--hint">
+      <h2 class="callout__title"><Icon name="bulb" /> {tr.noWords}</h2>
+      <p>{tr.noWordsText}</p>
+      <a class="btn" href={`${base}/${lang}/glossary/`}>{tr.openTopics}</a>
+    </div>
+  ) : (
+    <>
+      <p class="note">{based.replace('{total}', String(tasks))}</p>
+      {tasks < ENOUGH_TASKS && <p class="callout callout--hint"><Icon name="bulb" /> {tr.fewTasks}</p>}
+      <WordRanking client:load words={words} total={tasks} lang={lang} labels={{
+        all: tr.allWords, verb: tr.pos_verb, noun: tr.pos_noun, adj: tr.pos_adj, prep: tr.pos_prep, other: tr.pos_other,
+        inTasks: tr.inTasks, more: tr.showMore, study: tr.studyCards, back: tr.backToWords,
+      }} cardLabels={{
+        flip: tr.flip, know: tr.know, again: tr.again, done: tr.done, restart: tr.restart, card: tr.card,
+      }} />
+    </>
+  )}
+</Layout>
