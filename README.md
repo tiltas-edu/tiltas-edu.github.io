@@ -49,6 +49,13 @@ npm run build    # статика в dist/
 `ru`, `en` — файл `src/i18n/ui.ts`. Чтобы добавить язык, добавьте его в `ui.ts`, в схемы `src/content.config.ts`
 (`tri`) и переведите поля в JSON-файлах.
 
+## Релизы
+
+Версия — в `package.json` и в подвале сайта. Выпустить: GitHub → **Actions → Release → Run workflow**, выбрать
+`patch` (исправления), `minor` (новые задания, функции) или `major` (большие изменения). Workflow поднимет версию,
+поставит тег `vX.Y.Z`, создаст [релиз](https://github.com/tiltas-edu/tiltas-edu.github.io/releases) с заметками
+из смерженных PR и задеплоит сайт.
+
 ## Лицензия
 
 Код — [MIT](LICENSE). Контент (`src/content/`: задания, словари, описания ссылок; `src/data/`: рейтинг слов) — [CC BY 4.0](LICENSE-CONTENT.md).

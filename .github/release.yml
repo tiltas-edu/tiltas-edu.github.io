@@ -1,0 +1,9 @@
+# Sections of the generated release notes, by pull request label.
+changelog:
+  exclude:
+    authors: ['github-actions[bot]']
+  categories:
+    - title: Dependency updates
+      labels: [dependencies]
+    - title: Changes
+      labels: ['*']

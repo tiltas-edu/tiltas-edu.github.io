@@ -1,0 +1,49 @@
+name: Release
+
+# Run by hand: Actions → Release → Run workflow, then pick the bump.
+# Raises the version in package.json, tags vX.Y.Z, publishes a GitHub Release
+# with notes from the merged pull requests, and redeploys so the footer shows it.
+on:
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: 'patch = fixes, minor = new tasks or features, major = big change'
+        type: choice
+        options: [patch, minor, major]
+        default: minor
+
+permissions:
+  contents: write # push the version commit and tag, create the release
+  actions: write # start the deploy workflow
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: main
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Bump version and tag
+        id: bump
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898699+github-actions[bot]@users.noreply.github.com'
+          VERSION="$(npm version "${{ inputs.bump }}" -m 'Release v%s')"
+          echo "tag=${VERSION}" >> "$GITHUB_OUTPUT"
+          git push origin HEAD:main "${VERSION}"
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "${{ steps.bump.outputs.tag }}" --generate-notes --verify-tag
+      # A push made with GITHUB_TOKEN does not start other workflows, so start the deploy here.
+      - name: Deploy
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main

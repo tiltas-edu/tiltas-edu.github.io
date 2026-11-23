@@ -3,6 +3,7 @@ import '../styles/base.css';
 import Logo from '../components/Logo.astro';
 import Icon from '../components/Icon.astro';
 import { languages, t, type Lang, base } from '../i18n/ui';
+import { version } from '../../package.json';
 
 interface Props { lang: Lang; title?: string; description?: string; noindex?: boolean }
 const { lang, title, description, noindex } = Astro.props;
@@ -11,6 +12,8 @@ const path = Astro.url.pathname;
 const rest = path.slice(base.length).replace(/^\/(ru|en)\//, '');
 const pageTitle = title ? `${title} · Tiltas` : `Tiltas · ${tr.tagline}`;
 const section = rest.split('/')[0];
+// Set by the Release workflow; the releases page lists what changed in each version.
+const releasesUrl = 'https://github.com/tiltas-edu/tiltas-edu.github.io/releases';
 ---
 <!doctype html>
 <html lang={lang} data-band="junior">
@@ -57,7 +60,7 @@ const section = rest.split('/')[0];
     </header>
     <main class="wrap"><slot /></main>
     <footer class="site-footer">
-      <div class="wrap">{tr.footer} <a href={tr.licenseUrl} rel="license">{tr.contentLicense}</a></div>
+      <div class="wrap">{tr.footer} <a href={tr.licenseUrl} rel="license">{tr.contentLicense}</a> · <a href={releasesUrl} title={tr.whatsNew}>v{version}</a></div>
     </footer>
     <script is:inline>
       (function () {

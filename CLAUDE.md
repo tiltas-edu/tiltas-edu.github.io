@@ -22,6 +22,7 @@ Open-source site (Astro 7 + React islands, GitHub Pages) that helps RU/EN-speaki
 - Wrong answers: calm hint, never shaming.
 
 ## Deploy
+- Releases: run the `Release` workflow (patch/minor/major). Do not edit the version in `package.json` by hand.
 - GitHub Actions `deploy.yml` computes SITE/BASE: `/` for `<owner>.github.io` repos, otherwise `/<repo>`.
 - Always use the `base` helper from `src/i18n/ui.ts` for internal links.
 
