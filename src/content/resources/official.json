@@ -15,21 +15,10 @@
     },
     {
       "name": "Nacionalinė švietimo agentūra",
-      "url": "https://www.nsa.smm.lt/",
+      "url": "https://www.nsa.smsm.lt/",
       "desc": {
         "ru": "Национальное агентство образования: методические материалы и экзамены.",
         "en": "National Agency for Education: guidance and exams."
-      },
-      "tags": [
-        "LT"
-      ]
-    },
-    {
-      "name": "Ugdymo sodas",
-      "url": "https://www.ugdymosodas.lt/",
-      "desc": {
-        "ru": "Портал агентства образования с учебными материалами.",
-        "en": "Education agency portal with learning materials."
       },
       "tags": [
         "LT"
