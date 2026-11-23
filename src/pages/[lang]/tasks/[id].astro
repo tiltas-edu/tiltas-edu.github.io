@@ -15,7 +15,10 @@ const tr = t(lang);
 const { entry } = Astro.props;
 const d = entry.data;
 
-const glossary = (await getCollection('glossary')).find((g) => g.id === d.topic);
+// Terms of the task's topic first, then the general task-wording terms.
+const glossaries = (await getCollection('glossary'))
+  .filter((g) => g.id === d.topic || g.id === 'task-wording')
+  .sort((a, b) => Number(b.id === d.topic) - Number(a.id === d.topic));
 
 const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]!));
 const rx = d.keywords.length
@@ -23,11 +26,20 @@ const rx = d.keywords.length
   : null;
 const ltHtml = rx ? esc(d.lt).replace(rx, '<mark>$1</mark>') : esc(d.lt);
 
-// Glossary terms whose first word (minus its ending) shows up in the task text.
-const stem = (w: string) => w.toLowerCase().slice(0, w.length >= 7 ? w.length - 2 : w.length >= 5 ? w.length - 1 : w.length);
-const words = (glossary?.data.terms ?? []).filter((term) =>
-  d.lt.toLowerCase().includes(stem(term.lt.split(/[ (]/)[0])),
-);
+// Glossary terms whose every word (minus its ending) starts a word of the task text.
+// Short words must match whole, so "kiek" does not match "kiekvienas". Nasal letters are folded,
+// so "plotas" finds "plotą". Only the part before " / " and outside "( )" is matched.
+const fold = (s: string) => s.toLowerCase().replace(/[ąęįų]/g, (c) => ({ ą: 'a', ę: 'e', į: 'i', ų: 'u' })[c]!);
+const stem = (w: string) => w.slice(0, w.length >= 7 ? w.length - 2 : w.length >= 5 ? w.length - 1 : w.length);
+const taskWords = fold(d.lt).match(/[\p{L}\p{M}]+/gu) ?? [];
+const has = (word: string) => taskWords.some((w) => (word.length < 5 ? w === word : w.startsWith(stem(word))));
+const seen = new Set<string>();
+const words = glossaries.flatMap((g) => g.data.terms).filter((term) => {
+  const parts = fold(term.lt.split(' / ')[0].replace(/\(.*?\)/g, '')).match(/[\p{L}\p{M}]+/gu) ?? [];
+  if (!parts.length || !parts.every(has) || seen.has(term.lt)) return false;
+  seen.add(term.lt);
+  return true;
+});
 const unit = d.answer.replace(/^[\d\s.,]+/, '');
 ---
 <Layout lang={lang} title={`${tr.task}: ${d.translation[lang].slice(0, 50)}`}>
@@ -51,9 +63,9 @@ const unit = d.answer.replace(/^[\d\s.,]+/, '');
   )}
 
   <h2>{tr.yourAnswer}</h2>
-  <TaskCheck client:load accepted={d.check} unit={unit} labels={{
-    yourAnswer: tr.yourAnswer, check: tr.check, correct: tr.correct, wrong: tr.wrong,
-  }} />
+  <TaskCheck client:load accepted={d.check} unit={unit}
+    mistakes={d.mistakes.map((m) => ({ value: m.value, hint: m.hint[lang] }))}
+    labels={{ yourAnswer: tr.yourAnswer, check: tr.check, correct: tr.correct, wrong: tr.wrong, tryAgain: tr.tryAgain }} />
 
   <details style="margin-top:1rem">
     <summary><strong>{tr.showSolution}</strong></summary>
