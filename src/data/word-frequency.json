@@ -1,4 +1,928 @@
 {
-  "tasks": 0,
-  "words": []
+  "tasks": 26,
+  "words": [
+    {
+      "lemma": "plotas",
+      "pos": "noun",
+      "ru": "площадь",
+      "en": "area",
+      "forms": [
+        "plotas",
+        "ploto",
+        "plotą"
+      ],
+      "tasks": 18
+    },
+    {
+      "lemma": "ir",
+      "pos": "conj",
+      "ru": "и",
+      "en": "and",
+      "forms": [
+        "ir"
+      ],
+      "tasks": 18
+    },
+    {
+      "lemma": "apskaičiuoti",
+      "pos": "verb",
+      "ru": "вычислить",
+      "en": "calculate",
+      "forms": [
+        "apskaičiuok",
+        "apskaičiuoti"
+      ],
+      "tasks": 16
+    },
+    {
+      "lemma": "atsakymas",
+      "pos": "noun",
+      "ru": "ответ",
+      "en": "answer",
+      "forms": [
+        "atsakymu",
+        "atsakymą"
+      ],
+      "tasks": 12
+    },
+    {
+      "lemma": "koks",
+      "pos": "pron",
+      "ru": "какой",
+      "en": "what",
+      "forms": [
+        "kokio",
+        "koks",
+        "kokį"
+      ],
+      "tasks": 12
+    },
+    {
+      "lemma": "kvadratas",
+      "pos": "noun",
+      "ru": "квадрат",
+      "en": "square",
+      "forms": [
+        "kvadratas",
+        "kvadrato",
+        "kvadratų"
+      ],
+      "tasks": 11
+    },
+    {
+      "lemma": "ilgis",
+      "pos": "noun",
+      "ru": "длина",
+      "en": "length",
+      "forms": [
+        "ilgio",
+        "ilgis",
+        "ilgį"
+      ],
+      "tasks": 11
+    },
+    {
+      "lemma": "forma",
+      "pos": "noun",
+      "ru": "форма",
+      "en": "shape",
+      "forms": [
+        "formos"
+      ],
+      "tasks": 9
+    },
+    {
+      "lemma": "stačiakampis",
+      "pos": "noun",
+      "ru": "прямоугольник",
+      "en": "rectangle",
+      "forms": [
+        "stačiakampio",
+        "stačiakampis",
+        "stačiakampių",
+        "stačiakampį"
+      ],
+      "tasks": 8
+    },
+    {
+      "lemma": "perimetras",
+      "pos": "noun",
+      "ru": "периметр",
+      "en": "perimeter",
+      "forms": [
+        "perimetras"
+      ],
+      "tasks": 8
+    },
+    {
+      "lemma": "sprendimas",
+      "pos": "noun",
+      "ru": "решение",
+      "en": "solution",
+      "forms": [
+        "sprendimu",
+        "sprendimą"
+      ],
+      "tasks": 8
+    },
+    {
+      "lemma": "figūra",
+      "pos": "noun",
+      "ru": "фигура",
+      "en": "shape",
+      "forms": [
+        "figūras",
+        "figūros",
+        "figūrą",
+        "figūrų"
+      ],
+      "tasks": 7
+    },
+    {
+      "lemma": "įrašyti",
+      "pos": "verb",
+      "ru": "вписать",
+      "en": "write in",
+      "forms": [
+        "įrašyk"
+      ],
+      "tasks": 7
+    },
+    {
+      "lemma": "šis",
+      "pos": "pron",
+      "ru": "этот",
+      "en": "this",
+      "forms": [
+        "ši",
+        "šio",
+        "šios",
+        "šis",
+        "šių"
+      ],
+      "tasks": 7
+    },
+    {
+      "lemma": "užrašyti",
+      "pos": "verb",
+      "ru": "записать",
+      "en": "write down",
+      "forms": [
+        "užrašyk"
+      ],
+      "tasks": 7
+    },
+    {
+      "lemma": "užimti",
+      "pos": "verb",
+      "ru": "занимать",
+      "en": "take up",
+      "forms": [
+        "užima"
+      ],
+      "tasks": 5
+    },
+    {
+      "lemma": "kraštinė",
+      "pos": "noun",
+      "ru": "сторона",
+      "en": "side",
+      "forms": [
+        "kraštinės"
+      ],
+      "tasks": 5
+    },
+    {
+      "lemma": "kuris",
+      "pos": "pron",
+      "ru": "который",
+      "en": "which",
+      "forms": [
+        "kurio",
+        "kurios",
+        "kurių"
+      ],
+      "tasks": 5
+    },
+    {
+      "lemma": "sujungti",
+      "pos": "verb",
+      "ru": "соединить",
+      "en": "connect",
+      "forms": [
+        "sujunk"
+      ],
+      "tasks": 5
+    },
+    {
+      "lemma": "vienodas",
+      "pos": "adj",
+      "ru": "одинаковый",
+      "en": "identical",
+      "forms": [
+        "vienodas",
+        "vienodi",
+        "vienodų"
+      ],
+      "tasks": 5
+    },
+    {
+      "lemma": "būti",
+      "pos": "verb",
+      "ru": "быть",
+      "en": "be",
+      "forms": [
+        "bus",
+        "yra"
+      ],
+      "tasks": 4
+    },
+    {
+      "lemma": "iš",
+      "pos": "prep",
+      "ru": "из",
+      "en": "of, from",
+      "forms": [
+        "iš"
+      ],
+      "tasks": 4
+    },
+    {
+      "lemma": "lygus",
+      "pos": "adj",
+      "ru": "равный",
+      "en": "equal",
+      "forms": [
+        "lygios",
+        "lygus"
+      ],
+      "tasks": 4
+    },
+    {
+      "lemma": "parašyti",
+      "pos": "verb",
+      "ru": "написать",
+      "en": "write",
+      "forms": [
+        "parašyk"
+      ],
+      "tasks": 4
+    },
+    {
+      "lemma": "plotis",
+      "pos": "noun",
+      "ru": "ширина",
+      "en": "width",
+      "forms": [
+        "plotis",
+        "plotį"
+      ],
+      "tasks": 4
+    },
+    {
+      "lemma": "su",
+      "pos": "prep",
+      "ru": "с",
+      "en": "with",
+      "forms": [
+        "su"
+      ],
+      "tasks": 4
+    },
+    {
+      "lemma": "vienas",
+      "pos": "num",
+      "ru": "один",
+      "en": "one",
+      "forms": [
+        "vieno"
+      ],
+      "tasks": 4
+    },
+    {
+      "lemma": "į",
+      "pos": "prep",
+      "ru": "в",
+      "en": "into",
+      "forms": [
+        "į"
+      ],
+      "tasks": 3
+    },
+    {
+      "lemma": "jis",
+      "pos": "pron",
+      "ru": "он",
+      "en": "he, it",
+      "forms": [
+        "jo"
+      ],
+      "tasks": 3
+    },
+    {
+      "lemma": "nežinomas",
+      "pos": "adj",
+      "ru": "неизвестный",
+      "en": "unknown",
+      "forms": [
+        "nežinomos"
+      ],
+      "tasks": 3
+    },
+    {
+      "lemma": "pažymėti",
+      "pos": "verb",
+      "ru": "отметить",
+      "en": "mark",
+      "forms": [
+        "pažymėk"
+      ],
+      "tasks": 3
+    },
+    {
+      "lemma": "daržas",
+      "pos": "noun",
+      "ru": "огород",
+      "en": "vegetable garden",
+      "forms": [
+        "daržas",
+        "darže",
+        "daržo"
+      ],
+      "tasks": 2
+    },
+    {
+      "lemma": "aikštelė",
+      "pos": "noun",
+      "ru": "площадка",
+      "en": "playground",
+      "forms": [
+        "aikštelių",
+        "aikštelės"
+      ],
+      "tasks": 2
+    },
+    {
+      "lemma": "sklypas",
+      "pos": "noun",
+      "ru": "участок",
+      "en": "plot",
+      "forms": [
+        "sklypai",
+        "sklypas",
+        "sklypo"
+      ],
+      "tasks": 2
+    },
+    {
+      "lemma": "žemė",
+      "pos": "noun",
+      "ru": "земля",
+      "en": "land",
+      "forms": [
+        "žemės"
+      ],
+      "tasks": 2
+    },
+    {
+      "lemma": "brėžinys",
+      "pos": "noun",
+      "ru": "чертёж",
+      "en": "drawing",
+      "forms": [
+        "brėžinį"
+      ],
+      "tasks": 2
+    },
+    {
+      "lemma": "ji",
+      "pos": "pron",
+      "ru": "она",
+      "en": "it, she, it",
+      "forms": [
+        "jos",
+        "ją"
+      ],
+      "tasks": 2
+    },
+    {
+      "lemma": "kad",
+      "pos": "conj",
+      "ru": "что",
+      "en": "that",
+      "forms": [
+        "kad"
+      ],
+      "tasks": 2
+    },
+    {
+      "lemma": "kiekvienas",
+      "pos": "pron",
+      "ru": "каждый",
+      "en": "each",
+      "forms": [
+        "kiekvienos"
+      ],
+      "tasks": 2
+    },
+    {
+      "lemma": "langelis",
+      "pos": "noun",
+      "ru": "окошко",
+      "en": "box",
+      "forms": [
+        "langelius",
+        "langelį"
+      ],
+      "tasks": 2
+    },
+    {
+      "lemma": "o",
+      "pos": "conj",
+      "ru": "а",
+      "en": "and, but",
+      "forms": [
+        "o"
+      ],
+      "tasks": 2
+    },
+    {
+      "lemma": "pateikti",
+      "pos": "verb",
+      "ru": "представить",
+      "en": "give",
+      "forms": [
+        "pateikti",
+        "pateiktą"
+      ],
+      "tasks": 2
+    },
+    {
+      "lemma": "sudaryti",
+      "pos": "verb",
+      "ru": "составить",
+      "en": "make up",
+      "forms": [
+        "sudarytas"
+      ],
+      "tasks": 2
+    },
+    {
+      "lemma": "žaidimas",
+      "pos": "noun",
+      "ru": "игра",
+      "en": "game",
+      "forms": [
+        "žaidimo",
+        "žaidimų"
+      ],
+      "tasks": 2
+    },
+    {
+      "lemma": "daržovė",
+      "pos": "noun",
+      "ru": "овощ",
+      "en": "vegetable",
+      "forms": [
+        "daržovės"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "dėžė",
+      "pos": "noun",
+      "ru": "ящик",
+      "en": "box",
+      "forms": [
+        "dėžė",
+        "dėžės"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "kilimas",
+      "pos": "noun",
+      "ru": "ковёр",
+      "en": "carpet",
+      "forms": [
+        "kilimai",
+        "kilimo"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "lenta",
+      "pos": "noun",
+      "ru": "доска",
+      "en": "board",
+      "forms": [
+        "lenta",
+        "lentos"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "lentelė",
+      "pos": "noun",
+      "ru": "таблица",
+      "en": "table",
+      "forms": [
+        "lentelėje",
+        "lentelę"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "lysvė",
+      "pos": "noun",
+      "ru": "грядка",
+      "en": "garden bed",
+      "forms": [
+        "lysvėje",
+        "lysvės"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "skiautinis",
+      "pos": "noun",
+      "ru": "лоскутное шитьё",
+      "en": "patchwork",
+      "forms": [
+        "skiautinio",
+        "skiautinį"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "šakniavaisinis",
+      "pos": "adj",
+      "ru": "корнеплодный",
+      "en": "root (vegetable)",
+      "forms": [
+        "šakniavaisinės"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "trikampis",
+      "pos": "noun",
+      "ru": "треугольник",
+      "en": "triangle",
+      "forms": [
+        "trikampio"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "tvora",
+      "pos": "noun",
+      "ru": "забор",
+      "en": "fence",
+      "forms": [
+        "tvora"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "aptverti",
+      "pos": "verb",
+      "ru": "огородить",
+      "en": "fence in",
+      "forms": [
+        "aptvertas"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "atkreipti",
+      "pos": "verb",
+      "ru": "обратить",
+      "en": "draw (attention)",
+      "forms": [
+        "atkreipk"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "braškė",
+      "pos": "noun",
+      "ru": "клубника",
+      "en": "strawberry",
+      "forms": [
+        "braškės"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "dėmesys",
+      "pos": "noun",
+      "ru": "внимание",
+      "en": "attention",
+      "forms": [
+        "dėmesį"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "didelis",
+      "pos": "adj",
+      "ru": "большой",
+      "en": "big",
+      "forms": [
+        "didysis"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "dydis",
+      "pos": "noun",
+      "ru": "размер",
+      "en": "size",
+      "forms": [
+        "dydžiai"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "duomenys",
+      "pos": "noun",
+      "ru": "данные",
+      "en": "data",
+      "forms": [
+        "duomenis"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "jei",
+      "pos": "conj",
+      "ru": "если",
+      "en": "if",
+      "forms": [
+        "jei"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "jeigu",
+      "pos": "conj",
+      "ru": "если",
+      "en": "if",
+      "forms": [
+        "jeigu"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "kaip",
+      "pos": "adv",
+      "ru": "как",
+      "en": "how",
+      "forms": [
+        "kaip"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "keturi",
+      "pos": "num",
+      "ru": "четыре",
+      "en": "four",
+      "forms": [
+        "keturi"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "kiemas",
+      "pos": "noun",
+      "ru": "двор",
+      "en": "yard",
+      "forms": [
+        "kiemu"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "kortelė",
+      "pos": "noun",
+      "ru": "карточка",
+      "en": "card",
+      "forms": [
+        "korteles"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "kvadratinis",
+      "pos": "adj",
+      "ru": "квадратный",
+      "en": "square",
+      "forms": [
+        "kvadratinės"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "namas",
+      "pos": "noun",
+      "ru": "дом",
+      "en": "house",
+      "forms": [
+        "namas"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "nuspalvinti",
+      "pos": "verb",
+      "ru": "закрасить",
+      "en": "colour in",
+      "forms": [
+        "nuspalvinto"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "pagal",
+      "pos": "prep",
+      "ru": "по",
+      "en": "according to",
+      "forms": [
+        "pagal"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "pailginti",
+      "pos": "verb",
+      "ru": "удлинить",
+      "en": "lengthen",
+      "forms": [
+        "pailginsime"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "pasiūti",
+      "pos": "verb",
+      "ru": "сшить",
+      "en": "sew",
+      "forms": [
+        "pasiuvo"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "pasodinti",
+      "pos": "verb",
+      "ru": "посадить",
+      "en": "plant",
+      "forms": [
+        "pasodintos"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "piešinys",
+      "pos": "noun",
+      "ru": "рисунок",
+      "en": "picture",
+      "forms": [
+        "piešinį"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "praleisti",
+      "pos": "verb",
+      "ru": "пропустить",
+      "en": "leave out",
+      "forms": [
+        "praleistus"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "skaičius",
+      "pos": "noun",
+      "ru": "число",
+      "en": "number",
+      "forms": [
+        "skaičius"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "skiautė",
+      "pos": "noun",
+      "ru": "лоскут",
+      "en": "patch",
+      "forms": [
+        "skiaučių"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "smėlis",
+      "pos": "noun",
+      "ru": "песок",
+      "en": "sand",
+      "forms": [
+        "smėlio"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "sudėti",
+      "pos": "verb",
+      "ru": "сложить",
+      "en": "put together",
+      "forms": [
+        "sudėjo"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "šuolis",
+      "pos": "noun",
+      "ru": "прыжок",
+      "en": "jump",
+      "forms": [
+        "šuoliui"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "teisingas",
+      "pos": "adj",
+      "ru": "правильный",
+      "en": "correct",
+      "forms": [
+        "teisingą"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "tinkamas",
+      "pos": "adj",
+      "ru": "подходящий",
+      "en": "suitable",
+      "forms": [
+        "tinkamu"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "tolis",
+      "pos": "noun",
+      "ru": "даль",
+      "en": "distance",
+      "forms": [
+        "tolį"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "trūkti",
+      "pos": "verb",
+      "ru": "не хватать",
+      "en": "be missing",
+      "forms": [
+        "trūkstamus"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "užpildyti",
+      "pos": "verb",
+      "ru": "заполнить",
+      "en": "fill in",
+      "forms": [
+        "užpildyk"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "visas",
+      "pos": "pron",
+      "ru": "весь",
+      "en": "whole",
+      "forms": [
+        "viso"
+      ],
+      "tasks": 1
+    },
+    {
+      "lemma": "žinoti",
+      "pos": "verb",
+      "ru": "знать",
+      "en": "know",
+      "forms": [
+        "žinoma"
+      ],
+      "tasks": 1
+    }
+  ]
 }
