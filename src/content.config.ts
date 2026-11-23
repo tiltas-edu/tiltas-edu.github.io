@@ -51,7 +51,7 @@ const resources = defineCollection({
     items: z.array(
       z.object({
         name: z.string(),
-        url: z.string().url(),
+        url: z.url(),
         desc: tri,
         tags: z.array(z.enum(['LT', 'RU', 'EN', 'UK'])).default(['LT']),
         checked: z.string().optional(), // YYYY-MM-DD when a human last confirmed the link works

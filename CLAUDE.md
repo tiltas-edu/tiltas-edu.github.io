@@ -3,9 +3,9 @@
 Open-source site (Astro 7 + React islands, GitHub Pages) that helps RU/EN-speaking schoolchildren (grades 1–8, Lithuania first) with the school curriculum, vocabulary and understanding Eduka-style tasks.
 
 ## Commands
-- `npm install`, `npx astro dev` (preview), `npx astro build` (must pass before finishing).
+- `npm install`, `npx astro dev` (preview), `npm run check` and `npm run build` (both must pass before finishing; CI runs them on every PR).
 - Subpath build check: `SITE=https://<owner>.github.io BASE=/<repo> npx astro build`.
-- `node scripts/check-links.mjs`: checks links in `src/content/resources/`.
+- `node scripts/check-links.mjs`: checks links in `src/content/resources/`. SKIP means a bot check (Cloudflare) blocked it: open that link by hand.
 
 ## Content rules
 - Tasks are ORIGINAL, written for Tiltas in the same wording patterns as Eduka. Never paste Eduka text verbatim (copyright).

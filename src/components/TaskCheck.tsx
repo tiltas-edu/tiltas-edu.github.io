@@ -18,7 +18,7 @@ export default function TaskCheck({ accepted, mistakes = [], labels, unit }: Pro
   const [state, setState] = useState<'idle' | 'ok' | 'bad'>('idle');
   const [hint, setHint] = useState<string | null>(null);
 
-  const submit = (e: React.FormEvent) => {
+  const submit = (e: React.SyntheticEvent) => {
     e.preventDefault();
     const ok = accepted.some((a) => same(a, value));
     setState(ok ? 'ok' : 'bad');
