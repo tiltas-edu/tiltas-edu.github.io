@@ -1,6 +1,8 @@
 {
   "subject": "math",
   "topic": "area-perimeter",
+  "group": "side-from-area",
+  "level": 1,
   "grade": 4,
   "lt": "Kvadrato plotas 36 cm². Apskaičiuok, koks kvadrato perimetras.",
   "translation": {
@@ -24,5 +26,35 @@
   "keywords": [
     "plotas",
     "perimetras"
+  ],
+  "mistakes": [
+    {
+      "value": "6",
+      "hint": {
+        "ru": "6 см — сторона. Периметр — это сумма всех 4 сторон.",
+        "en": "6 cm is the side. The perimeter is the sum of all 4 sides."
+      }
+    },
+    {
+      "value": "36",
+      "hint": {
+        "ru": "36 — это площадь. Спрашивают периметр (perimetras).",
+        "en": "36 is the area. The task asks for the perimeter (perimetras)."
+      }
+    },
+    {
+      "value": "9",
+      "hint": {
+        "ru": "36 : 4 не даёт сторону. Подбери число: ? · ? = 36.",
+        "en": "36 : 4 does not give the side. Find the number: ? · ? = 36."
+      }
+    },
+    {
+      "value": "12",
+      "hint": {
+        "ru": "6 · 2 — это только две стороны. У квадрата их 4.",
+        "en": "6 · 2 is only two sides. A square has 4."
+      }
+    }
   ]
 }

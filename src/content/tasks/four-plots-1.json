@@ -1,6 +1,8 @@
 {
   "subject": "math",
   "topic": "area-perimeter",
+  "group": "side-from-area",
+  "level": 2,
   "grade": 4,
   "lt": "Keturi vienodi kvadrato formos sklypai kartu užima 196 m². Koks vieno sklypo kraštinės ilgis?",
   "translation": {
@@ -26,5 +28,28 @@
     "sklypai",
     "užima",
     "kraštinės ilgis"
+  ],
+  "mistakes": [
+    {
+      "value": "49",
+      "hint": {
+        "ru": "49 м² — площадь одного участка. Теперь найди сторону: ? · ? = 49.",
+        "en": "49 m² is the area of one plot. Now find the side: ? · ? = 49."
+      }
+    },
+    {
+      "value": "14",
+      "hint": {
+        "ru": "14 м — сторона всех 4 участков вместе. Один участок в 2 раза уже.",
+        "en": "14 m is the side of all 4 plots together. One plot is half as wide."
+      }
+    },
+    {
+      "value": "98",
+      "hint": {
+        "ru": "196 : 2 — это половина. Участков 4: дели на 4.",
+        "en": "196 : 2 is half. There are 4 plots: divide by 4."
+      }
+    }
   ]
 }

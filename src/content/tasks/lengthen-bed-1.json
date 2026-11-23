@@ -1,6 +1,8 @@
 {
   "subject": "math",
   "topic": "area-perimeter",
+  "group": "area-from-perimeter",
+  "level": 3,
   "grade": 4,
   "lt": "Stačiakampės lysvės ilgis 20 m, o perimetras – 56 m. Koks bus lysvės plotas, jeigu ją pailginsime 10 m? Užrašyk sprendimą ir atsakymą.",
   "translation": {
@@ -30,5 +32,21 @@
     "ilgis",
     "perimetras",
     "pailginsime"
+  ],
+  "mistakes": [
+    {
+      "value": "160",
+      "hint": {
+        "ru": "Это площадь до удлинения. Новая длина: 20 + 10.",
+        "en": "That is the area before lengthening. The new length is 20 + 10."
+      }
+    },
+    {
+      "value": "8",
+      "hint": {
+        "ru": "8 м — ширина. Теперь найди новую длину и площадь.",
+        "en": "8 m is the width. Now find the new length and the area."
+      }
+    }
   ]
 }

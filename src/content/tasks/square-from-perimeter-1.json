@@ -1,6 +1,8 @@
 {
   "subject": "math",
   "topic": "area-perimeter",
+  "group": "area-from-perimeter",
+  "level": 1,
   "grade": 4,
   "lt": "Kvadrato formos kilimo perimetras – 20 m. Apskaičiuok kilimo plotą. Užrašyk sprendimą ir atsakymą.",
   "translation": {
@@ -26,5 +28,28 @@
     "kilimo",
     "perimetras",
     "plotą"
+  ],
+  "mistakes": [
+    {
+      "value": "5",
+      "hint": {
+        "ru": "5 м — это сторона. Теперь найди площадь: сторона · сторона.",
+        "en": "5 m is the side. Now find the area: side · side."
+      }
+    },
+    {
+      "value": "10",
+      "hint": {
+        "ru": "У квадрата 4 равные стороны: периметр делят на 4, а не на 2.",
+        "en": "A square has 4 equal sides: divide the perimeter by 4, not by 2."
+      }
+    },
+    {
+      "value": "100",
+      "hint": {
+        "ru": "Похоже, сторону нашли делением на 2. У квадрата 4 стороны: 20 : 4.",
+        "en": "It looks like the side was found by dividing by 2. A square has 4 sides: 20 : 4."
+      }
+    }
   ]
 }

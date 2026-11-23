@@ -28,6 +28,8 @@ const tasks = defineCollection({
   schema: z.object({
     subject: z.string(),
     topic: z.string(), // glossary id this task trains
+    group: z.enum(['area-from-perimeter', 'side-from-area']), // section on the subject page
+    level: z.number().int().min(1).max(3), // 1 = one step, 3 = several steps
     grade: z.number(),
     lt: z.string(), // original task text
     translation: tri,
@@ -35,6 +37,8 @@ const tasks = defineCollection({
     answer: z.string(), // shown answer, e.g. "2 500 m²"
     check: z.array(z.string()).default([]), // accepted numeric answers
     keywords: z.array(z.string()).default([]), // lt terms to highlight
+    // Typical wrong answers and a calm hint for each, e.g. the area typed where the perimeter is asked.
+    mistakes: z.array(z.object({ value: z.string(), hint: tri })).default([]),
   }),
 });
 

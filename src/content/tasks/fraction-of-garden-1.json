@@ -1,6 +1,8 @@
 {
   "subject": "math",
   "topic": "area-perimeter",
+  "group": "area-from-perimeter",
+  "level": 3,
   "grade": 4,
   "lt": "Kvadrato formos sodo perimetras lygus 80 m. Obelys užima 3/4 viso sodo ploto. Apskaičiuok, kokį plotą užima obelys.",
   "translation": {
@@ -31,5 +33,28 @@
     "užima",
     "viso",
     "ploto"
+  ],
+  "mistakes": [
+    {
+      "value": "400",
+      "hint": {
+        "ru": "400 м² — площадь всего сада. Яблони занимают только 3/4.",
+        "en": "400 m² is the area of the whole orchard. The apple trees take up only 3/4."
+      }
+    },
+    {
+      "value": "100",
+      "hint": {
+        "ru": "100 м² — это 1/4 сада. А нужно 3/4: умножь на 3.",
+        "en": "100 m² is 1/4 of the orchard. You need 3/4: multiply by 3."
+      }
+    },
+    {
+      "value": "20",
+      "hint": {
+        "ru": "20 м — сторона сада. Дальше найди площадь всего сада.",
+        "en": "20 m is the side of the orchard. Next find the area of the whole orchard."
+      }
+    }
   ]
 }

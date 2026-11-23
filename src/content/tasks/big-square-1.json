@@ -1,6 +1,8 @@
 {
   "subject": "math",
   "topic": "area-perimeter",
+  "group": "area-from-perimeter",
+  "level": 2,
   "grade": 4,
   "lt": "Didysis kvadratas, kurio perimetras – 240 cm, sudarytas iš 4 vienodų kvadratų. Apskaičiuok vieno mažo kvadrato plotą.",
   "translation": {
@@ -28,5 +30,28 @@
     "sudarytas iš",
     "vienodų",
     "kvadratų"
+  ],
+  "mistakes": [
+    {
+      "value": "3600",
+      "hint": {
+        "ru": "Это площадь большого квадрата. Маленький квадрат — одна из 4 частей.",
+        "en": "That is the area of the big square. A small square is one of its 4 parts."
+      }
+    },
+    {
+      "value": "60",
+      "hint": {
+        "ru": "60 см — сторона большого квадрата. Сторона маленького в 2 раза меньше.",
+        "en": "60 cm is the side of the big square. A small side is half of it."
+      }
+    },
+    {
+      "value": "30",
+      "hint": {
+        "ru": "30 см — сторона маленького квадрата. Теперь найди его площадь.",
+        "en": "30 cm is the side of a small square. Now find its area."
+      }
+    }
   ]
 }

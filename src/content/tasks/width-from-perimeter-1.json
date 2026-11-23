@@ -1,6 +1,8 @@
 {
   "subject": "math",
   "topic": "area-perimeter",
+  "group": "area-from-perimeter",
+  "level": 1,
   "grade": 4,
   "lt": "Stačiakampio perimetras lygus 54 cm, o ilgis – 16 cm. Apskaičiuok stačiakampio plotį.",
   "translation": {
@@ -27,5 +29,28 @@
     "perimetras",
     "ilgis",
     "plotį"
+  ],
+  "mistakes": [
+    {
+      "value": "27",
+      "hint": {
+        "ru": "27 см — это длина и ширина вместе. Вычти из них длину.",
+        "en": "27 cm is the length and the width together. Subtract the length."
+      }
+    },
+    {
+      "value": "38",
+      "hint": {
+        "ru": "Ты вычел длину из всего периметра. Сначала раздели периметр на 2.",
+        "en": "You subtracted the length from the whole perimeter. First divide the perimeter by 2."
+      }
+    },
+    {
+      "value": "176",
+      "hint": {
+        "ru": "Это площадь. А спрашивают ширину (plotį).",
+        "en": "That is the area. The task asks for the width (plotį)."
+      }
+    }
   ]
 }

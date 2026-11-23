@@ -1,6 +1,8 @@
 {
   "subject": "math",
   "topic": "area-perimeter",
+  "group": "area-from-perimeter",
+  "level": 2,
   "grade": 4,
   "lt": "Stačiakampio formos darželio perimetras lygus 60 m, o ilgis – 18 m. Apskaičiuok darželio plotą. Užrašyk sprendimą ir atsakymą.",
   "translation": {
@@ -29,5 +31,28 @@
     "plotą",
     "sprendimą",
     "atsakymą"
+  ],
+  "mistakes": [
+    {
+      "value": "12",
+      "hint": {
+        "ru": "12 м — это ширина. Теперь найди площадь: длина · ширина.",
+        "en": "12 m is the width. Now find the area: length · width."
+      }
+    },
+    {
+      "value": "30",
+      "hint": {
+        "ru": "30 м — это длина и ширина вместе. Вычти длину, чтобы найти ширину.",
+        "en": "30 m is the length and the width together. Subtract the length to get the width."
+      }
+    },
+    {
+      "value": "756",
+      "hint": {
+        "ru": "Ширину нашли из всего периметра. Сначала 60 : 2, потом вычти длину.",
+        "en": "The width was taken from the whole perimeter. First 60 : 2, then subtract the length."
+      }
+    }
   ]
 }
