@@ -42,14 +42,17 @@ const words = glossaries.flatMap((g) => g.data.terms).filter((term) => {
 });
 const unit = d.answer.replace(/^[\d\s.,]+/, '');
 ---
-<Layout lang={lang} title={`${tr.task}: ${d.translation[lang].slice(0, 50)}`}>
+<Layout lang={lang} title={`${tr.task}: ${d.lt.slice(0, 50)}`}>
   <p><a href={`${base}/${lang}/math/`}>← {tr.math}</a></p>
   <h1>{tr.task}</h1>
 
   <p class="task-lt" lang="lt" set:html={ltHtml} />
 
-  <h2>{tr.translation}</h2>
-  <p class="task-tr">{d.translation[lang]}</p>
+  <!-- Closed by default: first try to read the Lithuanian text, then check with the translation. -->
+  <details class="reveal">
+    <summary>{tr.showTranslation}</summary>
+    <p class="task-tr">{d.translation[lang]}</p>
+  </details>
 
   {words.length > 0 && (
     <>
@@ -63,11 +66,11 @@ const unit = d.answer.replace(/^[\d\s.,]+/, '');
   )}
 
   <h2>{tr.yourAnswer}</h2>
-  <TaskCheck client:load accepted={d.check} unit={unit}
+  <TaskCheck client:load taskId={entry.id} accepted={d.check} unit={unit}
     mistakes={d.mistakes.map((m) => ({ value: m.value, hint: m.hint[lang] }))}
     labels={{ yourAnswer: tr.yourAnswer, check: tr.check, correct: tr.correct, wrong: tr.wrong, tryAgain: tr.tryAgain }} />
 
-  <details style="margin-top:1rem">
+  <details class="reveal">
     <summary><strong>{tr.showSolution}</strong></summary>
     <h2>{tr.solution}</h2>
     <ol class="steps">

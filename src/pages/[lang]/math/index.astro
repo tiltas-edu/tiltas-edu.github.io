@@ -37,13 +37,24 @@ const groups = [
       <h3>{g.title}</h3>
       <div class="grid">
         {g.tasks.map((x, i) => (
-          <a class="card" href={`${base}/${lang}/tasks/${x.id}/`}>
+          <a class="card" href={`${base}/${lang}/tasks/${x.id}/`} data-task={x.id}>
             <strong>{tr.task} {i + 1}</strong>
+            <span class="badge badge--done" data-solved hidden><Icon name="check" /> {tr.solved}</span>
             <div class="note">{x.data.grade} {tr.grade} · {tr.level} {x.data.level}</div>
-            <div>{x.data.translation[lang].slice(0, 90)}…</div>
+            <div lang="lt">{x.data.lt.slice(0, 90)}…</div>
           </a>
         ))}
       </div>
     </>
   ))}
+  <script is:inline>
+    // Marks tasks solved in this browser (set by TaskCheck). Works without storage too.
+    document.querySelectorAll('[data-task]').forEach(function (card) {
+      try {
+        if (localStorage.getItem('tiltas:solved:' + card.getAttribute('data-task'))) {
+          card.querySelector('[data-solved]').hidden = false;
+        }
+      } catch (e) {}
+    });
+  </script>
 </Layout>

@@ -2,6 +2,8 @@ import { useState } from 'react';
 import Icon from './Icon';
 
 interface Props {
+  /** Remembered in this browser once solved, so the subject page can mark it. */
+  taskId: string;
   accepted: string[];
   /** Typical wrong answers with a hint in the page language. */
   mistakes?: { value: string; hint: string }[];
@@ -13,7 +15,9 @@ interface Props {
 const norm = (s: string) => (s.match(/-?\d[\d\s ]*(?:[.,]\d+)?/)?.[0] ?? '').replace(/[\s ]/g, '').replace(',', '.');
 const same = (a: string, b: string) => norm(b) !== '' && Number(norm(a)) === Number(norm(b));
 
-export default function TaskCheck({ accepted, mistakes = [], labels, unit }: Props) {
+export const solvedKey = (id: string) => `tiltas:solved:${id}`;
+
+export default function TaskCheck({ taskId, accepted, mistakes = [], labels, unit }: Props) {
   const [value, setValue] = useState('');
   const [state, setState] = useState<'idle' | 'ok' | 'bad'>('idle');
   const [hint, setHint] = useState<string | null>(null);
@@ -22,6 +26,9 @@ export default function TaskCheck({ accepted, mistakes = [], labels, unit }: Pro
     e.preventDefault();
     const ok = accepted.some((a) => same(a, value));
     setState(ok ? 'ok' : 'bad');
+    if (ok) {
+      try { localStorage.setItem(solvedKey(taskId), '1'); } catch { /* private mode: nothing to remember */ }
+    }
     setHint(ok ? null : (mistakes.find((m) => same(m.value, value))?.hint ?? null));
   };
 
