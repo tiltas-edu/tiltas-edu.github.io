@@ -1,0 +1,30 @@
+{
+  "subject": "math",
+  "topic": "area-perimeter",
+  "grade": 4,
+  "lt": "Stačiakampio formos sodas aptvertas tvora. Sodo plotas – 1200 m², o ilgis – 40 m. Kokio ilgio yra tvora? Užrašyk sprendimą ir atsakymą.",
+  "translation": {
+    "ru": "Прямоугольный сад обнесён забором. Площадь сада 1200 м², а длина 40 м. Какой длины забор? Запиши решение и ответ.",
+    "en": "A rectangular orchard is fenced in. Its area is 1200 m² and its length is 40 m. How long is the fence? Write the solution and the answer."
+  },
+  "steps": {
+    "ru": [
+      "Ширина: 1200 : 40 = 30 (м).",
+      "Забор идёт вокруг сада, это периметр: (40 + 30) · 2 = 140 (м)."
+    ],
+    "en": [
+      "Width: 1200 : 40 = 30 (m).",
+      "The fence goes all around the orchard, so it is the perimeter: (40 + 30) · 2 = 140 (m)."
+    ]
+  },
+  "answer": "140 m",
+  "check": [
+    "140"
+  ],
+  "keywords": [
+    "aptvertas tvora",
+    "plotas",
+    "ilgis",
+    "Kokio ilgio"
+  ]
+}

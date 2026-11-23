@@ -1,0 +1,30 @@
+{
+  "subject": "math",
+  "topic": "area-perimeter",
+  "grade": 4,
+  "lt": "Keturi vienodi kvadrato formos sklypai kartu užima 196 m². Koks vieno sklypo kraštinės ilgis?",
+  "translation": {
+    "ru": "Четыре одинаковых квадратных участка вместе занимают 196 м². Какова длина стороны одного участка?",
+    "en": "Four identical square plots together take up 196 m². How long is the side of one plot?"
+  },
+  "steps": {
+    "ru": [
+      "Площадь одного участка: 196 : 4 = 49 (м²).",
+      "7 · 7 = 49, значит сторона 7 м."
+    ],
+    "en": [
+      "Area of one plot: 196 : 4 = 49 (m²).",
+      "7 · 7 = 49, so the side is 7 m."
+    ]
+  },
+  "answer": "7 m",
+  "check": [
+    "7"
+  ],
+  "keywords": [
+    "vienodi",
+    "sklypai",
+    "užima",
+    "kraštinės ilgis"
+  ]
+}

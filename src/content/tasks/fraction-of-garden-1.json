@@ -1,0 +1,35 @@
+{
+  "subject": "math",
+  "topic": "area-perimeter",
+  "grade": 4,
+  "lt": "Kvadrato formos sodo perimetras lygus 80 m. Obelys užima 3/4 viso sodo ploto. Apskaičiuok, kokį plotą užima obelys.",
+  "translation": {
+    "ru": "Периметр квадратного сада равен 80 м. Яблони занимают 3/4 всей площади сада. Вычисли, какую площадь занимают яблони.",
+    "en": "The perimeter of a square orchard is 80 m. Apple trees take up 3/4 of the whole orchard area. Calculate the area the apple trees take up."
+  },
+  "steps": {
+    "ru": [
+      "Сторона квадрата: 80 : 4 = 20 (м).",
+      "Площадь сада: 20 · 20 = 400 (м²).",
+      "Одна четверть: 400 : 4 = 100 (м²).",
+      "Три четверти: 100 · 3 = 300 (м²)."
+    ],
+    "en": [
+      "Side of the square: 80 : 4 = 20 (m).",
+      "Area of the orchard: 20 · 20 = 400 (m²).",
+      "One quarter: 400 : 4 = 100 (m²).",
+      "Three quarters: 100 · 3 = 300 (m²)."
+    ]
+  },
+  "answer": "300 m²",
+  "check": [
+    "300"
+  ],
+  "keywords": [
+    "kvadrato",
+    "perimetras",
+    "užima",
+    "viso",
+    "ploto"
+  ]
+}

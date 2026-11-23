@@ -1,0 +1,32 @@
+{
+  "subject": "math",
+  "topic": "area-perimeter",
+  "grade": 4,
+  "lt": "Didysis kvadratas, kurio perimetras – 240 cm, sudarytas iš 4 vienodų kvadratų. Apskaičiuok vieno mažo kvadrato plotą.",
+  "translation": {
+    "ru": "Большой квадрат с периметром 240 см составлен из 4 одинаковых квадратов. Вычисли площадь одного маленького квадрата.",
+    "en": "A big square with a perimeter of 240 cm is made up of 4 identical squares. Calculate the area of one small square."
+  },
+  "steps": {
+    "ru": [
+      "Сторона большого квадрата: 240 : 4 = 60 (см).",
+      "Сторона маленького квадрата: 60 : 2 = 30 (см).",
+      "Площадь маленького квадрата: 30 · 30 = 900 (см²)."
+    ],
+    "en": [
+      "Side of the big square: 240 : 4 = 60 (cm).",
+      "Side of a small square: 60 : 2 = 30 (cm).",
+      "Area of a small square: 30 · 30 = 900 (cm²)."
+    ]
+  },
+  "answer": "900 cm²",
+  "check": [
+    "900"
+  ],
+  "keywords": [
+    "Didysis",
+    "sudarytas iš",
+    "vienodų",
+    "kvadratų"
+  ]
+}

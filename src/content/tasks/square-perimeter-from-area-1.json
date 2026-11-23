@@ -1,0 +1,28 @@
+{
+  "subject": "math",
+  "topic": "area-perimeter",
+  "grade": 4,
+  "lt": "Kvadrato plotas 36 cm². Apskaičiuok, koks kvadrato perimetras.",
+  "translation": {
+    "ru": "Площадь квадрата 36 см². Вычисли, каков периметр квадрата.",
+    "en": "The area of a square is 36 cm². Calculate the perimeter of the square."
+  },
+  "steps": {
+    "ru": [
+      "Какое число, умноженное само на себя, даёт 36? 6 · 6 = 36, значит сторона 6 см.",
+      "Периметр: 6 · 4 = 24 (см)."
+    ],
+    "en": [
+      "Which number times itself gives 36? 6 · 6 = 36, so the side is 6 cm.",
+      "Perimeter: 6 · 4 = 24 (cm)."
+    ]
+  },
+  "answer": "24 cm",
+  "check": [
+    "24"
+  ],
+  "keywords": [
+    "plotas",
+    "perimetras"
+  ]
+}

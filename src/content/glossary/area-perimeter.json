@@ -152,6 +152,76 @@
       "lt": "praleisti skaičiai",
       "ru": "пропущенные числа",
       "en": "missing numbers"
+    },
+    {
+      "lt": "piešinys",
+      "ru": "рисунок",
+      "en": "picture"
+    },
+    {
+      "lt": "kortelė (mn. kortelės)",
+      "ru": "карточка",
+      "en": "card"
+    },
+    {
+      "lt": "užima",
+      "ru": "занимает",
+      "en": "takes up"
+    },
+    {
+      "lt": "šakniavaisinės daržovės",
+      "ru": "корнеплоды",
+      "en": "root vegetables"
+    },
+    {
+      "lt": "kvadratinis / kvadrato formos",
+      "ru": "квадратный",
+      "en": "square-shaped"
+    },
+    {
+      "lt": "sodas",
+      "ru": "сад",
+      "en": "orchard, garden"
+    },
+    {
+      "lt": "obelis (mn. obelys)",
+      "ru": "яблоня",
+      "en": "apple tree"
+    },
+    {
+      "lt": "nežinoma kraštinė",
+      "ru": "неизвестная сторона",
+      "en": "unknown side"
+    },
+    {
+      "lt": "trikampis",
+      "ru": "треугольник",
+      "en": "triangle"
+    },
+    {
+      "lt": "žemės sklypas",
+      "ru": "земельный участок",
+      "en": "plot of land"
+    },
+    {
+      "lt": "tvora / aptvertas tvora",
+      "ru": "забор / обнесён забором",
+      "en": "fence / fenced in"
+    },
+    {
+      "lt": "kiemas",
+      "ru": "двор",
+      "en": "yard"
+    },
+    {
+      "lt": "dydis (mn. dydžiai)",
+      "ru": "размер",
+      "en": "size"
+    },
+    {
+      "lt": "šuolis į tolį",
+      "ru": "прыжок в длину",
+      "en": "long jump"
     }
   ]
 }

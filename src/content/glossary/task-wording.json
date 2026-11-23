@@ -16,6 +16,11 @@
       "en": "write down"
     },
     {
+      "lt": "parašyk",
+      "ru": "напиши",
+      "en": "write"
+    },
+    {
       "lt": "įrašyk",
       "ru": "впиши",
       "en": "write in"
@@ -104,6 +109,26 @@
       "lt": "koks / kokia",
       "ru": "какой / какая",
       "en": "which / what"
+    },
+    {
+      "lt": "užpildyk lentelę",
+      "ru": "заполни таблицу",
+      "en": "fill in the table"
+    },
+    {
+      "lt": "trūkstami duomenys",
+      "ru": "недостающие данные",
+      "en": "missing data"
+    },
+    {
+      "lt": "tinkamas",
+      "ru": "подходящий",
+      "en": "suitable, matching"
+    },
+    {
+      "lt": "kokio ilgio",
+      "ru": "какой длины",
+      "en": "how long"
     }
   ]
 }

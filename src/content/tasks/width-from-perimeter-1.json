@@ -1,0 +1,31 @@
+{
+  "subject": "math",
+  "topic": "area-perimeter",
+  "grade": 4,
+  "lt": "Stačiakampio perimetras lygus 54 cm, o ilgis – 16 cm. Apskaičiuok stačiakampio plotį.",
+  "translation": {
+    "ru": "Периметр прямоугольника равен 54 см, а длина — 16 см. Вычисли ширину прямоугольника.",
+    "en": "The perimeter of a rectangle is 54 cm and its length is 16 cm. Calculate the width of the rectangle."
+  },
+  "steps": {
+    "ru": [
+      "Полупериметр: 54 : 2 = 27 (см) — это длина + ширина.",
+      "Ширина: 27 − 16 = 11 (см).",
+      "Проверка: (16 + 11) · 2 = 54 (см)."
+    ],
+    "en": [
+      "Half-perimeter: 54 : 2 = 27 (cm), this is length + width.",
+      "Width: 27 − 16 = 11 (cm).",
+      "Check: (16 + 11) · 2 = 54 (cm)."
+    ]
+  },
+  "answer": "11 cm",
+  "check": [
+    "11"
+  ],
+  "keywords": [
+    "perimetras",
+    "ilgis",
+    "plotį"
+  ]
+}
