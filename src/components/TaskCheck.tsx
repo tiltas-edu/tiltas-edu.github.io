@@ -7,7 +7,8 @@ interface Props {
   unit?: string;
 }
 
-const norm = (s: string) => s.replace(/\s| /g, '').replace(',', '.').replace(/[^0-9.\-]/g, '');
+// First number in the input, so a unit typed after it ("216 m2", "5 000 cm²") is ignored.
+const norm = (s: string) => (s.match(/-?\d[\d\s\u00a0]*(?:[.,]\d+)?/)?.[0] ?? '').replace(/[\s\u00a0]/g, '').replace(',', '.');
 
 export default function TaskCheck({ accepted, labels, unit }: Props) {
   const [value, setValue] = useState('');
