@@ -18,7 +18,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       # <owner>.github.io repos are served from the root, any other repo from /<repo>
       - name: Compute site URL
         run: |
@@ -30,9 +30,9 @@ jobs:
           else
             echo "BASE=/${REPO}" >> "$GITHUB_ENV"
           fi
-      - uses: withastro/action@v3
+      - uses: withastro/action@v6
         with:
-          node-version: 22
+          node-version: 24
 
   deploy:
     needs: build
@@ -42,4 +42,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
