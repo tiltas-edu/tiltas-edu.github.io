@@ -1,0 +1,28 @@
+# Monthly updates for GitHub Actions and npm packages, one grouped PR each.
+# A release must be 14 days old before it is proposed, so a broken or pulled release is skipped.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    cooldown:
+      default-days: 14
+    groups:
+      actions:
+        patterns: ['*']
+
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+    cooldown:
+      default-days: 14
+    groups:
+      npm:
+        patterns: ['*']
+        update-types: [minor, patch]
+    ignore:
+      # @astrojs/check supports TypeScript 5 and 6 only. Lift this when it allows 7.
+      - dependency-name: typescript
+        update-types: ['version-update:semver-major']
