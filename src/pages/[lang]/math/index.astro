@@ -10,7 +10,13 @@ export function getStaticPaths() {
 const lang = Astro.params.lang as Lang;
 const tr = t(lang);
 const glossary = (await getCollection('glossary')).filter((g) => g.data.subject === 'math');
-const tasks = (await getCollection('tasks')).filter((x) => x.data.subject === 'math');
+const tasks = (await getCollection('tasks'))
+  .filter((x) => x.data.subject === 'math')
+  .sort((a, b) => a.data.level - b.data.level || a.id.localeCompare(b.id));
+const groups = [
+  { id: 'area-from-perimeter', title: tr.group_area_from_perimeter },
+  { id: 'side-from-area', title: tr.group_side_from_area },
+].map((g) => ({ ...g, tasks: tasks.filter((x) => x.data.group === g.id) }));
 ---
 <Layout lang={lang} title={tr.math}>
   <h1><Icon name="math" /> {tr.math}</h1>
@@ -26,13 +32,18 @@ const tasks = (await getCollection('tasks')).filter((x) => x.data.subject === 'm
   </div>
 
   <h2>{tr.tasks}</h2>
-  <div class="grid">
-    {tasks.map((x, i) => (
-      <a class="card" href={`${base}/${lang}/tasks/${x.id}/`}>
-        <strong>{tr.task} {i + 1}</strong>
-        <div class="note">{x.data.grade} {tr.grade}</div>
-        <div>{x.data.translation[lang].slice(0, 90)}…</div>
-      </a>
-    ))}
-  </div>
+  {groups.map((g) => (
+    <>
+      <h3>{g.title}</h3>
+      <div class="grid">
+        {g.tasks.map((x, i) => (
+          <a class="card" href={`${base}/${lang}/tasks/${x.id}/`}>
+            <strong>{tr.task} {i + 1}</strong>
+            <div class="note">{x.data.grade} {tr.grade} · {tr.level} {x.data.level}</div>
+            <div>{x.data.translation[lang].slice(0, 90)}…</div>
+          </a>
+        ))}
+      </div>
+    </>
+  ))}
 </Layout>
