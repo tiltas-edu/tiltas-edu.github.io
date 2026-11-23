@@ -9,7 +9,7 @@ Open-source site (Astro 7 + React islands, GitHub Pages) that helps RU/EN-speaki
 
 ## Content rules
 - Tasks are ORIGINAL, written for Tiltas in the same wording patterns as Eduka. Never paste Eduka text verbatim (copyright).
-- Task JSON: lt text, ru/en translation, step-by-step solution, answer, check values, keywords. Glossary terms: lt/ru/en + optional note.
+- Task JSON: lt text, ru/en translation, step-by-step solution, answer, check values, keywords, group (section on the subject page), level 1–3 and `mistakes` (typical wrong numbers, each with a calm ru/en hint). Glossary terms: lt/ru/en + optional note.
 - Every user-facing string exists in ru and en (`src/i18n/ui.ts`, content `{ru,en}` fields).
 - Add a `checked: YYYY-MM-DD` to a resource only after a human opened the link.
 - Math example logic: rectangle b = P:2 − a, S = a·b; square side = P:4; 4 notebook cells = 1 cm².
