@@ -1,0 +1,56 @@
+{
+  "subject": "math",
+  "topic": "word-problems",
+  "group": "word-problems",
+  "grade": 4,
+  "level": 3,
+  "lt": "Vienai gėlei pagaminti reikia 12 klevo lapų. Kiekvieną puokštę sudaro 4 gėlės ir dar 8 lapai. Kiek klevo lapų reikės 25 puokštėms? Užrašyk sprendimą reiškiniu ir atsakymą.",
+  "translation": {
+    "ru": "На один цветок нужно 12 кленовых листьев. Каждый букет — 4 цветка и ещё 8 листьев. Сколько кленовых листьев нужно на 25 букетов? Запиши решение выражением и ответ.",
+    "en": "One flower needs 12 maple leaves. Each bouquet has 4 flowers and 8 more leaves. How many maple leaves are needed for 25 bouquets? Write the solution as an expression and the answer."
+  },
+  "steps": {
+    "ru": [
+      "Один букет: 4 · 12 + 8 = 56 (листьев).",
+      "25 букетов: (4 · 12 + 8) · 25 = 56 · 25 = 1 400.",
+      "Подсказка: · 25 — это · 100 : 4. 5 600 : 4 = 1 400."
+    ],
+    "en": [
+      "One bouquet: 4 · 12 + 8 = 56 (leaves).",
+      "25 bouquets: (4 · 12 + 8) · 25 = 56 · 25 = 1 400.",
+      "Tip: · 25 is the same as · 100 : 4. 5 600 : 4 = 1 400."
+    ]
+  },
+  "answer": "1 400 lapų",
+  "check": [
+    "1400"
+  ],
+  "keywords": [
+    "puokštę",
+    "klevo lapų",
+    "reiškiniu"
+  ],
+  "mistakes": [
+    {
+      "value": "56",
+      "hint": {
+        "ru": "56 листьев — это один букет. Букетов 25.",
+        "en": "56 leaves is one bouquet. There are 25 bouquets."
+      }
+    },
+    {
+      "value": "1500",
+      "hint": {
+        "ru": "Проверь 56 · 25. Удобно так: 56 · 100 = 5 600, и 5 600 : 4.",
+        "en": "Check 56 · 25. An easy way: 56 · 100 = 5 600, then 5 600 : 4."
+      }
+    },
+    {
+      "value": "1208",
+      "hint": {
+        "ru": "Ты прибавил 8 листьев только один раз. Они в каждом букете: (4 · 12 + 8) · 25.",
+        "en": "You added the 8 leaves only once. They are in every bouquet: (4 · 12 + 8) · 25."
+      }
+    }
+  ]
+}

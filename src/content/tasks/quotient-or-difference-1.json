@@ -1,0 +1,47 @@
+{
+  "subject": "math",
+  "topic": "word-problems",
+  "group": "word-problems",
+  "grade": 4,
+  "level": 2,
+  "lt": "Tomas sako: „Iš 6 000 atėmiau 2 412 ir 4 dalmenį.“ Užrašyk Tomo žodžius skaitiniu reiškiniu ir apskaičiuok jo reikšmę.",
+  "translation": {
+    "ru": "Томас говорит: «Из 6 000 я вычел частное 2 412 и 4». Запиши слова Томаса числовым выражением и вычисли его значение.",
+    "en": "Tomas says: \"From 6 000 I subtracted the quotient of 2 412 and 4.\" Write his words as a numerical expression and find its value."
+  },
+  "steps": {
+    "ru": [
+      "«Dalmuo» — частное: 2 412 : 4 = 603.",
+      "Вычитаем его из 6 000: 6 000 − 2 412 : 4 = 6 000 − 603 = 5 397."
+    ],
+    "en": [
+      "\"Dalmuo\" is the quotient: 2 412 : 4 = 603.",
+      "Subtract it from 6 000: 6 000 − 2 412 : 4 = 6 000 − 603 = 5 397."
+    ]
+  },
+  "answer": "5 397",
+  "check": [
+    "5397"
+  ],
+  "keywords": [
+    "atėmiau",
+    "dalmenį",
+    "skaitiniu reiškiniu"
+  ],
+  "mistakes": [
+    {
+      "value": "897",
+      "hint": {
+        "ru": "Это (6 000 − 2 412) : 4 — разность разделили на 4. А Томас вычел частное 2 412 и 4.",
+        "en": "That is (6 000 − 2 412) : 4, the difference divided by 4. Tomas subtracted the quotient of 2 412 and 4."
+      }
+    },
+    {
+      "value": "603",
+      "hint": {
+        "ru": "603 — это частное. Осталось вычесть его из 6 000.",
+        "en": "603 is the quotient. Now subtract it from 6 000."
+      }
+    }
+  ]
+}

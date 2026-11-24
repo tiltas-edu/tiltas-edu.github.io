@@ -28,7 +28,7 @@ const tasks = defineCollection({
   schema: z.object({
     subject: z.string(),
     topic: z.string(), // glossary id this task trains
-    group: z.enum(['area-from-perimeter', 'side-from-area']), // section on the subject page
+    group: z.enum(['area-from-perimeter', 'side-from-area', 'word-problems']), // section on the subject page
     level: z.number().int().min(1).max(3), // 1 = one step, 3 = several steps
     grade: z.number(),
     lt: z.string(), // original task text

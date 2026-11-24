@@ -16,6 +16,7 @@ const tasks = (await getCollection('tasks'))
 const groups = [
   { id: 'area-from-perimeter', title: tr.group_area_from_perimeter },
   { id: 'side-from-area', title: tr.group_side_from_area },
+  { id: 'word-problems', title: tr.group_word_problems },
 ].map((g) => ({ ...g, tasks: tasks.filter((x) => x.data.group === g.id) }));
 ---
 <Layout lang={lang} title={tr.math}>

@@ -1,0 +1,107 @@
+{
+  "subject": "math",
+  "title": {
+    "ru": "Что спрашивает задача",
+    "en": "What the task asks"
+  },
+  "terms": [
+    {
+      "lt": "sau",
+      "ru": "себе",
+      "en": "for oneself"
+    },
+    {
+      "lt": "iš viso",
+      "ru": "всего",
+      "en": "in total"
+    },
+    {
+      "lt": "kiek atpigo",
+      "ru": "на сколько подешевел",
+      "en": "how much cheaper it became"
+    },
+    {
+      "lt": "sumažinta trečdaliu",
+      "ru": "уменьшена на треть",
+      "en": "reduced by a third"
+    },
+    {
+      "lt": "trečdalis / ketvirtadalis / penktadalis",
+      "ru": "треть / четверть / пятая часть",
+      "en": "a third / a quarter / a fifth"
+    },
+    {
+      "lt": "kartus daugiau",
+      "ru": "в … раз больше",
+      "en": "times more"
+    },
+    {
+      "lt": "dalmuo",
+      "ru": "частное (результат деления)",
+      "en": "quotient",
+      "note": {
+        "ru": "«Iš 7 000 atėmiau 1 521 ir 3 dalmenį» = 7 000 − 1 521 : 3. «9 000 ir 7 482 skirtumą padalijau iš 3» = (9 000 − 7 482) : 3.",
+        "en": "\"From 7 000 I subtracted the quotient of 1 521 and 3\" = 7 000 − 1 521 : 3. \"I divided the difference of 9 000 and 7 482 by 3\" = (9 000 − 7 482) : 3."
+      }
+    },
+    {
+      "lt": "skirtumas",
+      "ru": "разность (результат вычитания)",
+      "en": "difference",
+      "note": {
+        "ru": "«Iš 7 000 atėmiau 1 521 ir 3 dalmenį» = 7 000 − 1 521 : 3. «9 000 ir 7 482 skirtumą padalijau iš 3» = (9 000 − 7 482) : 3.",
+        "en": "\"From 7 000 I subtracted the quotient of 1 521 and 3\" = 7 000 − 1 521 : 3. \"I divided the difference of 9 000 and 7 482 by 3\" = (9 000 − 7 482) : 3."
+      }
+    },
+    {
+      "lt": "suma",
+      "ru": "сумма (результат сложения)",
+      "en": "sum"
+    },
+    {
+      "lt": "sandauga",
+      "ru": "произведение (результат умножения)",
+      "en": "product"
+    },
+    {
+      "lt": "atėmiau",
+      "ru": "я вычел",
+      "en": "I subtracted"
+    },
+    {
+      "lt": "padalijau",
+      "ru": "я разделил",
+      "en": "I divided"
+    },
+    {
+      "lt": "briauna",
+      "ru": "ребро (куба)",
+      "en": "edge"
+    },
+    {
+      "lt": "viela",
+      "ru": "проволока",
+      "en": "wire"
+    },
+    {
+      "lt": "puokštė",
+      "ru": "букет",
+      "en": "bouquet"
+    },
+    {
+      "lt": "lapas",
+      "ru": "лист",
+      "en": "leaf"
+    },
+    {
+      "lt": "kokios spalvos",
+      "ru": "какого цвета",
+      "en": "what colour"
+    },
+    {
+      "lt": "reiškiniu",
+      "ru": "выражением",
+      "en": "as an expression"
+    }
+  ]
+}

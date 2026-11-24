@@ -1,0 +1,48 @@
+{
+  "subject": "math",
+  "topic": "word-problems",
+  "group": "word-problems",
+  "grade": 4,
+  "level": 1,
+  "lt": "Lina iš kelionės parvežė po saldainį sau, broliui ir 18 klasės draugų. Vienas saldainis kainuoja 35 ct. Kiek ji sumokėjo už saldainius? Užrašyk sprendimą ir atsakymą.",
+  "translation": {
+    "ru": "Лина привезла из поездки по конфете себе, брату и 18 одноклассникам. Одна конфета стоит 35 ц. Сколько она заплатила за конфеты? Запиши решение и ответ.",
+    "en": "Lina brought a sweet from her trip for herself, her brother and 18 classmates. One sweet costs 35 ct. How much did she pay for the sweets? Write the solution and the answer."
+  },
+  "steps": {
+    "ru": [
+      "Кому конфеты: себе (1), брату (1) и 18 друзьям: 1 + 1 + 18 = 20.",
+      "20 · 35 = 700 (ц.) = 7 €."
+    ],
+    "en": [
+      "Who gets a sweet: herself (1), her brother (1) and 18 friends: 1 + 1 + 18 = 20.",
+      "20 · 35 = 700 (ct) = 7 Eur."
+    ]
+  },
+  "answer": "7 Eur (700 ct)",
+  "check": [
+    "7",
+    "700"
+  ],
+  "keywords": [
+    "sau",
+    "iš kelionės",
+    "po saldainį"
+  ],
+  "mistakes": [
+    {
+      "value": "630",
+      "hint": {
+        "ru": "630 ц. — только 18 друзей. А ещё себе и брату.",
+        "en": "630 ct is only the 18 friends. She also bought one for herself and one for her brother."
+      }
+    },
+    {
+      "value": "665",
+      "hint": {
+        "ru": "665 ц. — 19 конфет. Посчитай ещё раз: себе, брату и 18 друзьям.",
+        "en": "665 ct is 19 sweets. Count again: herself, her brother and 18 friends."
+      }
+    }
+  ]
+}

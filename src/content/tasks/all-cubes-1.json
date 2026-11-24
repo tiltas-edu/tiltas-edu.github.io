@@ -1,0 +1,47 @@
+{
+  "subject": "math",
+  "topic": "word-problems",
+  "group": "word-problems",
+  "grade": 4,
+  "level": 2,
+  "lt": "Kubo briaunos ilgis 35 cm. Vaikai iš vielos išlankstė 8 tokius kubus. Kiek centimetrų vielos jiems prireikė? Užrašyk sprendimą ir atsakymą.",
+  "translation": {
+    "ru": "Ребро куба 35 см. Дети согнули из проволоки 8 таких кубов. Сколько сантиметров проволоки им понадобилось?",
+    "en": "A cube has an edge of 35 cm. The children bent 8 such cubes out of wire. How many centimetres of wire did they need?"
+  },
+  "steps": {
+    "ru": [
+      "У куба 12 рёбер: 12 · 35 = 420 (см) — один куб.",
+      "Кубов 8: 420 · 8 = 3 360 (см)."
+    ],
+    "en": [
+      "A cube has 12 edges: 12 · 35 = 420 (cm) for one cube.",
+      "There are 8 cubes: 420 · 8 = 3 360 (cm)."
+    ]
+  },
+  "answer": "3 360 cm",
+  "check": [
+    "3360"
+  ],
+  "keywords": [
+    "briaunos",
+    "vielos",
+    "8 tokius kubus"
+  ],
+  "mistakes": [
+    {
+      "value": "420",
+      "hint": {
+        "ru": "420 см — это один куб. А кубов 8.",
+        "en": "420 cm is one cube. There are 8 cubes."
+      }
+    },
+    {
+      "value": "280",
+      "hint": {
+        "ru": "280 = 8 · 35 — это 8 рёбер. У куба 12 рёбер, и кубов 8.",
+        "en": "280 = 8 · 35 is 8 edges. A cube has 12 edges, and there are 8 cubes."
+      }
+    }
+  ]
+}

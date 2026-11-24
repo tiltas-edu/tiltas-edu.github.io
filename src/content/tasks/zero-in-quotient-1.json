@@ -1,0 +1,48 @@
+{
+  "subject": "math",
+  "topic": "word-problems",
+  "group": "word-problems",
+  "grade": 4,
+  "level": 1,
+  "lt": "Ūkininkas 4 236 kg bulvių po lygiai supylė į 6 dėžes. Kiek kilogramų bulvių yra vienoje dėžėje?",
+  "translation": {
+    "ru": "Фермер разложил 4 236 кг картофеля поровну в 6 ящиков. Сколько килограммов в одном ящике?",
+    "en": "A farmer shared 4 236 kg of potatoes equally between 6 boxes. How many kilograms are in one box?"
+  },
+  "steps": {
+    "ru": [
+      "42 : 6 = 7.",
+      "Сносим 3: 3 меньше 6, в частное пишем 0.",
+      "Сносим 6: 36 : 6 = 6. Ответ 706 (кг)."
+    ],
+    "en": [
+      "42 : 6 = 7.",
+      "Bring down 3: 3 is less than 6, so write 0 in the quotient.",
+      "Bring down 6: 36 : 6 = 6. The answer is 706 (kg)."
+    ]
+  },
+  "answer": "706 kg",
+  "check": [
+    "706"
+  ],
+  "keywords": [
+    "po lygiai",
+    "Kiek kilogramų"
+  ],
+  "mistakes": [
+    {
+      "value": "76",
+      "hint": {
+        "ru": "Потерялся ноль. Когда 3 меньше 6, в частное пишем 0.",
+        "en": "A zero got lost. When 3 is less than 6, write 0 in the quotient."
+      }
+    },
+    {
+      "value": "760",
+      "hint": {
+        "ru": "Ноль стоит не там. Проверь: 760 · 6 = 4 560, а не 4 236.",
+        "en": "The zero is in the wrong place. Check: 760 · 6 = 4 560, not 4 236."
+      }
+    }
+  ]
+}

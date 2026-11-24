@@ -1,0 +1,40 @@
+{
+  "subject": "math",
+  "topic": "word-problems",
+  "group": "word-problems",
+  "grade": 4,
+  "level": 1,
+  "lt": "Per išpardavimą dviračio kaina, kuri buvo 1 248 Eur, sumažinta trečdaliu. Kiek eurų atpigo dviratis?",
+  "translation": {
+    "ru": "На распродаже цену велосипеда (было 1 248 €) снизили на треть. На сколько евро подешевел велосипед?",
+    "en": "In a sale, the price of a bike (it was 1 248 Eur) was reduced by a third. By how many euros did the bike get cheaper?"
+  },
+  "steps": {
+    "ru": [
+      "«Kiek atpigo» — на сколько подешевел, то есть сама скидка.",
+      "Треть цены: 1 248 : 3 = 416 (€)."
+    ],
+    "en": [
+      "\"Kiek atpigo\" asks how much cheaper it got, that is the discount itself.",
+      "A third of the price: 1 248 : 3 = 416 (Eur)."
+    ]
+  },
+  "answer": "416 Eur",
+  "check": [
+    "416"
+  ],
+  "keywords": [
+    "išpardavimą",
+    "sumažinta trečdaliu",
+    "Kiek eurų atpigo"
+  ],
+  "mistakes": [
+    {
+      "value": "832",
+      "hint": {
+        "ru": "832 € — это новая цена. Спрашивают, на сколько подешевел: только скидку.",
+        "en": "832 Eur is the new price. The task asks how much cheaper it got: only the discount."
+      }
+    }
+  ]
+}
