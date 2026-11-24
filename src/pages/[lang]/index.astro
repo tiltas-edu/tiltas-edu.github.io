@@ -9,10 +9,9 @@ export function getStaticPaths() {
 }
 const lang = Astro.params.lang as Lang;
 const tr = t(lang);
+const ready = ['math', 'lithuanian', 'society'] as const;
 const soon = [
-  { id: 'lithuanian', name: tr.lithuanian },
   { id: 'nature', name: tr.nature },
-  { id: 'society', name: tr.society },
   { id: 'physics', name: tr.physics },
 ] as const;
 ---
@@ -30,10 +29,12 @@ const soon = [
 
   <h2>{tr.subjects}</h2>
   <div class="grid">
-    <a class="card tile tile--math" href={`${base}/${lang}/math/`}>
-      <span class="tile__icon"><Icon name="math" /></span>
-      <h3>{tr.math}</h3>
-    </a>
+    {ready.map((id) => (
+      <a class={`card tile tile--${id}`} href={`${base}/${lang}/${id}/`}>
+        <span class="tile__icon"><Icon name={id} /></span>
+        <h3>{tr[id]}</h3>
+      </a>
+    ))}
     {soon.map(({ id, name }) => (
       <div class={`card tile tile--${id} card--soon`}>
         <span class="tile__icon"><Icon name={id} /></span>

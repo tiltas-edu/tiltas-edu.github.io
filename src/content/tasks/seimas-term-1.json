@@ -1,0 +1,46 @@
+{
+  "subject": "society",
+  "topic": "citizen-state",
+  "group": "rights-duties",
+  "grade": 4,
+  "level": 1,
+  "lt": "Kiek metų renkamas Lietuvos Respublikos Seimas?",
+  "translation": {
+    "ru": "На сколько лет избирается Сейм Литовской Республики?",
+    "en": "For how many years is the Seimas of the Republic of Lithuania elected?"
+  },
+  "check": [
+    "4"
+  ],
+  "answer": "4 metams",
+  "steps": {
+    "ru": [
+      "Сейм избирают на 4 года.",
+      "Потом снова проходят выборы."
+    ],
+    "en": [
+      "The Seimas is elected for 4 years.",
+      "Then there are elections again."
+    ]
+  },
+  "keywords": [
+    "renkamas",
+    "Seimas"
+  ],
+  "mistakes": [
+    {
+      "value": "5",
+      "hint": {
+        "ru": "5 лет — так избирают, например, Президента. Сейм — на 4 года.",
+        "en": "5 years is, for example, the President’s term. The Seimas is elected for 4."
+      }
+    },
+    {
+      "value": "141",
+      "hint": {
+        "ru": "141 — это число членов Сейма. Спрашивают, на сколько лет.",
+        "en": "141 is the number of members. The question is for how many years."
+      }
+    }
+  ]
+}

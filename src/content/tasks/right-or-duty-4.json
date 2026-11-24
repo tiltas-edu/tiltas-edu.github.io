@@ -1,0 +1,43 @@
+{
+  "subject": "society",
+  "topic": "citizen-state",
+  "group": "rights-duties",
+  "grade": 4,
+  "level": 2,
+  "lt": "Gauti valstybės pagalbą užsienyje, jei pametei pasą, – tai piliečio teisė ar pareiga?",
+  "translation": {
+    "ru": "Получить помощь государства за границей, если потерял паспорт, — это право или обязанность гражданина?",
+    "en": "Getting help from the state abroad if you lose your passport: is it a right or a duty?"
+  },
+  "choices": [
+    "Teisė",
+    "Pareiga"
+  ],
+  "check": [
+    "Teisė"
+  ],
+  "answer": "Teisė",
+  "steps": {
+    "ru": [
+      "Государство защищает своих граждан и за границей.",
+      "Гражданин может попросить помощь — это право (teisė)."
+    ],
+    "en": [
+      "The state protects its citizens abroad too.",
+      "A citizen may ask for help: it is a right (teisė)."
+    ]
+  },
+  "keywords": [
+    "užsienyje",
+    "pagalbą"
+  ],
+  "mistakes": [
+    {
+      "value": "Pareiga",
+      "hint": {
+        "ru": "Помощь получают, когда нужно, — это «могу», то есть право.",
+        "en": "You get help when you need it: \"I may\", so it is a right."
+      }
+    }
+  ]
+}

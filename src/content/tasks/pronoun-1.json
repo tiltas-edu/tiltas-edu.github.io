@@ -1,0 +1,51 @@
+{
+  "subject": "lithuanian",
+  "topic": "verb-tenses",
+  "group": "verb-tenses",
+  "grade": 4,
+  "level": 1,
+  "lt": "Kuriuo įvardžiu galima pakeisti žodį „sodas“?",
+  "translation": {
+    "ru": "Каким местоимением можно заменить слово «sodas» (сад)?",
+    "en": "Which pronoun can replace the word \"sodas\" (garden)?"
+  },
+  "choices": [
+    "jis",
+    "ji",
+    "jie",
+    "jos"
+  ],
+  "check": [
+    "jis"
+  ],
+  "answer": "jis",
+  "steps": {
+    "ru": [
+      "Sodas оканчивается на -as.",
+      "Слова на -as, -is, -ys → jis (он)."
+    ],
+    "en": [
+      "Sodas ends in -as.",
+      "Words in -as, -is, -ys → jis (he)."
+    ]
+  },
+  "keywords": [
+    "įvardžiu"
+  ],
+  "mistakes": [
+    {
+      "value": "ji",
+      "hint": {
+        "ru": "«Ji» — для слов на -a, -ė (mergaitė). Sodas оканчивается на -as.",
+        "en": "\"Ji\" is for words in -a, -ė (mergaitė). Sodas ends in -as."
+      }
+    },
+    {
+      "value": "jie",
+      "hint": {
+        "ru": "«Jie» — много (sodai). Здесь один sodas.",
+        "en": "\"Jie\" is for many (sodai). Here there is one sodas."
+      }
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "subject": "lithuanian",
+  "topic": "verb-tenses",
+  "group": "verb-tenses",
+  "grade": 4,
+  "level": 2,
+  "lt": "Įrašyk tinkamą veiksmažodį. Tu kiekvieną vakarą … knygą.",
+  "translation": {
+    "ru": "Впиши подходящий глагол. Ты каждый вечер … книгу (бывало, читал).",
+    "en": "Fill in the right verb. You … a book every evening (used to read)."
+  },
+  "choices": [
+    "skaitydavau",
+    "skaitydavai",
+    "skaitydavo",
+    "skaitydavome"
+  ],
+  "check": [
+    "skaitydavai"
+  ],
+  "answer": "skaitydavai",
+  "steps": {
+    "ru": [
+      "«Tu» — ты, 2-е лицо единственного числа.",
+      "Окончание для «tu»: -davai. Tu skaitydavai."
+    ],
+    "en": [
+      "\"Tu\" is you, 2nd person singular.",
+      "The ending for \"tu\" is -davai. Tu skaitydavai."
+    ]
+  },
+  "keywords": [
+    "Tu",
+    "kiekvieną vakarą"
+  ],
+  "mistakes": [
+    {
+      "value": "skaitydavau",
+      "hint": {
+        "ru": "Это «aš» (я). В предложении «tu» — окончание -davai.",
+        "en": "That is \"aš\" (I). The sentence has \"tu\": ending -davai."
+      }
+    },
+    {
+      "value": "skaitydavo",
+      "hint": {
+        "ru": "Это «jis, ji» (он, она). Для «tu» — -davai.",
+        "en": "That is \"jis, ji\" (he, she). For \"tu\" use -davai."
+      }
+    },
+    {
+      "value": "skaitydavome",
+      "hint": {
+        "ru": "Это «mes» (мы). Для «tu» — -davai.",
+        "en": "That is \"mes\" (we). For \"tu\" use -davai."
+      }
+    }
+  ]
+}

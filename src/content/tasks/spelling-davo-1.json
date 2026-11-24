@@ -1,0 +1,58 @@
+{
+  "subject": "lithuanian",
+  "topic": "verb-tenses",
+  "group": "verb-tenses",
+  "grade": 4,
+  "level": 2,
+  "lt": "Kuris veiksmažodis parašytas teisingai? Pažymėk.",
+  "translation": {
+    "ru": "Какой глагол написан правильно? Отметь.",
+    "en": "Which verb is spelled correctly? Mark it."
+  },
+  "choices": [
+    "vešdavo",
+    "veždavo",
+    "vėždavo",
+    "vežtavo"
+  ],
+  "check": [
+    "veždavo"
+  ],
+  "answer": "veždavo",
+  "steps": {
+    "ru": [
+      "Неопределённая форма: vežti (везти).",
+      "Перед -davo буква та же, что в -ti: veždavo."
+    ],
+    "en": [
+      "The infinitive is vežti (to carry).",
+      "Before -davo the letter is the same as before -ti: veždavo."
+    ]
+  },
+  "keywords": [
+    "teisingai"
+  ],
+  "mistakes": [
+    {
+      "value": "vešdavo",
+      "hint": {
+        "ru": "Проверь по -ti: vežti → ž остаётся: veždavo.",
+        "en": "Check with -ti: vežti, so ž stays: veždavo."
+      }
+    },
+    {
+      "value": "vėždavo",
+      "hint": {
+        "ru": "В vežti буква e без точки: veždavo.",
+        "en": "Vežti has e without a dot: veždavo."
+      }
+    },
+    {
+      "value": "vežtavo",
+      "hint": {
+        "ru": "Окончание всегда -davo, без t.",
+        "en": "The ending is always -davo, with no t."
+      }
+    }
+  ]
+}

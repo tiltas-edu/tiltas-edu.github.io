@@ -1,0 +1,46 @@
+{
+  "subject": "society",
+  "topic": "citizen-state",
+  "group": "rights-duties",
+  "grade": 4,
+  "level": 1,
+  "lt": "Kiek narių sudaro Lietuvos Respublikos Seimą?",
+  "translation": {
+    "ru": "Сколько членов в Сейме Литовской Республики?",
+    "en": "How many members does the Seimas of the Republic of Lithuania have?"
+  },
+  "check": [
+    "141"
+  ],
+  "answer": "141",
+  "steps": {
+    "ru": [
+      "В Сейме 141 член.",
+      "Их выбирают на выборах на 4 года."
+    ],
+    "en": [
+      "The Seimas has 141 members.",
+      "They are elected for 4 years."
+    ]
+  },
+  "keywords": [
+    "Seimą",
+    "narių"
+  ],
+  "mistakes": [
+    {
+      "value": "4",
+      "hint": {
+        "ru": "4 — это на сколько лет выбирают Сейм. Спрашивают, сколько в нём членов.",
+        "en": "4 is how many years the Seimas is elected for. The question is how many members it has."
+      }
+    },
+    {
+      "value": "140",
+      "hint": {
+        "ru": "Почти! На один больше.",
+        "en": "Almost! One more."
+      }
+    }
+  ]
+}

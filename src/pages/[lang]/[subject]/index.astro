@@ -3,24 +3,24 @@ import Layout from '../../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import Icon from '../../../components/Icon.astro';
 import { languages, t, type Lang, base } from '../../../i18n/ui';
+import { subjects, groupKey, type Subject } from '../../../lib/subjects';
 
 export function getStaticPaths() {
-  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+  return Object.keys(languages).flatMap((lang) => Object.keys(subjects).map((subject) => ({ params: { lang, subject } })));
 }
 const lang = Astro.params.lang as Lang;
+const subject = Astro.params.subject as Subject;
 const tr = t(lang);
-const glossary = (await getCollection('glossary')).filter((g) => g.data.subject === 'math');
+const glossary = (await getCollection('glossary')).filter((g) => g.data.subject === subject);
 const tasks = (await getCollection('tasks'))
-  .filter((x) => x.data.subject === 'math')
+  .filter((x) => x.data.subject === subject)
   .sort((a, b) => a.data.level - b.data.level || a.id.localeCompare(b.id));
-const groups = [
-  { id: 'area-from-perimeter', title: tr.group_area_from_perimeter },
-  { id: 'side-from-area', title: tr.group_side_from_area },
-  { id: 'word-problems', title: tr.group_word_problems },
-].map((g) => ({ ...g, tasks: tasks.filter((x) => x.data.group === g.id) }));
+const groups = subjects[subject]
+  .map((id) => ({ id, title: tr[groupKey(id) as keyof typeof tr] ?? id, tasks: tasks.filter((x) => x.data.group === id) }))
+  .filter((g) => g.tasks.length);
 ---
-<Layout lang={lang} title={tr.math}>
-  <h1><Icon name="math" /> {tr.math}</h1>
+<Layout lang={lang} title={tr[subject]}>
+  <h1><Icon name={subject} /> {tr[subject]}</h1>
 
   <h2>{tr.glossary}</h2>
   <div class="grid">

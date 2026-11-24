@@ -1,0 +1,51 @@
+{
+  "subject": "lithuanian",
+  "topic": "verb-tenses",
+  "group": "verb-tenses",
+  "grade": 4,
+  "level": 2,
+  "lt": "Kuris žodis parašytas teisingai? Pažymėk.",
+  "translation": {
+    "ru": "Какое слово написано правильно? Отметь.",
+    "en": "Which word is spelled correctly? Mark it."
+  },
+  "choices": [
+    "statidavo",
+    "statydavo",
+    "statėdavo",
+    "statydava"
+  ],
+  "check": [
+    "statydavo"
+  ],
+  "answer": "statydavo",
+  "steps": {
+    "ru": [
+      "Неопределённая форма: statyti (строить).",
+      "Буква y остаётся: statydavo."
+    ],
+    "en": [
+      "The infinitive is statyti (to build).",
+      "The letter y stays: statydavo."
+    ]
+  },
+  "keywords": [
+    "teisingai"
+  ],
+  "mistakes": [
+    {
+      "value": "statidavo",
+      "hint": {
+        "ru": "В statyti пишется y: statydavo.",
+        "en": "Statyti is spelled with y: statydavo."
+      }
+    },
+    {
+      "value": "statydava",
+      "hint": {
+        "ru": "Окончание для «jis, jie» — -davo.",
+        "en": "The ending for \"jis, jie\" is -davo."
+      }
+    }
+  ]
+}

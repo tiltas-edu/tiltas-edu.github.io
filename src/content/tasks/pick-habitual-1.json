@@ -1,0 +1,59 @@
+{
+  "subject": "lithuanian",
+  "topic": "verb-tenses",
+  "group": "verb-tenses",
+  "grade": 4,
+  "level": 1,
+  "lt": "Pasirink tinkamą žodį. Kai buvome maži, vasarą mes dažnai … ežere.",
+  "translation": {
+    "ru": "Выбери подходящее слово. Когда мы были маленькими, летом мы часто … в озере.",
+    "en": "Choose the right word. When we were little, in summer we often … in the lake."
+  },
+  "choices": [
+    "maudomės",
+    "maudėmės",
+    "maudydavomės",
+    "maudysimės"
+  ],
+  "check": [
+    "maudydavomės"
+  ],
+  "answer": "maudydavomės",
+  "steps": {
+    "ru": [
+      "«Kai buvome maži» — это прошлое, «dažnai» — много раз.",
+      "Прошлое много раз = -davo-: mes maudydavomės."
+    ],
+    "en": [
+      "\"Kai buvome maži\" is the past, \"dažnai\" means many times.",
+      "Past, many times = -davo-: mes maudydavomės."
+    ]
+  },
+  "keywords": [
+    "dažnai",
+    "Kai buvome maži"
+  ],
+  "mistakes": [
+    {
+      "value": "maudomės",
+      "hint": {
+        "ru": "Это настоящее время («купаемся сейчас»). А тут «когда мы были маленькими».",
+        "en": "That is the present (\"we bathe now\"). Here it is \"when we were little\"."
+      }
+    },
+    {
+      "value": "maudėmės",
+      "hint": {
+        "ru": "Почти: это прошлое, но один раз. «Dažnai» — часто, нужно -davo-.",
+        "en": "Close: that is the past, but once. \"Dažnai\" means often, so use -davo-."
+      }
+    },
+    {
+      "value": "maudysimės",
+      "hint": {
+        "ru": "Это будущее время. А речь о том, что было.",
+        "en": "That is the future. The sentence is about the past."
+      }
+    }
+  ]
+}

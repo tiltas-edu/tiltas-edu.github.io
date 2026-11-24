@@ -151,3 +151,11 @@ input[type='text']:focus-visible { border-color: var(--c-brand); }
   .prefs { gap: var(--s-1); }
   .prefs .seg { padding: 0; gap: 0; }
 }
+
+/* Answer options of a choice task (TaskCheck). */
+.choices { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: var(--s-2); border: 0; padding: 0; margin: 0 0 var(--s-3); }
+.choice { display: flex; align-items: center; gap: var(--s-2); min-height: var(--tap); padding: var(--s-2) var(--s-3); background: var(--c-surface); border: var(--border-w) solid var(--c-line); border-radius: var(--radius-sm); cursor: pointer; font-weight: 700; }
+.choice:hover { background: var(--c-surface-2); }
+.choice:has(input:checked) { border-color: var(--c-brand); background: var(--c-surface-2); }
+.choice input { accent-color: var(--c-brand); width: 1.25rem; height: 1.25rem; }
+.btn:disabled { opacity: 0.55; cursor: not-allowed; }

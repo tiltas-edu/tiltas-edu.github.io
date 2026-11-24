@@ -1,6 +1,7 @@
 import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
+import { groupIds } from './lib/subjects';
 
 const tri = z.object({ ru: z.string(), en: z.string() });
 
@@ -28,14 +29,15 @@ const tasks = defineCollection({
   schema: z.object({
     subject: z.string(),
     topic: z.string(), // glossary id this task trains
-    group: z.enum(['area-from-perimeter', 'side-from-area', 'word-problems']), // section on the subject page
+    group: z.enum(groupIds), // section on the subject page (src/lib/subjects.ts)
     level: z.number().int().min(1).max(3), // 1 = one step, 3 = several steps
     grade: z.number(),
     lt: z.string(), // original task text
     translation: tri,
     steps: z.object({ ru: z.array(z.string()), en: z.array(z.string()) }),
     answer: z.string(), // shown answer, e.g. "2 500 m²"
-    check: z.array(z.string()).default([]), // accepted numeric answers
+    check: z.array(z.string()).default([]), // accepted answers: numbers, or the exact text of a choice
+    choices: z.array(z.string()).optional(), // answer options in Lithuanian; without them the child types a number
     keywords: z.array(z.string()).default([]), // lt terms to highlight
     // Typical wrong answers and a calm hint for each, e.g. the area typed where the perimeter is asked.
     mistakes: z.array(z.object({ value: z.string(), hint: tri })).default([]),

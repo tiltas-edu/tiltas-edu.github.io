@@ -1,0 +1,59 @@
+{
+  "subject": "society",
+  "topic": "citizen-state",
+  "group": "rights-duties",
+  "grade": 4,
+  "level": 2,
+  "lt": "Kuri valdžios institucija leidžia Lietuvos Respublikos įstatymus?",
+  "translation": {
+    "ru": "Какой институт власти принимает законы Литовской Республики?",
+    "en": "Which institution of power passes the laws of the Republic of Lithuania?"
+  },
+  "choices": [
+    "Seimas",
+    "Vyriausybė",
+    "Respublikos Prezidentas",
+    "Savivaldybė"
+  ],
+  "check": [
+    "Seimas"
+  ],
+  "answer": "Seimas",
+  "steps": {
+    "ru": [
+      "Законы принимает Сейм (парламент).",
+      "Правительство их исполняет, а самоуправление решает местные вопросы."
+    ],
+    "en": [
+      "The Seimas (parliament) passes the laws.",
+      "The Government carries them out; a municipality handles local matters."
+    ]
+  },
+  "keywords": [
+    "leidžia",
+    "įstatymus"
+  ],
+  "mistakes": [
+    {
+      "value": "Vyriausybė",
+      "hint": {
+        "ru": "Правительство законы исполняет, а принимает их Сейм.",
+        "en": "The Government carries the laws out; the Seimas passes them."
+      }
+    },
+    {
+      "value": "Respublikos Prezidentas",
+      "hint": {
+        "ru": "Президент — глава государства, но законы принимает Сейм.",
+        "en": "The President is the head of state, but the Seimas passes the laws."
+      }
+    },
+    {
+      "value": "Savivaldybė",
+      "hint": {
+        "ru": "Самоуправление решает вопросы города или района, а не законы страны.",
+        "en": "A municipality handles local matters, not the laws of the country."
+      }
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "subject": "lithuanian",
+  "topic": "verb-tenses",
+  "group": "verb-tenses",
+  "grade": 4,
+  "level": 2,
+  "lt": "Kokia yra veiksmažodžio „laukdavo“ bendratis?",
+  "translation": {
+    "ru": "Какая неопределённая форма у глагола «laukdavo» (бывало, ждал)?",
+    "en": "What is the infinitive of the verb \"laukdavo\" (used to wait)?"
+  },
+  "choices": [
+    "laukia",
+    "laukti",
+    "lauks",
+    "laukė"
+  ],
+  "check": [
+    "laukti"
+  ],
+  "answer": "laukti",
+  "steps": {
+    "ru": [
+      "Bendratis — неопределённая форма, отвечает на «ką daryti?».",
+      "Она оканчивается на -ti: laukti."
+    ],
+    "en": [
+      "Bendratis is the infinitive, it answers \"ką daryti?\".",
+      "It ends in -ti: laukti."
+    ]
+  },
+  "keywords": [
+    "bendratis"
+  ],
+  "mistakes": [
+    {
+      "value": "laukia",
+      "hint": {
+        "ru": "Это настоящее время (ждёт). Bendratis кончается на -ti.",
+        "en": "That is the present (waits). The infinitive ends in -ti."
+      }
+    },
+    {
+      "value": "lauks",
+      "hint": {
+        "ru": "Это будущее (будет ждать). Нужна форма на -ti.",
+        "en": "That is the future (will wait). Use the -ti form."
+      }
+    },
+    {
+      "value": "laukė",
+      "hint": {
+        "ru": "Это прошедшее (ждал). Нужна форма на -ti.",
+        "en": "That is the past (waited). Use the -ti form."
+      }
+    }
+  ]
+}

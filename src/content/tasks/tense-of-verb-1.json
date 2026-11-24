@@ -1,0 +1,52 @@
+{
+  "subject": "lithuanian",
+  "topic": "verb-tenses",
+  "group": "verb-tenses",
+  "grade": 4,
+  "level": 1,
+  "lt": "Kuriuo laiku parašytas veiksmažodis „žaisdavome“? Pažymėk teisingą atsakymą.",
+  "translation": {
+    "ru": "В каком времени глагол «žaisdavome»? Отметь правильный ответ.",
+    "en": "Which tense is the verb \"žaisdavome\" in? Mark the correct answer."
+  },
+  "choices": [
+    "Esamasis laikas",
+    "Būtasis kartinis laikas",
+    "Būtasis dažninis laikas",
+    "Būsimasis laikas"
+  ],
+  "check": [
+    "Būtasis dažninis laikas"
+  ],
+  "answer": "Būtasis dažninis laikas",
+  "steps": {
+    "ru": [
+      "В слове есть -davo-: žaisdavome.",
+      "-davo- — всегда прошедшее многократное: «мы, бывало, играли»."
+    ],
+    "en": [
+      "The word has -davo- in it: žaisdavome.",
+      "-davo- always means the past habitual: \"we used to play\"."
+    ]
+  },
+  "keywords": [
+    "laiku",
+    "veiksmažodis"
+  ],
+  "mistakes": [
+    {
+      "value": "Būtasis kartinis laikas",
+      "hint": {
+        "ru": "Один раз было бы «žaidėme». Здесь есть -davo- — это «бывало, много раз».",
+        "en": "Once would be \"žaidėme\". Here there is -davo-: \"used to, many times\"."
+      }
+    },
+    {
+      "value": "Esamasis laikas",
+      "hint": {
+        "ru": "Сейчас было бы «žaidžiame». -davo- — прошлое.",
+        "en": "Now would be \"žaidžiame\". -davo- is the past."
+      }
+    }
+  ]
+}

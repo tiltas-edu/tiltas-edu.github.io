@@ -1,0 +1,117 @@
+{
+  "subject": "lithuanian",
+  "title": {
+    "ru": "Глагол и его времена",
+    "en": "The verb and its tenses"
+  },
+  "terms": [
+    {
+      "lt": "veiksmažodis",
+      "ru": "глагол",
+      "en": "verb"
+    },
+    {
+      "lt": "bendratis",
+      "ru": "неопределённая форма (на -ti)",
+      "en": "infinitive (ends in -ti)",
+      "note": {
+        "ru": "kasti, žiūrėti, laukti",
+        "en": "kasti, žiūrėti, laukti"
+      }
+    },
+    {
+      "lt": "esamasis laikas",
+      "ru": "настоящее время",
+      "en": "present tense",
+      "note": {
+        "ru": "Сейчас: aš skaitau, mes skaitome.",
+        "en": "Now: aš skaitau, mes skaitome."
+      }
+    },
+    {
+      "lt": "būtasis kartinis laikas",
+      "ru": "прошедшее время (один раз)",
+      "en": "simple past",
+      "note": {
+        "ru": "Вчера один раз: aš skaičiau, mes skaitėme.",
+        "en": "Once, yesterday: aš skaičiau, mes skaitėme."
+      }
+    },
+    {
+      "lt": "būtasis dažninis laikas",
+      "ru": "прошедшее многократное («бывало»)",
+      "en": "past habitual (\"used to\")",
+      "note": {
+        "ru": "Всегда -davo-: aš skaitydavau, tu skaitydavai, jis skaitydavo, mes skaitydavome, jūs skaitydavote.",
+        "en": "Always -davo-: aš skaitydavau, tu skaitydavai, jis skaitydavo, mes skaitydavome, jūs skaitydavote."
+      }
+    },
+    {
+      "lt": "būsimasis laikas",
+      "ru": "будущее время",
+      "en": "future tense",
+      "note": {
+        "ru": "Будет: aš skaitysiu, mes skaitysime.",
+        "en": "Will be: aš skaitysiu, mes skaitysime."
+      }
+    },
+    {
+      "lt": "vienaskaita (vns.)",
+      "ru": "единственное число",
+      "en": "singular"
+    },
+    {
+      "lt": "daugiskaita (dgs.)",
+      "ru": "множественное число",
+      "en": "plural"
+    },
+    {
+      "lt": "asmuo",
+      "ru": "лицо (1-е — я/мы, 2-е — ты/вы, 3-е — он/они)",
+      "en": "person (1st, 2nd, 3rd)"
+    },
+    {
+      "lt": "įvardis",
+      "ru": "местоимение",
+      "en": "pronoun",
+      "note": {
+        "ru": "-as, -is, -ys → jis; -a, -ė → ji; -ai → jie; -os, -ės → jos.",
+        "en": "-as, -is, -ys → jis; -a, -ė → ji; -ai → jie; -os, -ės → jos."
+      }
+    },
+    {
+      "lt": "prieveiksmis",
+      "ru": "наречие (как? когда? где?)",
+      "en": "adverb"
+    },
+    {
+      "lt": "dažnai",
+      "ru": "часто",
+      "en": "often"
+    },
+    {
+      "lt": "kasdien",
+      "ru": "каждый день",
+      "en": "every day"
+    },
+    {
+      "lt": "vakar",
+      "ru": "вчера",
+      "en": "yesterday"
+    },
+    {
+      "lt": "rytoj",
+      "ru": "завтра",
+      "en": "tomorrow"
+    },
+    {
+      "lt": "rašyba",
+      "ru": "правописание",
+      "en": "spelling",
+      "note": {
+        "ru": "Перед -davo согласная та же, что в -ti: vežti → veždavo, rišti → rišdavo, kepti → kepdavo.",
+        "en": "Before -davo the consonant stays as in -ti: vežti → veždavo, rišti → rišdavo, kepti → kepdavo."
+      }
+    }
+  ]
+}

@@ -3,6 +3,7 @@ import Layout from '../../../layouts/Layout.astro';
 import TaskCheck from '../../../components/TaskCheck';
 import { getCollection } from 'astro:content';
 import { languages, t, type Lang, base } from '../../../i18n/ui';
+import type { Subject } from '../../../lib/subjects';
 
 export async function getStaticPaths() {
   const tasks = await getCollection('tasks');
@@ -40,10 +41,11 @@ const words = glossaries.flatMap((g) => g.data.terms).filter((term) => {
   seen.add(term.lt);
   return true;
 });
-const unit = d.answer.replace(/^[\d\s.,]+/, '');
+// A unit only for typed numeric answers: "2 500 m²" → "m²".
+const unit = d.choices || !/^\d/.test(d.answer) ? undefined : d.answer.replace(/^[\d\s.,]+/, '') || undefined;
 ---
 <Layout lang={lang} title={`${tr.task}: ${d.lt.slice(0, 50)}`}>
-  <p><a href={`${base}/${lang}/math/`}>← {tr.math}</a></p>
+  <p><a href={`${base}/${lang}/${d.subject}/`}>← {tr[d.subject as Subject]}</a></p>
   <h1>{tr.task}</h1>
 
   <p class="task-lt" lang="lt" set:html={ltHtml} />
@@ -66,7 +68,7 @@ const unit = d.answer.replace(/^[\d\s.,]+/, '');
   )}
 
   <h2>{tr.yourAnswer}</h2>
-  <TaskCheck client:load taskId={entry.id} accepted={d.check} unit={unit}
+  <TaskCheck client:load taskId={entry.id} accepted={d.check} unit={unit} choices={d.choices}
     mistakes={d.mistakes.map((m) => ({ value: m.value, hint: m.hint[lang] }))}
     labels={{ yourAnswer: tr.yourAnswer, check: tr.check, correct: tr.correct, wrong: tr.wrong, tryAgain: tr.tryAgain }} />
 

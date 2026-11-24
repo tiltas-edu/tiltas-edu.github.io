@@ -1,0 +1,42 @@
+{
+  "subject": "society",
+  "topic": "citizen-state",
+  "group": "rights-duties",
+  "grade": 4,
+  "level": 1,
+  "lt": "Balsuoti rinkimuose – tai piliečio teisė ar pareiga?",
+  "translation": {
+    "ru": "Голосовать на выборах — это право или обязанность гражданина?",
+    "en": "Voting in elections: is it a right or a duty of a citizen?"
+  },
+  "choices": [
+    "Teisė",
+    "Pareiga"
+  ],
+  "check": [
+    "Teisė"
+  ],
+  "answer": "Teisė",
+  "steps": {
+    "ru": [
+      "В Литве гражданин может голосовать, но его не заставляют.",
+      "«Могу» — это право (teisė)."
+    ],
+    "en": [
+      "In Lithuania a citizen may vote but is not forced to.",
+      "\"I may\" is a right (teisė)."
+    ]
+  },
+  "keywords": [
+    "Balsuoti rinkimuose"
+  ],
+  "mistakes": [
+    {
+      "value": "Pareiga",
+      "hint": {
+        "ru": "Голосовать важно, но в Литве никто не заставляет. «Могу» — право.",
+        "en": "Voting matters, but in Lithuania nobody is forced to. \"I may\" is a right."
+      }
+    }
+  ]
+}

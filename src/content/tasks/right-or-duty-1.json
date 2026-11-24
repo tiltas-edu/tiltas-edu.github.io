@@ -1,0 +1,44 @@
+{
+  "subject": "society",
+  "topic": "citizen-state",
+  "group": "rights-duties",
+  "grade": 4,
+  "level": 1,
+  "lt": "Mokėti mokesčius – tai piliečio teisė ar pareiga?",
+  "translation": {
+    "ru": "Платить налоги — это право или обязанность гражданина?",
+    "en": "Paying taxes: is it a right or a duty of a citizen?"
+  },
+  "choices": [
+    "Teisė",
+    "Pareiga"
+  ],
+  "check": [
+    "Pareiga"
+  ],
+  "answer": "Pareiga",
+  "steps": {
+    "ru": [
+      "Спроси себя: «могу» или «должен»?",
+      "Налоги гражданин должен платить — это обязанность (pareiga)."
+    ],
+    "en": [
+      "Ask yourself: \"may\" or \"must\"?",
+      "A citizen must pay taxes, so it is a duty (pareiga)."
+    ]
+  },
+  "keywords": [
+    "mokesčius",
+    "teisė",
+    "pareiga"
+  ],
+  "mistakes": [
+    {
+      "value": "Teisė",
+      "hint": {
+        "ru": "Право — это «могу». Налоги нельзя не платить — это «должен».",
+        "en": "A right is \"I may\". Taxes are not optional: \"I must\"."
+      }
+    }
+  ]
+}

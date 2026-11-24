@@ -1,0 +1,102 @@
+{
+  "subject": "society",
+  "title": {
+    "ru": "Гражданин и государство",
+    "en": "Citizen and state"
+  },
+  "terms": [
+    {
+      "lt": "pilietis",
+      "ru": "гражданин",
+      "en": "citizen"
+    },
+    {
+      "lt": "pilietybė",
+      "ru": "гражданство",
+      "en": "citizenship"
+    },
+    {
+      "lt": "teisė",
+      "ru": "право («могу»)",
+      "en": "right (\"I may\")"
+    },
+    {
+      "lt": "pareiga",
+      "ru": "обязанность («должен»)",
+      "en": "duty (\"I must\")"
+    },
+    {
+      "lt": "įstatymas",
+      "ru": "закон",
+      "en": "law"
+    },
+    {
+      "lt": "Konstitucija",
+      "ru": "Конституция — главный закон",
+      "en": "Constitution, the main law"
+    },
+    {
+      "lt": "rinkimai",
+      "ru": "выборы",
+      "en": "elections"
+    },
+    {
+      "lt": "balsuoti",
+      "ru": "голосовать",
+      "en": "vote"
+    },
+    {
+      "lt": "Seimas",
+      "ru": "Сейм (парламент)",
+      "en": "Seimas (parliament)",
+      "note": {
+        "ru": "141 член, избирается на 4 года, принимает законы.",
+        "en": "141 members, elected for 4 years, passes the laws."
+      }
+    },
+    {
+      "lt": "Vyriausybė",
+      "ru": "Правительство",
+      "en": "Government",
+      "note": {
+        "ru": "Исполняет законы, ведёт дела государства.",
+        "en": "Carries out the laws and runs the state."
+      }
+    },
+    {
+      "lt": "Respublikos Prezidentas",
+      "ru": "Президент Республики",
+      "en": "President of the Republic"
+    },
+    {
+      "lt": "savivaldybė",
+      "ru": "самоуправление (муниципалитет)",
+      "en": "municipality"
+    },
+    {
+      "lt": "mokesčiai",
+      "ru": "налоги",
+      "en": "taxes"
+    },
+    {
+      "lt": "laikytis",
+      "ru": "соблюдать",
+      "en": "obey, keep to"
+    },
+    {
+      "lt": "ginti",
+      "ru": "защищать",
+      "en": "defend"
+    },
+    {
+      "lt": "valstybės simboliai",
+      "ru": "символы государства: herbas, vėliava, himnas",
+      "en": "state symbols: coat of arms, flag, anthem"
+    },
+    {
+      "lt": "demokratija",
+      "ru": "демократия",
+      "en": "democracy"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "subject": "society",
+  "topic": "citizen-state",
+  "group": "rights-duties",
+  "grade": 4,
+  "level": 1,
+  "lt": "Laikytis valstybės įstatymų – tai piliečio teisė ar pareiga?",
+  "translation": {
+    "ru": "Соблюдать законы государства — это право или обязанность гражданина?",
+    "en": "Obeying the laws of the state: is it a right or a duty of a citizen?"
+  },
+  "choices": [
+    "Teisė",
+    "Pareiga"
+  ],
+  "check": [
+    "Pareiga"
+  ],
+  "answer": "Pareiga",
+  "steps": {
+    "ru": [
+      "Законы соблюдать должен каждый.",
+      "«Должен» — обязанность (pareiga)."
+    ],
+    "en": [
+      "Everyone must obey the laws.",
+      "\"I must\" is a duty (pareiga)."
+    ]
+  },
+  "keywords": [
+    "Laikytis",
+    "įstatymų"
+  ],
+  "mistakes": [
+    {
+      "value": "Teisė",
+      "hint": {
+        "ru": "Законы не выбирают, соблюдать или нет. Это «должен».",
+        "en": "You cannot choose whether to obey the laws. It is \"I must\"."
+      }
+    }
+  ]
+}
