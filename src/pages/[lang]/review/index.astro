@@ -1,0 +1,52 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import Icon from '../../../components/Icon.astro';
+import { languages, t, type Lang, base } from '../../../i18n/ui';
+import type { Subject } from '../../../lib/subjects';
+
+export function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const lang = Astro.params.lang as Lang;
+const tr = t(lang);
+// Every task is rendered hidden; the script below shows the ones with a remembered wrong answer.
+const tasks = await getCollection('tasks');
+---
+<Layout lang={lang} title={tr.myMistakes}>
+  <h1><Icon name="bulb" /> {tr.myMistakes}</h1>
+  <p class="lead">{tr.reviewLead}</p>
+
+  <div class="grid" data-review>
+    {tasks.map((x) => (
+      <a class="card" href={`${base}/${lang}/tasks/${x.id}/`} data-task={x.id} hidden>
+        <strong>{tr[x.data.subject as Subject]}</strong>
+        <div lang="lt">{x.data.lt.slice(0, 90)}…</div>
+        <div class="note">{tr.lastAnswer}: <span lang="lt" data-last></span></div>
+        <span class="badge badge--review"><Icon name="bulb" /> {tr.review}</span>
+      </a>
+    ))}
+  </div>
+  <p class="callout callout--ok" data-empty hidden><Icon name="check" /> {tr.noMistakes}</p>
+  <p class="note">{tr.storedHere}</p>
+
+  <script is:inline>
+    // Shows tasks with a wrong answer saved by TaskCheck, newest first. Works without storage too.
+    (function () {
+      var list = document.querySelector('[data-review]');
+      var found = [];
+      list.querySelectorAll('[data-task]').forEach(function (card) {
+        try {
+          var saved = JSON.parse(localStorage.getItem('tiltas:mistake:' + card.getAttribute('data-task')) || 'null');
+          if (saved) {
+            card.querySelector('[data-last]').textContent = saved.value;
+            card.hidden = false;
+            found.push({ card: card, at: saved.at || 0 });
+          }
+        } catch (e) {}
+      });
+      found.sort(function (a, b) { return b.at - a.at; }).forEach(function (f) { list.appendChild(f.card); });
+      document.querySelector('[data-empty]').hidden = found.length > 0;
+    })();
+  </script>
+</Layout>

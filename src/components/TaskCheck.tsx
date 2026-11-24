@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Icon from './Icon';
+import { isCorrect, hintFor, solvedKey, mistakeKey } from '../lib/answer';
 
 interface Props {
   /** Remembered in this browser once solved, so the subject page can mark it. */
@@ -13,15 +14,6 @@ interface Props {
   choices?: string[];
 }
 
-// First number in the input, so a unit typed after it ("216 m2", "5 000 cm²") is ignored.
-const norm = (s: string) => (s.match(/-?\d[\d\s ]*(?:[.,]\d+)?/)?.[0] ?? '').replace(/[\s ]/g, '').replace(',', '.');
-const text = (s: string) => s.trim().toLowerCase().replace(/\s+/g, ' ');
-// Numbers are compared as numbers; a text answer (a chosen option) must match exactly, ignoring case.
-const same = (a: string, b: string) =>
-  norm(a) !== '' ? norm(b) !== '' && Number(norm(a)) === Number(norm(b)) : text(a) === text(b);
-
-export const solvedKey = (id: string) => `tiltas:solved:${id}`;
-
 export default function TaskCheck({ taskId, accepted, mistakes = [], labels, unit, choices }: Props) {
   const [value, setValue] = useState('');
   const [state, setState] = useState<'idle' | 'ok' | 'bad'>('idle');
@@ -29,12 +21,18 @@ export default function TaskCheck({ taskId, accepted, mistakes = [], labels, uni
 
   const submit = (e: React.SyntheticEvent) => {
     e.preventDefault();
-    const ok = accepted.some((a) => same(a, value));
+    const ok = isCorrect(accepted, value);
     setState(ok ? 'ok' : 'bad');
-    if (ok) {
-      try { localStorage.setItem(solvedKey(taskId), '1'); } catch { /* private mode: nothing to remember */ }
-    }
-    setHint(ok ? null : (mistakes.find((m) => same(m.value, value))?.hint ?? null));
+    try {
+      // Solved tasks get a badge; a wrong answer puts the task on the "My mistakes" page until it is solved.
+      if (ok) {
+        localStorage.setItem(solvedKey(taskId), '1');
+        localStorage.removeItem(mistakeKey(taskId));
+      } else if (!localStorage.getItem(solvedKey(taskId))) {
+        localStorage.setItem(mistakeKey(taskId), JSON.stringify({ value, at: Date.now() }));
+      }
+    } catch { /* private mode: nothing to remember */ }
+    setHint(ok ? null : hintFor(mistakes, value));
   };
 
   return (

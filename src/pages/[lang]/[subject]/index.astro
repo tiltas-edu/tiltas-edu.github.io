@@ -33,6 +33,7 @@ const groups = subjects[subject]
   </div>
 
   <h2>{tr.tasks}</h2>
+  <p><a href={`${base}/${lang}/review/`}><Icon name="bulb" /> {tr.myMistakes}</a></p>
   {groups.map((g) => (
     <>
       <h3>{g.title}</h3>
@@ -41,6 +42,7 @@ const groups = subjects[subject]
           <a class="card" href={`${base}/${lang}/tasks/${x.id}/`} data-task={x.id}>
             <strong>{tr.task} {i + 1}</strong>
             <span class="badge badge--done" data-solved hidden><Icon name="check" /> {tr.solved}</span>
+            <span class="badge badge--review" data-mistake hidden><Icon name="bulb" /> {tr.review}</span>
             <div class="note">{x.data.grade} {tr.grade} · {tr.level} {x.data.level}</div>
             <div lang="lt">{x.data.lt.slice(0, 90)}…</div>
           </a>
@@ -49,12 +51,12 @@ const groups = subjects[subject]
     </>
   ))}
   <script is:inline>
-    // Marks tasks solved in this browser (set by TaskCheck). Works without storage too.
+    // Marks tasks solved, or to review after a wrong answer, in this browser (set by TaskCheck). Works without storage too.
     document.querySelectorAll('[data-task]').forEach(function (card) {
       try {
-        if (localStorage.getItem('tiltas:solved:' + card.getAttribute('data-task'))) {
-          card.querySelector('[data-solved]').hidden = false;
-        }
+        var id = card.getAttribute('data-task');
+        if (localStorage.getItem('tiltas:solved:' + id)) card.querySelector('[data-solved]').hidden = false;
+        else if (localStorage.getItem('tiltas:mistake:' + id)) card.querySelector('[data-mistake]').hidden = false;
       } catch (e) {}
     });
   </script>

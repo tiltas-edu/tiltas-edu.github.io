@@ -30,3 +30,6 @@ main.wrap { padding-block: var(--s-5) var(--s-7); }
 .cluster { display: flex; flex-wrap: wrap; gap: var(--s-3); align-items: center; }
 .grid { display: grid; gap: var(--gap); grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); margin-top: var(--s-4); }
 .icon { width: 1.25em; height: 1.25em; flex: none; vertical-align: -0.2em; }
+
+/* The hidden attribute always wins over component display rules. */
+[hidden] { display: none !important; }

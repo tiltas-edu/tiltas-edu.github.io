@@ -3,7 +3,7 @@
 Open-source site (Astro 7 + React islands, GitHub Pages) that helps RU/EN-speaking schoolchildren (grades 1–8, Lithuania first) with the school curriculum, vocabulary and understanding Eduka-style tasks.
 
 ## Commands
-- `npm install`, `npx astro dev` (preview), `npm run check` and `npm run build` (both must pass before finishing; CI runs them on every PR).
+- `npm install`, `npx astro dev` (preview), `npm run check`, `npm test` and `npm run build` (all must pass before finishing; CI runs them on every PR). `npm test` also checks every task: its answer passes, its listed mistakes do not, and choice tasks offer them all.
 - Subpath build check: `SITE=https://<owner>.github.io BASE=/<repo> npx astro build`.
 - `node scripts/check-links.mjs`: checks links in `src/content/resources/`. SKIP means a bot check (Cloudflare) blocked it: open that link by hand.
 
@@ -29,4 +29,3 @@ Open-source site (Astro 7 + React islands, GitHub Pages) that helps RU/EN-speaki
 
 ## Open items
 - Confirm "Tako" = TAMO; verify external links by hand.
-- Decide repo home: org `tiltas-edu` (preferred) or `born-to-be-mad`.
