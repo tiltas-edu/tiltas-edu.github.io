@@ -1,20 +1,25 @@
 import { useEffect, useRef, useState } from 'react';
 import Flashcards from './Flashcards';
 import Icon from './Icon';
-import { GROUPS, inGroup, studyDeck, type Filter, type Group, type RankedWord } from '../lib/pos';
+import { GROUPS, forSubject, inGroup, studyDeck, type Filter, type Group, type RankedWord } from '../lib/pos';
 
 const PREVIEW = 3;
 
 interface Props {
   words: RankedWord[];
   total: number;
+  // Subjects with their task counts, most tasks first.
+  subjects: { id: string; label: string; tasks: number }[];
   lang: 'ru' | 'en';
-  labels: Record<Filter, string> & { inTasks: string; more: string; study: string; back: string };
+  labels: Record<Filter, string> & {
+    inTasks: string; more: string; study: string; back: string; allSubjects: string; bySubject: string; byPos: string;
+  };
   cardLabels: React.ComponentProps<typeof Flashcards>['labels'];
 }
 
-export default function WordRanking({ words, total, lang, labels, cardLabels }: Props) {
-  const [filter, setFilter] = useState<Filter>('all');
+export default function WordRanking({ words: allWords, total: allTotal, subjects, lang, labels, cardLabels }: Props) {
+  const [subject, setSubject] = useState<string | null>(null);
+  const [chosen, setChosen] = useState<Filter>('all');
   const [studying, setStudying] = useState(false);
   const top = useRef<HTMLDivElement>(null);
   const moved = useRef(false);
@@ -25,11 +30,15 @@ export default function WordRanking({ words, total, lang, labels, cardLabels }: 
     moved.current = false;
     top.current?.focus();
     top.current?.scrollIntoView();
-  }, [filter, studying]);
+  }, [chosen, studying]);
 
   const inTasks = (w: RankedWord) => labels.inTasks.replace('{count}', String(w.tasks)).replace('{total}', String(total));
-  const deck = studyDeck(words, filter);
+  const words = forSubject(allWords, subject);
+  const total = subjects.find((s) => s.id === subject)?.tasks ?? allTotal;
   const groups = GROUPS.filter((g) => inGroup(words, g).length > 0);
+  // A part of speech the chosen subject lacks falls back to "all".
+  const filter: Filter = chosen === 'all' || groups.includes(chosen) ? chosen : 'all';
+  const deck = studyDeck(words, filter);
 
   const list = (group: Group, limit?: number) => (
     <ol className="words">
@@ -69,9 +78,18 @@ export default function WordRanking({ words, total, lang, labels, cardLabels }: 
       <button className="btn" type="button" onClick={() => { moved.current = true; setStudying(true); }}>
         <Icon name="flip" /> {labels.study}: {deck.length}
       </button>
-      <div className="tabs tabs--scroll">
+      {subjects.length > 1 && (
+        <div className="tabs tabs--scroll" role="group" aria-label={labels.bySubject}>
+          {[{ id: null, label: labels.allSubjects }, ...subjects].map((s) => (
+            <button key={s.id ?? 'all'} className="tab" type="button" aria-pressed={subject === s.id} onClick={() => setSubject(s.id)}>
+              {s.label}
+            </button>
+          ))}
+        </div>
+      )}
+      <div className="tabs tabs--scroll" role="group" aria-label={labels.byPos}>
         {(['all', ...groups] as Filter[]).map((f) => (
-          <button key={f} className="tab" type="button" aria-pressed={filter === f} onClick={() => setFilter(f)}>
+          <button key={f} className="tab" type="button" aria-pressed={filter === f} onClick={() => setChosen(f)}>
             {labels[f]}
           </button>
         ))}
@@ -83,7 +101,7 @@ export default function WordRanking({ words, total, lang, labels, cardLabels }: 
               <h2>{labels[group]}</h2>
               {list(group, PREVIEW)}
               {inGroup(words, group).length > PREVIEW && (
-                <button className="btn btn--soft words__more" type="button" onClick={() => { moved.current = true; setFilter(group); }}>
+                <button className="btn btn--soft words__more" type="button" onClick={() => { moved.current = true; setChosen(group); }}>
                   {labels.more}<span className="sr-only">: {labels[group]}</span>
                 </button>
               )}

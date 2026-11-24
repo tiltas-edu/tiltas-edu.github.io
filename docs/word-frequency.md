@@ -29,7 +29,8 @@ is public and textbooks are copyrighted. Back up `corpus/` privately.
 3. Run `npm run words`. It writes two files:
    - `corpus/frequency.md`: private report.
    - `src/data/word-frequency.json`: **public**, shown on `/<lang>/words/`. It holds only lemma,
-     part of speech, translation, forms and the number of tasks.
+     part of speech, translation, forms and the number of tasks, overall and per `subject`
+     (the words page filters by it).
 4. Read the diff of the public file before committing it. Anything that identifies a child must be
    marked `name` in the task, which keeps it out of the ranking.
 

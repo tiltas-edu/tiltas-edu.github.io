@@ -1,5 +1,10 @@
 {
   "tasks": 160,
+  "subjects": {
+    "lithuanian": 16,
+    "math": 123,
+    "world": 21
+  },
   "words": [
     {
       "lemma": "ir",
@@ -9,7 +14,12 @@
       "forms": [
         "ir"
       ],
-      "tasks": 71
+      "tasks": 71,
+      "bySubject": {
+        "lithuanian": 3,
+        "math": 63,
+        "world": 5
+      }
     },
     {
       "lemma": "atsakymas",
@@ -23,7 +33,10 @@
         "atsakymus",
         "atsakymą"
       ],
-      "tasks": 44
+      "tasks": 44,
+      "bySubject": {
+        "math": 44
+      }
     },
     {
       "lemma": "kiek",
@@ -33,7 +46,10 @@
       "forms": [
         "kiek"
       ],
-      "tasks": 39
+      "tasks": 39,
+      "bySubject": {
+        "math": 39
+      }
     },
     {
       "lemma": "apskaičiuoti",
@@ -45,7 +61,10 @@
         "apskaičiuok",
         "apskaičiuoti"
       ],
-      "tasks": 35
+      "tasks": 35,
+      "bySubject": {
+        "math": 35
+      }
     },
     {
       "lemma": "būti",
@@ -59,7 +78,12 @@
         "būtų",
         "yra"
       ],
-      "tasks": 34
+      "tasks": 34,
+      "bySubject": {
+        "lithuanian": 1,
+        "math": 28,
+        "world": 5
+      }
     },
     {
       "lemma": "kuris",
@@ -80,7 +104,12 @@
         "kurių",
         "kurį"
       ],
-      "tasks": 30
+      "tasks": 30,
+      "bySubject": {
+        "lithuanian": 4,
+        "math": 18,
+        "world": 8
+      }
     },
     {
       "lemma": "sujungti",
@@ -90,7 +119,12 @@
       "forms": [
         "sujunk"
       ],
-      "tasks": 27
+      "tasks": 27,
+      "bySubject": {
+        "lithuanian": 6,
+        "math": 15,
+        "world": 6
+      }
     },
     {
       "lemma": "pažymėti",
@@ -100,7 +134,12 @@
       "forms": [
         "pažymėk"
       ],
-      "tasks": 26
+      "tasks": 26,
+      "bySubject": {
+        "lithuanian": 6,
+        "math": 15,
+        "world": 5
+      }
     },
     {
       "lemma": "su",
@@ -110,7 +149,12 @@
       "forms": [
         "su"
       ],
-      "tasks": 26
+      "tasks": 26,
+      "bySubject": {
+        "lithuanian": 5,
+        "math": 17,
+        "world": 4
+      }
     },
     {
       "lemma": "koks",
@@ -125,7 +169,12 @@
         "koks",
         "kokį"
       ],
-      "tasks": 25
+      "tasks": 25,
+      "bySubject": {
+        "lithuanian": 3,
+        "math": 21,
+        "world": 1
+      }
     },
     {
       "lemma": "iš",
@@ -135,7 +184,11 @@
       "forms": [
         "iš"
       ],
-      "tasks": 24
+      "tasks": 24,
+      "bySubject": {
+        "math": 22,
+        "world": 2
+      }
     },
     {
       "lemma": "užrašyti",
@@ -145,7 +198,10 @@
       "forms": [
         "užrašyk"
       ],
-      "tasks": 24
+      "tasks": 24,
+      "bySubject": {
+        "math": 24
+      }
     },
     {
       "lemma": "į",
@@ -155,7 +211,11 @@
       "forms": [
         "į"
       ],
-      "tasks": 23
+      "tasks": 23,
+      "bySubject": {
+        "lithuanian": 2,
+        "math": 21
+      }
     },
     {
       "lemma": "tinkamas",
@@ -170,7 +230,12 @@
         "tinkamus",
         "tinkamą"
       ],
-      "tasks": 23
+      "tasks": 23,
+      "bySubject": {
+        "lithuanian": 5,
+        "math": 14,
+        "world": 4
+      }
     },
     {
       "lemma": "veiksmas",
@@ -184,7 +249,11 @@
         "veiksmą",
         "veiksmų"
       ],
-      "tasks": 22
+      "tasks": 22,
+      "bySubject": {
+        "lithuanian": 1,
+        "math": 21
+      }
     },
     {
       "lemma": "visas",
@@ -199,7 +268,11 @@
         "visus",
         "visų"
       ],
-      "tasks": 22
+      "tasks": 22,
+      "bySubject": {
+        "lithuanian": 1,
+        "math": 21
+      }
     },
     {
       "lemma": "parašyti",
@@ -210,7 +283,12 @@
         "parašyk",
         "parašyti"
       ],
-      "tasks": 22
+      "tasks": 22,
+      "bySubject": {
+        "lithuanian": 4,
+        "math": 11,
+        "world": 7
+      }
     },
     {
       "lemma": "sprendimas",
@@ -221,7 +299,10 @@
         "sprendimu",
         "sprendimą"
       ],
-      "tasks": 22
+      "tasks": 22,
+      "bySubject": {
+        "math": 22
+      }
     },
     {
       "lemma": "įrašyti",
@@ -231,7 +312,12 @@
       "forms": [
         "įrašyk"
       ],
-      "tasks": 20
+      "tasks": 20,
+      "bySubject": {
+        "lithuanian": 1,
+        "math": 17,
+        "world": 2
+      }
     },
     {
       "lemma": "išspręsti",
@@ -242,7 +328,10 @@
         "išsprendė",
         "išspręsk"
       ],
-      "tasks": 19
+      "tasks": 19,
+      "bySubject": {
+        "math": 19
+      }
     },
     {
       "lemma": "plotas",
@@ -254,7 +343,10 @@
         "ploto",
         "plotą"
       ],
-      "tasks": 18
+      "tasks": 18,
+      "bySubject": {
+        "math": 18
+      }
     },
     {
       "lemma": "ilgis",
@@ -267,7 +359,10 @@
         "ilgių",
         "ilgį"
       ],
-      "tasks": 18
+      "tasks": 18,
+      "bySubject": {
+        "math": 18
+      }
     },
     {
       "lemma": "uždavinys",
@@ -278,7 +373,10 @@
         "uždaviniui",
         "uždavinį"
       ],
-      "tasks": 18
+      "tasks": 18,
+      "bySubject": {
+        "math": 18
+      }
     },
     {
       "lemma": "vienas",
@@ -293,7 +391,11 @@
         "vienoje",
         "vieną"
       ],
-      "tasks": 17
+      "tasks": 17,
+      "bySubject": {
+        "math": 16,
+        "world": 1
+      }
     },
     {
       "lemma": "skaičius",
@@ -305,7 +407,10 @@
         "skaičius",
         "skaičių"
       ],
-      "tasks": 16
+      "tasks": 16,
+      "bySubject": {
+        "math": 16
+      }
     },
     {
       "lemma": "jie",
@@ -319,7 +424,11 @@
         "juos",
         "jų"
       ],
-      "tasks": 16
+      "tasks": 16,
+      "bySubject": {
+        "math": 13,
+        "world": 3
+      }
     },
     {
       "lemma": "o",
@@ -329,7 +438,11 @@
       "forms": [
         "o"
       ],
-      "tasks": 16
+      "tasks": 16,
+      "bySubject": {
+        "math": 14,
+        "world": 2
+      }
     },
     {
       "lemma": "šis",
@@ -345,7 +458,11 @@
         "šių",
         "šį"
       ],
-      "tasks": 15
+      "tasks": 15,
+      "bySubject": {
+        "math": 13,
+        "world": 2
+      }
     },
     {
       "lemma": "kiekvienas",
@@ -361,7 +478,10 @@
         "kiekvienos",
         "kiekvieną"
       ],
-      "tasks": 14
+      "tasks": 14,
+      "bySubject": {
+        "math": 14
+      }
     },
     {
       "lemma": "atlikti",
@@ -372,7 +492,10 @@
         "atlik",
         "atlikti"
       ],
-      "tasks": 14
+      "tasks": 14,
+      "bySubject": {
+        "math": 14
+      }
     },
     {
       "lemma": "veiksmažodis",
@@ -387,7 +510,10 @@
         "veiksmažodžius",
         "veiksmažodžių"
       ],
-      "tasks": 12
+      "tasks": 12,
+      "bySubject": {
+        "lithuanian": 12
+      }
     },
     {
       "lemma": "kvadratas",
@@ -399,7 +525,10 @@
         "kvadrato",
         "kvadratų"
       ],
-      "tasks": 11
+      "tasks": 11,
+      "bySubject": {
+        "math": 11
+      }
     },
     {
       "lemma": "po",
@@ -409,7 +538,10 @@
       "forms": [
         "po"
       ],
-      "tasks": 11
+      "tasks": 11,
+      "bySubject": {
+        "math": 11
+      }
     },
     {
       "lemma": "jis",
@@ -421,7 +553,11 @@
         "jis",
         "jo"
       ],
-      "tasks": 11
+      "tasks": 11,
+      "bySubject": {
+        "math": 10,
+        "world": 1
+      }
     },
     {
       "lemma": "reiškinys",
@@ -436,7 +572,10 @@
         "reiškinys",
         "reiškinį"
       ],
-      "tasks": 11
+      "tasks": 11,
+      "bySubject": {
+        "math": 11
+      }
     },
     {
       "lemma": "per",
@@ -446,7 +585,10 @@
       "forms": [
         "per"
       ],
-      "tasks": 10
+      "tasks": 10,
+      "bySubject": {
+        "math": 10
+      }
     },
     {
       "lemma": "toks",
@@ -462,7 +604,10 @@
         "tokių",
         "tokį"
       ],
-      "tasks": 10
+      "tasks": 10,
+      "bySubject": {
+        "math": 10
+      }
     },
     {
       "lemma": "stačiakampis",
@@ -475,7 +620,10 @@
         "stačiakampių",
         "stačiakampį"
       ],
-      "tasks": 9
+      "tasks": 9,
+      "bySubject": {
+        "math": 9
+      }
     },
     {
       "lemma": "forma",
@@ -485,7 +633,10 @@
       "forms": [
         "formos"
       ],
-      "tasks": 9
+      "tasks": 9,
+      "bySubject": {
+        "math": 9
+      }
     },
     {
       "lemma": "teisingas",
@@ -497,7 +648,11 @@
         "teisingus",
         "teisingą"
       ],
-      "tasks": 9
+      "tasks": 9,
+      "bySubject": {
+        "math": 7,
+        "world": 2
+      }
     },
     {
       "lemma": "skaitmuo",
@@ -511,7 +666,10 @@
         "skaitmenų",
         "skaitmuo"
       ],
-      "tasks": 8
+      "tasks": 8,
+      "bySubject": {
+        "math": 8
+      }
     },
     {
       "lemma": "figūra",
@@ -524,7 +682,10 @@
         "figūrą",
         "figūrų"
       ],
-      "tasks": 8
+      "tasks": 8,
+      "bySubject": {
+        "math": 8
+      }
     },
     {
       "lemma": "už",
@@ -534,7 +695,10 @@
       "forms": [
         "už"
       ],
-      "tasks": 8
+      "tasks": 8,
+      "bySubject": {
+        "math": 8
+      }
     },
     {
       "lemma": "valstybė",
@@ -545,7 +709,10 @@
         "valstybė",
         "valstybės"
       ],
-      "tasks": 8
+      "tasks": 8,
+      "bySubject": {
+        "world": 8
+      }
     },
     {
       "lemma": "reikėti",
@@ -558,7 +725,10 @@
         "reikėjo",
         "reikės"
       ],
-      "tasks": 8
+      "tasks": 8,
+      "bySubject": {
+        "math": 8
+      }
     },
     {
       "lemma": "jei",
@@ -568,7 +738,10 @@
       "forms": [
         "jei"
       ],
-      "tasks": 8
+      "tasks": 8,
+      "bySubject": {
+        "math": 8
+      }
     },
     {
       "lemma": "pats",
@@ -580,7 +753,10 @@
         "patį",
         "pačiu"
       ],
-      "tasks": 8
+      "tasks": 8,
+      "bySubject": {
+        "math": 8
+      }
     },
     {
       "lemma": "perimetras",
@@ -590,7 +766,10 @@
       "forms": [
         "perimetras"
       ],
-      "tasks": 8
+      "tasks": 8,
+      "bySubject": {
+        "math": 8
+      }
     },
     {
       "lemma": "sudaryti",
@@ -603,7 +782,11 @@
         "sudarytas",
         "sudarė"
       ],
-      "tasks": 8
+      "tasks": 8,
+      "bySubject": {
+        "math": 7,
+        "world": 1
+      }
     },
     {
       "lemma": "diena",
@@ -617,7 +800,11 @@
         "dieną",
         "dienų"
       ],
-      "tasks": 7
+      "tasks": 7,
+      "bySubject": {
+        "math": 6,
+        "world": 1
+      }
     },
     {
       "lemma": "pirmas",
@@ -630,7 +817,10 @@
         "pirmą",
         "pirmąjį"
       ],
-      "tasks": 7
+      "tasks": 7,
+      "bySubject": {
+        "math": 7
+      }
     },
     {
       "lemma": "gauti",
@@ -644,7 +834,10 @@
         "gautus",
         "gavo"
       ],
-      "tasks": 7
+      "tasks": 7,
+      "bySubject": {
+        "math": 7
+      }
     },
     {
       "lemma": "kad",
@@ -654,7 +847,10 @@
       "forms": [
         "kad"
       ],
-      "tasks": 7
+      "tasks": 7,
+      "bySubject": {
+        "math": 7
+      }
     },
     {
       "lemma": "vaikas",
@@ -667,7 +863,11 @@
         "vaikui",
         "vaikų"
       ],
-      "tasks": 7
+      "tasks": 7,
+      "bySubject": {
+        "math": 4,
+        "world": 3
+      }
     },
     {
       "lemma": "daugyba",
@@ -677,7 +877,10 @@
       "forms": [
         "daugybos"
       ],
-      "tasks": 7
+      "tasks": 7,
+      "bySubject": {
+        "math": 7
+      }
     },
     {
       "lemma": "kaip",
@@ -687,7 +890,11 @@
       "forms": [
         "kaip"
       ],
-      "tasks": 7
+      "tasks": 7,
+      "bySubject": {
+        "math": 1,
+        "world": 6
+      }
     },
     {
       "lemma": "kraštinė",
@@ -698,7 +905,10 @@
         "kraštinių",
         "kraštinės"
       ],
-      "tasks": 7
+      "tasks": 7,
+      "bySubject": {
+        "math": 7
+      }
     },
     {
       "lemma": "lygus",
@@ -710,7 +920,10 @@
         "lygios",
         "lygus"
       ],
-      "tasks": 7
+      "tasks": 7,
+      "bySubject": {
+        "math": 7
+      }
     },
     {
       "lemma": "skaitinis",
@@ -724,7 +937,10 @@
         "skaitinius",
         "skaitinį"
       ],
-      "tasks": 7
+      "tasks": 7,
+      "bySubject": {
+        "math": 7
+      }
     },
     {
       "lemma": "turėti",
@@ -736,7 +952,11 @@
         "turintis",
         "turėtų"
       ],
-      "tasks": 7
+      "tasks": 7,
+      "bySubject": {
+        "math": 4,
+        "world": 3
+      }
     },
     {
       "lemma": "vienodas",
@@ -749,7 +969,10 @@
         "vienodą",
         "vienodų"
       ],
-      "tasks": 7
+      "tasks": 7,
+      "bySubject": {
+        "math": 7
+      }
     },
     {
       "lemma": "dėžė",
@@ -764,7 +987,10 @@
         "dėžės",
         "dėžėse"
       ],
-      "tasks": 6
+      "tasks": 6,
+      "bySubject": {
+        "math": 6
+      }
     },
     {
       "lemma": "laikas",
@@ -776,7 +1002,11 @@
         "laiko",
         "laiką"
       ],
-      "tasks": 6
+      "tasks": 6,
+      "bySubject": {
+        "lithuanian": 5,
+        "math": 1
+      }
     },
     {
       "lemma": "kartas",
@@ -788,7 +1018,11 @@
         "kartą",
         "kartų"
       ],
-      "tasks": 6
+      "tasks": 6,
+      "bySubject": {
+        "lithuanian": 1,
+        "math": 5
+      }
     },
     {
       "lemma": "sakinys",
@@ -800,7 +1034,11 @@
         "sakinius",
         "sakinį"
       ],
-      "tasks": 6
+      "tasks": 6,
+      "bySubject": {
+        "lithuanian": 5,
+        "math": 1
+      }
     },
     {
       "lemma": "dalyba",
@@ -810,7 +1048,10 @@
       "forms": [
         "dalybos"
       ],
-      "tasks": 6
+      "tasks": 6,
+      "bySubject": {
+        "math": 6
+      }
     },
     {
       "lemma": "nurodyti",
@@ -823,7 +1064,11 @@
         "nurodyto",
         "nurodytą"
       ],
-      "tasks": 6
+      "tasks": 6,
+      "bySubject": {
+        "lithuanian": 1,
+        "math": 5
+      }
     },
     {
       "lemma": "paveikslėlis",
@@ -837,7 +1082,12 @@
         "paveikslėlius",
         "paveikslėlį"
       ],
-      "tasks": 6
+      "tasks": 6,
+      "bySubject": {
+        "lithuanian": 1,
+        "math": 4,
+        "world": 1
+      }
     },
     {
       "lemma": "trūkti",
@@ -848,7 +1098,11 @@
         "trūksta",
         "trūkstamus"
       ],
-      "tasks": 6
+      "tasks": 6,
+      "bySubject": {
+        "lithuanian": 1,
+        "math": 5
+      }
     },
     {
       "lemma": "sverti",
@@ -859,7 +1113,10 @@
         "sveria",
         "svėrė"
       ],
-      "tasks": 5
+      "tasks": 5,
+      "bySubject": {
+        "math": 5
+      }
     },
     {
       "lemma": "sudėti",
@@ -869,7 +1126,10 @@
       "forms": [
         "sudėjo"
       ],
-      "tasks": 5
+      "tasks": 5,
+      "bySubject": {
+        "math": 5
+      }
     },
     {
       "lemma": "antras",
@@ -882,7 +1142,10 @@
         "antroje",
         "antrą"
       ],
-      "tasks": 5
+      "tasks": 5,
+      "bySubject": {
+        "math": 5
+      }
     },
     {
       "lemma": "kas",
@@ -894,7 +1157,11 @@
         "kas",
         "ką"
       ],
-      "tasks": 5
+      "tasks": 5,
+      "bySubject": {
+        "math": 1,
+        "world": 4
+      }
     },
     {
       "lemma": "Lietuva",
@@ -906,7 +1173,10 @@
         "lietuvos",
         "lietuvą"
       ],
-      "tasks": 5
+      "tasks": 5,
+      "bySubject": {
+        "world": 5
+      }
     },
     {
       "lemma": "sužinoti",
@@ -917,7 +1187,10 @@
         "sužinok",
         "sužinosi"
       ],
-      "tasks": 5
+      "tasks": 5,
+      "bySubject": {
+        "math": 5
+      }
     },
     {
       "lemma": "užimti",
@@ -927,7 +1200,10 @@
       "forms": [
         "užima"
       ],
-      "tasks": 5
+      "tasks": 5,
+      "bySubject": {
+        "math": 5
+      }
     },
     {
       "lemma": "ji",
@@ -939,7 +1215,10 @@
         "ją",
         "jį"
       ],
-      "tasks": 5
+      "tasks": 5,
+      "bySubject": {
+        "math": 5
+      }
     },
     {
       "lemma": "likti",
@@ -952,7 +1231,10 @@
         "likusių",
         "likę"
       ],
-      "tasks": 5
+      "tasks": 5,
+      "bySubject": {
+        "math": 5
+      }
     },
     {
       "lemma": "plotis",
@@ -963,7 +1245,10 @@
         "plotis",
         "plotį"
       ],
-      "tasks": 5
+      "tasks": 5,
+      "bySubject": {
+        "math": 5
+      }
     },
     {
       "lemma": "suma",
@@ -976,7 +1261,10 @@
         "sumos",
         "sumą"
       ],
-      "tasks": 5
+      "tasks": 5,
+      "bySubject": {
+        "math": 5
+      }
     },
     {
       "lemma": "tai",
@@ -986,7 +1274,11 @@
       "forms": [
         "tai"
       ],
-      "tasks": 5
+      "tasks": 5,
+      "bySubject": {
+        "math": 3,
+        "world": 2
+      }
     },
     {
       "lemma": "užduotis",
@@ -997,7 +1289,10 @@
         "užduotis",
         "užduotį"
       ],
-      "tasks": 5
+      "tasks": 5,
+      "bySubject": {
+        "math": 5
+      }
     },
     {
       "lemma": "žmogus",
@@ -1008,7 +1303,11 @@
         "žmogaus",
         "žmonės"
       ],
-      "tasks": 5
+      "tasks": 5,
+      "bySubject": {
+        "math": 2,
+        "world": 3
+      }
     },
     {
       "lemma": "žodis",
@@ -1020,7 +1319,11 @@
         "žodžiams",
         "žodžius"
       ],
-      "tasks": 5
+      "tasks": 5,
+      "bySubject": {
+        "lithuanian": 3,
+        "math": 2
+      }
     },
     {
       "lemma": "mokykla",
@@ -1033,7 +1336,10 @@
         "mokyklos",
         "mokyklą"
       ],
-      "tasks": 4
+      "tasks": 4,
+      "bySubject": {
+        "math": 4
+      }
     },
     {
       "lemma": "eiti",
@@ -1046,7 +1352,10 @@
         "nueina",
         "nuėjo"
       ],
-      "tasks": 4
+      "tasks": 4,
+      "bySubject": {
+        "math": 4
+      }
     },
     {
       "lemma": "tilpti",
@@ -1057,7 +1366,10 @@
         "telpa",
         "tilps"
       ],
-      "tasks": 4
+      "tasks": 4,
+      "bySubject": {
+        "math": 4
+      }
     },
     {
       "lemma": "iškepti",
@@ -1068,7 +1380,10 @@
         "iškepti",
         "iškepė"
       ],
-      "tasks": 4
+      "tasks": 4,
+      "bySubject": {
+        "math": 4
+      }
     },
     {
       "lemma": "kitas",
@@ -1082,7 +1397,11 @@
         "kitos",
         "kituose"
       ],
-      "tasks": 4
+      "tasks": 4,
+      "bySubject": {
+        "math": 3,
+        "world": 1
+      }
     },
     {
       "lemma": "klausimas",
@@ -1094,7 +1413,11 @@
         "klausimus",
         "klausimą"
       ],
-      "tasks": 4
+      "tasks": 4,
+      "bySubject": {
+        "lithuanian": 1,
+        "math": 3
+      }
     },
     {
       "lemma": "metai",
@@ -1106,7 +1429,11 @@
         "metams",
         "metus"
       ],
-      "tasks": 4
+      "tasks": 4,
+      "bySubject": {
+        "math": 2,
+        "world": 2
+      }
     },
     {
       "lemma": "metras",
@@ -1118,7 +1445,10 @@
         "metrais",
         "metrų"
       ],
-      "tasks": 4
+      "tasks": 4,
+      "bySubject": {
+        "math": 4
+      }
     },
     {
       "lemma": "žaidimas",
@@ -1129,7 +1459,11 @@
         "žaidimo",
         "žaidimų"
       ],
-      "tasks": 4
+      "tasks": 4,
+      "bySubject": {
+        "math": 3,
+        "world": 1
+      }
     },
     {
       "lemma": "brėžinys",
@@ -1140,7 +1474,10 @@
         "brėžiniu",
         "brėžinį"
       ],
-      "tasks": 4
+      "tasks": 4,
+      "bySubject": {
+        "math": 4
+      }
     },
     {
       "lemma": "dalis",
@@ -1151,7 +1488,10 @@
         "dalis",
         "dalį"
       ],
-      "tasks": 4
+      "tasks": 4,
+      "bySubject": {
+        "math": 4
+      }
     },
     {
       "lemma": "daugiau",
@@ -1161,7 +1501,10 @@
       "forms": [
         "daugiau"
       ],
-      "tasks": 4
+      "tasks": 4,
+      "bySubject": {
+        "math": 4
+      }
     },
     {
       "lemma": "institucija",
@@ -1173,7 +1516,10 @@
         "institucijos",
         "institucijų"
       ],
-      "tasks": 4
+      "tasks": 4,
+      "bySubject": {
+        "world": 4
+      }
     },
     {
       "lemma": "įstatymas",
@@ -1186,7 +1532,10 @@
         "įstatymu",
         "įstatymus"
       ],
-      "tasks": 4
+      "tasks": 4,
+      "bySubject": {
+        "world": 4
+      }
     },
     {
       "lemma": "langelis",
@@ -1198,7 +1547,10 @@
         "langelių",
         "langelį"
       ],
-      "tasks": 4
+      "tasks": 4,
+      "bySubject": {
+        "math": 4
+      }
     },
     {
       "lemma": "lygtis",
@@ -1210,7 +1562,10 @@
         "lygtis",
         "lygtį"
       ],
-      "tasks": 4
+      "tasks": 4,
+      "bySubject": {
+        "math": 4
+      }
     },
     {
       "lemma": "nežinomas",
@@ -1221,7 +1576,10 @@
         "nežinomos",
         "nežinomą"
       ],
-      "tasks": 4
+      "tasks": 4,
+      "bySubject": {
+        "math": 4
+      }
     },
     {
       "lemma": "nupirkti",
@@ -1232,7 +1590,10 @@
         "nupirko",
         "nusipirko"
       ],
-      "tasks": 4
+      "tasks": 4,
+      "bySubject": {
+        "math": 4
+      }
     },
     {
       "lemma": "reikšmė",
@@ -1243,7 +1604,10 @@
         "reikšmes",
         "reikšmę"
       ],
-      "tasks": 4
+      "tasks": 4,
+      "bySubject": {
+        "math": 4
+      }
     },
     {
       "lemma": "teiginys",
@@ -1254,7 +1618,10 @@
         "teiginiai",
         "teiginius"
       ],
-      "tasks": 4
+      "tasks": 4,
+      "bySubject": {
+        "world": 4
+      }
     },
     {
       "lemma": "teisė",
@@ -1265,7 +1632,10 @@
         "teisėms",
         "teisės"
       ],
-      "tasks": 4
+      "tasks": 4,
+      "bySubject": {
+        "world": 4
+      }
     },
     {
       "lemma": "trečdalis",
@@ -1276,7 +1646,10 @@
         "trečdaliu",
         "trečdalį"
       ],
-      "tasks": 4
+      "tasks": 4,
+      "bySubject": {
+        "math": 4
+      }
     },
     {
       "lemma": "vienetas",
@@ -1287,7 +1660,10 @@
         "vienetus",
         "vienetų"
       ],
-      "tasks": 4
+      "tasks": 4,
+      "bySubject": {
+        "math": 4
+      }
     },
     {
       "lemma": "lankyti",
@@ -1297,7 +1673,10 @@
       "forms": [
         "lanko"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "math": 3
+      }
     },
     {
       "lemma": "lentyna",
@@ -1309,7 +1688,10 @@
         "lentynoje",
         "lentyną"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "math": 3
+      }
     },
     {
       "lemma": "pasiūti",
@@ -1321,7 +1703,10 @@
         "pasiūdavo",
         "pasiūti"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "math": 3
+      }
     },
     {
       "lemma": "gaminti",
@@ -1334,7 +1719,10 @@
         "pagamino",
         "pagaminti"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "math": 3
+      }
     },
     {
       "lemma": "kepykla",
@@ -1345,7 +1733,10 @@
         "kepykloje",
         "kepyklą"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "math": 3
+      }
     },
     {
       "lemma": "klasė",
@@ -1356,7 +1747,10 @@
         "klasėje",
         "klasės"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "math": 3
+      }
     },
     {
       "lemma": "nei",
@@ -1366,7 +1760,10 @@
       "forms": [
         "nei"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "math": 3
+      }
     },
     {
       "lemma": "perskaityti",
@@ -1377,7 +1774,11 @@
         "perskaityk",
         "perskaitė"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "lithuanian": 2,
+        "math": 1
+      }
     },
     {
       "lemma": "jau",
@@ -1387,7 +1788,10 @@
       "forms": [
         "jau"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "math": 3
+      }
     },
     {
       "lemma": "kaina",
@@ -1398,7 +1802,10 @@
         "kaina",
         "kainą"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "math": 3
+      }
     },
     {
       "lemma": "lentelė",
@@ -1409,7 +1816,10 @@
         "lentelėje",
         "lentelę"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "math": 3
+      }
     },
     {
       "lemma": "namai",
@@ -1421,7 +1831,11 @@
         "namo",
         "namų"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "math": 2,
+        "world": 1
+      }
     },
     {
       "lemma": "pilietis",
@@ -1432,7 +1846,10 @@
         "piliečio",
         "piliečių"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "world": 3
+      }
     },
     {
       "lemma": "atimti",
@@ -1443,7 +1860,10 @@
         "atimtum",
         "atėmiau"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "math": 3
+      }
     },
     {
       "lemma": "atsakyti",
@@ -1454,7 +1874,11 @@
         "atsako",
         "atsakyk"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "lithuanian": 1,
+        "math": 2
+      }
     },
     {
       "lemma": "būrelis",
@@ -1465,7 +1889,10 @@
         "būrelius",
         "būrelį"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "math": 3
+      }
     },
     {
       "lemma": "būtasis",
@@ -1475,7 +1902,10 @@
       "forms": [
         "būtojo"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "lithuanian": 3
+      }
     },
     {
       "lemma": "dar",
@@ -1485,7 +1915,10 @@
       "forms": [
         "dar"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "math": 3
+      }
     },
     {
       "lemma": "dažninis",
@@ -1495,7 +1928,10 @@
       "forms": [
         "dažninio"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "lithuanian": 3
+      }
     },
     {
       "lemma": "demokratinis",
@@ -1506,7 +1942,10 @@
         "demokratinė",
         "demokratinės"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "world": 3
+      }
     },
     {
       "lemma": "dešimtis",
@@ -1517,7 +1956,10 @@
         "dešimtis",
         "dešimčių"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "math": 3
+      }
     },
     {
       "lemma": "duoti",
@@ -1529,7 +1971,12 @@
         "duoti",
         "duotų"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "lithuanian": 1,
+        "math": 1,
+        "world": 1
+      }
     },
     {
       "lemma": "euras",
@@ -1540,7 +1987,10 @@
         "eurus",
         "eurų"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "math": 3
+      }
     },
     {
       "lemma": "ketvirtokas",
@@ -1551,7 +2001,10 @@
         "ketvirtokai",
         "ketvirtokų"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "math": 3
+      }
     },
     {
       "lemma": "norėti",
@@ -1562,7 +2015,11 @@
         "nori",
         "norint"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "math": 2,
+        "world": 1
+      }
     },
     {
       "lemma": "pabaigti",
@@ -1573,7 +2030,10 @@
         "pabaik",
         "užbaik"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "math": 3
+      }
     },
     {
       "lemma": "pareiga",
@@ -1584,7 +2044,10 @@
         "pareigoms",
         "pareigos"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "world": 3
+      }
     },
     {
       "lemma": "praleisti",
@@ -1596,7 +2059,11 @@
         "praleistas",
         "praleistus"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "lithuanian": 1,
+        "math": 2
+      }
     },
     {
       "lemma": "prireikti",
@@ -1607,7 +2074,10 @@
         "prireiks",
         "prireikė"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "math": 3
+      }
     },
     {
       "lemma": "pusė",
@@ -1618,7 +2088,10 @@
         "pusė",
         "pusę"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "math": 3
+      }
     },
     {
       "lemma": "raidė",
@@ -1630,7 +2103,11 @@
         "raides",
         "raidės"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "lithuanian": 2,
+        "math": 1
+      }
     },
     {
       "lemma": "savas",
@@ -1641,7 +2118,11 @@
         "sava",
         "savo"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "math": 1,
+        "world": 2
+      }
     },
     {
       "lemma": "seimas",
@@ -1653,7 +2134,10 @@
         "seimo",
         "seimui"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "world": 3
+      }
     },
     {
       "lemma": "skirtumas",
@@ -1664,7 +2148,10 @@
         "skirtumas",
         "skirtumą"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "math": 3
+      }
     },
     {
       "lemma": "sumokėti",
@@ -1675,7 +2162,10 @@
         "sumokėjo",
         "sumokėti"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "math": 3
+      }
     },
     {
       "lemma": "tas",
@@ -1686,7 +2176,11 @@
         "tam",
         "tą"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "math": 2,
+        "world": 1
+      }
     },
     {
       "lemma": "trečias",
@@ -1698,7 +2192,10 @@
         "trečio",
         "trečioje"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "math": 3
+      }
     },
     {
       "lemma": "ženklas",
@@ -1709,7 +2206,10 @@
         "ženklus",
         "ženklą"
       ],
-      "tasks": 3
+      "tasks": 3,
+      "bySubject": {
+        "math": 3
+      }
     },
     {
       "lemma": "mokinys",
@@ -1720,7 +2220,10 @@
         "mokiniai",
         "mokinių"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "knyga",
@@ -1732,7 +2235,10 @@
         "knygos",
         "knygų"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "sausainis",
@@ -1746,7 +2252,10 @@
         "sausainius",
         "sausainių"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "gėlė",
@@ -1759,7 +2268,10 @@
         "gėlėmis",
         "gėlės"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "valanda",
@@ -1771,7 +2283,10 @@
         "valandos",
         "valandą"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "atvežti",
@@ -1782,7 +2297,10 @@
         "atvežtos",
         "atvežė"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "daržas",
@@ -1794,7 +2312,10 @@
         "darže",
         "daržo"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "kamuoliukas",
@@ -1805,7 +2326,10 @@
         "kamuoliukai",
         "kamuoliukų"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "lenta",
@@ -1817,7 +2341,10 @@
         "lentas",
         "lentos"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "lysvė",
@@ -1829,7 +2356,10 @@
         "lysvėje",
         "lysvės"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "sportas",
@@ -1839,7 +2369,11 @@
       "forms": [
         "sporto"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 1,
+        "world": 1
+      }
     },
     {
       "lemma": "takas",
@@ -1850,7 +2384,10 @@
         "tako",
         "taku"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "tūkstantis",
@@ -1860,7 +2397,10 @@
       "forms": [
         "tūkstančių"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "aikštelė",
@@ -1871,7 +2411,10 @@
         "aikštelių",
         "aikštelės"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "apskritimas",
@@ -1882,7 +2425,10 @@
         "apskritimai",
         "apskritimo"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "braškė",
@@ -1893,7 +2439,10 @@
         "braškių",
         "braškės"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "draugas",
@@ -1905,7 +2454,10 @@
         "draugui",
         "draugus"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "kubas",
@@ -1917,7 +2469,10 @@
         "kubą",
         "kubų"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "litras",
@@ -1927,7 +2482,10 @@
       "forms": [
         "litrų"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "mėnuo",
@@ -1937,7 +2495,10 @@
       "forms": [
         "mėnesį"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "parduoti",
@@ -1948,7 +2509,10 @@
         "pardavė",
         "parduota"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "privalėti",
@@ -1959,7 +2523,10 @@
         "privalo",
         "privaloma"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "world": 2
+      }
     },
     {
       "lemma": "sandauga",
@@ -1971,7 +2538,10 @@
         "sandaugą",
         "sandaugų"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "siunta",
@@ -1982,7 +2552,10 @@
         "siuntoje",
         "siuntą"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "sklypas",
@@ -1994,7 +2567,10 @@
         "sklypas",
         "sklypo"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "spalvotas",
@@ -2004,7 +2580,10 @@
       "forms": [
         "spalvotų"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "stulpelis",
@@ -2016,7 +2595,10 @@
         "stulpeliu",
         "stulpelyje"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "šimtas",
@@ -2026,7 +2608,10 @@
       "forms": [
         "šimtų"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "trikampis",
@@ -2036,7 +2621,10 @@
       "forms": [
         "trikampio"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "valstybinis",
@@ -2048,7 +2636,10 @@
         "valstybinius",
         "valstybinių"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "world": 2
+      }
     },
     {
       "lemma": "žemė",
@@ -2058,7 +2649,10 @@
       "forms": [
         "žemės"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "apibūdinimas",
@@ -2069,7 +2663,10 @@
         "apibūdinimais",
         "apibūdinimus"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "world": 2
+      }
     },
     {
       "lemma": "ar",
@@ -2079,7 +2676,10 @@
       "forms": [
         "ar"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "atstumas",
@@ -2089,7 +2689,10 @@
       "forms": [
         "atstumą"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "automobilis",
@@ -2099,7 +2702,10 @@
       "forms": [
         "automobilį"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "bei",
@@ -2109,7 +2715,10 @@
       "forms": [
         "bei"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "world": 2
+      }
     },
     {
       "lemma": "dalmuo",
@@ -2120,7 +2729,10 @@
         "dalmenyje",
         "dalmenį"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "darbas",
@@ -2131,7 +2743,11 @@
         "darbo",
         "darbus"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 1,
+        "world": 1
+      }
     },
     {
       "lemma": "dydis",
@@ -2142,7 +2758,10 @@
         "dydžiai",
         "dydžio"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "dirbti",
@@ -2153,7 +2772,10 @@
         "dirbo",
         "dirbs"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "du",
@@ -2163,7 +2785,10 @@
       "forms": [
         "du"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "dvigubai",
@@ -2173,7 +2798,10 @@
       "forms": [
         "dvigubai"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "dviveiksmis",
@@ -2183,7 +2811,10 @@
       "forms": [
         "dviveiksmiu"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "gramas",
@@ -2193,7 +2824,10 @@
       "forms": [
         "gramų"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "įdėti",
@@ -2204,7 +2838,10 @@
         "įdėjo",
         "įdėti"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "interesas",
@@ -2215,7 +2852,10 @@
         "interesas",
         "interesus"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "world": 2
+      }
     },
     {
       "lemma": "įstaiga",
@@ -2226,7 +2866,11 @@
         "įstaiga",
         "įstaigų"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 1,
+        "world": 1
+      }
     },
     {
       "lemma": "išmanusis",
@@ -2237,7 +2881,10 @@
         "išmaniojo",
         "išmaniąsias"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "įvardis",
@@ -2248,7 +2895,10 @@
         "įvardžiu",
         "įvardžius"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "lithuanian": 2
+      }
     },
     {
       "lemma": "jeigu",
@@ -2258,7 +2908,10 @@
       "forms": [
         "jeigu"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "jog",
@@ -2268,7 +2921,10 @@
       "forms": [
         "jog"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "world": 2
+      }
     },
     {
       "lemma": "kelionė",
@@ -2279,7 +2935,10 @@
         "kelionių",
         "kelionės"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "keturženklis",
@@ -2290,7 +2949,10 @@
         "keturženklis",
         "keturženklius"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "kiemas",
@@ -2301,7 +2963,10 @@
         "kiemo",
         "kiemu"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "kortelė",
@@ -2312,7 +2977,11 @@
         "kortele",
         "korteles"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "lithuanian": 1,
+        "math": 1
+      }
     },
     {
       "lemma": "kriaušė",
@@ -2322,7 +2991,10 @@
       "forms": [
         "kriaušės"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "lygiai",
@@ -2332,7 +3004,10 @@
       "forms": [
         "lygiai"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "mažiausias",
@@ -2342,7 +3017,10 @@
       "forms": [
         "mažiausias"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "metas",
@@ -2352,7 +3030,11 @@
       "forms": [
         "metu"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 1,
+        "world": 1
+      }
     },
     {
       "lemma": "mokytis",
@@ -2362,7 +3044,10 @@
       "forms": [
         "mokosi"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "nelyginis",
@@ -2373,7 +3058,10 @@
         "nelyginis",
         "nelyginius"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "nustatyti",
@@ -2383,7 +3071,11 @@
       "forms": [
         "nustatyk"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "lithuanian": 1,
+        "math": 1
+      }
     },
     {
       "lemma": "padėti",
@@ -2394,7 +3086,11 @@
         "padeda",
         "padėk"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 1,
+        "world": 1
+      }
     },
     {
       "lemma": "pagrindinis",
@@ -2405,7 +3101,11 @@
         "pagrindinis",
         "pagrindinį"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 1,
+        "world": 1
+      }
     },
     {
       "lemma": "parduotuvė",
@@ -2415,7 +3115,10 @@
       "forms": [
         "parduotuvė"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "pasodinti",
@@ -2426,7 +3129,10 @@
         "pasodino",
         "pasodintos"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "pateikti",
@@ -2437,7 +3143,10 @@
         "pateikti",
         "pateiktą"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "pavadinimas",
@@ -2447,7 +3156,11 @@
       "forms": [
         "pavadinimus"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 1,
+        "world": 1
+      }
     },
     {
       "lemma": "pavaizduoti",
@@ -2458,7 +3171,11 @@
         "pavaizduota",
         "pavaizduotos"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 1,
+        "world": 1
+      }
     },
     {
       "lemma": "pažintinis",
@@ -2469,7 +3186,10 @@
         "pažintinio",
         "pažintiniu"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "pilietybė",
@@ -2479,7 +3199,10 @@
       "forms": [
         "pilietybę"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "world": 2
+      }
     },
     {
       "lemma": "požymis",
@@ -2490,7 +3213,10 @@
         "požymis",
         "požymius"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "world": 2
+      }
     },
     {
       "lemma": "pradėti",
@@ -2501,7 +3227,11 @@
         "pradeda",
         "pradėti"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 1,
+        "world": 1
+      }
     },
     {
       "lemma": "prie",
@@ -2511,7 +3241,11 @@
       "forms": [
         "prie"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 1,
+        "world": 1
+      }
     },
     {
       "lemma": "projektas",
@@ -2521,7 +3255,10 @@
       "forms": [
         "projektą"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "world": 2
+      }
     },
     {
       "lemma": "rasti",
@@ -2532,7 +3269,11 @@
         "rask",
         "surask"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "lithuanian": 1,
+        "math": 1
+      }
     },
     {
       "lemma": "remtis",
@@ -2543,7 +3284,10 @@
         "remdamasis",
         "remkis"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "ruošti",
@@ -2554,7 +3298,11 @@
         "ruošia",
         "ruošti"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 1,
+        "world": 1
+      }
     },
     {
       "lemma": "savęs",
@@ -2564,7 +3312,10 @@
       "forms": [
         "sau"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "savivaldybė",
@@ -2574,7 +3325,10 @@
       "forms": [
         "savivaldybių"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "world": 2
+      }
     },
     {
       "lemma": "simbolis",
@@ -2585,7 +3339,10 @@
         "simboliai",
         "simbolius"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "world": 2
+      }
     },
     {
       "lemma": "skirtingas",
@@ -2596,7 +3353,11 @@
         "skirtingas",
         "skirtingus"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 1,
+        "world": 1
+      }
     },
     {
       "lemma": "slyva",
@@ -2607,7 +3368,10 @@
         "slyvos",
         "slyvų"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "spindulys",
@@ -2618,7 +3382,10 @@
         "spindulio",
         "spindulys"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "sumažinti",
@@ -2629,7 +3396,10 @@
         "sumažinta",
         "sumažinę"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "suteikti",
@@ -2640,7 +3410,10 @@
         "suteikia",
         "suteikiamos"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "world": 2
+      }
     },
     {
       "lemma": "tešla",
@@ -2651,7 +3424,10 @@
         "tešlos",
         "tešlą"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "tiek",
@@ -2661,7 +3437,10 @@
       "forms": [
         "tiek"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "tikti",
@@ -2672,7 +3451,10 @@
         "tiktų",
         "tinka"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "lithuanian": 2
+      }
     },
     {
       "lemma": "užpildyti",
@@ -2682,7 +3464,10 @@
       "forms": [
         "užpildyk"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "užsakyti",
@@ -2693,7 +3478,10 @@
         "užsakė",
         "užsisakė"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "vadinti",
@@ -2703,7 +3491,10 @@
       "forms": [
         "vadinamas"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "world": 2
+      }
     },
     {
       "lemma": "valdžia",
@@ -2713,7 +3504,10 @@
       "forms": [
         "valdžios"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "world": 2
+      }
     },
     {
       "lemma": "žinoti",
@@ -2723,7 +3517,10 @@
       "forms": [
         "žinoma"
       ],
-      "tasks": 2
+      "tasks": 2,
+      "bySubject": {
+        "math": 2
+      }
     },
     {
       "lemma": "bilietas",
@@ -2733,7 +3530,10 @@
       "forms": [
         "bilietų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "pyragas",
@@ -2746,7 +3546,10 @@
         "pyragui",
         "pyragą"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "stiklainis",
@@ -2758,7 +3561,10 @@
         "stiklainius",
         "stiklainyje"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "vaismedis",
@@ -2769,7 +3575,10 @@
         "vaismedžiai",
         "vaismedžių"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "lapas",
@@ -2780,7 +3589,10 @@
         "lapai",
         "lapų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "puslapis",
@@ -2791,7 +3603,10 @@
         "puslapius",
         "puslapių"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "vykti",
@@ -2803,7 +3618,10 @@
         "vyks",
         "vyksta"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "lithuanian": 1
+      }
     },
     {
       "lemma": "asmuo",
@@ -2813,7 +3631,10 @@
       "forms": [
         "asmuo"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "kiaušinis",
@@ -2824,7 +3645,10 @@
         "kiaušiniais",
         "kiaušinių"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "klevas",
@@ -2834,7 +3658,10 @@
       "forms": [
         "klevo"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "kostiumas",
@@ -2846,7 +3673,10 @@
         "kostiumui",
         "kostiumus"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "plyta",
@@ -2856,7 +3686,10 @@
       "forms": [
         "plytų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "puokštė",
@@ -2867,7 +3700,10 @@
         "puokštes",
         "puokštę"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "spintelė",
@@ -2878,7 +3714,10 @@
         "spintelės",
         "spintelėse"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "suknelė",
@@ -2889,7 +3728,10 @@
         "sukneles",
         "suknelių"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "sultys",
@@ -2899,7 +3741,10 @@
       "forms": [
         "sulčių"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "svarelis",
@@ -2910,7 +3755,10 @@
         "svareliai",
         "svarelis"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "šeima",
@@ -2920,7 +3768,10 @@
       "forms": [
         "šeima"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "taupyklė",
@@ -2932,7 +3783,10 @@
         "taupyklė",
         "taupyklėje"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "aikštė",
@@ -2943,7 +3797,10 @@
         "aikštės",
         "aikštę"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "akmuo",
@@ -2953,7 +3810,10 @@
       "forms": [
         "akmenimis"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "antrokas",
@@ -2964,7 +3824,10 @@
         "antrokai",
         "antrokų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "ateiti",
@@ -2975,7 +3838,10 @@
         "ateinant",
         "ateis"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "atvėsinti",
@@ -2986,7 +3852,10 @@
         "atvėsinimas",
         "atvėsinti"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "balsavimas",
@@ -2996,7 +3865,10 @@
       "forms": [
         "balsavimu"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "burbulas",
@@ -3006,7 +3878,10 @@
       "forms": [
         "burbulų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "centas",
@@ -3017,7 +3892,10 @@
         "centus",
         "centų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "centras",
@@ -3028,7 +3906,10 @@
         "centre",
         "centrą"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "choras",
@@ -3038,7 +3919,10 @@
       "forms": [
         "chorą"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "daigas",
@@ -3049,7 +3933,10 @@
         "daigus",
         "daigų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "daržovė",
@@ -3059,7 +3946,10 @@
       "forms": [
         "daržovės"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "dažai",
@@ -3069,7 +3959,10 @@
       "forms": [
         "dažų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "degalai",
@@ -3079,7 +3972,10 @@
       "forms": [
         "degalų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "dykuma",
@@ -3089,7 +3985,10 @@
       "forms": [
         "dykuma"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "dokumentas",
@@ -3099,7 +3998,10 @@
       "forms": [
         "dokumentų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "futbolas",
@@ -3109,7 +4011,10 @@
       "forms": [
         "futbolo"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "gamykla",
@@ -3119,7 +4024,10 @@
       "forms": [
         "gamykla"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "grįžti",
@@ -3129,7 +4037,10 @@
       "forms": [
         "grįždamas"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "išgrįsti",
@@ -3139,7 +4050,10 @@
       "forms": [
         "išgrįsta"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "iškelti",
@@ -3149,7 +4063,10 @@
       "forms": [
         "iškelti"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "išrinkti",
@@ -3159,7 +4076,10 @@
       "forms": [
         "išrenkamas"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "išspausti",
@@ -3170,7 +4090,10 @@
         "išspaudė",
         "išspaus"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "kavinė",
@@ -3181,7 +4104,10 @@
         "kavinė",
         "kavinės"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "keksiukas",
@@ -3191,7 +4117,10 @@
       "forms": [
         "keksiukų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "kelialapis",
@@ -3202,7 +4131,10 @@
         "kelialapio",
         "kelialapius"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "kilimas",
@@ -3213,7 +4145,10 @@
         "kilimai",
         "kilimo"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "krepšinis",
@@ -3223,7 +4158,10 @@
       "forms": [
         "krepšinį"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "lankytojas",
@@ -3234,7 +4172,10 @@
         "lankytojai",
         "lankytojų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "mažiau",
@@ -3244,7 +4185,10 @@
       "forms": [
         "mažiau"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "medelynas",
@@ -3254,7 +4198,10 @@
       "forms": [
         "medelyne"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "medžiaga",
@@ -3264,7 +4211,10 @@
       "forms": [
         "medžiagos"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "muilas",
@@ -3274,7 +4224,10 @@
       "forms": [
         "muilo"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "nudažyti",
@@ -3284,7 +4237,10 @@
       "forms": [
         "nudažyti"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "nukeliauti",
@@ -3294,7 +4250,10 @@
       "forms": [
         "nukeliavo"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "nuomonė",
@@ -3305,7 +4264,10 @@
         "nuomones",
         "nuomonės"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "obuolys",
@@ -3316,7 +4278,10 @@
         "obuoliai",
         "obuolių"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "paimti",
@@ -3326,7 +4291,10 @@
       "forms": [
         "paėmė"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "pakelis",
@@ -3337,7 +4305,10 @@
         "pakelis",
         "pakelius"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "paskutinis",
@@ -3348,7 +4319,10 @@
         "paskutiniai",
         "paskutinio"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "pavojus",
@@ -3359,7 +4333,10 @@
         "pavojaus",
         "pavojų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "pieštukas",
@@ -3370,7 +4347,10 @@
         "pieštukus",
         "pieštuką"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "pradinukas",
@@ -3381,7 +4361,10 @@
         "pradinukai",
         "pradinukų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "praeitis",
@@ -3391,7 +4374,10 @@
       "forms": [
         "praeityje"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "lithuanian": 1
+      }
     },
     {
       "lemma": "prekė",
@@ -3401,7 +4387,10 @@
       "forms": [
         "prekių"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "priskinti",
@@ -3411,7 +4400,10 @@
       "forms": [
         "priskynė"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "rinkimai",
@@ -3422,7 +4414,10 @@
         "rinkimai",
         "rinkimų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "rinkinys",
@@ -3432,7 +4427,10 @@
       "forms": [
         "rinkinį"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "sąsiuvinis",
@@ -3443,7 +4441,10 @@
         "sąsiuvinio",
         "sąsiuvinius"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "segtuvas",
@@ -3454,7 +4455,10 @@
         "segtuvus",
         "segtuvų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "sėkla",
@@ -3465,7 +4469,10 @@
         "sėklomis",
         "sėklų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "skiautinis",
@@ -3476,7 +4483,10 @@
         "skiautinio",
         "skiautinį"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "sodininkas",
@@ -3486,7 +4496,10 @@
       "forms": [
         "sodininkas"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "spaudykla",
@@ -3496,7 +4509,10 @@
       "forms": [
         "spaudykla"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "stalas",
@@ -3506,7 +4522,10 @@
       "forms": [
         "stalo"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "standartinis",
@@ -3516,7 +4535,10 @@
       "forms": [
         "standartinių"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "statinė",
@@ -3526,7 +4548,10 @@
       "forms": [
         "statinėje"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "sunkesnis",
@@ -3536,7 +4561,10 @@
       "forms": [
         "sunkesnis"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "surašyti",
@@ -3546,7 +4574,10 @@
       "forms": [
         "surašyk"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "svečias",
@@ -3557,7 +4588,10 @@
         "svečiams",
         "svečių"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "šakniavaisinis",
@@ -3567,7 +4601,10 @@
       "forms": [
         "šakniavaisinės"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "šventė",
@@ -3578,7 +4615,10 @@
         "šventes",
         "švenčių"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "televizorius",
@@ -3589,7 +4629,10 @@
         "televizoriaus",
         "televizorius"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "tvarka",
@@ -3599,7 +4642,10 @@
       "forms": [
         "tvarka"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "tvora",
@@ -3609,7 +4655,10 @@
       "forms": [
         "tvora"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "vėliava",
@@ -3619,7 +4668,10 @@
       "forms": [
         "vėliavą"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "abu",
@@ -3629,7 +4681,10 @@
       "forms": [
         "abi"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "agentūra",
@@ -3639,7 +4694,10 @@
       "forms": [
         "agentūra"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "akis",
@@ -3649,7 +4707,10 @@
       "forms": [
         "akis"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "aktas",
@@ -3659,7 +4720,10 @@
       "forms": [
         "aktų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "ant",
@@ -3669,7 +4733,10 @@
       "forms": [
         "ant"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "apdovanojimas",
@@ -3679,7 +4746,10 @@
       "forms": [
         "apdovanojimus"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "apeiti",
@@ -3689,7 +4759,10 @@
       "forms": [
         "apėjo"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "apgaulė",
@@ -3699,7 +4772,10 @@
       "forms": [
         "apgaulės"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "apibūdinti",
@@ -3709,7 +4785,10 @@
       "forms": [
         "apibūdinti"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "apie",
@@ -3719,7 +4798,10 @@
       "forms": [
         "apie"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "apsisaugoti",
@@ -3729,7 +4811,10 @@
       "forms": [
         "apsisaugoti"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "aptverti",
@@ -3739,7 +4824,10 @@
       "forms": [
         "aptvertas"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "archyvas",
@@ -3749,7 +4837,10 @@
       "forms": [
         "archyve"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "asmeniškas",
@@ -3759,7 +4850,10 @@
       "forms": [
         "asmeniški"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "ateitis",
@@ -3769,7 +4863,10 @@
       "forms": [
         "ateityje"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "lithuanian": 1
+      }
     },
     {
       "lemma": "atitikti",
@@ -3779,7 +4876,10 @@
       "forms": [
         "atitinka"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "atkreipti",
@@ -3789,7 +4889,10 @@
       "forms": [
         "atkreipk"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "atpigti",
@@ -3799,7 +4902,10 @@
       "forms": [
         "atpigo"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "atrakinimas",
@@ -3809,7 +4915,10 @@
       "forms": [
         "atrakinimo"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "atstovas",
@@ -3819,7 +4928,10 @@
       "forms": [
         "atstovais"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "atstovauti",
@@ -3829,7 +4941,10 @@
       "forms": [
         "atstovautų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "augti",
@@ -3839,7 +4954,10 @@
       "forms": [
         "auga"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "aukščiausias",
@@ -3849,7 +4967,10 @@
       "forms": [
         "aukščiausią"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "bananas",
@@ -3859,7 +4980,10 @@
       "forms": [
         "bananų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "bandelė",
@@ -3869,7 +4993,10 @@
       "forms": [
         "bandelė"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "bendras",
@@ -3879,7 +5006,10 @@
       "forms": [
         "bendrą"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "bendratis",
@@ -3889,7 +5019,10 @@
       "forms": [
         "bendratį"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "lithuanian": 1
+      }
     },
     {
       "lemma": "biblioteka",
@@ -3899,7 +5032,10 @@
       "forms": [
         "biblioteką"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "bibliotekininkas",
@@ -3909,7 +5045,10 @@
       "forms": [
         "bibliotekininkas"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "briauna",
@@ -3919,7 +5058,10 @@
       "forms": [
         "briaunos"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "brolis",
@@ -3929,7 +5071,10 @@
       "forms": [
         "brolis"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "būdas",
@@ -3939,7 +5084,10 @@
       "forms": [
         "būdus"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "būdingas",
@@ -3949,7 +5097,10 @@
       "forms": [
         "būdingas"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "burokėlis",
@@ -3959,7 +5110,10 @@
       "forms": [
         "burokėlių"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "centimetras",
@@ -3969,7 +5123,10 @@
       "forms": [
         "centimetrais"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "dabar",
@@ -3979,7 +5136,10 @@
       "forms": [
         "dabar"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "lithuanian": 1
+      }
     },
     {
       "lemma": "dalyvauti",
@@ -3989,7 +5149,10 @@
       "forms": [
         "dalyvauja"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "darbuotojas",
@@ -3999,7 +5162,10 @@
       "forms": [
         "darbuotojai"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "daryti",
@@ -4009,7 +5175,10 @@
       "forms": [
         "daryk"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "daug",
@@ -4019,7 +5188,10 @@
       "forms": [
         "daug"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "lithuanian": 1
+      }
     },
     {
       "lemma": "daugiklis",
@@ -4029,7 +5201,10 @@
       "forms": [
         "daugiklį"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "dekoracija",
@@ -4039,7 +5214,10 @@
       "forms": [
         "dekoracijoms"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "dėmesys",
@@ -4049,7 +5227,10 @@
       "forms": [
         "dėmesį"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "derlius",
@@ -4059,7 +5240,10 @@
       "forms": [
         "derliaus"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "desertas",
@@ -4069,7 +5253,10 @@
       "forms": [
         "desertą"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "didėjimas",
@@ -4079,7 +5266,10 @@
       "forms": [
         "didėjimo"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "didelis",
@@ -4089,7 +5279,10 @@
       "forms": [
         "didysis"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "didesnis",
@@ -4099,7 +5292,10 @@
       "forms": [
         "didesnis"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "drabužis",
@@ -4109,7 +5305,10 @@
       "forms": [
         "drabužių"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "duomenys",
@@ -4119,7 +5318,10 @@
       "forms": [
         "duomenis"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "dviženklis",
@@ -4129,7 +5331,10 @@
       "forms": [
         "dviženklių"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "džiovintas",
@@ -4139,7 +5344,10 @@
       "forms": [
         "džiovintų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "eilė",
@@ -4149,7 +5357,10 @@
       "forms": [
         "eilės"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "eilutė",
@@ -4159,7 +5370,10 @@
       "forms": [
         "eilutėje"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "lithuanian": 1
+      }
     },
     {
       "lemma": "ekranas",
@@ -4169,7 +5383,10 @@
       "forms": [
         "ekranų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "ekspedicija",
@@ -4179,7 +5396,10 @@
       "forms": [
         "ekspedicijos"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "festivalis",
@@ -4189,7 +5409,10 @@
       "forms": [
         "festivalį"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "galėti",
@@ -4199,7 +5422,10 @@
       "forms": [
         "galėtum"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "galia",
@@ -4209,7 +5435,10 @@
       "forms": [
         "galią"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "galima",
@@ -4219,7 +5448,10 @@
       "forms": [
         "galima"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "gamyba",
@@ -4229,7 +5461,10 @@
       "forms": [
         "gamyba"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "gausu",
@@ -4239,7 +5474,10 @@
       "forms": [
         "gausu"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "geologas",
@@ -4249,7 +5487,10 @@
       "forms": [
         "geologai"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "geometrinis",
@@ -4259,7 +5500,10 @@
       "forms": [
         "geometrinių"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "geriausiai",
@@ -4269,7 +5513,10 @@
       "forms": [
         "geriausiai"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "gėrimas",
@@ -4279,7 +5526,10 @@
       "forms": [
         "gėrimą"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "gyvenamasis",
@@ -4289,7 +5539,10 @@
       "forms": [
         "gyvenamųjų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "gyvūnas",
@@ -4299,7 +5552,10 @@
       "forms": [
         "gyvūnų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "globa",
@@ -4309,7 +5565,10 @@
       "forms": [
         "globos"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "graikiškas",
@@ -4319,7 +5578,10 @@
       "forms": [
         "graikiškų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "grėsmė",
@@ -4329,7 +5591,10 @@
       "forms": [
         "grėsmes"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "įbrėžti",
@@ -4339,7 +5604,10 @@
       "forms": [
         "įbrėžti"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "ieškoti",
@@ -4349,7 +5617,10 @@
       "forms": [
         "ieško"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "lithuanian": 1
+      }
     },
     {
       "lemma": "įgyvendinti",
@@ -4359,7 +5630,10 @@
       "forms": [
         "įgyvendinti"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "iki",
@@ -4369,7 +5643,10 @@
       "forms": [
         "iki"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "ilgai",
@@ -4379,7 +5656,10 @@
       "forms": [
         "ilgiau"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "įlipti",
@@ -4389,7 +5669,10 @@
       "forms": [
         "įlipo"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "iliustracija",
@@ -4399,7 +5682,10 @@
       "forms": [
         "iliustraciją"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "įmonė",
@@ -4409,7 +5695,10 @@
       "forms": [
         "įmonių"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "internetas",
@@ -4419,7 +5708,10 @@
       "forms": [
         "internete"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "įrodyti",
@@ -4429,7 +5721,10 @@
       "forms": [
         "įrodo"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "įsidėmėtinas",
@@ -4439,7 +5734,10 @@
       "forms": [
         "įsidėmėtinos"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "lithuanian": 1
+      }
     },
     {
       "lemma": "išklotinė",
@@ -4449,7 +5747,10 @@
       "forms": [
         "išklotinės"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "išlankstyti",
@@ -4459,7 +5760,10 @@
       "forms": [
         "išlankstyti"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "išleisti",
@@ -4469,7 +5773,10 @@
       "forms": [
         "išleido"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "išnagrinėti",
@@ -4479,7 +5786,10 @@
       "forms": [
         "išnagrinėjo"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "išpardavimas",
@@ -4489,7 +5799,10 @@
       "forms": [
         "išpardavimą"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "išsiruošti",
@@ -4499,7 +5812,10 @@
       "forms": [
         "išsiruošė"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "išvengti",
@@ -4509,7 +5825,10 @@
       "forms": [
         "išvengti"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "įtaka",
@@ -4519,7 +5838,10 @@
       "forms": [
         "įtakos"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "įvairus",
@@ -4529,7 +5851,10 @@
       "forms": [
         "įvairius"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "įveikti",
@@ -4539,7 +5864,10 @@
       "forms": [
         "įveikė"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "joga",
@@ -4549,7 +5877,10 @@
       "forms": [
         "jogos"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "joti",
@@ -4559,7 +5890,10 @@
       "forms": [
         "joti"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "kalnas",
@@ -4569,7 +5903,10 @@
       "forms": [
         "kalną"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "kartu",
@@ -4579,7 +5916,10 @@
       "forms": [
         "kartu"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "kelias",
@@ -4589,7 +5929,10 @@
       "forms": [
         "kelio"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "kelintas",
@@ -4599,7 +5942,10 @@
       "forms": [
         "kelintą"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "kepėja",
@@ -4609,7 +5955,10 @@
       "forms": [
         "kepėjai"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "kepinys",
@@ -4619,7 +5968,10 @@
       "forms": [
         "kepinių"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "kepti",
@@ -4629,7 +5981,10 @@
       "forms": [
         "keps"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "ketinti",
@@ -4639,7 +5994,10 @@
       "forms": [
         "ketina"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "keturi",
@@ -4649,7 +6007,10 @@
       "forms": [
         "keturi"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "ketvirtadalis",
@@ -4659,7 +6020,10 @@
       "forms": [
         "ketvirtadaliu"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "ketvirtas",
@@ -4669,7 +6033,10 @@
       "forms": [
         "ketvirto"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "kilogramas",
@@ -4679,7 +6046,10 @@
       "forms": [
         "kilogramų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "kilometras",
@@ -4689,7 +6059,10 @@
       "forms": [
         "kilometrų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "klaidingas",
@@ -4699,7 +6072,10 @@
       "forms": [
         "klaidingas"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "kodas",
@@ -4709,7 +6085,10 @@
       "forms": [
         "kodą"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "kodėl",
@@ -4719,7 +6098,10 @@
       "forms": [
         "kodėl"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "kompiuterinis",
@@ -4729,7 +6111,10 @@
       "forms": [
         "kompiuterinių"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "kompiuteris",
@@ -4739,7 +6124,10 @@
       "forms": [
         "kompiuterio"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "koncertas",
@@ -4749,7 +6137,10 @@
       "forms": [
         "koncertą"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "konstitucija",
@@ -4759,7 +6150,10 @@
       "forms": [
         "konstitucija"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "krovininis",
@@ -4769,7 +6163,10 @@
       "forms": [
         "krovininį"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "krovinys",
@@ -4779,7 +6176,10 @@
       "forms": [
         "krovinys"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "kubelis",
@@ -4789,7 +6189,10 @@
       "forms": [
         "kubelio"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "kupranugaris",
@@ -4799,7 +6202,10 @@
       "forms": [
         "kupranugariais"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "kur",
@@ -4809,7 +6215,10 @@
       "forms": [
         "kur"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "kvadratinis",
@@ -4819,7 +6228,10 @@
       "forms": [
         "kvadratinės"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "laukti",
@@ -4829,7 +6241,10 @@
       "forms": [
         "laukia"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "lazdynas",
@@ -4839,7 +6254,10 @@
       "forms": [
         "lazdynų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "ledai",
@@ -4849,7 +6267,10 @@
       "forms": [
         "ledų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "leisti",
@@ -4859,7 +6280,10 @@
       "forms": [
         "leidžia"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "lyderis",
@@ -4869,7 +6293,10 @@
       "forms": [
         "lyderiams"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "lyginis",
@@ -4879,7 +6306,10 @@
       "forms": [
         "lyginius"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "mama",
@@ -4889,7 +6319,10 @@
       "forms": [
         "mama"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "mažėjimas",
@@ -4899,7 +6332,10 @@
       "forms": [
         "mažėjimo"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "mažiausiai",
@@ -4909,7 +6345,10 @@
       "forms": [
         "mažiausiai"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "mergaitė",
@@ -4919,7 +6358,10 @@
       "forms": [
         "mergaitė"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "minutė",
@@ -4929,7 +6371,10 @@
       "forms": [
         "minučių"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "mokytoja",
@@ -4939,7 +6384,10 @@
       "forms": [
         "mokytojai"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "moksleivis",
@@ -4949,7 +6397,10 @@
       "forms": [
         "moksleiviai"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "monstriukas",
@@ -4959,7 +6410,10 @@
       "forms": [
         "monstriukui"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "mūrininkas",
@@ -4969,7 +6423,10 @@
       "forms": [
         "mūrininkai"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "muzika",
@@ -4979,7 +6436,10 @@
       "forms": [
         "muzikos"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "namas",
@@ -4989,7 +6449,10 @@
       "forms": [
         "namas"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "narys",
@@ -4999,7 +6462,10 @@
       "forms": [
         "narys"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "naujas",
@@ -5009,7 +6475,10 @@
       "forms": [
         "naujų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "neigiamas",
@@ -5019,7 +6488,10 @@
       "forms": [
         "neigiamos"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "nugara",
@@ -5029,7 +6501,10 @@
       "forms": [
         "nugarą"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "nulis",
@@ -5039,7 +6514,10 @@
       "forms": [
         "nulis"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "nuo",
@@ -5049,7 +6527,10 @@
       "forms": [
         "nuo"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "nuotrauka",
@@ -5059,7 +6540,10 @@
       "forms": [
         "nuotraukomis"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "nusakyti",
@@ -5069,7 +6553,10 @@
       "forms": [
         "nusako"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "lithuanian": 1
+      }
     },
     {
       "lemma": "nuspalvinti",
@@ -5079,7 +6566,10 @@
       "forms": [
         "nuspalvinto"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "obelis",
@@ -5089,7 +6579,10 @@
       "forms": [
         "obelys"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "organizacija",
@@ -5099,7 +6592,10 @@
       "forms": [
         "organizacijų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "organizatorius",
@@ -5109,7 +6605,10 @@
       "forms": [
         "organizatoriai"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "pabaiga",
@@ -5119,7 +6618,10 @@
       "forms": [
         "pabaiga"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "padalyti",
@@ -5129,7 +6631,10 @@
       "forms": [
         "padalijau"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "padaryti",
@@ -5139,7 +6644,10 @@
       "forms": [
         "padaryti"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "padauginti",
@@ -5149,7 +6657,10 @@
       "forms": [
         "padaugink"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "padėklas",
@@ -5159,7 +6670,10 @@
       "forms": [
         "padėklai"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "padidinti",
@@ -5169,7 +6683,10 @@
       "forms": [
         "padidintum"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "pagal",
@@ -5179,7 +6696,10 @@
       "forms": [
         "pagal"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "pailginti",
@@ -5189,7 +6709,10 @@
       "forms": [
         "pailginsime"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "pakeisti",
@@ -5199,7 +6722,10 @@
       "forms": [
         "pakeisti"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "lithuanian": 1
+      }
     },
     {
       "lemma": "palyginti",
@@ -5209,7 +6735,10 @@
       "forms": [
         "palygink"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "pamoka",
@@ -5219,7 +6748,10 @@
       "forms": [
         "pamokas"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "panaudoti",
@@ -5229,7 +6761,10 @@
       "forms": [
         "panaudojo"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "papuošti",
@@ -5239,7 +6774,10 @@
       "forms": [
         "papuošti"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "paryškintas",
@@ -5249,7 +6787,10 @@
       "forms": [
         "paryškintiems"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "lithuanian": 1
+      }
     },
     {
       "lemma": "parkas",
@@ -5259,7 +6800,10 @@
       "forms": [
         "parką"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "parodyti",
@@ -5269,7 +6813,10 @@
       "forms": [
         "parodys"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "paruošti",
@@ -5279,7 +6826,10 @@
       "forms": [
         "paruoš"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "parvežti",
@@ -5289,7 +6839,10 @@
       "forms": [
         "parvežė"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "pasitikrinti",
@@ -5299,7 +6852,10 @@
       "forms": [
         "pasitikrink"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "patalpa",
@@ -5309,7 +6865,10 @@
       "forms": [
         "patalpas"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "patarimas",
@@ -5319,7 +6878,10 @@
       "forms": [
         "patarimus"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "patarlė",
@@ -5329,7 +6891,10 @@
       "forms": [
         "patarlę"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "lithuanian": 1
+      }
     },
     {
       "lemma": "patiekalas",
@@ -5339,7 +6904,10 @@
       "forms": [
         "patiekalą"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "patikti",
@@ -5349,7 +6917,10 @@
       "forms": [
         "patinkančius"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "pavaišinti",
@@ -5359,7 +6930,10 @@
       "forms": [
         "pavaišino"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "paversti",
@@ -5369,7 +6943,10 @@
       "forms": [
         "pavertęs"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "penktadalis",
@@ -5379,7 +6956,10 @@
       "forms": [
         "penktadalį"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "persikas",
@@ -5389,7 +6969,10 @@
       "forms": [
         "persikai"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "pertrauka",
@@ -5399,7 +6982,10 @@
       "forms": [
         "pertrauką"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "piešinys",
@@ -5409,7 +6995,10 @@
       "forms": [
         "piešinį"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "pinigai",
@@ -5419,7 +7008,10 @@
       "forms": [
         "pinigų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "pirmokas",
@@ -5429,7 +7021,10 @@
       "forms": [
         "pirmokai"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "planuoti",
@@ -5439,7 +7034,10 @@
       "forms": [
         "planuoja"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "politikas",
@@ -5449,7 +7047,10 @@
       "forms": [
         "politikus"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "popierinis",
@@ -5459,7 +7060,10 @@
       "forms": [
         "popierinėmis"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "porcija",
@@ -5469,7 +7073,10 @@
       "forms": [
         "porcijas"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "pradinis",
@@ -5479,7 +7086,10 @@
       "forms": [
         "pradinės"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "pridėti",
@@ -5489,7 +7099,10 @@
       "forms": [
         "pridėtum"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "prieveiksmis",
@@ -5499,7 +7112,10 @@
       "forms": [
         "prieveiksmius"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "lithuanian": 1
+      }
     },
     {
       "lemma": "priklausyti",
@@ -5509,7 +7125,10 @@
       "forms": [
         "priklauso"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "priskirtinas",
@@ -5519,7 +7138,10 @@
       "forms": [
         "priskirtini"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "profesija",
@@ -5529,7 +7151,10 @@
       "forms": [
         "profesijų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "puikiai",
@@ -5539,7 +7164,10 @@
       "forms": [
         "puikiai"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "pusantro",
@@ -5549,7 +7177,10 @@
       "forms": [
         "pusantros"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "raidinis",
@@ -5559,7 +7190,10 @@
       "forms": [
         "raidinio"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "rašyba",
@@ -5569,7 +7203,10 @@
       "forms": [
         "rašybos"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "lithuanian": 1
+      }
     },
     {
       "lemma": "razinos",
@@ -5579,7 +7216,10 @@
       "forms": [
         "razinų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "referendumas",
@@ -5589,7 +7229,10 @@
       "forms": [
         "referendumas"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "remontas",
@@ -5599,7 +7242,10 @@
       "forms": [
         "remontui"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "respublika",
@@ -5609,7 +7255,10 @@
       "forms": [
         "respublikos"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "režimas",
@@ -5619,7 +7268,10 @@
       "forms": [
         "režimu"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "riešutas",
@@ -5629,7 +7281,10 @@
       "forms": [
         "riešutų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "rinkti",
@@ -5639,7 +7294,10 @@
       "forms": [
         "renka"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "rišti",
@@ -5649,7 +7307,10 @@
       "forms": [
         "surišo"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "rytas",
@@ -5659,7 +7320,10 @@
       "forms": [
         "rytą"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "rodyklė",
@@ -5669,7 +7333,10 @@
       "forms": [
         "rodyklės"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "rudeninis",
@@ -5679,7 +7346,10 @@
       "forms": [
         "rudenines"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "rūšis",
@@ -5689,7 +7359,10 @@
       "forms": [
         "rūšies"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "salė",
@@ -5699,7 +7372,10 @@
       "forms": [
         "salę"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "saulė",
@@ -5709,7 +7385,10 @@
       "forms": [
         "saulė"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "savanorystė",
@@ -5719,7 +7398,10 @@
       "forms": [
         "savanorystės"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "savanoriškas",
@@ -5729,7 +7411,10 @@
       "forms": [
         "savanoriškos"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "savybė",
@@ -5739,7 +7424,10 @@
       "forms": [
         "savybes"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "sąvoka",
@@ -5749,7 +7437,10 @@
       "forms": [
         "sąvokas"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "sėdėti",
@@ -5759,7 +7450,10 @@
       "forms": [
         "sėdint"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "senjoras",
@@ -5769,7 +7463,10 @@
       "forms": [
         "senjorų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "siuvykla",
@@ -5779,7 +7476,10 @@
       "forms": [
         "siuvykloje"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "skaitymas",
@@ -5789,7 +7489,10 @@
       "forms": [
         "skaitymo"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "skarda",
@@ -5799,7 +7502,10 @@
       "forms": [
         "skardas"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "skaudėti",
@@ -5809,7 +7515,10 @@
       "forms": [
         "skaudėti"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "skiautė",
@@ -5819,7 +7528,10 @@
       "forms": [
         "skiaučių"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "skirti",
@@ -5829,7 +7541,10 @@
       "forms": [
         "skiria"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "slaptas",
@@ -5839,7 +7554,10 @@
       "forms": [
         "slapti"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "slėpti",
@@ -5849,7 +7567,10 @@
       "forms": [
         "slepia"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "smėlis",
@@ -5859,7 +7580,10 @@
       "forms": [
         "smėlio"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "spalva",
@@ -5869,7 +7593,10 @@
       "forms": [
         "spalvos"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "spektaklis",
@@ -5879,7 +7606,10 @@
       "forms": [
         "spektaklio"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "spėti",
@@ -5889,7 +7619,10 @@
       "forms": [
         "spėtų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "spinta",
@@ -5899,7 +7632,10 @@
       "forms": [
         "spintą"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "sprendinys",
@@ -5909,7 +7645,10 @@
       "forms": [
         "sprendinį"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "spręsti",
@@ -5919,7 +7658,10 @@
       "forms": [
         "sprendžia"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "sritis",
@@ -5929,7 +7671,10 @@
       "forms": [
         "sritimis"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "stalčius",
@@ -5939,7 +7684,10 @@
       "forms": [
         "stalčiuje"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "statybos",
@@ -5949,7 +7697,10 @@
       "forms": [
         "statybų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "statinys",
@@ -5959,7 +7710,10 @@
       "forms": [
         "statinys"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "studentas",
@@ -5969,7 +7723,10 @@
       "forms": [
         "studentų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "suaukoti",
@@ -5979,7 +7736,10 @@
       "forms": [
         "suaukojo"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "sugalvoti",
@@ -5989,7 +7749,10 @@
       "forms": [
         "sugalvok"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "sukrauti",
@@ -5999,7 +7762,10 @@
       "forms": [
         "sukrovė"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "sunumeruoti",
@@ -6009,7 +7775,10 @@
       "forms": [
         "sunumeruok"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "suremontuoti",
@@ -6019,7 +7788,10 @@
       "forms": [
         "suremontavo"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "suskaičiuoti",
@@ -6029,7 +7801,10 @@
       "forms": [
         "suskaičiavo"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "svarbu",
@@ -6039,7 +7814,10 @@
       "forms": [
         "svarbu"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "sveikata",
@@ -6049,7 +7827,10 @@
       "forms": [
         "sveikatai"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "svoris",
@@ -6059,7 +7840,10 @@
       "forms": [
         "svoris"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "šalia",
@@ -6069,7 +7853,10 @@
       "forms": [
         "šalia"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "šalis",
@@ -6079,7 +7866,10 @@
       "forms": [
         "šalies"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "šuolis",
@@ -6089,7 +7879,10 @@
       "forms": [
         "šuoliui"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "tačiau",
@@ -6099,7 +7892,10 @@
       "forms": [
         "tačiau"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "tarptautinis",
@@ -6109,7 +7905,10 @@
       "forms": [
         "tarptautinėse"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "teigti",
@@ -6119,7 +7918,10 @@
       "forms": [
         "teigiama"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "teisingai",
@@ -6129,7 +7931,10 @@
       "forms": [
         "teisingai"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "lithuanian": 1
+      }
     },
     {
       "lemma": "tekstas",
@@ -6139,7 +7944,10 @@
       "forms": [
         "tekste"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "lithuanian": 1
+      }
     },
     {
       "lemma": "tekti",
@@ -6149,7 +7957,10 @@
       "forms": [
         "teko"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "telefonas",
@@ -6159,7 +7970,10 @@
       "forms": [
         "telefono"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "teritorija",
@@ -6169,7 +7983,10 @@
       "forms": [
         "teritorija"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "tėtis",
@@ -6179,7 +7996,10 @@
       "forms": [
         "tėtis"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "tėvai",
@@ -6189,7 +8009,10 @@
       "forms": [
         "tėvai"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "tik",
@@ -6199,7 +8022,10 @@
       "forms": [
         "tik"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "tikras",
@@ -6209,7 +8035,10 @@
       "forms": [
         "tikros"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "tolis",
@@ -6219,7 +8048,10 @@
       "forms": [
         "tolį"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "trečiokas",
@@ -6229,7 +8061,10 @@
       "forms": [
         "trečiokai"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "treji",
@@ -6239,7 +8074,10 @@
       "forms": [
         "trejus"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "trukti",
@@ -6249,7 +8087,10 @@
       "forms": [
         "truks"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "tuščias",
@@ -6259,7 +8100,10 @@
       "forms": [
         "tuščia"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "ūkininkas",
@@ -6269,7 +8113,10 @@
       "forms": [
         "ūkininkas"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "uždirbti",
@@ -6279,7 +8126,10 @@
       "forms": [
         "uždirbo"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "užsodinti",
@@ -6289,7 +8139,10 @@
       "forms": [
         "užsodinti"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "užtekti",
@@ -6299,7 +8152,10 @@
       "forms": [
         "užteks"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "užtrukti",
@@ -6309,7 +8165,10 @@
       "forms": [
         "užtrunka"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "vagystė",
@@ -6319,7 +8178,10 @@
       "forms": [
         "vagystės"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "vaisius",
@@ -6329,7 +8191,10 @@
       "forms": [
         "vaisių"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "valia",
@@ -6339,7 +8204,10 @@
       "forms": [
         "valia"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "varžybos",
@@ -6349,7 +8217,10 @@
       "forms": [
         "varžybose"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "veikla",
@@ -6359,7 +8230,10 @@
       "forms": [
         "veiklos"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "veikti",
@@ -6369,7 +8243,10 @@
       "forms": [
         "veikia"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "vėliau",
@@ -6379,7 +8256,10 @@
       "forms": [
         "vėliau"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "vėliausiai",
@@ -6389,7 +8269,10 @@
       "forms": [
         "vėliausiai"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "viela",
@@ -6399,7 +8282,10 @@
       "forms": [
         "vielos"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "vienaženklis",
@@ -6409,7 +8295,10 @@
       "forms": [
         "vienaženklis"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "vieta",
@@ -6419,7 +8308,10 @@
       "forms": [
         "vietoj"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "vykdyti",
@@ -6429,7 +8321,10 @@
       "forms": [
         "vykdomi"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "žaislas",
@@ -6439,7 +8334,10 @@
       "forms": [
         "žaislų"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "žaismingas",
@@ -6449,7 +8347,10 @@
       "forms": [
         "žaismingą"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "žygis",
@@ -6459,7 +8360,10 @@
       "forms": [
         "žygį"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "žymėti",
@@ -6469,7 +8373,10 @@
       "forms": [
         "žymėk"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     },
     {
       "lemma": "žingsnis",
@@ -6479,7 +8386,10 @@
       "forms": [
         "žingsnius"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "world": 1
+      }
     },
     {
       "lemma": "žirnis",
@@ -6489,7 +8399,10 @@
       "forms": [
         "žirnių"
       ],
-      "tasks": 1
+      "tasks": 1,
+      "bySubject": {
+        "math": 1
+      }
     }
   ]
 }

@@ -29,9 +29,10 @@ const tokens = (text) => text.normalize('NFC').toLowerCase().match(/[\p{L}\p{M}]
 const errors = [];
 const seen = new Map();
 const stats = new Map();
+const subjectTasks = {};
 
 for (const file of files) {
-  const { text, words } = JSON.parse(readFileSync(join(dir, file), 'utf8'));
+  const { text, words, subject } = JSON.parse(readFileSync(join(dir, file), 'utf8'));
   // Numbers are part of the key: the same wording with other numbers is another task.
   const key = text.normalize('NFC').toLowerCase().match(/[\p{L}\p{M}\p{N}]+/gu)?.join(' ');
   if (seen.has(key)) {
@@ -39,6 +40,8 @@ for (const file of files) {
     continue;
   }
   seen.set(key, file);
+  if (!/^[a-z]+$/.test(subject ?? '')) errors.push(`${file}: "subject" must be a lowercase word like "math"`);
+  subjectTasks[subject] = (subjectTasks[subject] ?? 0) + 1;
 
   const expected = tokens(text).join(' ');
   const actual = words.map((w) => w.form.normalize('NFC').toLowerCase()).join(' ');
@@ -51,9 +54,10 @@ for (const file of files) {
       continue;
     }
     const id = `${pos}:${lemma}`;
-    if (!stats.has(id)) stats.set(id, { lemma, pos, total: 0, tasks: new Set(), forms: new Set(), ru: new Set(), en: new Set() });
+    if (!stats.has(id)) stats.set(id, { lemma, pos, total: 0, tasks: new Set(), bySubject: {}, forms: new Set(), ru: new Set(), en: new Set() });
     const s = stats.get(id);
     s.total++;
+    if (!s.tasks.has(file)) s.bySubject[subject] = (s.bySubject[subject] ?? 0) + 1;
     s.tasks.add(file);
     s.forms.add(form.toLowerCase());
     s.ru.add(ru);
@@ -91,14 +95,17 @@ console.log(`${seen.size} tasks, ${ranked.length} words -> ${join(root, 'frequen
 
 if (publicFile) {
   // Fields are listed one by one so that text, source and word order cannot slip through.
-  const words = ranked.map(({ lemma, pos, ru, en, forms, tasks }) => ({
+  const sortKeys = (o) => Object.fromEntries(Object.entries(o).sort(([a], [b]) => a.localeCompare(b)));
+  const words = ranked.map(({ lemma, pos, ru, en, forms, tasks, bySubject }) => ({
     lemma,
     pos,
     ru: [...ru].sort().join(', '),
     en: [...en].sort().join(', '),
     forms: [...forms].sort(),
     tasks: tasks.size,
+    bySubject: sortKeys(bySubject),
   }));
-  writeFileSync(publicFile, `${JSON.stringify({ tasks: seen.size, words }, null, 2)}\n`);
+  const subjects = sortKeys(subjectTasks);
+  writeFileSync(publicFile, `${JSON.stringify({ tasks: seen.size, subjects, words }, null, 2)}\n`);
   console.log(`public ranking -> ${publicFile}`);
 }

@@ -5,6 +5,7 @@ export interface RankedWord {
   en: string;
   forms: string[];
   tasks: number;
+  bySubject: Record<string, number>;
 }
 
 export const POS = ['verb', 'noun', 'adj', 'prep'] as const;
@@ -14,6 +15,16 @@ export type Filter = Group | 'all';
 
 const QUOTA = { verb: 3, noun: 3, adj: 2, prep: 2 };
 const DECK_SIZE = 10;
+
+// One subject's ranking: its words only, counted and re-ranked by that subject's tasks.
+// The sort is stable, so ties keep the overall order.
+export function forSubject(words: RankedWord[], subject: string | null): RankedWord[] {
+  if (!subject) return words;
+  return words
+    .filter((w) => w.bySubject[subject])
+    .map((w) => ({ ...w, tasks: w.bySubject[subject] }))
+    .sort((a, b) => b.tasks - a.tasks);
+}
 
 // `words` is already ranked by scripts/word-frequency.mjs.
 export function inGroup(words: RankedWord[], group: Group) {
