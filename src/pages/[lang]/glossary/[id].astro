@@ -1,6 +1,8 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import Flashcards from '../../../components/Flashcards';
+import Marked from '../../../components/Marked';
+import { entryWords } from '../../../lib/confusable';
 import { getCollection } from 'astro:content';
 import { languages, t, type Lang, base } from '../../../i18n/ui';
 
@@ -30,8 +32,8 @@ const { entry } = Astro.props;
     <tbody>
       {entry.data.terms.map((term) => (
         <tr>
-          <td><strong>{term.lt}</strong></td>
-          <td>{term[lang]}{term.note && <div class="note">{term.note[lang]}</div>}</td>
+          <td><strong lang="lt"><Marked text={term.lt} like={term.like} /></strong></td>
+          <td>{term[lang]}{term.note && <div class="note"><Marked text={term.note[lang]} like={term.like && [...term.like, ...entryWords(term.lt)]} /></div>}</td>
           <td>{term[other]}</td>
         </tr>
       ))}

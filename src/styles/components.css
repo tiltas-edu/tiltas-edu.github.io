@@ -72,6 +72,8 @@ a.card:hover { transform: translateY(-2px); border-color: var(--c-brand); }
 .task-lt { background: var(--c-surface); border: var(--border-w) solid var(--c-line); border-left: 8px solid var(--c-lang-lt); border-radius: var(--radius); padding: var(--s-4) var(--s-5); font-size: 1.1em; font-weight: 700; }
 .task-tr { background: var(--c-surface-2); border-radius: var(--radius); padding: var(--s-4) var(--s-5); }
 mark { background: var(--c-accent); color: var(--c-on-accent); padding: 0 0.2em; border-radius: 0.3em; }
+/* Letters that tell look-alike words apart (plotas / plotis). Underlined too, so colour is not the only cue. */
+mark.diff { background: var(--c-accent); color: var(--c-on-accent); padding: 0 0.06em; border-radius: 0.2em; font-weight: 800; text-decoration: underline 0.12em; text-underline-offset: 0.15em; }
 ol.steps { padding-left: 1.4em; } ol.steps li { margin: var(--s-2) 0; padding-left: var(--s-1); }
 .answer { font-weight: 900; font-size: 1.2em; }
 .reveal { margin-block: var(--s-4); }

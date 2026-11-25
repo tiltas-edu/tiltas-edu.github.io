@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import Icon from './Icon';
+import Marked from './Marked';
+import { entryWords } from '../lib/confusable';
 
-interface Term { lt: string; ru: string; en: string; note?: { ru: string; en: string }; hint?: string; forms?: string }
+interface Term { lt: string; ru: string; en: string; like?: string[]; note?: { ru: string; en: string }; hint?: string; forms?: string }
 interface Props {
   terms: Term[];
   lang: 'ru' | 'en';
@@ -61,11 +63,11 @@ export default function Flashcards({ terms, lang, labels }: Props) {
             <strong>{term[lang]}</strong>
             <small>{term[other]}</small>
             {term.forms && <small lang="lt">{term.lt}: {term.forms}</small>}
-            {term.note && <small><Icon name="bulb" /> {term.note[lang]}</small>}
+            {term.note && <small><Icon name="bulb" /> <Marked text={term.note[lang]} like={term.like && [...term.like, ...entryWords(term.lt)]} /></small>}
           </div>
         ) : (
           <div>
-            <span lang="lt">{term.lt}</span>
+            <span lang="lt"><Marked text={term.lt} like={term.like} /></span>
             {term.hint && <small>{term.hint}</small>}
           </div>
         )}

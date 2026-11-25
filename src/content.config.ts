@@ -16,6 +16,8 @@ const glossary = defineCollection({
         lt: z.string(),
         ru: z.string(),
         en: z.string(),
+        // Look-alike words a child mixes up with this one (plotas -> plotis); the differing letters get marked.
+        like: z.array(z.string()).optional(),
         note: tri.optional(),
       }),
     ),

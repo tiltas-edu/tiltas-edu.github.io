@@ -13,17 +13,32 @@
     {
       "lt": "užrašyk / surašyk",
       "ru": "запиши",
-      "en": "write down"
+      "en": "write down",
+      "like": [
+        "surask",
+        "parašyk",
+        "įrašyk"
+      ]
     },
     {
       "lt": "parašyk",
       "ru": "напиши",
-      "en": "write"
+      "en": "write",
+      "like": [
+        "užrašyk",
+        "surašyk",
+        "įrašyk"
+      ]
     },
     {
       "lt": "įrašyk",
       "ru": "впиши",
-      "en": "write in"
+      "en": "write in",
+      "like": [
+        "parašyk",
+        "užrašyk",
+        "surašyk"
+      ]
     },
     {
       "lt": "pažymėk",
@@ -43,7 +58,10 @@
     {
       "lt": "surask",
       "ru": "найди",
-      "en": "find"
+      "en": "find",
+      "like": [
+        "surašyk"
+      ]
     },
     {
       "lt": "nubraižė",

@@ -8,12 +8,18 @@
     {
       "lt": "pilietis",
       "ru": "гражданин",
-      "en": "citizen"
+      "en": "citizen",
+      "like": [
+        "pilietybė"
+      ]
     },
     {
       "lt": "pilietybė",
       "ru": "гражданство",
-      "en": "citizenship"
+      "en": "citizenship",
+      "like": [
+        "pilietis"
+      ]
     },
     {
       "lt": "teisė",

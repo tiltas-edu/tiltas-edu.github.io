@@ -9,6 +9,9 @@
       "lt": "plotas",
       "ru": "площадь",
       "en": "area",
+      "like": [
+        "plotis"
+      ],
       "note": {
         "ru": "Не путай с plotis (ширина)!",
         "en": "Don't confuse with plotis (width)!"
@@ -18,6 +21,9 @@
       "lt": "plotis",
       "ru": "ширина",
       "en": "width",
+      "like": [
+        "plotas"
+      ],
       "note": {
         "ru": "Похоже на plotas (площадь), но это ширина.",
         "en": "Looks like plotas (area) but means width."
@@ -41,7 +47,10 @@
     {
       "lt": "kvadratas",
       "ru": "квадрат",
-      "en": "square"
+      "en": "square",
+      "like": [
+        "kvadratinis"
+      ]
     },
     {
       "lt": "kraštinė",
@@ -76,7 +85,10 @@
     {
       "lt": "kilimas (mn. kilimai)",
       "ru": "ковёр",
-      "en": "carpet"
+      "en": "carpet",
+      "like": [
+        "kiemas"
+      ]
     },
     {
       "lt": "daržas",
@@ -176,7 +188,10 @@
     {
       "lt": "kvadratinis / kvadrato formos",
       "ru": "квадратный",
-      "en": "square-shaped"
+      "en": "square-shaped",
+      "like": [
+        "kvadratas"
+      ]
     },
     {
       "lt": "sodas",
@@ -211,7 +226,10 @@
     {
       "lt": "kiemas",
       "ru": "двор",
-      "en": "yard"
+      "en": "yard",
+      "like": [
+        "kilimas"
+      ]
     },
     {
       "lt": "dydis (mn. dydžiai)",
