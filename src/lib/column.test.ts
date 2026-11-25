@@ -54,6 +54,20 @@ describe('column layouts', () => {
   });
 });
 
+describe('texts', () => {
+  it.each([['add', 2657, 1659], ['sub', 1003, 8], ['mul', 123, 105], ['mul', 45, 7], ['div', 4824, 4], ['div', 137, 4], ['div', 3, 7]] as [Op, number, number][])(
+    '%s %i %i: every step and check is in Lithuanian, Russian and English',
+    (op, a, b) => {
+      const l = layout(op, a, b);
+      for (const t of [...l.steps.map((s) => s.text), ...l.check]) {
+        expect(t.lt && t.ru && t.en).toBeTruthy();
+        expect(t.lt).not.toBe(t.ru);
+        expect(t.ru).not.toMatch(/[ąčęėįšųūž]/i); // no Lithuanian left inside the translation
+      }
+    },
+  );
+});
+
 describe('problem', () => {
   it('rejects what the layout cannot draw', () => {
     expect(problem('sub', 3, 5)).not.toBeNull();

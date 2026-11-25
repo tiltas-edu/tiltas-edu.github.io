@@ -2,7 +2,8 @@
 // Pure data: src/components/ColumnMath.tsx draws it.
 
 export type Op = 'add' | 'sub' | 'mul' | 'div';
-export interface Tri { ru: string; en: string }
+// Every text in Lithuanian (as said in class) and in the reader's language.
+export interface Tri { lt: string; ru: string; en: string }
 
 export interface Cell {
   row: number;
@@ -15,7 +16,7 @@ export interface Cell {
 }
 export interface Rule { row: number; from: number; to: number; step: number } // line under `row`, columns from..to
 export interface Step { text: Tri; focus: string[] } // focus: `${row}:${col}` of the cells this step is about
-export interface Legend { value: number; lt: string; term: Tri }
+export interface Legend { value: number; lt: string; term: { ru: string; en: string } }
 export interface Layout {
   op: Op;
   rows: number;
@@ -33,16 +34,16 @@ export interface Layout {
 export const LIMITS = { max: 99999, mulBy: 999, divBy: 99 };
 
 const digits = (n: number) => String(n).split('').map(Number);
-// ru: nominative, genitive ("цифра единиц"), instrumental ("под единицами").
-const PLACE: { lt: string; ru: string; gen: string; ins: string; en: string }[] = [
-  { lt: 'vienetai', ru: 'единицы', gen: 'единиц', ins: 'единицами', en: 'units' },
-  { lt: 'dešimtys', ru: 'десятки', gen: 'десятков', ins: 'десятками', en: 'tens' },
-  { lt: 'šimtai', ru: 'сотни', gen: 'сотен', ins: 'сотнями', en: 'hundreds' },
-  { lt: 'tūkstančiai', ru: 'тысячи', gen: 'тысяч', ins: 'тысячами', en: 'thousands' },
-  { lt: 'dešimtys tūkstančių', ru: 'десятки тысяч', gen: 'десятков тысяч', ins: 'десятками тысяч', en: 'ten thousands' },
-  { lt: 'šimtai tūkstančių', ru: 'сотни тысяч', gen: 'сотен тысяч', ins: 'сотнями тысяч', en: 'hundred thousands' },
+// Place values. lt/ru: nominative, genitive ("dešimčių skyrius", "цифра десятков"), instrumental ("po dešimtimis", "под десятками").
+const PLACE = [
+  { lt: 'vienetai', ltGen: 'vienetų', ltIns: 'vienetais', ru: 'единицы', gen: 'единиц', ins: 'единицами', en: 'units' },
+  { lt: 'dešimtys', ltGen: 'dešimčių', ltIns: 'dešimtimis', ru: 'десятки', gen: 'десятков', ins: 'десятками', en: 'tens' },
+  { lt: 'šimtai', ltGen: 'šimtų', ltIns: 'šimtais', ru: 'сотни', gen: 'сотен', ins: 'сотнями', en: 'hundreds' },
+  { lt: 'tūkstančiai', ltGen: 'tūkstančių', ltIns: 'tūkstančiais', ru: 'тысячи', gen: 'тысяч', ins: 'тысячами', en: 'thousands' },
+  { lt: 'dešimtys tūkstančių', ltGen: 'dešimčių tūkstančių', ltIns: 'dešimtimis tūkstančių', ru: 'десятки тысяч', gen: 'десятков тысяч', ins: 'десятками тысяч', en: 'ten thousands' },
+  { lt: 'šimtai tūkstančių', ltGen: 'šimtų tūkstančių', ltIns: 'šimtais tūkstančių', ru: 'сотни тысяч', gen: 'сотен тысяч', ins: 'сотнями тысяч', en: 'hundred thousands' },
 ];
-const place = (p: number, lang: 'ru' | 'en') => `${PLACE[p][lang]} (${PLACE[p].lt})`;
+const place = (p: number, lang: 'lt' | 'ru' | 'en') => PLACE[p][lang];
 const cap = (s: string) => s[0].toUpperCase() + s.slice(1);
 const key = (row: number, col: number) => `${row}:${col}`;
 const fmt = (n: number) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
@@ -69,8 +70,8 @@ class Builder {
     const s = String(n);
     return [...s].map((d, i) => this.put(row, end - (s.length - 1 - i), d, kind, step));
   }
-  step(ru: string, en: string, focus: string[] = []) {
-    this.steps.push({ text: { ru, en }, focus });
+  step(lt: string, ru: string, en: string, focus: string[] = []) {
+    this.steps.push({ text: { lt, ru, en }, focus });
     return this.steps.length - 1;
   }
   get rows() {
@@ -87,6 +88,7 @@ function addition(nums: number[]): Layout {
   const top = 1; // row 0 is for carried digits
   const resultRow = top + nums.length;
   b.step(
+    'Skaičius rašome vieną po kitu: vienetus po vienetais, dešimtis po dešimtimis.',
     'Пишем числа друг под другом: единицы под единицами, десятки под десятками.',
     'Write the numbers one under another: units under units, tens under tens.',
   );
@@ -112,11 +114,13 @@ function addition(nums: number[]): Layout {
       b.put(0, col(p + 1), String(next), 'small', s);
       focus.push(key(0, col(p + 1)));
     }
+    const lt = `${cap(place(p, 'lt'))}: ${terms} = ${total}.` +
+      (isLast ? ` Rašome ${total}.` : next ? ` Rašome ${total % 10}, ${next} perkeliame į ${PLACE[p + 1].ltGen} skyrių.` : ` Rašome ${total}.`);
     const ru = `${cap(place(p, 'ru'))}: ${terms} = ${total}.` +
       (isLast ? ` Пишем ${total}.` : next ? ` Пишем ${total % 10}, ${next} переносим в ${PLACE[p + 1].ru}.` : ` Пишем ${total}.`);
     const en = `${cap(place(p, 'en'))}: ${terms} = ${total}.` +
       (isLast ? ` Write ${total}.` : next ? ` Write ${total % 10}, carry ${next} to the ${PLACE[p + 1].en}.` : ` Write ${total}.`);
-    b.step(ru, en, focus);
+    b.step(lt, ru, en, focus);
     carry = isLast ? 0 : next;
     if (isLast) break;
   }
@@ -130,10 +134,12 @@ function addition(nums: number[]): Layout {
     ],
     check: [
       {
+        lt: `Paskutinis skaitmuo: ${lastDigits.join(' + ')} = ${lastSum}, todėl atsakymas baigiasi ${lastSum % 10}.`,
         ru: `Последняя цифра: ${lastDigits.join(' + ')} = ${lastSum}, значит ответ оканчивается на ${lastSum % 10}.`,
         en: `Last digit: ${lastDigits.join(' + ')} = ${lastSum}, so the answer ends in ${lastSum % 10}.`,
       },
       {
+        lt: `Apytiksliai: ${nums.map((n) => fmt(rough(n))).join(' + ')} = ${fmt(nums.reduce((a, n) => a + rough(n), 0))}, atsakymas turi būti netoli.`,
         ru: `Прикидка: ${nums.map((n) => fmt(rough(n))).join(' + ')} = ${fmt(nums.reduce((a, n) => a + rough(n), 0))}, ответ должен быть рядом.`,
         en: `Estimate: ${nums.map((n) => fmt(rough(n))).join(' + ')} = ${fmt(nums.reduce((a, n) => a + rough(n), 0))}; the answer should be close.`,
       },
@@ -148,6 +154,7 @@ function subtraction(a: number, c: number): Layout {
   const last = b.cols - 1;
   const col = (p: number) => last - p;
   b.step(
+    'Viršuje rašome turinį, po juo – atėminį: vienetus po vienetais.',
     'Пишем уменьшаемое сверху, вычитаемое под ним: единицы под единицами.',
     'Write the bigger number on top, the smaller one below it: units under units.',
   );
@@ -171,6 +178,7 @@ function subtraction(a: number, c: number): Layout {
     const s = b.steps.length;
     const focus = [key(1, col(p))];
     if (p < String(c).length) focus.push(key(2, col(p)));
+    let lt = '';
     let ru = '';
     let en = '';
     if (cur[p] < d) {
@@ -185,6 +193,8 @@ function subtraction(a: number, c: number): Layout {
         change(q, 9, s);
         focus.push(key(0, col(q)));
       }
+      lt = `${cap(place(p, 'lt'))}: iš ${cur[p]} negalima atimti ${d}. Pasiskoliname 1 iš ${from.ltGen} skyriaus` +
+        (k > p + 1 ? ' (nuliai pakeliui virsta devynetais)' : '') + `: ${cur[p] + 10} − ${d} = ${cur[p] + 10 - d}.`;
       ru = `${cap(place(p, 'ru'))}: из ${cur[p]} нельзя вычесть ${d}. Занимаем 1 из разряда «${from.ru}»` +
         (k > p + 1 ? ' (нули по дороге становятся девятками)' : '') + `: ${cur[p] + 10} − ${d} = ${cur[p] + 10 - d}.`;
       en = `${cap(place(p, 'en'))}: you can't take ${d} from ${cur[p]}. Borrow 1 from the ${from.en}` +
@@ -193,6 +203,7 @@ function subtraction(a: number, c: number): Layout {
       change(p, cur[p], s);
       focus.push(key(0, col(p)));
     } else {
+      lt = `${cap(place(p, 'lt'))}: ${cur[p]} − ${d} = ${cur[p] - d}.`;
       ru = `${cap(place(p, 'ru'))}: ${cur[p]} − ${d} = ${cur[p] - d}.`;
       en = `${cap(place(p, 'en'))}: ${cur[p]} − ${d} = ${cur[p] - d}.`;
     }
@@ -201,10 +212,11 @@ function subtraction(a: number, c: number): Layout {
       b.put(3, col(p), String(r), 'result', s);
       focus.push(key(3, col(p)));
     } else {
+      lt += ' Nulio priekyje nerašome.';
       ru += ' Ноль впереди не пишем.';
       en += ' A leading zero is not written.';
     }
-    b.step(ru, en, focus);
+    b.step(lt, ru, en, focus);
   }
   return {
     op: 'sub', rows: 4, cols: b.cols, cells: b.cells, rules: b.rules, steps: b.steps, result: diff,
@@ -215,6 +227,7 @@ function subtraction(a: number, c: number): Layout {
     ],
     check: [
       {
+        lt: `Patikriname sudėtimi: ${fmt(diff)} + ${fmt(c)} = ${fmt(a)}.`,
         ru: `Проверка сложением: ${fmt(diff)} + ${fmt(c)} = ${fmt(a)}.`,
         en: `Check by adding: ${fmt(diff)} + ${fmt(c)} = ${fmt(a)}.`,
       },
@@ -232,6 +245,7 @@ function multiplication(a: number, m: number): Layout {
   const one = md.length === 1;
   const top = 1; // row 0: carried digits (one-digit multiplier only)
   b.step(
+    'Dauginamąjį ir daugiklį rašome vieną po kitu, lygiuodami dešinėje.',
     'Пишем множители друг под другом, выравнивая по правому краю.',
     'Write the factors one under another, lined up on the right.',
   );
@@ -259,6 +273,7 @@ function multiplication(a: number, m: number): Layout {
       }
       const expr = `${ad[p]} · ${m}` + (carry ? ` + ${carry}` : '');
       b.step(
+        `${cap(place(p, 'lt'))}: ${expr} = ${v}.` + (isLast ? ` Rašome ${v}.` : next ? ` Rašome ${v % 10}, ${next} perkeliame į ${PLACE[p + 1].ltGen} skyrių.` : ` Rašome ${v}.`),
         `${cap(place(p, 'ru'))}: ${expr} = ${v}.` + (isLast ? ` Пишем ${v}.` : next ? ` Пишем ${v % 10}, ${next} запоминаем.` : ` Пишем ${v}.`),
         `${cap(place(p, 'en'))}: ${expr} = ${v}.` + (isLast ? ` Write ${v}.` : next ? ` Write ${v % 10}, carry ${next}.` : ` Write ${v}.`),
         focus,
@@ -272,7 +287,8 @@ function multiplication(a: number, m: number): Layout {
       const s = b.steps.length;
       if (md[p] === 0) {
         b.step(
-          `Цифра ${PLACE[p].gen} (${PLACE[p].lt}) во втором множителе — 0. Строка из нулей не нужна: следующую строку сдвинем ещё на клетку.`,
+          `Daugiklio ${PLACE[p].ltGen} skaitmuo – 0. Nulių eilutės nereikia: kitą eilutę rašysime dar vienu langeliu kairiau.`,
+          `Цифра ${PLACE[p].gen} во втором множителе — 0. Строка из нулей не нужна: следующую строку сдвинем ещё на клетку.`,
           `The ${place(p, 'en')} digit is 0. No row of zeros is needed: the next row moves one more cell left.`,
           [key(top + 1, col(p))],
         );
@@ -282,6 +298,9 @@ function multiplication(a: number, m: number): Layout {
       b.num(row, col(p), v, 'result', s);
       const focus = [key(top + 1, col(p)), ...String(v).split('').map((_, i) => key(row, col(p) - i))];
       b.step(
+        p === 0
+          ? `${fmt(a)} · ${md[p]} = ${fmt(v)}. Rašome po brūkšniu, paskutinį skaitmenį – po vienetais.`
+          : `${fmt(a)} · ${md[p]} (${PLACE[p].lt}) = ${fmt(v)}. Paskutinį skaitmenį rašome po ${PLACE[p].ltIns}: ${p} ${p === 1 ? 'langeliu' : 'langeliais'} kairiau.`,
         p === 0
           ? `${fmt(a)} · ${md[p]} = ${fmt(v)}. Пишем под чертой, последняя цифра под единицами.`
           : `${fmt(a)} · ${md[p]} (${PLACE[p].ru}) = ${fmt(v)}. Последнюю цифру пишем под ${PLACE[p].ins}: сдвиг на ${p} ${p === 1 ? 'клетку' : 'клетки'} влево.`,
@@ -300,6 +319,7 @@ function multiplication(a: number, m: number): Layout {
       b.num(row, last, product, 'result', s);
       const sum = partials.map((x) => fmt(x.value * 10 ** x.shift)).join(' + ');
       b.step(
+        `Eilutes sudedame stulpeliu: ${sum} = ${fmt(product)}.`,
         `Складываем строки столбиком: ${sum} = ${fmt(product)}.`,
         `Add the rows in a column: ${sum} = ${fmt(product)}.`,
         String(product).split('').map((_, i) => key(row, last - i)),
@@ -310,6 +330,7 @@ function multiplication(a: number, m: number): Layout {
       const s = b.steps.length;
       for (let p = 0; p < x.shift; p++) b.put(x.row, col(p), '0', 'result', s);
       b.step(
+        `Dešinėje prirašome ${x.shift === 1 ? 'nulį' : 'nulius'}: ${fmt(product)}.`,
         `Справа дописываем ${x.shift === 1 ? 'ноль' : 'нули'} от сдвига: ${fmt(product)}.`,
         `Fill the shifted place${x.shift === 1 ? '' : 's'} on the right with zero${x.shift === 1 ? '' : 's'}: ${fmt(product)}.`,
         Array.from({ length: x.shift }, (_, p) => key(x.row, col(p))),
@@ -326,10 +347,12 @@ function multiplication(a: number, m: number): Layout {
     ],
     check: [
       {
+        lt: `Paskutinis skaitmuo: ${a % 10} · ${m % 10} = ${(a % 10) * (m % 10)}, todėl atsakymas baigiasi ${ld}.`,
         ru: `Последняя цифра: ${a % 10} · ${m % 10} = ${(a % 10) * (m % 10)}, значит ответ оканчивается на ${ld}.`,
         en: `Last digit: ${a % 10} · ${m % 10} = ${(a % 10) * (m % 10)}, so the answer ends in ${ld}.`,
       },
       {
+        lt: `Apytiksliai: ${fmt(rough(a))} · ${fmt(rough(m))} = ${fmt(rough(a) * rough(m))}, atsakymas turi būti netoli.`,
         ru: `Прикидка: ${fmt(rough(a))} · ${fmt(rough(m))} = ${fmt(rough(a) * rough(m))}, ответ должен быть рядом.`,
         en: `Estimate: ${fmt(rough(a))} · ${fmt(rough(m))} = ${fmt(rough(a) * rough(m))}; the answer should be close.`,
       },
@@ -348,6 +371,7 @@ function division(a: number, d: number): Layout {
   const b = new Builder(right + width);
   const dc = (i: number) => 1 + i; // column of the dividend's digit i
   b.step(
+    'Rašome dalinį, dešinėje už kampo – daliklį. Dalmenį rašysime po dalikliu.',
     'Пишем делимое, справа за уголком — делитель. Частное будем писать под делителем.',
     'Write the dividend, the divisor to the right behind the corner. The quotient goes under the divisor.',
   );
@@ -370,9 +394,10 @@ function division(a: number, d: number): Layout {
   if (cur < d) {
     const s = b.steps.length;
     const f = writeQ(0, s);
-    b.step(`${a} меньше ${d}: частное 0, остаток ${a}.`, `${a} is less than ${d}: the quotient is 0, the remainder ${a}.`, [f]);
+    b.step(`${a} mažesnis už ${d}: dalmuo 0, liekana ${a}.`, `${a} меньше ${d}: частное 0, остаток ${a}.`, `${a} is less than ${d}: the quotient is 0, the remainder ${a}.`, [f]);
   } else {
     b.step(
+      `Imame tiek pirmųjų skaitmenų, kad skaičius būtų ne mažesnis už ${d}: tai ${cur}.`,
       `Берём столько первых цифр, чтобы число было не меньше ${d}: это ${cur}.`,
       `Take as many first digits as needed to get at least ${d}: that is ${cur}.`,
       curFocus,
@@ -387,6 +412,7 @@ function division(a: number, d: number): Layout {
       const f = writeQ(0, s);
       if (i === n - 1) {
         b.step(
+          `${cur} mažesnis už ${d}: dalmenyje rašome 0. Skaitmenų nebeliko, ${cur} – liekana.`,
           `${cur} меньше ${d}: в частном пишем 0. Цифр больше нет, ${cur} — остаток.`,
           `${cur} is less than ${d}: write 0 in the quotient. No digits left, ${cur} is the remainder.`,
           [...curFocus, f],
@@ -397,6 +423,7 @@ function division(a: number, d: number): Layout {
       cur = cur * 10 + ad[i];
       b.put(row, dc(i), String(ad[i]), 'digit', s);
       b.step(
+        `${Math.floor(cur / 10)} mažesnis už ${d}: dalmenyje rašome 0 (nepraleisk jo!) ir nukeliame kitą skaitmenį ${ad[i]}. Gavome ${cur}.`,
         `${Math.floor(cur / 10)} меньше ${d}: в частном пишем 0 (не пропускай его!) и сносим следующую цифру ${ad[i]}. Получилось ${cur}.`,
         `${Math.floor(cur / 10)} is less than ${d}: write 0 in the quotient (don't skip it!) and bring down the next digit ${ad[i]}. Now it is ${cur}.`,
         [f, key(row, dc(i)), key(0, dc(i))],
@@ -413,6 +440,7 @@ function division(a: number, d: number): Layout {
     b.rules.push({ row: row + 1, from: dc(i) - String(cur).length + 1, to: dc(i), step: s });
     const prodFocus = String(prod).split('').map((_, k) => key(row + 1, dc(i) - k));
     b.step(
+      `${cur} : ${d} = ${digit} (${digit} · ${d} = ${prod}${digit < 9 ? `, o ${digit + 1} · ${d} = ${(digit + 1) * d} jau per daug` : ''}). Dalmenyje rašome ${digit}, ${prod} – po ${cur}.`,
       `${cur} : ${d} = ${digit} (${digit} · ${d} = ${prod}${digit < 9 ? `, а ${digit + 1} · ${d} = ${(digit + 1) * d} уже больше` : ''}). Пишем ${digit} в частное, ${prod} под ${cur}.`,
       `${cur} : ${d} = ${digit} (${digit} · ${d} = ${prod}${digit < 9 ? `, while ${digit + 1} · ${d} = ${(digit + 1) * d} is too much` : ''}). Write ${digit} in the quotient, ${prod} under ${cur}.`,
       [...curFocus, f, ...prodFocus],
@@ -426,6 +454,7 @@ function division(a: number, d: number): Layout {
     }
     if (i === n - 1) {
       b.step(
+        `${cur} − ${prod} = ${left}. Skaitmenų nebeliko: ${left === 0 ? 'padalijome be liekanos' : `liekana ${left}`}.`,
         `${cur} − ${prod} = ${left}. Цифр больше нет: ${left === 0 ? 'разделилось без остатка' : `остаток ${left}`}.`,
         `${cur} − ${prod} = ${left}. No digits left: ${left === 0 ? 'no remainder' : `the remainder is ${left}`}.`,
         remFocus,
@@ -437,6 +466,7 @@ function division(a: number, d: number): Layout {
     cur = left * 10 + ad[i];
     curFocus = String(cur).split('').map((_, k) => key(row, dc(i) - k));
     b.step(
+      `${left + prod} − ${prod} = ${left}. Nukeliame kitą skaitmenį ${ad[i]}: gavome ${cur}.`,
       `${left + prod} − ${prod} = ${left}. Сносим следующую цифру ${ad[i]}: получилось ${cur}.`,
       `${left + prod} − ${prod} = ${left}. Bring down the next digit ${ad[i]}: now it is ${cur}.`,
       [...remFocus, key(row, dc(i)), key(0, dc(i))],
@@ -453,11 +483,12 @@ function division(a: number, d: number): Layout {
     ],
     check: [
       {
+        lt: `Patikriname daugyba: ${fmt(q)} · ${d}${rem ? ` + ${rem}` : ''} = ${fmt(a)}.`,
         ru: `Проверка умножением: ${fmt(q)} · ${d}${rem ? ` + ${rem}` : ''} = ${fmt(a)}.`,
         en: `Check by multiplying: ${fmt(q)} · ${d}${rem ? ` + ${rem}` : ''} = ${fmt(a)}.`,
       },
       ...(String(q).length > 1 && String(q).includes('0')
-        ? [{ ru: 'В частном есть 0: сколько цифр в частном, столько раз делили.', en: 'The quotient has a 0: there is one quotient digit for every division step.' }]
+        ? [{ lt: 'Dalmenyje yra 0: kiek kartų dalijome, tiek dalmens skaitmenų.', ru: 'В частном есть 0: сколько цифр в частном, столько раз делили.', en: 'The quotient has a 0: there is one quotient digit for every division step.' }]
         : []),
     ],
   };
@@ -466,12 +497,12 @@ function division(a: number, d: number): Layout {
 // Checks the input; returns null when it is fine, or the reason it is not.
 export function problem(op: Op, a: number, b: number): Tri | null {
   const whole = (n: number) => Number.isInteger(n) && n >= 0;
-  if (!whole(a) || !whole(b)) return { ru: 'Нужны целые числа от 0.', en: 'Use whole numbers from 0.' };
-  if (a > LIMITS.max || b > LIMITS.max) return { ru: `Числа до ${fmt(LIMITS.max)}.`, en: `Numbers up to ${fmt(LIMITS.max)}.` };
-  if (op === 'sub' && b > a) return { ru: 'Второе число больше первого: поменяй их местами.', en: 'The second number is bigger: swap them.' };
-  if (op === 'mul' && b > LIMITS.mulBy) return { ru: `Второй множитель до ${LIMITS.mulBy}.`, en: `Second factor up to ${LIMITS.mulBy}.` };
-  if (op === 'div' && b === 0) return { ru: 'На 0 делить нельзя.', en: "You can't divide by 0." };
-  if (op === 'div' && b > LIMITS.divBy) return { ru: `Делитель до ${LIMITS.divBy}.`, en: `Divisor up to ${LIMITS.divBy}.` };
+  if (!whole(a) || !whole(b)) return { lt: 'Reikia sveikųjų skaičių nuo 0.', ru: 'Нужны целые числа от 0.', en: 'Use whole numbers from 0.' };
+  if (a > LIMITS.max || b > LIMITS.max) return { lt: `Skaičiai iki ${fmt(LIMITS.max)}.`, ru: `Числа до ${fmt(LIMITS.max)}.`, en: `Numbers up to ${fmt(LIMITS.max)}.` };
+  if (op === 'sub' && b > a) return { lt: 'Antrasis skaičius didesnis: sukeisk juos vietomis.', ru: 'Второе число больше первого: поменяй их местами.', en: 'The second number is bigger: swap them.' };
+  if (op === 'mul' && b > LIMITS.mulBy) return { lt: `Daugiklis iki ${LIMITS.mulBy}.`, ru: `Второй множитель до ${LIMITS.mulBy}.`, en: `Second factor up to ${LIMITS.mulBy}.` };
+  if (op === 'div' && b === 0) return { lt: 'Dalyti iš 0 negalima.', ru: 'На 0 делить нельзя.', en: "You can't divide by 0." };
+  if (op === 'div' && b > LIMITS.divBy) return { lt: `Daliklis iki ${LIMITS.divBy}.`, ru: `Делитель до ${LIMITS.divBy}.`, en: `Divisor up to ${LIMITS.divBy}.` };
   return null;
 }
 

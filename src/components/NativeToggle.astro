@@ -1,0 +1,26 @@
+---
+// Hides or shows the translation under Lithuanian text on this and every other page; remembered in this browser.
+import Icon from './Icon.astro';
+interface Props { hide: string; show: string }
+const { hide, show } = Astro.props;
+---
+<button class="btn btn--soft native-toggle" type="button" aria-pressed="false" data-hide={hide} data-show={show}>
+  <Icon name="flip" /> <span>{hide}</span>
+</button>
+<script is:inline>
+  document.querySelectorAll('.native-toggle').forEach(function (btn) {
+    var root = document.documentElement;
+    var sync = function () {
+      var hidden = root.dataset.native === 'hidden';
+      btn.setAttribute('aria-pressed', String(hidden));
+      btn.querySelector('span').textContent = hidden ? btn.dataset.show : btn.dataset.hide;
+    };
+    sync();
+    btn.addEventListener('click', function () {
+      if (root.dataset.native === 'hidden') delete root.dataset.native;
+      else root.dataset.native = 'hidden';
+      try { localStorage.setItem('tiltas-native', root.dataset.native || ''); } catch (e) {}
+      sync();
+    });
+  });
+</script>

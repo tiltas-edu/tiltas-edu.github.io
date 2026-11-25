@@ -33,6 +33,8 @@ const releasesUrl = 'https://github.com/tiltas-edu/tiltas-edu.github.io/releases
       try {
         var b = localStorage.getItem('tiltas-band');
         if (b === 'junior' || b === 'senior') document.documentElement.dataset.band = b;
+        // The "Hide translation" choice (NativeToggle).
+        if (localStorage.getItem('tiltas-native') === 'hidden') document.documentElement.dataset.native = 'hidden';
       } catch (e) {}
     </script>
   </head>

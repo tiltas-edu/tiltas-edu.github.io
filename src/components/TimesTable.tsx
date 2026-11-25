@@ -1,11 +1,13 @@
 import { useState } from 'react';
-import type { visual } from '../i18n/visual';
+import Bi from './Bi';
+import { rowsOf, visualLt, type visual } from '../i18n/visual';
 
 type Labels = (typeof visual)['ru' | 'en'];
+type Tips = Record<'tip1' | 'tip2' | 'tip5' | 'tip9' | 'tip10' | 'tipSquare' | 'tipOther', string>;
 const N = Array.from({ length: 10 }, (_, i) => i + 1);
 const fill = (s: string, v: Record<string, number>) => s.replace(/\{(\w)\}/g, (_, k) => String(v[k]));
 
-function tip(a: number, b: number, l: Labels) {
+function tip(a: number, b: number, l: Tips) {
   const small = Math.min(a, b);
   const big = Math.max(a, b);
   if (small === 1) return l.tip1;
@@ -17,7 +19,7 @@ function tip(a: number, b: number, l: Labels) {
   return fill(l.tipOther, { a: big, b: small, c: small - 1 });
 }
 
-export default function TimesTable({ labels }: { labels: Labels }) {
+export default function TimesTable({ labels, lang }: { labels: Labels; lang: 'ru' | 'en' }) {
   const [pick, setPick] = useState<[number, number]>([7, 8]);
   const [hidden, setHidden] = useState(false);
   const [open, setOpen] = useState<Set<string>>(new Set());
@@ -33,12 +35,14 @@ export default function TimesTable({ labels }: { labels: Labels }) {
     <div className="tt">
       <div className="tt__panel" aria-live="polite">
         <p className="tt__fact"><span>{a} · {b} =</span> <strong>{hidden && !open.has(`${a}x${b}`) ? '?' : p}</strong></p>
-        <p className="note">{fill(labels.rows, { a, b })}</p>
+        <Bi as="p" lt={rowsOf('lt', a, b)} native={rowsOf(lang, a, b)} />
         <div className="tt__dots" style={{ gridTemplateColumns: `repeat(${b}, 1fr)` }} aria-hidden="true">
           {Array.from({ length: p }, (_, i) => <span key={i} />)}
         </div>
-        {a !== b && !(hidden && !open.has(`${a}x${b}`)) && <p>{fill(labels.same, { a, b, p })}</p>}
-        <p className="callout callout--hint">{tip(a, b, labels)}</p>
+        {a !== b && !(hidden && !open.has(`${a}x${b}`)) && (
+          <Bi as="p" lt={fill(visualLt.same, { a, b, p })} native={fill(labels.same, { a, b, p })} />
+        )}
+        <div className="callout callout--hint"><Bi lt={tip(a, b, visualLt)} native={tip(a, b, labels)} /></div>
       </div>
 
       <div className="tt__grid">

@@ -21,8 +21,8 @@ export const visual = {
     examples: 'Примеры',
     formulasTitle: 'Формулы',
     formulasLead: 'Площадь, периметр и скорость: картинка, формула и пример.',
-    rectangle: 'Прямоугольник (stačiakampis)',
-    square: 'Квадрат (kvadratas)',
+    rectangle: 'Прямоугольник',
+    square: 'Квадрат',
     speed: 'Скорость, время, расстояние',
     length: 'длина',
     width: 'ширина',
@@ -48,7 +48,8 @@ export const visual = {
     hide: 'Спрятать ответы',
     showAnswers: 'Показать ответы',
     same: 'То же самое: {b} · {a} = {p}. Половину таблицы можно не учить!',
-    rows: '{a} ряда по {b}',
+    hideTr: 'Скрыть перевод',
+    showTr: 'Показать перевод',
     tip1: '· 1: число не меняется.',
     tip2: '· 2: удвой число (сложи его с собой).',
     tip5: '· 5: ответ оканчивается на 0 или 5. Это половина от · 10.',
@@ -78,8 +79,8 @@ export const visual = {
     examples: 'Examples',
     formulasTitle: 'Formulas',
     formulasLead: 'Area, perimeter and speed: a picture, a formula and an example.',
-    rectangle: 'Rectangle (stačiakampis)',
-    square: 'Square (kvadratas)',
+    rectangle: 'Rectangle',
+    square: 'Square',
     speed: 'Speed, time, distance',
     length: 'length',
     width: 'width',
@@ -105,7 +106,8 @@ export const visual = {
     hide: 'Hide answers',
     showAnswers: 'Show answers',
     same: 'The same: {b} · {a} = {p}. You only need to learn half the table!',
-    rows: '{a} rows of {b}',
+    hideTr: 'Hide translation',
+    showTr: 'Show translation',
     tip1: '· 1: the number stays the same.',
     tip2: '· 2: double the number (add it to itself).',
     tip5: '· 5: the answer ends in 0 or 5. It is half of · 10.',
@@ -115,3 +117,39 @@ export const visual = {
     tipOther: '{a} · {b} = {a} · {c} + {a}: take a fact you know and add one more {a}.',
   },
 } as const;
+
+// The same content in Lithuanian, shown first; the ru/en text above goes under it as the translation.
+export const visualLt = {
+  rectangle: 'Stačiakampis',
+  square: 'Kvadratas',
+  speed: 'Greitis, laikas, atstumas',
+  areaHow: 'Plotas – kiek vienetinių kvadratėlių telpa figūros viduje.',
+  perimeterHow: 'Perimetras – visų kraštinių ilgių suma: apeik figūrą aplink.',
+  findWidth: 'Žinai perimetrą ir ilgį – rask plotį:',
+  findSide: 'Žinai perimetrą – rask kraštinę:',
+  findFromArea: 'Žinai plotą ir vieną kraštinę – rask kitą:',
+  cells: '4 sąsiuvinio langeliai = 1 cm²',
+  example: 'Pavyzdys',
+  triangle: 'Uždenk pirštu tai, ko ieškai: s viršuje – dalijame, v ir t greta – dauginame.',
+  speedExample: 'Automobilis 3 valandas važiuoja 60 km/h greičiu.',
+  units: 'Greitis matuojamas kilometrais per valandą: km/h (dar rašoma km/val.).',
+  same: 'Tas pats: {b} · {a} = {p}. Pusės lentelės mokytis nereikia!',
+  tip1: '· 1: skaičius nesikeičia.',
+  tip2: '· 2: padvigubink skaičių (pridėk jį prie jo paties).',
+  tip5: '· 5: atsakymas baigiasi 0 arba 5. Tai pusė nuo · 10.',
+  tip9: '· 9: pirmas skaitmuo vienetu mažesnis už skaičių, o skaitmenų suma – 9 (9 · 7 = 63: 6 + 3 = 9).',
+  tip10: '· 10: dešinėje prirašyk 0.',
+  tipSquare: 'Skaičius įstrižainėje – kvadratas: {a} · {a}.',
+  tipOther: '{a} · {b} = {a} · {c} + {a}: imk žinomą pavyzdį ir pridėk dar {a}.',
+} as const;
+
+// "7 rows of 8" with the right plural in each language.
+export function rowsOf(lang: 'lt' | 'ru' | 'en', a: number, b: number) {
+  const form = new Intl.PluralRules(lang).select(a);
+  const word = {
+    lt: form === 'one' ? 'eilutė' : form === 'few' ? 'eilutės' : 'eilučių',
+    ru: form === 'one' ? 'ряд' : form === 'few' ? 'ряда' : 'рядов',
+    en: form === 'one' ? 'row' : 'rows',
+  }[lang];
+  return `${a} ${word} ${lang === 'en' ? 'of' : 'po'} ${b}`;
+}

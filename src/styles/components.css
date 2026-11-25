@@ -183,7 +183,7 @@ input[type='text']:focus-visible { border-color: var(--c-brand); }
 .cm__bar { border-left: 3px solid var(--c-ink); }
 .cm__focus { background: var(--c-accent); color: var(--c-on-accent); border-radius: 0.2em; }
 .cm__side { flex: 1 1 16rem; min-width: 0; }
-.cm__text { font-size: var(--fs-base); font-weight: 700; min-height: 4.5em; margin: 0; }
+.cm__text { font-size: var(--fs-base); min-height: 6.5em; margin: 0; }
 .cm__legend { list-style: none; padding: 0; margin: 0 0 var(--s-4); display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-5); }
 
 /* ---- Formulas page -------------------------------------------------------------- */
@@ -224,3 +224,10 @@ input[type='text']:focus-visible { border-color: var(--c-brand); }
 .tt__table td.tt__diag button { border-color: var(--c-brand); }
 .tt__table td.tt__line button { background: var(--c-surface-2); }
 .tt__table td.tt__pick button { background: var(--c-accent); color: var(--c-on-accent); border-color: var(--c-accent); }
+
+/* ---- Lithuanian first, translation under it (Bi, NativeToggle) ------------------- */
+.bi { display: block; }
+.bi__lt { display: block; font-weight: 800; }
+.bi__native { display: block; color: var(--c-muted); font-size: var(--fs-small); font-weight: 600; margin-top: var(--s-1); }
+[data-native='hidden'] .native { display: none; }
+.native-toggle { margin-bottom: var(--s-4); }

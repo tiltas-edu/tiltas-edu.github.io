@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react';
+import Bi from './Bi';
 import Icon from './Icon';
 import { layout, problem, type Layout, type Op } from '../lib/column';
 
@@ -99,7 +100,7 @@ export default function ColumnMath({ lang, labels }: Props) {
         </label>
         <button className="btn" type="submit" disabled={!!error || !a.trim() || !b.trim()}>{labels.show}</button>
       </form>
-      {error && <p className="callout callout--hint"><Icon name="bulb" /> {error[lang]}</p>}
+      {error && <div className="callout callout--hint"><Icon name="bulb" /> <Bi lt={error.lt} native={error[lang]} /></div>}
 
       <div className="row">
         <span className="note">{labels.examples}:</span>
@@ -115,7 +116,7 @@ export default function ColumnMath({ lang, labels }: Props) {
           <Grid l={l} step={step} />
           <div className="cm__side">
             <p className="note">{stepLabel}</p>
-            <p className="cm__text" aria-live="polite">{l.steps[step].text[lang]}</p>
+            <div className="cm__text" aria-live="polite"><Bi lt={l.steps[step].text.lt} native={l.steps[step].text[lang]} /></div>
             <div className="row">
               <button className="btn btn--soft" type="button" disabled={step === 0} onClick={() => setStep(step - 1)}>← {labels.prev}</button>
               {step < last ? (
@@ -135,12 +136,12 @@ export default function ColumnMath({ lang, labels }: Props) {
         <>
           <ul className="cm__legend">
             {l.legend.map((x, i) => (
-              <li key={i}><strong>{x.value}</strong> — <span lang="lt">{x.lt}</span> ({x.term[lang]})</li>
+              <li key={i}><strong>{x.value}</strong> — <span lang="lt">{x.lt}</span> <span className="native">({x.term[lang]})</span></li>
             ))}
           </ul>
           <div className="callout callout--ok">
             <h3 className="callout__title"><Icon name="check" /> {labels.check}</h3>
-            {l.check.map((c, i) => <p key={i}>{c[lang]}</p>)}
+            {l.check.map((c, i) => <Bi key={i} as="p" lt={c.lt} native={c[lang]} />)}
           </div>
         </>
       )}

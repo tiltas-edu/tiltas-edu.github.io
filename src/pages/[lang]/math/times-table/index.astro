@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../../layouts/Layout.astro';
 import TimesTable from '../../../../components/TimesTable';
+import NativeToggle from '../../../../components/NativeToggle.astro';
 import { languages, t, type Lang, base } from '../../../../i18n/ui';
 import { visual } from '../../../../i18n/visual';
 
@@ -15,5 +16,6 @@ const v = visual[lang];
   <p><a href={`${base}/${lang}/math/`}>← {tr.math}</a></p>
   <h1>{v.timesTitle} <small class="note" lang="lt">({v.timesTable})</small></h1>
   <p>{v.timesLead}</p>
-  <TimesTable client:load labels={v} />
+  <NativeToggle hide={v.hideTr} show={v.showTr} />
+  <TimesTable client:load labels={v} lang={lang} />
 </Layout>
