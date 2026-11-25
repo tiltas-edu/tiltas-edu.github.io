@@ -16,7 +16,7 @@ const lang = Astro.params.lang as Lang;
 const tr = t(lang);
 const { tasks, words } = frequency;
 // Corpus subject ids; an unknown one shows as is rather than breaking the build.
-const subjectLabel: Record<string, string> = { math: tr.math, lithuanian: tr.lithuanian, world: tr.subject_world };
+const subjectLabel: Record<string, string> = { math: tr.math, lithuanian: tr.lithuanian, world: tr.society };
 const subjects = Object.entries(frequency.subjects)
   .map(([id, count]) => ({ id, label: subjectLabel[id] ?? id, tasks: count }))
   .sort((a, b) => b.tasks - a.tasks);
