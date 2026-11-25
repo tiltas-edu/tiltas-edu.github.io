@@ -200,6 +200,8 @@ input[type='text']:focus-visible { border-color: var(--c-brand); }
 .fx__list p { margin: var(--s-2) 0; }
 .fx__f { font-size: var(--fs-big); font-weight: 900; color: var(--c-brand); font-variant-numeric: tabular-nums; }
 .fx__u { display: inline-block; vertical-align: middle; padding: 0 var(--s-2); border-radius: var(--radius-sm); background: var(--c-surface-2); font-weight: 800; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.fx__eg-native { display: block; font-weight: 600; }
+.fx__u--native { margin-left: var(--s-1); background: transparent; border: 1px dashed var(--c-line); color: var(--c-muted); }
 .fx__eg { display: block; color: var(--c-muted); font-size: var(--fs-small); font-weight: 700; font-variant-numeric: tabular-nums; }
 .fx__f--inline { font-size: inherit; white-space: nowrap; }
 

@@ -13,6 +13,35 @@ const tr = t(lang);
 const v = visual[lang];
 // The pictures use one cell = 1 cm, so the child can count: 5 by 3 cells.
 const A = 5, B = 3, Q = 4, CELL = 24, PAD = 34, LEFT = 30;
+// Speed units as each language writes them: Lithuanian km/val. and val., Russian км/ч and ч, English km/h and h.
+const UNITS = {
+  lt: { km: 'km', m: 'm', kmh: 'km/val.', ms: 'm/s', h: 'val.', min: 'min', s: 's' },
+  ru: { km: 'км', m: 'м', kmh: 'км/ч', ms: 'м/с', h: 'ч', min: 'мин', s: 'с' },
+  en: { km: 'km', m: 'm', kmh: 'km/h', ms: 'm/s', h: 'h', min: 'min', s: 's' },
+};
+type U = (typeof UNITS)['lt'];
+const speed = {
+  s: (u: U) => `${u.km}, ${u.m}`,
+  v: (u: U) => `${u.kmh}, ${u.ms}`,
+  t: (u: U) => `${u.h}, ${u.min}, ${u.s}`,
+  sF: (u: U) => `${u.km} = ${u.kmh} · ${u.h}`,
+  sE: (u: U) => `60 ${u.kmh} · 3 ${u.h} = 180 ${u.km}`,
+  vF: (u: U) => `${u.kmh} = ${u.km} : ${u.h}`,
+  vE: (u: U) => `180 ${u.km} : 3 ${u.h} = 60 ${u.kmh}`,
+  tF: (u: U) => `${u.h} = ${u.km} : ${u.kmh}`,
+  tE: (u: U) => `180 ${u.km} : 60 ${u.kmh} = 3 ${u.h}`,
+  mF: (u: U) => `${u.m} = ${u.ms} · ${u.s}`,
+  mE: (u: U) => `4 ${u.ms} · 25 ${u.s} = 100 ${u.m}`,
+  all: (u: U) => `s = 60 ${u.kmh} · 3 ${u.h} = 180 ${u.km}; v = 180 ${u.km} : 3 ${u.h} = 60 ${u.kmh}; t = 180 ${u.km} : 60 ${u.kmh} = 3 ${u.h}`,
+};
+type K = keyof typeof speed;
+// The Lithuanian form first; the reader's own form only where it is written differently.
+const lt = (k: K) => speed[k](UNITS.lt);
+const nat = (k: K) => (speed[k](UNITS[lang]) === lt(k) ? '' : speed[k](UNITS[lang]));
+const words: [string, string, string, K][] = [
+  ['s', 'atstumas, nueitas kelias', v.speedS, 's'], ['v', 'greitis', v.speedV, 'v'], ['t', 'laikas', v.speedT, 't'],
+];
+const rows: [string, K, K][] = [['s = v · t', 'sF', 'sE'], ['v = s : t', 'vF', 'vE'], ['t = s : v', 'tF', 'tE']];
 ---
 <Layout lang={lang} title={v.formulasTitle} description={v.formulasLead}>
   <p><a href={`${base}/${lang}/math/`}>← {tr.math}</a></p>
@@ -91,20 +120,33 @@ const A = 5, B = 3, Q = 4, CELL = 24, PAD = 34, LEFT = 30;
         <text class="fx__big" x="132" y="146" text-anchor="middle">t</text>
       </svg>
       <div class="fx__list">
-        <p><strong>s</strong> — <span lang="lt">atstumas, nueitas kelias</span> <span class="native">({v.speedS})</span> <span class="fx__u">km, m</span></p>
-        <p><strong>v</strong> — <span lang="lt">greitis</span> <span class="native">({v.speedV})</span> <span class="fx__u">km/h, m/s</span></p>
-        <p><strong>t</strong> — <span lang="lt">laikas</span> <span class="native">({v.speedT})</span> <span class="fx__u">h, min, s</span></p>
-        <p><span class="fx__f">s = v · t</span> <span class="fx__u">km = km/h · h</span> <span class="fx__eg">60 km/h · 3 h = 180 km</span></p>
-        <p><span class="fx__f">v = s : t</span> <span class="fx__u">km/h = km : h</span> <span class="fx__eg">180 km : 3 h = 60 km/h</span></p>
-        <p><span class="fx__f">t = s : v</span> <span class="fx__u">h = km : km/h</span> <span class="fx__eg">180 km : 60 km/h = 3 h</span></p>
-        <p class="note">m/s: <span class="fx__u">m = m/s · s</span> <span class="fx__eg">4 m/s · 25 s = 100 m</span></p>
+        {words.map(([x, word, tr, k]) => (
+          <p>
+            <strong>{x}</strong> — <span lang="lt">{word}</span> <span class="native">({tr})</span>{' '}
+            <span class="fx__u" lang="lt">{lt(k)}</span>
+            {nat(k) && <span class="fx__u fx__u--native native">{nat(k)}</span>}
+          </p>
+        ))}
+        {rows.map(([f, k, e]) => (
+          <p>
+            <span class="fx__f">{f}</span>{' '}
+            <span class="fx__u" lang="lt">{lt(k)}</span>
+            {nat(k) && <span class="fx__u fx__u--native native">{nat(k)}</span>}
+            <span class="fx__eg"><span lang="lt">{lt(e)}</span>{nat(e) && <span class="fx__eg-native native">{nat(e)}</span>}</span>
+          </p>
+        ))}
+        <p class="note">
+          m/s: <span class="fx__u" lang="lt">{lt('mF')}</span>
+          {nat('mF') && <span class="fx__u fx__u--native native">{nat('mF')}</span>}
+          <span class="fx__eg"><span lang="lt">{lt('mE')}</span>{nat('mE') && <span class="fx__eg-native native">{nat('mE')}</span>}</span>
+        </p>
       </div>
     </div>
     <div class="callout callout--hint">
       <Bi as="p" lt={L.triangle} native={v.triangle} />
       <p><strong><span lang="lt">{L.example}</span><span class="native"> ({v.example})</span>:</strong></p>
       <Bi as="p" lt={L.speedExample} native={v.speedExample} />
-      <p>s = 60 · 3 = 180 km. v = 180 : 3 = 60 km/h. t = 180 : 60 = 3 h.</p>
+      <Bi as="p" lt={lt('all')} native={nat('all') || lt('all')} />
       <Bi as="p" lt={L.units} native={v.units} />
     </div>
   </section>
