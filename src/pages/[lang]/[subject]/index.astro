@@ -4,6 +4,7 @@ import { getCollection } from 'astro:content';
 import Icon from '../../../components/Icon.astro';
 import { languages, t, type Lang, base } from '../../../i18n/ui';
 import { subjects, groupKey, type Subject } from '../../../lib/subjects';
+import { visual } from '../../../i18n/visual';
 
 export function getStaticPaths() {
   return Object.keys(languages).flatMap((lang) => Object.keys(subjects).map((subject) => ({ params: { lang, subject } })));
@@ -15,12 +16,36 @@ const glossary = (await getCollection('glossary')).filter((g) => g.data.subject 
 const tasks = (await getCollection('tasks'))
   .filter((x) => x.data.subject === subject)
   .sort((a, b) => a.data.level - b.data.level || a.id.localeCompare(b.id));
+const v = visual[lang];
+// Visual reference pages, maths only for now.
+const pictures = subject === 'math'
+  ? [
+      { href: 'column', title: v.columnTitle, lead: v.columnLead },
+      { href: 'formulas', title: v.formulasTitle, lead: v.formulasLead },
+      { href: 'times-table', title: v.timesTitle, lead: v.timesLead },
+    ]
+  : [];
 const groups = subjects[subject]
   .map((id) => ({ id, title: tr[groupKey(id) as keyof typeof tr] ?? id, tasks: tasks.filter((x) => x.data.group === id) }))
   .filter((g) => g.tasks.length);
 ---
 <Layout lang={lang} title={tr[subject]}>
   <h1><Icon name={subject} /> {tr[subject]}</h1>
+
+  {pictures.length > 0 && (
+    <>
+      <h2>{v.section}</h2>
+      <p>{v.sectionLead}</p>
+      <div class="grid">
+        {pictures.map((x) => (
+          <a class="card" href={`${base}/${lang}/math/${x.href}/`}>
+            <strong>{x.title}</strong>
+            <div class="note">{x.lead}</div>
+          </a>
+        ))}
+      </div>
+    </>
+  )}
 
   <h2>{tr.glossary}</h2>
   <div class="grid">

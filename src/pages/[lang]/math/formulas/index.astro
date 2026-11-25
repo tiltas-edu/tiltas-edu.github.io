@@ -1,0 +1,99 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+import { languages, t, type Lang, base } from '../../../../i18n/ui';
+import { visual } from '../../../../i18n/visual';
+
+export function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const lang = Astro.params.lang as Lang;
+const tr = t(lang);
+const v = visual[lang];
+// The pictures use one cell = 1 cm, so the child can count: 5 by 3 cells.
+const A = 5, B = 3, Q = 4, CELL = 24, PAD = 34;
+---
+<Layout lang={lang} title={v.formulasTitle} description={v.formulasLead}>
+  <p><a href={`${base}/${lang}/math/`}>← {tr.math}</a></p>
+  <h1>{v.formulasTitle}</h1>
+  <p>{v.formulasLead}</p>
+
+  <section class="fx">
+    <h2>{v.rectangle}</h2>
+    <div class="fx__row">
+      <svg class="fx__fig" viewBox={`0 0 ${A * CELL + 2 * PAD + 30} ${B * CELL + 2 * PAD}`} role="img" aria-label={`${v.rectangle}: a = ${A} cm, b = ${B} cm`}>
+        <g transform={`translate(${PAD + 30} ${PAD / 2})`}>
+          {Array.from({ length: A * B }, (_, i) => (
+            <rect class="fx__cell" x={(i % A) * CELL} y={Math.floor(i / A) * CELL} width={CELL} height={CELL} />
+          ))}
+          <rect class="fx__edge" x="0" y="0" width={A * CELL} height={B * CELL} />
+          <text class="fx__label" x={(A * CELL) / 2} y={B * CELL + 24} text-anchor="middle">a = {A} cm</text>
+          <text class="fx__label" x={-8} y={(B * CELL) / 2 + 6} text-anchor="end">b = {B}</text>
+        </g>
+      </svg>
+      <div class="fx__list">
+        <p><strong>a</strong> — <span lang="lt">ilgis</span> ({v.length}), <strong>b</strong> — <span lang="lt">plotis</span> ({v.width})</p>
+        <p class="fx__f"><span lang="lt">S</span> = a · b</p>
+        <p class="note">S — <span lang="lt">plotas</span> ({v.area}). {v.areaHow}</p>
+        <p class="fx__f">P = (a + b) · 2</p>
+        <p class="note">P — <span lang="lt">perimetras</span> ({v.perimeter}). {v.perimeterHow}</p>
+      </div>
+    </div>
+    <div class="callout callout--hint">
+      <p><strong>{v.example}:</strong> a = {A} cm, b = {B} cm → S = {A} · {B} = {A * B} cm², P = ({A} + {B}) · 2 = {(A + B) * 2} cm.</p>
+      <p>{v.findWidth} <strong class="fx__f fx__f--inline">b = P : 2 − a</strong> ({(A + B) * 2} : 2 − {A} = {B} cm)</p>
+      <p>{v.findFromArea} <strong class="fx__f fx__f--inline">b = S : a</strong> ({A * B} : {A} = {B} cm)</p>
+    </div>
+  </section>
+
+  <section class="fx">
+    <h2>{v.square}</h2>
+    <div class="fx__row">
+      <svg class="fx__fig" viewBox={`0 0 ${Q * CELL + 2 * PAD} ${Q * CELL + 2 * PAD}`} role="img" aria-label={`${v.square}: a = ${Q} cm`}>
+        <g transform={`translate(${PAD} ${PAD / 2})`}>
+          {Array.from({ length: Q * Q }, (_, i) => (
+            <rect class="fx__cell" x={(i % Q) * CELL} y={Math.floor(i / Q) * CELL} width={CELL} height={CELL} />
+          ))}
+          <rect class="fx__edge" x="0" y="0" width={Q * CELL} height={Q * CELL} />
+          <text class="fx__label" x={(Q * CELL) / 2} y={Q * CELL + 24} text-anchor="middle">a = {Q} cm</text>
+          <text class="fx__label" x={-8} y={(Q * CELL) / 2 + 6} text-anchor="end">a</text>
+        </g>
+      </svg>
+      <div class="fx__list">
+        <p><strong>a</strong> — <span lang="lt">kraštinė</span> ({v.side})</p>
+        <p class="fx__f">S = a · a</p>
+        <p class="fx__f">P = a · 4</p>
+        <p>{v.findSide} <strong class="fx__f fx__f--inline">a = P : 4</strong></p>
+      </div>
+    </div>
+    <div class="callout callout--hint">
+      <p><strong>{v.example}:</strong> a = {Q} cm → S = {Q} · {Q} = {Q * Q} cm², P = {Q} · 4 = {Q * 4} cm.</p>
+      <p>{v.cells}</p>
+    </div>
+  </section>
+
+  <section class="fx">
+    <h2>{v.speed}</h2>
+    <div class="fx__row">
+      <svg class="fx__fig fx__fig--tri" viewBox="0 0 200 170" role="img" aria-label="s = v · t">
+        <path class="fx__tri" d="M100 10 L190 160 L10 160 Z" />
+        <path class="fx__tri-line" d="M45 100 H155 M100 100 V160" />
+        <text class="fx__big" x="100" y="78" text-anchor="middle">s</text>
+        <text class="fx__big" x="68" y="146" text-anchor="middle">v</text>
+        <text class="fx__big" x="132" y="146" text-anchor="middle">t</text>
+      </svg>
+      <div class="fx__list">
+        <p><strong>s</strong> — <span lang="lt">atstumas, nueitas kelias</span> ({v.speedS})</p>
+        <p><strong>v</strong> — <span lang="lt">greitis</span> ({v.speedV})</p>
+        <p><strong>t</strong> — <span lang="lt">laikas</span> ({v.speedT})</p>
+        <p class="fx__f">s = v · t</p>
+        <p class="fx__f">v = s : t</p>
+        <p class="fx__f">t = s : v</p>
+      </div>
+    </div>
+    <div class="callout callout--hint">
+      <p>{v.triangle}</p>
+      <p><strong>{v.example}:</strong> {v.speedExample} s = 60 · 3 = 180 km. v = 180 : 3 = 60 km/h. t = 180 : 60 = 3 h.</p>
+      <p>{v.units}</p>
+    </div>
+  </section>
+</Layout>

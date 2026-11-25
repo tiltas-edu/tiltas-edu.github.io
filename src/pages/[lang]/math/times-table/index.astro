@@ -1,0 +1,19 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+import TimesTable from '../../../../components/TimesTable';
+import { languages, t, type Lang, base } from '../../../../i18n/ui';
+import { visual } from '../../../../i18n/visual';
+
+export function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const lang = Astro.params.lang as Lang;
+const tr = t(lang);
+const v = visual[lang];
+---
+<Layout lang={lang} title={v.timesTitle} description={v.timesLead}>
+  <p><a href={`${base}/${lang}/math/`}>← {tr.math}</a></p>
+  <h1>{v.timesTitle} <small class="note" lang="lt">({v.timesTable})</small></h1>
+  <p>{v.timesLead}</p>
+  <TimesTable client:load labels={v} />
+</Layout>

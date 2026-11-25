@@ -1,0 +1,22 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+import ColumnMath from '../../../../components/ColumnMath';
+import { languages, t, type Lang, base } from '../../../../i18n/ui';
+import { visual } from '../../../../i18n/visual';
+
+export function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const lang = Astro.params.lang as Lang;
+const tr = t(lang);
+const v = visual[lang];
+---
+<Layout lang={lang} title={v.columnTitle} description={v.columnLead}>
+  <p><a href={`${base}/${lang}/math/`}>← {tr.math}</a></p>
+  <h1>{v.columnTitle}</h1>
+  <p>{v.columnLead}</p>
+  <ColumnMath client:load lang={lang} labels={{
+    add: v.add, sub: v.sub, mul: v.mul, div: v.div, first: v.first, second: v.second, show: v.show, next: v.next,
+    prev: v.prev, all: v.all, again: v.again, step: v.step, check: v.check, examples: v.examples,
+  }} />
+</Layout>

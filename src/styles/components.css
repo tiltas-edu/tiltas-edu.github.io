@@ -162,3 +162,65 @@ input[type='text']:focus-visible { border-color: var(--c-brand); }
 .choice input { accent-color: var(--c-brand); width: 1.25rem; height: 1.25rem; }
 .btn:disabled { opacity: 0.55; cursor: not-allowed; }
 .badge--review { background: var(--c-hint-bg); color: var(--c-ink); margin-left: var(--s-2); }
+
+/* ---- Column arithmetic (ColumnMath): squared notebook, one digit per cell ---------- */
+.cm__input { width: 7rem !important; text-align: right; }
+.cm__op { font-size: var(--fs-big); font-weight: 900; }
+.cm__ex { min-height: var(--tap); }
+.cm__board { display: flex; flex-wrap: wrap; gap: var(--s-5); align-items: flex-start; margin-block: var(--s-5); }
+.cm__grid {
+  --cell: calc(var(--fs-big) * 1.1);
+  display: grid; grid-auto-rows: var(--cell); overflow-x: auto; max-width: 100%;
+  background: var(--c-surface); padding: var(--s-3); border-radius: var(--radius); border: var(--border-w) solid var(--c-line);
+  font-size: var(--fs-big); font-weight: 800; font-variant-numeric: tabular-nums; line-height: 1;
+}
+.cm__cell { display: flex; align-items: center; justify-content: center; border: 1px dashed var(--c-line); margin: 0 -1px -1px 0; }
+.cm__small { font-size: var(--fs-small); color: var(--c-brand); align-items: flex-end; padding-bottom: var(--s-1); }
+.cm__sign { color: var(--c-muted); }
+.cm__result { color: var(--c-brand); }
+.cm__struck { color: var(--c-muted); text-decoration: line-through 0.12em; }
+.cm__rule { border-bottom: 3px solid var(--c-ink); }
+.cm__bar { border-left: 3px solid var(--c-ink); }
+.cm__focus { background: var(--c-accent); color: var(--c-on-accent); border-radius: 0.2em; }
+.cm__side { flex: 1 1 16rem; min-width: 0; }
+.cm__text { font-size: var(--fs-base); font-weight: 700; min-height: 4.5em; margin: 0; }
+.cm__legend { list-style: none; padding: 0; margin: 0 0 var(--s-4); display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-5); }
+
+/* ---- Formulas page -------------------------------------------------------------- */
+.fx__row { display: flex; flex-wrap: wrap; gap: var(--s-5); align-items: center; }
+.fx__fig { width: min(100%, 18rem); height: auto; flex: none; }
+.fx__fig--tri { width: min(100%, 12rem); }
+.fx__cell { fill: var(--c-surface); stroke: var(--c-line); stroke-width: 1; }
+.fx__edge, .fx__tri { fill: none; stroke: var(--c-brand); stroke-width: 4; stroke-linejoin: round; }
+.fx__tri { fill: var(--c-surface-2); }
+.fx__tri-line { stroke: var(--c-brand); stroke-width: 3; }
+.fx__label { fill: var(--c-ink); font: 800 16px var(--font-ui); }
+.fx__big { fill: var(--c-ink); font: 900 34px var(--font-ui); }
+.fx__list { flex: 1 1 16rem; }
+.fx__list p { margin: var(--s-2) 0; }
+.fx__f { font-size: var(--fs-big); font-weight: 900; color: var(--c-brand); font-variant-numeric: tabular-nums; }
+.fx__f--inline { font-size: inherit; white-space: nowrap; }
+
+/* ---- Times table ------------------------------------------------------------------ */
+.tt { display: flex; flex-wrap: wrap; gap: var(--s-5); align-items: flex-start; }
+.tt__panel { flex: 1 1 16rem; }
+.tt__grid { flex: 1 1 22rem; min-width: 0; max-width: 100%; }
+.tt__fact { font-size: var(--fs-h1); font-weight: 900; margin: 0; }
+.tt__fact strong { color: var(--c-brand); }
+.tt__dots { display: grid; gap: var(--s-1); max-width: 16rem; margin-block: var(--s-3); }
+.tt__dots span { aspect-ratio: 1; border-radius: 50%; background: var(--c-brand); }
+/* Stays in view while the child scrolls the table on a phone. */
+.tt__now { position: sticky; top: 0; z-index: 1; background: var(--c-bg); margin: var(--s-3) 0 0; padding-block: var(--s-2); font-size: var(--fs-big); font-weight: 900; }
+.tt__now strong { color: var(--c-brand); }
+.tt__scroll { overflow-x: auto; margin-top: var(--s-3); max-width: 100%; }
+.tt__table { border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.tt__table th { min-width: var(--tap); height: var(--tap); color: var(--c-muted); font-weight: 900; text-align: center; }
+.tt__table th.tt__on { color: var(--c-brand); }
+.tt__table td { padding: 1px; }
+.tt__table td button {
+  width: var(--tap); height: var(--tap); border: 1px solid var(--c-line); border-radius: var(--radius-sm); background: var(--c-surface);
+  color: var(--c-ink); font: inherit; font-weight: 800; cursor: pointer;
+}
+.tt__table td.tt__diag button { border-color: var(--c-brand); }
+.tt__table td.tt__line button { background: var(--c-surface-2); }
+.tt__table td.tt__pick button { background: var(--c-accent); color: var(--c-on-accent); border-color: var(--c-accent); }
