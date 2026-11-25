@@ -12,10 +12,12 @@ const lang = Astro.params.lang as Lang;
 const tr = t(lang);
 const v = visual[lang];
 ---
-<Layout lang={lang} title={v.timesTitle} description={v.timesLead}>
+<Layout lang={lang} title={v.timesTitle} description={v.timesLead} wide>
   <p><a href={`${base}/${lang}/math/`}>← {tr.math}</a></p>
-  <h1>{v.timesTitle} <small class="note" lang="lt">({v.timesTable})</small></h1>
+  <div class="page-head">
+    <h1>{v.timesTitle} <small class="note" lang="lt">({v.timesTable})</small></h1>
+    <NativeToggle hide={v.hideTr} show={v.showTr} />
+  </div>
   <p>{v.timesLead}</p>
-  <NativeToggle hide={v.hideTr} show={v.showTr} />
   <TimesTable client:load labels={v} lang={lang} />
 </Layout>

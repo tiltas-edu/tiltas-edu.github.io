@@ -17,6 +17,20 @@ interface Props {
   cardLabels: React.ComponentProps<typeof Flashcards>['labels'];
 }
 
+// Share of tasks with the word, drawn like a laptop battery with the percent inside.
+function Battery({ share, label }: { share: number; label: string }) {
+  const pct = Math.round(share * 100);
+  const text = pct < 1 ? '<1%' : `${pct}%`;
+  return (
+    <span className="battery" role="img" aria-label={label} title={label}>
+      <span className="battery__txt" aria-hidden="true">{text}</span>
+      <span className="battery__fill" style={{ width: `${Math.max(pct, 1)}%` }} aria-hidden="true">
+        <span className="battery__txt">{text}</span>
+      </span>
+    </span>
+  );
+}
+
 export default function WordRanking({ words: allWords, total: allTotal, subjects, lang, labels, cardLabels }: Props) {
   const [subject, setSubject] = useState<string | null>(null);
   const [chosen, setChosen] = useState<Filter>('all');
@@ -50,12 +64,7 @@ export default function WordRanking({ words: allWords, total: allTotal, subjects
             {w.forms.some((f) => f !== w.lemma) && <small lang="lt">{w.forms.join(', ')}</small>}
           </span>
           <span>{w[lang]}</span>
-          <span className="word__freq">
-            <span className="bar" aria-hidden="true">
-              <span style={{ width: `${(100 * w.tasks) / total}%` }} />
-            </span>
-            {inTasks(w)}
-          </span>
+          <span className="word__freq"><Battery share={w.tasks / total} label={inTasks(w)} /></span>
         </li>
       ))}
     </ol>

@@ -31,9 +31,12 @@ export default function TimesTable({ labels, lang }: { labels: Labels; lang: 'ru
     if (hidden) setOpen((s) => new Set(s).add(`${r}x${c}`));
   };
 
+  const toggle = () => { setHidden(!hidden); setOpen(new Set()); };
+
   return (
     <div className="tt">
       <div className="tt__panel" aria-live="polite">
+        <button className="btn btn--soft tt__hide tt__hide--wide" type="button" onClick={toggle}>{hidden ? labels.showAnswers : labels.hide}</button>
         <p className="tt__fact"><span>{a} · {b} =</span> <strong>{hidden && !open.has(`${a}x${b}`) ? '?' : p}</strong></p>
         <Bi as="p" lt={rowsOf('lt', a, b)} native={rowsOf(lang, a, b)} />
         <div className="tt__dots" style={{ gridTemplateColumns: `repeat(${b}, 1fr)` }} aria-hidden="true">
@@ -46,9 +49,7 @@ export default function TimesTable({ labels, lang }: { labels: Labels; lang: 'ru
       </div>
 
       <div className="tt__grid">
-        <button className="btn btn--soft" type="button" onClick={() => { setHidden(!hidden); setOpen(new Set()); }}>
-          {hidden ? labels.showAnswers : labels.hide}
-        </button>
+        <button className="btn btn--soft tt__hide" type="button" onClick={toggle}>{hidden ? labels.showAnswers : labels.hide}</button>
         <p className="tt__now" aria-hidden="true">{a} · {b} = <strong>{hidden && !open.has(`${a}x${b}`) ? '?' : p}</strong></p>
         <div className="tt__scroll">
           <table className="tt__table">

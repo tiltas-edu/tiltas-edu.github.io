@@ -131,6 +131,13 @@ input[type='text']:focus-visible { border-color: var(--c-brand); }
 .word__freq { color: var(--c-muted); font-size: var(--fs-small); }
 .bar { display: block; height: var(--s-3); border-radius: 999px; background: var(--c-surface-2); overflow: hidden; }
 .bar > span { display: block; height: 100%; background: var(--c-brand); }
+/* Laptop-style battery: the share of tasks with the word, the percent written inside. The text is drawn twice,
+   once over the track and once inside the fill, so it stays readable on both. */
+.battery { --bw: 4.25rem; position: relative; display: inline-block; width: var(--bw); height: 1.6rem; margin-right: 0.35rem; border: 2px solid var(--c-muted); border-radius: 0.4rem; background: var(--c-surface-2); vertical-align: middle; }
+.battery::after { content: ''; position: absolute; top: 30%; right: -0.4rem; width: 0.25rem; height: 40%; border-radius: 0 0.15rem 0.15rem 0; background: var(--c-muted); }
+.battery__txt { position: absolute; top: 0; bottom: 0; left: 0; width: calc(var(--bw) - 4px); display: grid; place-items: center; color: var(--c-ink); font-size: var(--fs-small); font-weight: 800; font-variant-numeric: tabular-nums; line-height: 1; }
+.battery__fill { position: absolute; top: 0; bottom: 0; left: 0; overflow: hidden; border-radius: 0.25rem; background: var(--c-accent); }
+.battery__fill .battery__txt { color: var(--c-on-accent); }
 .words__more { margin-top: var(--s-3); }
 
 /* ---- Narrow screens ------------------------------------------------------------- */
@@ -216,13 +223,26 @@ input[type='text']:focus-visible { border-color: var(--c-brand); }
 /* Stays in view while the child scrolls the table on a phone. */
 .tt__now { position: sticky; top: 0; z-index: 1; background: var(--c-bg); margin: var(--s-3) 0 0; padding-block: var(--s-2); font-size: var(--fs-big); font-weight: 900; }
 .tt__now strong { color: var(--c-brand); }
+.page-head { display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-4); align-items: center; justify-content: space-between; }
+.page-head h1 { margin-block: var(--s-3); }
+.tt__hide--wide { display: none; }
+/* Desktop: the table on the left, sized to the window height so it fits without scrolling; the panel beside it. */
+@media (min-width: 64rem) {
+  .tt { flex-wrap: nowrap; --tt-cell: clamp(2.75rem, calc((100vh - 20rem) / 11), 4.5rem); }
+  .tt__grid { order: -1; flex: 0 0 auto; }
+  .tt__grid > .tt__hide, .tt__now { display: none; }
+  .tt__hide--wide { display: inline-flex; margin-bottom: var(--s-3); }
+  .tt__scroll { margin-top: 0; }
+  .tt__table { font-size: calc(var(--tt-cell) * 0.4); }
+  .tt__panel { position: sticky; top: var(--s-4); }
+}
 .tt__scroll { overflow-x: auto; margin-top: var(--s-3); max-width: 100%; }
 .tt__table { border-collapse: collapse; font-variant-numeric: tabular-nums; }
-.tt__table th { min-width: var(--tap); height: var(--tap); color: var(--c-muted); font-weight: 900; text-align: center; }
+.tt__table th { min-width: var(--tt-cell, var(--tap)); height: var(--tt-cell, var(--tap)); color: var(--c-muted); font-weight: 900; text-align: center; }
 .tt__table th.tt__on { color: var(--c-brand); }
 .tt__table td { padding: 1px; }
 .tt__table td button {
-  width: var(--tap); height: var(--tap); border: 1px solid var(--c-line); border-radius: var(--radius-sm); background: var(--c-surface);
+  width: var(--tt-cell, var(--tap)); height: var(--tt-cell, var(--tap)); border: 1px solid var(--c-line); border-radius: var(--radius-sm); background: var(--c-surface);
   color: var(--c-ink); font: inherit; font-weight: 800; cursor: pointer;
 }
 .tt__table td.tt__diag button { border-color: var(--c-brand); }

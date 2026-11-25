@@ -5,8 +5,8 @@ import Icon from '../components/Icon.astro';
 import { languages, t, type Lang, base } from '../i18n/ui';
 import { version } from '../../package.json';
 
-interface Props { lang: Lang; title?: string; description?: string; noindex?: boolean }
-const { lang, title, description, noindex } = Astro.props;
+interface Props { lang: Lang; title?: string; description?: string; noindex?: boolean; wide?: boolean }
+const { lang, title, description, noindex, wide } = Astro.props;
 const tr = t(lang);
 const path = Astro.url.pathname;
 const rest = path.slice(base.length).replace(/^\/(ru|en)\//, '');
@@ -60,7 +60,7 @@ const releasesUrl = 'https://github.com/tiltas-edu/tiltas-edu.github.io/releases
         </div>
       </div>
     </header>
-    <main class="wrap"><slot /></main>
+    <main class:list={['wrap', { 'wrap--wide': wide }]}><slot /></main>
     <footer class="site-footer">
       <div class="wrap">{tr.footer} <a href={tr.licenseUrl} rel="license">{tr.contentLicense}</a> · <a href={releasesUrl} title={tr.whatsNew}>v{version}</a></div>
     </footer>

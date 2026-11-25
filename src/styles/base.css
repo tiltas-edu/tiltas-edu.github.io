@@ -22,6 +22,7 @@ p { margin: 0 0 var(--s-4); }
 a { color: var(--c-brand); text-underline-offset: 0.18em; }
 :focus-visible { outline: none; box-shadow: var(--focus); border-radius: var(--radius-sm); }
 .wrap { max-width: 54rem; margin: 0 auto; padding: 0 var(--s-4); }
+.wrap--wide { max-width: 78rem; }
 main.wrap { padding-block: var(--s-5) var(--s-7); }
 .lead { color: var(--c-muted); font-size: 1.05em; }
 .note { color: var(--c-muted); font-size: var(--fs-small); }
