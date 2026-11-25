@@ -286,3 +286,32 @@ input[type='text']:focus-visible { border-color: var(--c-brand); }
 .fw__group--on { border-style: solid; border-color: var(--c-brand); }
 .fw__group--on span { background: var(--c-brand); }
 @media (prefers-reduced-motion: reduce) { .fw__mark { transition: none; } }
+
+/* Task hints and solution schemes. */
+.hints { display: flex; flex-direction: column; gap: var(--s-3); align-items: flex-start; margin-block: var(--s-4); }
+.hint-card { width: 100%; padding: var(--s-4); border-radius: var(--radius); background: var(--c-hint-bg); }
+.hint-card--solution { background: var(--c-surface); border: var(--border-w) solid var(--c-line); }
+.hint-card > :first-child { margin-top: 0; }
+.sc { margin: var(--s-3) 0; }
+.sc__svg { display: block; width: 100%; max-width: 26rem; height: auto; }
+.sc__t { fill: var(--c-ink); font: 800 18px var(--font-ui); }
+.sc__t--small { font-size: 15px; }
+.sc__find { fill: var(--c-brand); color: var(--c-brand); font-weight: 900; }
+.sc__edge { fill: none; stroke: var(--c-ink); stroke-width: 2; }
+.sc__edge--bold { stroke: var(--c-brand); stroke-width: 5; stroke-linejoin: round; }
+.sc__line { stroke: var(--c-ink); stroke-width: 1.5; }
+.sc__dash { stroke: var(--c-muted); stroke-width: 1.5; stroke-dasharray: 5 4; }
+.sc__shade { fill: var(--c-brand); fill-opacity: 0.3; }
+.sc__ext { fill: none; stroke: var(--c-muted); stroke-width: 2; stroke-dasharray: 6 4; }
+.sc__brace { fill: none; stroke: var(--c-ink); stroke-width: 2; }
+.sc__legend { margin-top: var(--s-2); font-size: var(--fs-small); color: var(--c-muted); }
+.sc-tree { margin-block: var(--s-2); }
+.sc-box {
+  display: inline-block; padding: var(--s-1) var(--s-3); border: var(--border-w) solid var(--c-line); border-radius: var(--radius-sm);
+  background: var(--c-surface); font-weight: 700;
+}
+.sc-box--find { border-color: var(--c-brand); }
+.sc-eq { font-weight: 900; color: var(--c-brand); }
+.sc-kids { list-style: none; margin: var(--s-1) 0 0 var(--s-3); padding-left: var(--s-2); border-left: 2px solid var(--c-line); }
+.sc-kids li { display: flex; align-items: flex-start; gap: var(--s-1); margin-block: var(--s-1); }
+.sc-op { flex: none; width: 1.2em; font-size: var(--fs-big); font-weight: 900; color: var(--c-brand); line-height: 1.5; text-align: center; }

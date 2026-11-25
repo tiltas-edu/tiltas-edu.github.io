@@ -51,5 +51,37 @@
         "en": "70 m is only the length and the width. The fence goes along 4 sides: multiply by 2."
       }
     }
+  ],
+  "scheme": {
+    "kind": "shape",
+    "bottom": {
+      "lt": "ilgis",
+      "ru": "длина",
+      "en": "length",
+      "value": "40 m"
+    },
+    "side": {
+      "lt": "plotis",
+      "ru": "ширина",
+      "en": "width",
+      "value": "30 m",
+      "find": true
+    },
+    "inside": {
+      "lt": "plotas",
+      "ru": "площадь",
+      "en": "area",
+      "value": "1200 m²"
+    },
+    "around": {
+      "lt": "tvora",
+      "ru": "забор",
+      "en": "fence",
+      "value": "140 m",
+      "find": true
+    }
+  },
+  "see": [
+    "formulas"
   ]
 }

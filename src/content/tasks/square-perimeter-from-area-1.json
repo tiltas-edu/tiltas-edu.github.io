@@ -56,5 +56,33 @@
         "en": "6 · 2 is only two sides. A square has 4."
       }
     }
+  ],
+  "scheme": {
+    "kind": "shape",
+    "square": true,
+    "inside": {
+      "lt": "plotas",
+      "ru": "площадь",
+      "en": "area",
+      "value": "36 cm²"
+    },
+    "bottom": {
+      "lt": "kraštinė",
+      "ru": "сторона",
+      "en": "side",
+      "value": "6 cm",
+      "find": true
+    },
+    "around": {
+      "lt": "perimetras",
+      "ru": "периметр",
+      "en": "perimeter",
+      "value": "24 cm",
+      "find": true
+    }
+  },
+  "see": [
+    "formulas",
+    "times-table"
   ]
 }

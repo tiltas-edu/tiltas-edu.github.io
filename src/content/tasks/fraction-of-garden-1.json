@@ -56,5 +56,44 @@
         "en": "20 m is the side of the orchard. Next find the area of the whole orchard."
       }
     }
+  ],
+  "scheme": {
+    "kind": "shape",
+    "square": true,
+    "around": {
+      "lt": "perimetras",
+      "ru": "периметр",
+      "en": "perimeter",
+      "value": "80 m"
+    },
+    "bottom": {
+      "lt": "kraštinė",
+      "ru": "сторона",
+      "en": "side",
+      "value": "20 m",
+      "find": true
+    },
+    "shade": [
+      3,
+      4
+    ],
+    "shadeLbl": {
+      "lt": "obelys 3/4",
+      "ru": "яблони 3/4",
+      "en": "apple trees 3/4",
+      "value": "300 m²",
+      "find": true
+    },
+    "inside": {
+      "lt": "visas sodas",
+      "ru": "весь сад",
+      "en": "whole orchard",
+      "value": "400 m²",
+      "find": true
+    }
+  },
+  "see": [
+    "fractions",
+    "formulas"
   ]
 }

@@ -48,5 +48,43 @@
         "en": "8 m is the width. Now find the new length and the area."
       }
     }
+  ],
+  "scheme": {
+    "kind": "shape",
+    "around": {
+      "lt": "perimetras",
+      "ru": "периметр",
+      "en": "perimeter",
+      "value": "56 m"
+    },
+    "bottom": {
+      "lt": "ilgis",
+      "ru": "длина",
+      "en": "length",
+      "value": "20 m"
+    },
+    "side": {
+      "lt": "plotis",
+      "ru": "ширина",
+      "en": "width",
+      "value": "8 m",
+      "find": true
+    },
+    "ext": {
+      "lt": "pailginsime",
+      "ru": "удлиним на",
+      "en": "longer by",
+      "value": "10 m"
+    },
+    "inside": {
+      "lt": "naujas plotas",
+      "ru": "новая площадь",
+      "en": "new area",
+      "value": "240 m²",
+      "find": true
+    }
+  },
+  "see": [
+    "formulas"
   ]
 }

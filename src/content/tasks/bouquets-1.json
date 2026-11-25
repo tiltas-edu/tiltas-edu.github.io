@@ -52,5 +52,79 @@
         "en": "You added the 8 leaves only once. They are in every bouquet: (4 · 12 + 8) · 25."
       }
     }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "lapų 25 puokštėms",
+        "ru": "листьев на 25 букетов",
+        "en": "leaves for 25 bouquets",
+        "value": "1 400",
+        "find": true
+      },
+      "op": "·",
+      "kids": [
+        {
+          "lbl": {
+            "lt": "viena puokštė",
+            "ru": "один букет",
+            "en": "one bouquet",
+            "value": "56",
+            "find": true
+          },
+          "op": "+",
+          "kids": [
+            {
+              "lbl": {
+                "lt": "4 gėlėms",
+                "ru": "на 4 цветка",
+                "en": "for 4 flowers",
+                "value": "48",
+                "find": true
+              },
+              "op": "·",
+              "kids": [
+                {
+                  "lbl": {
+                    "lt": "gėlių skaičius",
+                    "ru": "число цветков",
+                    "en": "number of flowers",
+                    "value": "4"
+                  }
+                },
+                {
+                  "lbl": {
+                    "lt": "lapų vienai gėlei",
+                    "ru": "листьев на цветок",
+                    "en": "leaves per flower",
+                    "value": "12"
+                  }
+                }
+              ]
+            },
+            {
+              "lbl": {
+                "lt": "dar lapų",
+                "ru": "ещё листьев",
+                "en": "more leaves",
+                "value": "8"
+              }
+            }
+          ]
+        },
+        {
+          "lbl": {
+            "lt": "puokščių skaičius",
+            "ru": "число букетов",
+            "en": "number of bouquets",
+            "value": "25"
+          }
+        }
+      ]
+    }
+  },
+  "see": [
+    "column"
   ]
 }

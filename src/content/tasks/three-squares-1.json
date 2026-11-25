@@ -46,5 +46,32 @@
         "en": "10 cm is the side of a square. Now find the area."
       }
     }
+  ],
+  "scheme": {
+    "kind": "shape",
+    "cols": 3,
+    "cell": {
+      "lt": "perimetras",
+      "ru": "периметр",
+      "en": "perimeter",
+      "value": "40 cm"
+    },
+    "cellSide": {
+      "lt": "kraštinė",
+      "ru": "сторона",
+      "en": "side",
+      "value": "10 cm",
+      "find": true
+    },
+    "inside": {
+      "lt": "stačiakampio plotas",
+      "ru": "площадь прямоугольника",
+      "en": "area of the rectangle",
+      "value": "300 cm²",
+      "find": true
+    }
+  },
+  "see": [
+    "formulas"
   ]
 }

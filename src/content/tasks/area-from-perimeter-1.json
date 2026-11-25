@@ -54,5 +54,37 @@
         "en": "The width was taken from the whole perimeter. First 60 : 2, then subtract the length."
       }
     }
+  ],
+  "scheme": {
+    "kind": "shape",
+    "around": {
+      "lt": "perimetras",
+      "ru": "периметр",
+      "en": "perimeter",
+      "value": "60 m"
+    },
+    "bottom": {
+      "lt": "ilgis",
+      "ru": "длина",
+      "en": "length",
+      "value": "18 m"
+    },
+    "side": {
+      "lt": "plotis",
+      "ru": "ширина",
+      "en": "width",
+      "value": "12 m",
+      "find": true
+    },
+    "inside": {
+      "lt": "plotas",
+      "ru": "площадь",
+      "en": "area",
+      "value": "216 m²",
+      "find": true
+    }
+  },
+  "see": [
+    "formulas"
   ]
 }

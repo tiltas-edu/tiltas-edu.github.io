@@ -1,6 +1,9 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import TaskCheck from '../../../components/TaskCheck';
+import Hints from '../../../components/Hints';
+import { visual } from '../../../i18n/visual';
+import type { Scheme } from '../../../lib/scheme';
 import { getCollection } from 'astro:content';
 import { languages, t, type Lang, base } from '../../../i18n/ui';
 import type { Subject } from '../../../lib/subjects';
@@ -42,6 +45,13 @@ const words = glossaries.flatMap((g) => g.data.terms).filter((term) => {
   return true;
 });
 // A unit only for typed numeric answers: "2 500 m²" → "m²".
+// Visual maths pages that show the idea behind this task.
+const v = visual[lang];
+const pages = {
+  column: [v.columnTitle, v.columnLead], formulas: [v.formulasTitle, v.formulasLead], 'times-table': [v.timesTitle, v.timesLead],
+  units: [v.unitsTitle, v.unitsLead], fractions: [v.fractionsTitle, v.fractionsLead],
+} as const;
+const see = d.see.map((href) => ({ href, title: pages[href][0], lead: pages[href][1] }));
 const unit = d.choices || !/^\d/.test(d.answer) ? undefined : d.answer.replace(/^[\d\s.,]+/, '') || undefined;
 ---
 <Layout lang={lang} title={`${tr.task}: ${d.lt.slice(0, 50)}`}>
@@ -72,12 +82,20 @@ const unit = d.choices || !/^\d/.test(d.answer) ? undefined : d.answer.replace(/
     mistakes={d.mistakes.map((m) => ({ value: m.value, hint: m.hint[lang] }))}
     labels={{ yourAnswer: tr.yourAnswer, check: tr.check, correct: tr.correct, wrong: tr.wrong, tryAgain: tr.tryAgain }} />
 
-  <details class="reveal">
-    <summary><strong>{tr.showSolution}</strong></summary>
-    <h2>{tr.solution}</h2>
-    <ol class="steps">
-      {d.steps[lang].map((s) => <li>{s}</li>)}
-    </ol>
-    <p class="answer">{tr.answer}: {d.answer}</p>
-  </details>
+  <Hints client:load taskId={entry.id} lang={lang} scheme={d.scheme as Scheme | undefined} steps={d.steps[lang]} answer={d.answer}
+    labels={{ hint: tr.hint, hintOf: tr.hintOf, scheme: tr.scheme, firstStep: tr.firstStep, solution: tr.solution, showSolution: tr.showSolution, answer: tr.answer }} />
+
+  {see.length > 0 && (
+    <>
+      <h2>{tr.seeIt}</h2>
+      <div class="grid">
+        {see.map((x) => (
+          <a class="card" href={`${base}/${lang}/math/${x.href}/`}>
+            <strong>{x.title}</strong>
+            <div class="note">{x.lead}</div>
+          </a>
+        ))}
+      </div>
+    </>
+  )}
 </Layout>

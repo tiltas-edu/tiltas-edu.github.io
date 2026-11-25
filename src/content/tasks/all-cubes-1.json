@@ -43,5 +43,59 @@
         "en": "280 = 8 · 35 is 8 edges. A cube has 12 edges, and there are 8 cubes."
       }
     }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "vielos iš viso",
+        "ru": "всего проволоки",
+        "en": "wire in all",
+        "value": "3 360 cm",
+        "find": true
+      },
+      "op": "·",
+      "kids": [
+        {
+          "lbl": {
+            "lt": "vienas kubas",
+            "ru": "один куб",
+            "en": "one cube",
+            "value": "420 cm",
+            "find": true
+          },
+          "op": "·",
+          "kids": [
+            {
+              "lbl": {
+                "lt": "briaunų skaičius",
+                "ru": "число рёбер",
+                "en": "number of edges",
+                "value": "12"
+              }
+            },
+            {
+              "lbl": {
+                "lt": "briauna",
+                "ru": "ребро",
+                "en": "edge",
+                "value": "35 cm"
+              }
+            }
+          ]
+        },
+        {
+          "lbl": {
+            "lt": "kubų skaičius",
+            "ru": "число кубов",
+            "en": "number of cubes",
+            "value": "8"
+          }
+        }
+      ]
+    }
+  },
+  "see": [
+    "column"
   ]
 }

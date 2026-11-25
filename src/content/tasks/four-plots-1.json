@@ -51,5 +51,35 @@
         "en": "196 : 2 is half. There are 4 plots: divide by 4."
       }
     }
+  ],
+  "scheme": {
+    "kind": "shape",
+    "square": true,
+    "cols": 2,
+    "rows": 2,
+    "inside": {
+      "lt": "visi sklypai",
+      "ru": "все участки",
+      "en": "all plots",
+      "value": "196 m²"
+    },
+    "cell": {
+      "lt": "sklypas",
+      "ru": "участок",
+      "en": "plot",
+      "value": "49 m²",
+      "find": true
+    },
+    "cellSide": {
+      "lt": "kraštinė",
+      "ru": "сторона",
+      "en": "side",
+      "value": "7 m",
+      "find": true
+    }
+  },
+  "see": [
+    "formulas",
+    "times-table"
   ]
 }

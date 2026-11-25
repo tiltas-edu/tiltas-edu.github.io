@@ -52,5 +52,30 @@
         "en": "That is the area. The task asks for the width (plotį)."
       }
     }
+  ],
+  "scheme": {
+    "kind": "shape",
+    "around": {
+      "lt": "perimetras",
+      "ru": "периметр",
+      "en": "perimeter",
+      "value": "54 cm"
+    },
+    "bottom": {
+      "lt": "ilgis",
+      "ru": "длина",
+      "en": "length",
+      "value": "16 cm"
+    },
+    "side": {
+      "lt": "plotis",
+      "ru": "ширина",
+      "en": "width",
+      "value": "11 cm",
+      "find": true
+    }
+  },
+  "see": [
+    "formulas"
   ]
 }

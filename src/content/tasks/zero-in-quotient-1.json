@@ -44,5 +44,45 @@
         "en": "The zero is in the wrong place. Check: 760 · 6 = 4 560, not 4 236."
       }
     }
+  ],
+  "scheme": {
+    "kind": "bar",
+    "total": {
+      "lt": "bulvės",
+      "ru": "картофель",
+      "en": "potatoes",
+      "value": "4 236 kg"
+    },
+    "parts": [
+      {
+        "w": 1,
+        "mark": true,
+        "lbl": {
+          "lt": "1 dėžėje",
+          "ru": "в 1 ящике",
+          "en": "in 1 box",
+          "value": "706 kg",
+          "find": true
+        }
+      },
+      {
+        "w": 1
+      },
+      {
+        "w": 1
+      },
+      {
+        "w": 1
+      },
+      {
+        "w": 1
+      },
+      {
+        "w": 1
+      }
+    ]
+  },
+  "see": [
+    "column"
   ]
 }

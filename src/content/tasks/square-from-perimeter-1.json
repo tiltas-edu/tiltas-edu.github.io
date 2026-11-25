@@ -51,5 +51,32 @@
         "en": "It looks like the side was found by dividing by 2. A square has 4 sides: 20 : 4."
       }
     }
+  ],
+  "scheme": {
+    "kind": "shape",
+    "square": true,
+    "around": {
+      "lt": "perimetras",
+      "ru": "периметр",
+      "en": "perimeter",
+      "value": "20 m"
+    },
+    "bottom": {
+      "lt": "kraštinė",
+      "ru": "сторона",
+      "en": "side",
+      "value": "5 m",
+      "find": true
+    },
+    "inside": {
+      "lt": "plotas",
+      "ru": "площадь",
+      "en": "area",
+      "value": "25 m²",
+      "find": true
+    }
+  },
+  "see": [
+    "formulas"
   ]
 }

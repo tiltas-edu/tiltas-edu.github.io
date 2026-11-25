@@ -43,5 +43,53 @@
         "en": "603 is the quotient. Now subtract it from 6 000."
       }
     }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "skirtumas",
+        "ru": "разность",
+        "en": "difference",
+        "value": "5 397",
+        "find": true
+      },
+      "op": "−",
+      "kids": [
+        {
+          "lbl": {
+            "lt": "",
+            "value": "6 000"
+          }
+        },
+        {
+          "lbl": {
+            "lt": "dalmuo",
+            "ru": "частное",
+            "en": "quotient",
+            "value": "603",
+            "find": true
+          },
+          "op": ":",
+          "kids": [
+            {
+              "lbl": {
+                "lt": "",
+                "value": "2 412"
+              }
+            },
+            {
+              "lbl": {
+                "lt": "",
+                "value": "4"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "see": [
+    "column"
   ]
 }

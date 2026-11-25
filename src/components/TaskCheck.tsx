@@ -33,6 +33,8 @@ export default function TaskCheck({ taskId, accepted, mistakes = [], labels, uni
       }
     } catch { /* private mode: nothing to remember */ }
     setHint(ok ? null : hintFor(mistakes, value));
+    // Hints opens the solution scheme after a wrong answer.
+    window.dispatchEvent(new CustomEvent('tiltas:check', { detail: { taskId, ok } }));
   };
 
   return (

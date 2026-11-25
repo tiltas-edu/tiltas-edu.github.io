@@ -24,6 +24,43 @@ const glossary = defineCollection({
   }),
 });
 
+// A labelled value in a solution scheme: "ilgis 18 m", or "plotis ?" when find is set.
+const lbl = z.object({
+  lt: z.string().default(''), // Lithuanian word; empty for a bare number
+  ru: z.string().optional(),
+  en: z.string().optional(),
+  value: z.string(),
+  find: z.boolean().default(false), // what the task asks: "?" in the hint, the value in the solution
+});
+type Node = { lbl: z.infer<typeof lbl>; op?: string; kids?: Node[] };
+const node: z.ZodType<Node> = z.lazy(() => z.object({ lbl, op: z.string().optional(), kids: z.array(node).optional() }));
+const scheme = z.discriminatedUnion('kind', [
+  // A rectangle or square, optionally split into equal squares, shaded or lengthened.
+  z.object({
+    kind: z.literal('shape'),
+    square: z.boolean().default(false),
+    cols: z.number().int().min(1).max(4).default(1),
+    rows: z.number().int().min(1).max(4).default(1),
+    around: lbl.optional(), // perimeter: the border is drawn bold
+    bottom: lbl.optional(),
+    side: lbl.optional(),
+    inside: lbl.optional(),
+    cell: lbl.optional(), // written in the first small square
+    cellSide: lbl.optional(), // under the first small square
+    shade: z.tuple([z.number().int(), z.number().int()]).optional(), // [3, 4]: 3 of 4 strips
+    shadeLbl: lbl.optional(),
+    ext: lbl.optional(), // dashed piece added on the right
+  }),
+  // Bar model: a whole split into parts.
+  z.object({
+    kind: z.literal('bar'),
+    total: lbl,
+    parts: z.array(z.object({ w: z.number().positive(), lbl: lbl.optional(), mark: z.boolean().default(false) })).min(1),
+  }),
+  // What to find on top, what it is made of below.
+  z.object({ kind: z.literal('tree'), root: node }),
+]);
+
 // One JSON file per task. Tasks are ORIGINAL (written for Tiltas),
 // they only use the same wording patterns as school platforms.
 const tasks = defineCollection({
@@ -43,6 +80,10 @@ const tasks = defineCollection({
     keywords: z.array(z.string()).default([]), // lt terms to highlight
     // Typical wrong answers and a calm hint for each, e.g. the area typed where the perimeter is asked.
     mistakes: z.array(z.object({ value: z.string(), hint: tri })).default([]),
+    // Solution picture, the first hint: "?" where the task asks, numbers in the solution.
+    scheme: scheme.optional(),
+    // Visual maths pages that show the idea of this task (/<lang>/math/<page>/).
+    see: z.array(z.enum(['column', 'formulas', 'times-table', 'units', 'fractions'])).default([]),
   }),
 });
 

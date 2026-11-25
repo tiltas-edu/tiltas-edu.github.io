@@ -53,5 +53,41 @@
         "en": "30 cm is the side of a small square. Now find its area."
       }
     }
+  ],
+  "scheme": {
+    "kind": "shape",
+    "square": true,
+    "cols": 2,
+    "rows": 2,
+    "around": {
+      "lt": "perimetras",
+      "ru": "периметр",
+      "en": "perimeter",
+      "value": "240 cm"
+    },
+    "bottom": {
+      "lt": "didžiojo kraštinė",
+      "ru": "сторона большого",
+      "en": "big side",
+      "value": "60 cm",
+      "find": true
+    },
+    "cellSide": {
+      "lt": "mažojo kraštinė",
+      "ru": "сторона маленького",
+      "en": "small side",
+      "value": "30 cm",
+      "find": true
+    },
+    "cell": {
+      "lt": "plotas",
+      "ru": "площадь",
+      "en": "area",
+      "value": "900 cm²",
+      "find": true
+    }
+  },
+  "see": [
+    "formulas"
   ]
 }

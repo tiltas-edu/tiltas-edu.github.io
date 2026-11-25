@@ -36,5 +36,36 @@
         "en": "832 Eur is the new price. The task asks how much cheaper it got: only the discount."
       }
     }
+  ],
+  "scheme": {
+    "kind": "bar",
+    "total": {
+      "lt": "kaina",
+      "ru": "цена",
+      "en": "price",
+      "value": "1 248 Eur"
+    },
+    "parts": [
+      {
+        "w": 1,
+        "mark": true,
+        "lbl": {
+          "lt": "atpigo",
+          "ru": "подешевел на",
+          "en": "cheaper by",
+          "value": "416 Eur",
+          "find": true
+        }
+      },
+      {
+        "w": 1
+      },
+      {
+        "w": 1
+      }
+    ]
+  },
+  "see": [
+    "fractions"
   ]
 }

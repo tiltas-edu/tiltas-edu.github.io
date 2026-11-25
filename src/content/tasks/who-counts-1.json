@@ -44,5 +44,67 @@
         "en": "665 ct is 19 sweets. Count again: herself, her brother and 18 friends."
       }
     }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "sumokėjo",
+        "ru": "заплатила",
+        "en": "paid",
+        "value": "700 ct = 7 Eur",
+        "find": true
+      },
+      "op": "·",
+      "kids": [
+        {
+          "lbl": {
+            "lt": "saldainių skaičius",
+            "ru": "число конфет",
+            "en": "number of sweets",
+            "value": "20",
+            "find": true
+          },
+          "op": "+",
+          "kids": [
+            {
+              "lbl": {
+                "lt": "sau",
+                "ru": "себе",
+                "en": "herself",
+                "value": "1"
+              }
+            },
+            {
+              "lbl": {
+                "lt": "broliui",
+                "ru": "брату",
+                "en": "brother",
+                "value": "1"
+              }
+            },
+            {
+              "lbl": {
+                "lt": "draugams",
+                "ru": "друзьям",
+                "en": "friends",
+                "value": "18"
+              }
+            }
+          ]
+        },
+        {
+          "lbl": {
+            "lt": "vieno saldainio kaina",
+            "ru": "цена одной конфеты",
+            "en": "price of one sweet",
+            "value": "35 ct"
+          }
+        }
+      ]
+    }
+  },
+  "see": [
+    "column"
   ]
 }
