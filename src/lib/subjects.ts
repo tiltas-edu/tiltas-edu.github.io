@@ -1,7 +1,7 @@
 // Subjects that have tasks, and the task groups (sections) shown on each subject page, in order.
 // A group id is the `group` field of a task; the title is an i18n key.
 export const subjects = {
-  math: ['area-from-perimeter', 'side-from-area', 'word-problems'],
+  math: ['area-from-perimeter', 'side-from-area', 'motion', 'word-problems'],
   lithuanian: ['verb-tenses'],
   society: ['rights-duties'],
 } as const;

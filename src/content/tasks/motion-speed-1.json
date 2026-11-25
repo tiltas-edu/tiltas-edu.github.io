@@ -1,0 +1,92 @@
+{
+  "subject": "math",
+  "topic": "motion",
+  "group": "motion",
+  "level": 1,
+  "grade": 4,
+  "lt": "Lėktuvas per 3 h nuskrido 2 400 km. Kokiu greičiu skrido lėktuvas? Užrašyk sprendimą ir atsakymą.",
+  "translation": {
+    "ru": "Самолёт за 3 ч пролетел 2 400 км. С какой скоростью летел самолёт? Запиши решение и ответ.",
+    "en": "A plane flew 2 400 km in 3 h. At what speed did the plane fly? Write the solution and the answer."
+  },
+  "steps": {
+    "ru": [
+      "Скорость = расстояние : время.",
+      "2 400 : 3 = 800 (км/ч)."
+    ],
+    "en": [
+      "Speed = distance : time.",
+      "2 400 : 3 = 800 (km/h)."
+    ]
+  },
+  "answer": "800 km/h",
+  "check": [
+    "800"
+  ],
+  "keywords": [
+    "per 3 h",
+    "nuskrido",
+    "Kokiu greičiu"
+  ],
+  "mistakes": [
+    {
+      "value": "7200",
+      "hint": {
+        "ru": "7 200 — это 2 400 · 3. Скорость — сколько км за 1 час: дели расстояние на время.",
+        "en": "7 200 is 2 400 · 3. Speed is km in 1 hour: divide the distance by the time."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "road",
+    "len": 3,
+    "arrows": [
+      {
+        "from": 0,
+        "to": 3,
+        "lbl": {
+          "lt": "greitis",
+          "ru": "скорость",
+          "en": "speed",
+          "value": "800 km/h",
+          "find": true
+        }
+      }
+    ],
+    "braces": [
+      {
+        "from": 0,
+        "to": 3,
+        "lbl": {
+          "lt": "atstumas",
+          "ru": "расстояние",
+          "en": "distance",
+          "value": "2 400 km"
+        }
+      },
+      {
+        "from": 0,
+        "to": 1,
+        "below": true,
+        "lbl": {
+          "lt": "per 1 h",
+          "ru": "за 1 ч",
+          "en": "in 1 h",
+          "value": "800 km",
+          "find": true
+        }
+      }
+    ],
+    "notes": [
+      {
+        "lt": "laikas",
+        "ru": "время",
+        "en": "time",
+        "value": "3 h"
+      }
+    ]
+  },
+  "see": [
+    "formulas"
+  ]
+}

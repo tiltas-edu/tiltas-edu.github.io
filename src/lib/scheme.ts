@@ -9,7 +9,13 @@ export type Scheme =
       shade?: [number, number]; shadeLbl?: Lbl; ext?: Lbl;
     }
   | { kind: 'bar'; total: Lbl; parts: { w: number; lbl?: Lbl; mark: boolean }[] }
-  | { kind: 'tree'; root: Node };
+  | { kind: 'tree'; root: Node }
+  | {
+      kind: 'road'; len: number;
+      arrows: { from: number; to: number; lbl: Lbl; below: boolean }[];
+      braces: { from: number; to: number; lbl: Lbl; below: boolean }[];
+      notes: Lbl[];
+    };
 
 // In a hint the asked value is "?"; in the solution it is filled in.
 export const shown = (l: Lbl, solved: boolean) => (l.find && !solved ? '?' : l.value);
@@ -22,6 +28,10 @@ export function labels(s: Scheme): Lbl[] {
   } else if (s.kind === 'bar') {
     out.push(s.total);
     s.parts.forEach((p) => p.lbl && out.push(p.lbl));
+  } else if (s.kind === 'road') {
+    s.arrows.forEach((a) => out.push(a.lbl));
+    s.braces.forEach((b) => out.push(b.lbl));
+    out.push(...s.notes);
   } else walk(s.root);
   return out;
 }

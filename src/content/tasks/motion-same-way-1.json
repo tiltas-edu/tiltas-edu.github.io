@@ -1,0 +1,95 @@
+{
+  "subject": "math",
+  "topic": "motion",
+  "group": "motion",
+  "level": 2,
+  "grade": 4,
+  "lt": "Iš mokyklos tuo pat metu ta pačia kryptimi išėjo Ieva ir Tomas. Ieva eina 4 km/h greičiu, o Tomas – 6 km/h greičiu. Koks atstumas bus tarp jų po 3 h? Užrašyk sprendimą ir atsakymą.",
+  "translation": {
+    "ru": "Из школы одновременно в одном направлении вышли Иева и Томас. Иева идёт со скоростью 4 км/ч, а Томас — 6 км/ч. Какое расстояние будет между ними через 3 ч? Запиши решение и ответ.",
+    "en": "Ieva and Tomas leave school at the same time in the same direction. Ieva walks at 4 km/h and Tomas at 6 km/h. What will the distance between them be after 3 h? Write the solution and the answer."
+  },
+  "steps": {
+    "ru": [
+      "В одну сторону: за 1 час Томас уходит вперёд на 6 − 4 = 2 (км).",
+      "2 · 3 = 6 (км)."
+    ],
+    "en": [
+      "Same direction: every hour Tomas gets 6 − 4 = 2 km further ahead.",
+      "2 · 3 = 6 (km)."
+    ]
+  },
+  "answer": "6 km",
+  "check": [
+    "6"
+  ],
+  "keywords": [
+    "ta pačia kryptimi",
+    "tuo pat metu",
+    "po 3 h",
+    "Koks atstumas"
+  ],
+  "mistakes": [
+    {
+      "value": "30",
+      "hint": {
+        "ru": "30 = (4 + 6) · 3: так считают, когда идут в разные стороны. Здесь в одну: из большей скорости вычти меньшую.",
+        "en": "30 = (4 + 6) · 3 is for opposite directions. Here they walk the same way: subtract the smaller speed from the bigger."
+      }
+    },
+    {
+      "value": "2",
+      "hint": {
+        "ru": "2 км — это за 1 час. А прошло 3 часа.",
+        "en": "2 km is for 1 hour. 3 hours have passed."
+      }
+    },
+    {
+      "value": "18",
+      "hint": {
+        "ru": "18 км прошёл Томас. Спрашивают расстояние между детьми: 18 − 12.",
+        "en": "18 km is how far Tomas walked. The task asks the distance between the children: 18 − 12."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "road",
+    "len": 18,
+    "arrows": [
+      {
+        "from": 0,
+        "to": 12,
+        "lbl": {
+          "lt": "",
+          "value": "Ieva 4 km/h"
+        }
+      },
+      {
+        "from": 0,
+        "to": 18,
+        "below": true,
+        "lbl": {
+          "lt": "",
+          "value": "Tomas 6 km/h"
+        }
+      }
+    ],
+    "braces": [
+      {
+        "from": 12,
+        "to": 18,
+        "lbl": {
+          "lt": "po 3 h",
+          "ru": "через 3 ч",
+          "en": "after 3 h",
+          "value": "6 km",
+          "find": true
+        }
+      }
+    ],
+    "notes": []
+  },
+  "see": [
+    "formulas"
+  ]
+}

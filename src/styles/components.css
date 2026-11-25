@@ -304,6 +304,10 @@ input[type='text']:focus-visible { border-color: var(--c-brand); }
 .sc__shade { fill: var(--c-brand); fill-opacity: 0.3; }
 .sc__ext { fill: none; stroke: var(--c-muted); stroke-width: 2; stroke-dasharray: 6 4; }
 .sc__brace { fill: none; stroke: var(--c-ink); stroke-width: 2; }
+.sc__road { stroke: var(--c-muted); stroke-width: 4; stroke-linecap: round; }
+.sc__dot { fill: var(--c-surface); stroke: var(--c-ink); stroke-width: 3; }
+.sc__arrow { stroke: var(--c-brand); stroke-width: 4; }
+.sc__head { fill: var(--c-brand); }
 .sc__legend { margin-top: var(--s-2); font-size: var(--fs-small); color: var(--c-muted); }
 .sc-tree { margin-block: var(--s-2); }
 .sc-box {

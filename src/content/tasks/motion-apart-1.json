@@ -1,0 +1,92 @@
+{
+  "subject": "math",
+  "topic": "motion",
+  "group": "motion",
+  "level": 2,
+  "grade": 4,
+  "lt": "Iš stoties tuo pat metu priešingomis kryptimis išvažiavo du traukiniai. Vienas važiuoja 60 km/h greičiu, kitas – 90 km/h greičiu. Koks atstumas bus tarp traukinių po 2 h? Užrašyk sprendimą ir atsakymą.",
+  "translation": {
+    "ru": "Со станции одновременно в противоположные стороны отправились два поезда. Один едет со скоростью 60 км/ч, другой — 90 км/ч. Какое расстояние будет между поездами через 2 ч? Запиши решение и ответ.",
+    "en": "Two trains leave a station at the same time in opposite directions. One goes at 60 km/h, the other at 90 km/h. What will the distance between the trains be after 2 h? Write the solution and the answer."
+  },
+  "steps": {
+    "ru": [
+      "В разные стороны: за 1 час расстояние растёт на 60 + 90 = 150 (км).",
+      "150 · 2 = 300 (км)."
+    ],
+    "en": [
+      "Opposite ways: every hour the gap grows by 60 + 90 = 150 km.",
+      "150 · 2 = 300 (km)."
+    ]
+  },
+  "answer": "300 km",
+  "check": [
+    "300"
+  ],
+  "keywords": [
+    "priešingomis kryptimis",
+    "tuo pat metu",
+    "po 2 h",
+    "Koks atstumas"
+  ],
+  "mistakes": [
+    {
+      "value": "60",
+      "hint": {
+        "ru": "60 = (90 − 60) · 2: так считают, когда едут в одну сторону. Здесь в разные: скорости складываются.",
+        "en": "60 = (90 − 60) · 2 is for the same direction. Here they go opposite ways: add the speeds."
+      }
+    },
+    {
+      "value": "150",
+      "hint": {
+        "ru": "150 км — это за 1 час. А прошло 2 часа.",
+        "en": "150 km is for 1 hour. 2 hours have passed."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "road",
+    "len": 300,
+    "arrows": [
+      {
+        "from": 120,
+        "to": 0,
+        "lbl": {
+          "lt": "",
+          "ru": "",
+          "en": "",
+          "value": "60 km/h"
+        }
+      },
+      {
+        "from": 120,
+        "to": 300,
+        "lbl": {
+          "lt": "",
+          "ru": "",
+          "en": "",
+          "value": "90 km/h"
+        }
+      }
+    ],
+    "braces": [
+      {
+        "from": 0,
+        "to": 300,
+        "below": true,
+        "lbl": {
+          "lt": "po 2 h",
+          "ru": "через 2 ч",
+          "en": "after 2 h",
+          "value": "300 km",
+          "find": true
+        }
+      }
+    ],
+    "notes": []
+  },
+  "see": [
+    "formulas"
+  ]
+}

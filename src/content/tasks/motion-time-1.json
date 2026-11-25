@@ -1,0 +1,87 @@
+{
+  "subject": "math",
+  "topic": "motion",
+  "group": "motion",
+  "level": 1,
+  "grade": 4,
+  "lt": "Pėsčiasis eina 5 km/h greičiu. Per kiek valandų jis nueis 20 km? Užrašyk sprendimą ir atsakymą.",
+  "translation": {
+    "ru": "Пешеход идёт со скоростью 5 км/ч. За сколько часов он пройдёт 20 км? Запиши решение и ответ.",
+    "en": "A walker goes at 5 km/h. In how many hours will he walk 20 km? Write the solution and the answer."
+  },
+  "steps": {
+    "ru": [
+      "Время = расстояние : скорость.",
+      "20 : 5 = 4 (ч)."
+    ],
+    "en": [
+      "Time = distance : speed.",
+      "20 : 5 = 4 (h)."
+    ]
+  },
+  "answer": "4 h",
+  "check": [
+    "4"
+  ],
+  "keywords": [
+    "km/h greičiu",
+    "Per kiek valandų",
+    "nueis"
+  ],
+  "mistakes": [
+    {
+      "value": "100",
+      "hint": {
+        "ru": "100 — это 20 · 5. Спрашивают время: сколько раз по 5 км помещается в 20 км?",
+        "en": "100 is 20 · 5. The task asks for time: how many 5 km pieces fit in 20 km?"
+      }
+    },
+    {
+      "value": "25",
+      "hint": {
+        "ru": "25 — это 20 + 5. Время находим делением: 20 : 5.",
+        "en": "25 is 20 + 5. Find the time by dividing: 20 : 5."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "road",
+    "len": 4,
+    "arrows": [
+      {
+        "from": 0,
+        "to": 4,
+        "lbl": {
+          "lt": "greitis",
+          "ru": "скорость",
+          "en": "speed",
+          "value": "5 km/h"
+        }
+      }
+    ],
+    "braces": [
+      {
+        "from": 0,
+        "to": 4,
+        "lbl": {
+          "lt": "atstumas",
+          "ru": "расстояние",
+          "en": "distance",
+          "value": "20 km"
+        }
+      }
+    ],
+    "notes": [
+      {
+        "lt": "laikas",
+        "ru": "время",
+        "en": "time",
+        "value": "4 h",
+        "find": true
+      }
+    ]
+  },
+  "see": [
+    "formulas"
+  ]
+}

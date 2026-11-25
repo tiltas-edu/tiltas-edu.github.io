@@ -59,6 +59,14 @@ const scheme = z.discriminatedUnion('kind', [
   }),
   // What to find on top, what it is made of below.
   z.object({ kind: z.literal('tree'), root: node }),
+  // Motion on a road: positions run from 0 to len; arrows are the movers, braces the distances.
+  z.object({
+    kind: z.literal('road'),
+    len: z.number().positive(),
+    arrows: z.array(z.object({ from: z.number(), to: z.number(), lbl, below: z.boolean().default(false) })).min(1),
+    braces: z.array(z.object({ from: z.number(), to: z.number(), lbl, below: z.boolean().default(false) })).default([]),
+    notes: z.array(lbl).default([]), // lines under the road, e.g. the time
+  }),
 ]);
 
 // One JSON file per task. Tasks are ORIGINAL (written for Tiltas),

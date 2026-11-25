@@ -93,6 +93,49 @@ function Bar({ s, solved }: { s: Extract<S, { kind: 'bar' }>; solved: boolean })
 }
 
 // Outline, so it fits a phone: the box, then what it is made of, joined by the sign.
+// Road: x runs from 0 to len. Movers are arrows above or below the road, distances are braces.
+function Road({ s, solved }: { s: Extract<S, { kind: 'road' }>; solved: boolean }) {
+  const X = (v: number) => 20 + (v / s.len) * 300;
+  const up = s.braces.some((b) => !b.below);
+  const top = up ? 36 : 0;
+  const road = top + 70;
+  const downBrace = s.braces.some((b) => b.below);
+  let y = road + 50 + (downBrace ? 56 : 0);
+  const notes = s.notes.map((n, i) => { const el = <T key={i} l={n} x={20} y={y} solved={solved} anchor="start" />; y += 24; return el; });
+  const ends = [...new Set(s.arrows.map((a) => a.from))];
+  return (
+    <svg className="sc__svg" viewBox={`0 0 340 ${y - 4}`} role="img" aria-hidden="true">
+      <defs>
+        <marker id="sc-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M0 0 L10 5 L0 10 z" className="sc__head" />
+        </marker>
+      </defs>
+      <line x1={X(0)} x2={X(s.len)} y1={road} y2={road} className="sc__road" />
+      {ends.map((e) => <circle key={e} cx={X(e)} cy={road} r={6} className="sc__dot" />)}
+      {s.arrows.map((a, i) => {
+        const ay = a.below ? road + 18 : road - 18;
+        return (
+          <g key={i}>
+            <line x1={X(a.from)} x2={X(a.to)} y1={ay} y2={ay} className="sc__arrow" markerEnd="url(#sc-arrow)" />
+            <T l={a.lbl} x={(X(a.from) + X(a.to)) / 2} y={a.below ? ay + 22 : ay - 10} solved={solved} />
+          </g>
+        );
+      })}
+      {s.braces.map((b, i) => {
+        const by = b.below ? road + 58 : top + 4;
+        const tick = b.below ? -8 : 8;
+        return (
+          <g key={`b${i}`}>
+            <path d={`M${X(b.from)} ${by + tick} V${by} H${X(b.to)} V${by + tick}`} className="sc__brace" />
+            <T l={b.lbl} x={(X(b.from) + X(b.to)) / 2} y={b.below ? by + 22 : by - 10} solved={solved} />
+          </g>
+        );
+      })}
+      {notes}
+    </svg>
+  );
+}
+
 function TreeNode({ n, solved }: { n: Node; solved: boolean }) {
   return (
     <div className="sc-node">
@@ -118,6 +161,7 @@ export default function Scheme({ scheme, lang, solved = false }: { scheme: S; la
     <figure className="sc">
       {scheme.kind === 'shape' && <Shape s={scheme} solved={solved} />}
       {scheme.kind === 'bar' && <Bar s={scheme} solved={solved} />}
+      {scheme.kind === 'road' && <Road s={scheme} solved={solved} />}
       {scheme.kind === 'tree' && <div className="sc-tree"><TreeNode n={scheme.root} solved={solved} /></div>}
       {words.length > 0 && (
         <figcaption className="native sc__legend">

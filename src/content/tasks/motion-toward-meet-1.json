@@ -1,0 +1,98 @@
+{
+  "subject": "math",
+  "topic": "motion",
+  "group": "motion",
+  "level": 2,
+  "grade": 4,
+  "lt": "Iš dviejų kaimų, tarp kurių yra 70 km, tuo pat metu vienas priešais kitą išvažiavo du dviratininkai. Vienas važiuoja 15 km/h greičiu, kitas – 20 km/h greičiu. Po kiek valandų jie susitiks? Užrašyk sprendimą ir atsakymą.",
+  "translation": {
+    "ru": "Из двух деревень, между которыми 70 км, одновременно навстречу друг другу выехали два велосипедиста. Один едет со скоростью 15 км/ч, другой — 20 км/ч. Через сколько часов они встретятся? Запиши решение и ответ.",
+    "en": "Two cyclists set off at the same time towards each other from two villages 70 km apart. One rides at 15 km/h, the other at 20 km/h. After how many hours will they meet? Write the solution and the answer."
+  },
+  "steps": {
+    "ru": [
+      "Навстречу: за 1 час они сближаются на 15 + 20 = 35 (км).",
+      "70 : 35 = 2 (ч)."
+    ],
+    "en": [
+      "Towards each other: every hour they get 15 + 20 = 35 km closer.",
+      "70 : 35 = 2 (h)."
+    ]
+  },
+  "answer": "2 h",
+  "check": [
+    "2"
+  ],
+  "keywords": [
+    "vienas priešais kitą",
+    "tuo pat metu",
+    "Po kiek valandų",
+    "susitiks"
+  ],
+  "mistakes": [
+    {
+      "value": "14",
+      "hint": {
+        "ru": "14 — это 70 : 5, как будто они едут в одну сторону. Навстречу скорости складываются: 15 + 20.",
+        "en": "14 is 70 : 5, as if they rode the same way. Towards each other the speeds add up: 15 + 20."
+      }
+    },
+    {
+      "value": "35",
+      "hint": {
+        "ru": "35 км — на столько они сближаются за 1 час. Сколько таких часов в 70 км?",
+        "en": "35 km is how much closer they get in 1 hour. How many such hours make 70 km?"
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "road",
+    "len": 70,
+    "arrows": [
+      {
+        "from": 0,
+        "to": 30,
+        "lbl": {
+          "lt": "",
+          "ru": "",
+          "en": "",
+          "value": "15 km/h"
+        }
+      },
+      {
+        "from": 70,
+        "to": 30,
+        "lbl": {
+          "lt": "",
+          "ru": "",
+          "en": "",
+          "value": "20 km/h"
+        }
+      }
+    ],
+    "braces": [
+      {
+        "from": 0,
+        "to": 70,
+        "lbl": {
+          "lt": "atstumas",
+          "ru": "расстояние",
+          "en": "distance",
+          "value": "70 km"
+        }
+      }
+    ],
+    "notes": [
+      {
+        "lt": "susitiks po",
+        "ru": "встретятся через",
+        "en": "meet after",
+        "value": "2 h",
+        "find": true
+      }
+    ]
+  },
+  "see": [
+    "formulas"
+  ]
+}

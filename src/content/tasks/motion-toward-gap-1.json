@@ -1,0 +1,111 @@
+{
+  "subject": "math",
+  "topic": "motion",
+  "group": "motion",
+  "level": 3,
+  "grade": 4,
+  "lt": "Iš dviejų miestų, nutolusių vienas nuo kito 500 km, tuo pat metu vienas priešais kitą išvažiavo du automobiliai. Pirmasis važiuoja 70 km/h greičiu, antrasis – 80 km/h greičiu. Koks atstumas bus tarp automobilių po 2 h? Užrašyk sprendimą ir atsakymą.",
+  "translation": {
+    "ru": "Из двух городов, удалённых друг от друга на 500 км, одновременно навстречу друг другу выехали два автомобиля. Первый едет со скоростью 70 км/ч, второй — 80 км/ч. Какое расстояние будет между автомобилями через 2 ч? Запиши решение и ответ.",
+    "en": "Two cars set off at the same time towards each other from two cities 500 km apart. The first drives at 70 km/h, the second at 80 km/h. What will the distance between the cars be after 2 h? Write the solution and the answer."
+  },
+  "steps": {
+    "ru": [
+      "За 1 час они сближаются на 70 + 80 = 150 (км).",
+      "За 2 часа: 150 · 2 = 300 (км).",
+      "Осталось между ними: 500 − 300 = 200 (км)."
+    ],
+    "en": [
+      "Every hour they get 70 + 80 = 150 km closer.",
+      "In 2 hours: 150 · 2 = 300 (km).",
+      "Left between them: 500 − 300 = 200 (km)."
+    ]
+  },
+  "answer": "200 km",
+  "check": [
+    "200"
+  ],
+  "keywords": [
+    "nutolusių vienas nuo kito",
+    "vienas priešais kitą",
+    "po 2 h",
+    "Koks atstumas"
+  ],
+  "mistakes": [
+    {
+      "value": "300",
+      "hint": {
+        "ru": "300 км они вместе проехали. Спрашивают, сколько осталось между ними: вычти из 500.",
+        "en": "300 km is how far they drove together. The task asks what is left between them: subtract from 500."
+      }
+    },
+    {
+      "value": "800",
+      "hint": {
+        "ru": "Навстречу расстояние уменьшается, а не растёт: 500 − 300.",
+        "en": "Towards each other the gap shrinks, not grows: 500 − 300."
+      }
+    },
+    {
+      "value": "480",
+      "hint": {
+        "ru": "480 = 500 − 20: так было бы, если бы машины ехали в одну сторону. Они едут навстречу.",
+        "en": "480 = 500 − 20 would be the same direction. They drive towards each other."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "road",
+    "len": 500,
+    "arrows": [
+      {
+        "from": 0,
+        "to": 140,
+        "lbl": {
+          "lt": "",
+          "ru": "",
+          "en": "",
+          "value": "70 km/h"
+        }
+      },
+      {
+        "from": 500,
+        "to": 340,
+        "lbl": {
+          "lt": "",
+          "ru": "",
+          "en": "",
+          "value": "80 km/h"
+        }
+      }
+    ],
+    "braces": [
+      {
+        "from": 0,
+        "to": 500,
+        "lbl": {
+          "lt": "atstumas",
+          "ru": "расстояние",
+          "en": "distance",
+          "value": "500 km"
+        }
+      },
+      {
+        "from": 140,
+        "to": 340,
+        "below": true,
+        "lbl": {
+          "lt": "po 2 h",
+          "ru": "через 2 ч",
+          "en": "after 2 h",
+          "value": "200 km",
+          "find": true
+        }
+      }
+    ],
+    "notes": []
+  },
+  "see": [
+    "formulas"
+  ]
+}

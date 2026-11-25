@@ -1,0 +1,136 @@
+{
+  "subject": "math",
+  "title": {
+    "ru": "Движение",
+    "en": "Motion"
+  },
+  "terms": [
+    {
+      "lt": "greitis",
+      "ru": "скорость",
+      "en": "speed",
+      "note": {
+        "ru": "Обозначается v. km/h — километров в час.",
+        "en": "Written v. km/h means kilometres per hour."
+      }
+    },
+    {
+      "lt": "laikas",
+      "ru": "время",
+      "en": "time",
+      "note": {
+        "ru": "Обозначается t.",
+        "en": "Written t."
+      }
+    },
+    {
+      "lt": "atstumas",
+      "ru": "расстояние",
+      "en": "distance",
+      "note": {
+        "ru": "Обозначается s. s = v · t.",
+        "en": "Written s. s = v · t."
+      }
+    },
+    {
+      "lt": "kilometrai per valandą (km/h)",
+      "ru": "километров в час",
+      "en": "kilometres per hour"
+    },
+    {
+      "lt": "metrai per sekundę (m/s)",
+      "ru": "метров в секунду",
+      "en": "metres per second"
+    },
+    {
+      "lt": "vienas priešais kitą",
+      "ru": "навстречу друг другу",
+      "en": "towards each other",
+      "note": {
+        "ru": "Расстояние между ними уменьшается на v₁ + v₂ каждый час.",
+        "en": "The gap shrinks by v₁ + v₂ every hour."
+      }
+    },
+    {
+      "lt": "priešingomis kryptimis",
+      "ru": "в противоположные стороны",
+      "en": "in opposite directions",
+      "note": {
+        "ru": "Расстояние растёт на v₁ + v₂ каждый час.",
+        "en": "The gap grows by v₁ + v₂ every hour."
+      }
+    },
+    {
+      "lt": "ta pačia kryptimi",
+      "ru": "в одном направлении",
+      "en": "in the same direction",
+      "note": {
+        "ru": "Расстояние меняется на v₁ − v₂ каждый час.",
+        "en": "The gap changes by v₁ − v₂ every hour."
+      }
+    },
+    {
+      "lt": "tuo pat metu",
+      "ru": "в одно и то же время",
+      "en": "at the same time"
+    },
+    {
+      "lt": "susitikti",
+      "ru": "встретиться",
+      "en": "meet"
+    },
+    {
+      "lt": "išvažiuoti",
+      "ru": "выехать",
+      "en": "set off (by vehicle)",
+      "like": [
+        "nuvažiuoti"
+      ],
+      "note": {
+        "ru": "Приставка iš- — «из, от»: начало пути.",
+        "en": "The prefix iš- means \"out of\": the start of the trip."
+      }
+    },
+    {
+      "lt": "nuvažiuoti",
+      "ru": "проехать (какое-то расстояние)",
+      "en": "travel (a distance)",
+      "like": [
+        "išvažiuoti"
+      ],
+      "note": {
+        "ru": "Приставка nu- — «сколько проехал».",
+        "en": "The prefix nu- means \"how far\": the distance covered."
+      }
+    },
+    {
+      "lt": "nueiti",
+      "ru": "пройти (пешком)",
+      "en": "walk (a distance)"
+    },
+    {
+      "lt": "nuskristi",
+      "ru": "пролететь",
+      "en": "fly (a distance)"
+    },
+    {
+      "lt": "po 2 h",
+      "ru": "через 2 часа",
+      "en": "after 2 hours",
+      "note": {
+        "ru": "Здесь po — «через», а не «по 5 см».",
+        "en": "Here po means \"after\", not \"5 cm each\"."
+      }
+    },
+    {
+      "lt": "per 3 h",
+      "ru": "за 3 часа",
+      "en": "in 3 hours"
+    },
+    {
+      "lt": "nutolę vienas nuo kito",
+      "ru": "удалены друг от друга",
+      "en": "apart from each other"
+    }
+  ]
+}
