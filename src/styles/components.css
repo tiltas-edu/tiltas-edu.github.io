@@ -231,3 +231,58 @@ input[type='text']:focus-visible { border-color: var(--c-brand); }
 .bi__native { display: block; color: var(--c-muted); font-size: var(--fs-small); font-weight: 600; margin-top: var(--s-1); }
 [data-native='hidden'] .native { display: none; }
 .native-toggle { margin-bottom: var(--s-4); }
+
+/* Units ladder: big units on top, each rung shifted right like a staircase going down. */
+.ul__board { display: flex; flex-wrap: wrap; gap: var(--s-5); align-items: flex-start; margin-block: var(--s-4); }
+.ul__ladder { list-style: none; margin: 0; padding: 0; flex: 1 1 16rem; min-width: 0; }
+.ul__ladder li { margin-left: calc(var(--i) * var(--s-4)); }
+.ul__rung {
+  display: flex; align-items: baseline; gap: var(--s-3); min-height: var(--tap); padding: var(--s-2) var(--s-3);
+  border: var(--border-w) solid var(--c-line); border-radius: var(--radius-sm); background: var(--c-surface);
+}
+.ul__rung strong { font-size: var(--fs-big); font-weight: 900; min-width: 3ch; }
+.ul__path { background: var(--c-surface-2); }
+.ul__from { border-color: var(--c-brand); background: var(--c-surface-2); }
+.ul__to { border-color: var(--c-accent); background: var(--c-accent); color: var(--c-on-accent); }
+.ul__to .native { color: inherit; }
+.ul__gap { display: flex; gap: var(--s-4); padding: var(--s-1) var(--s-3); color: var(--c-muted); font-weight: 800; font-size: var(--fs-small); }
+.ul__gap--on { color: var(--c-brand); }
+.ul__side { flex: 1 1 18rem; min-width: 0; }
+.ul__pick .tabs { margin-block: var(--s-1) var(--s-3); }
+.ul__field { display: flex; flex-direction: column; gap: var(--s-1); }
+.ul__answer { font-size: var(--fs-big); font-weight: 800; font-variant-numeric: tabular-nums; }
+.ul__answer strong { color: var(--c-brand); white-space: nowrap; }
+.ul__steps { padding-left: var(--s-5); }
+.ul__steps li { margin-block: var(--s-2); }
+.ul__chain { font-weight: 800; font-variant-numeric: tabular-nums; margin: var(--s-1) 0; }
+
+/* Fraction wall: one strip per denominator; the mark shows where the chosen fraction ends. */
+.fw__top { display: flex; flex-wrap: wrap; gap: var(--s-5); align-items: center; margin-block: var(--s-4); }
+.fw__frac { display: flex; flex-direction: column; gap: var(--s-2); }
+.fw__num { display: flex; align-items: center; gap: var(--s-3); flex-wrap: wrap; }
+.fw__big { font-size: var(--fs-h1); font-weight: 900; color: var(--c-brand); min-width: 2ch; text-align: center; font-variant-numeric: tabular-nums; margin: 0; }
+.fw__line { border-top: 0.25rem solid var(--c-ink); width: 100%; padding-top: var(--s-1); }
+.fw__term { color: var(--c-muted); font-size: var(--fs-small); font-weight: 700; }
+.fw__stepper { display: inline-flex; gap: var(--s-1); }
+.fw__stepper .btn { min-width: var(--tap); }
+.fw__about { flex: 1 1 16rem; }
+.fw__eq { font-size: var(--fs-big); font-weight: 900; color: var(--c-brand); }
+.fw__wall { position: relative; display: flex; flex-direction: column; gap: 2px; margin-block: var(--s-4); }
+.fw__mark { position: absolute; top: calc(-1 * var(--s-2)); bottom: calc(-1 * var(--s-2)); left: calc(var(--at) * 100%); width: 0.2rem; margin-left: -0.1rem; background: var(--c-ink); border-radius: 0.1rem; z-index: 1; pointer-events: none; transition: left var(--dur) var(--ease); }
+.fw__row { display: flex; }
+.fw__row--tight .fw__seg { font-size: 0.65rem; letter-spacing: -0.03em; }
+.fw__seg {
+  flex: 1 1 0; min-width: 0; min-height: 2.25rem; padding: 0; border: var(--border-w) solid var(--c-line); border-radius: 0;
+  background: var(--c-surface); color: var(--c-muted); font: 700 var(--fs-small) var(--font-ui); cursor: pointer; overflow: hidden;
+}
+.fw__seg:first-child { border-radius: var(--radius-sm) 0 0 var(--radius-sm); }
+.fw__seg:last-child { border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+.fw__seg:only-child { border-radius: var(--radius-sm); }
+.fw__seg.fw__same { background: var(--c-surface-2); border-color: var(--c-brand); color: var(--c-ink); }
+.fw__seg.fw__on { background: var(--c-brand); border-color: var(--c-brand); color: var(--c-on-brand); }
+.fw__groups { display: flex; flex-wrap: wrap; gap: var(--s-3); margin-block: var(--s-3); }
+.fw__group { display: flex; flex-wrap: wrap; gap: var(--s-1); max-width: 7rem; padding: var(--s-2); border: var(--border-w) dashed var(--c-line); border-radius: var(--radius-sm); }
+.fw__group span { width: 0.9rem; aspect-ratio: 1; border-radius: 50%; background: var(--c-line); }
+.fw__group--on { border-style: solid; border-color: var(--c-brand); }
+.fw__group--on span { background: var(--c-brand); }
+@media (prefers-reduced-motion: reduce) { .fw__mark { transition: none; } }

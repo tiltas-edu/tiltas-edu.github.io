@@ -1,0 +1,21 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+import FractionWall from '../../../../components/FractionWall';
+import NativeToggle from '../../../../components/NativeToggle.astro';
+import { languages, t, type Lang, base } from '../../../../i18n/ui';
+import { visual } from '../../../../i18n/visual';
+
+export function getStaticPaths() {
+  return Object.keys(languages).map((lang) => ({ params: { lang } }));
+}
+const lang = Astro.params.lang as Lang;
+const tr = t(lang);
+const v = visual[lang];
+---
+<Layout lang={lang} title={v.fractionsTitle} description={v.fractionsLead}>
+  <p><a href={`${base}/${lang}/math/`}>← {tr.math}</a></p>
+  <h1>{v.fractionsTitle} <small class="note" lang="lt">({v.wall})</small></h1>
+  <p>{v.fractionsLead}</p>
+  <NativeToggle hide={v.hideTr} show={v.showTr} />
+  <FractionWall client:load labels={v} lang={lang} />
+</Layout>
