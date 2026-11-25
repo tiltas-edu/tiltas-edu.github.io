@@ -9,8 +9,8 @@ type Lang = 'ru' | 'en';
 // Examples from typical tasks: going down, going up with a remainder, the 1000 and 60 steps.
 const EXAMPLES: Record<Kind, [number, string, string][]> = {
   length: [[350, 'cm', 'm'], [2, 'm', 'cm'], [3, 'km', 'm'], [45, 'mm', 'cm']],
-  mass: [[2, 'kg', 'g'], [3500, 'g', 'kg'], [2, 't', 'kg']],
-  capacity: [[3, 'l', 'ml'], [1500, 'ml', 'l']],
+  mass: [[2, 'kg', 'g'], [3500, 'g', 'kg'], [3, 'cnt', 'kg'], [2, 't', 'cnt'], [2500, 'mg', 'g']],
+  capacity: [[3, 'l', 'ml'], [1500, 'ml', 'l'], [2, 'm3', 'l']],
   time: [[2, 'h', 'min'], [90, 'min', 'h'], [1, 'para', 'h'], [3, 'min', 's']],
 };
 const KINDS = Object.keys(LADDERS) as Kind[];

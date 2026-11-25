@@ -91,12 +91,13 @@ const A = 5, B = 3, Q = 4, CELL = 24, PAD = 34, LEFT = 30;
         <text class="fx__big" x="132" y="146" text-anchor="middle">t</text>
       </svg>
       <div class="fx__list">
-        <p><strong>s</strong> — <span lang="lt">atstumas, nueitas kelias</span> <span class="native">({v.speedS})</span></p>
-        <p><strong>v</strong> — <span lang="lt">greitis</span> <span class="native">({v.speedV})</span></p>
-        <p><strong>t</strong> — <span lang="lt">laikas</span> <span class="native">({v.speedT})</span></p>
-        <p class="fx__f">s = v · t</p>
-        <p class="fx__f">v = s : t</p>
-        <p class="fx__f">t = s : v</p>
+        <p><strong>s</strong> — <span lang="lt">atstumas, nueitas kelias</span> <span class="native">({v.speedS})</span> <span class="fx__u">km, m</span></p>
+        <p><strong>v</strong> — <span lang="lt">greitis</span> <span class="native">({v.speedV})</span> <span class="fx__u">km/h, m/s</span></p>
+        <p><strong>t</strong> — <span lang="lt">laikas</span> <span class="native">({v.speedT})</span> <span class="fx__u">h, min, s</span></p>
+        <p><span class="fx__f">s = v · t</span> <span class="fx__u">km = km/h · h</span> <span class="fx__eg">60 km/h · 3 h = 180 km</span></p>
+        <p><span class="fx__f">v = s : t</span> <span class="fx__u">km/h = km : h</span> <span class="fx__eg">180 km : 3 h = 60 km/h</span></p>
+        <p><span class="fx__f">t = s : v</span> <span class="fx__u">h = km : km/h</span> <span class="fx__eg">180 km : 60 km/h = 3 h</span></p>
+        <p class="note">m/s: <span class="fx__u">m = m/s · s</span> <span class="fx__eg">4 m/s · 25 s = 100 m</span></p>
       </div>
     </div>
     <div class="callout callout--hint">

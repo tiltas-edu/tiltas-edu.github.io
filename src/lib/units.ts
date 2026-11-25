@@ -24,11 +24,14 @@ export const LADDERS: Record<Kind, Unit[]> = {
     u('mm', 1, { lt: 'milimetras', ru: 'миллиметр', en: 'millimetre' }),
   ],
   mass: [
-    u('t', 1_000_000, { lt: 'tona', ru: 'тонна', en: 'tonne' }),
-    u('kg', 1000, { lt: 'kilogramas', ru: 'килограмм', en: 'kilogram' }),
-    u('g', 1, { lt: 'gramas', ru: 'грамм', en: 'gram' }),
+    u('t', 1_000_000_000, { lt: 'tona', ru: 'тонна', en: 'tonne' }),
+    u('cnt', 100_000_000, { lt: 'centneris', ru: 'центнер', en: 'quintal (100 kg)' }),
+    u('kg', 1_000_000, { lt: 'kilogramas', ru: 'килограмм', en: 'kilogram' }),
+    u('g', 1000, { lt: 'gramas', ru: 'грамм', en: 'gram' }),
+    u('mg', 1, { lt: 'miligramas', ru: 'миллиграмм', en: 'milligram' }),
   ],
   capacity: [
+    u('m3', 1_000_000, { lt: 'kubinis metras', ru: 'кубический метр', en: 'cubic metre' }, { lt: 'm³', ru: 'm³', en: 'm³' }),
     u('l', 1000, { lt: 'litras', ru: 'литр', en: 'litre' }),
     u('ml', 1, { lt: 'mililitras', ru: 'миллилитр', en: 'millilitre' }),
   ],

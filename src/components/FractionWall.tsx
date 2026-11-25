@@ -84,7 +84,7 @@ export default function FractionWall({ lang, labels }: { lang: Lang; labels: Lab
 
       <h2><span lang="lt">{visualLt.part}</span> <span className="native note">({labels.part})</span></h2>
       <Bi as="p" lt={visualLt.partHow} native={labels.partHow} />
-      <div className="row">
+      <div className="row fw__part">
         <label className="ul__field">
           <span className="note">{labels.whole} (≤ {MAX_WHOLE})</span>
           <input type="text" inputMode="numeric" className="cm__input" value={whole} onChange={(e) => setWhole(e.target.value.replace(/\D/g, ''))} />

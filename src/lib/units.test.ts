@@ -43,3 +43,14 @@ describe('units ladder', () => {
     expect(parse('abc')).toBeNull();
   });
 });
+
+describe('new units', () => {
+  it('has the centner, milligram and cubic metre with real step sizes', () => {
+    expect(convert('mass', 3, 'cnt', 'kg').value).toBe(300);
+    expect(convert('mass', 2, 't', 'cnt').value).toBe(20);
+    expect(convert('mass', 2500, 'mg', 'g').value).toBe(2.5);
+    expect(convert('capacity', 2, 'm3', 'l').value).toBe(2000);
+    expect(chain('mass', 'lt')).toBe('1 t = 10 cnt = 1000 kg = 1 000 000 g = 1 000 000 000 mg');
+    expect(chain('capacity', 'lt')).toBe('1 m³ = 1000 l = 1 000 000 ml');
+  });
+});
