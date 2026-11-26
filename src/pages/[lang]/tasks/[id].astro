@@ -80,7 +80,7 @@ const unit = d.choices || !/^\d/.test(d.answer) ? undefined : d.answer.replace(/
   <h2>{tr.yourAnswer}</h2>
   <TaskCheck client:load taskId={entry.id} accepted={d.check} unit={unit} choices={d.choices}
     mistakes={d.mistakes.map((m) => ({ value: m.value, hint: m.hint[lang] }))}
-    labels={{ yourAnswer: tr.yourAnswer, check: tr.check, correct: tr.correct, wrong: tr.wrong, tryAgain: tr.tryAgain }} />
+    labels={{ yourAnswer: tr.yourAnswer, check: tr.check, correct: tr.correct, wrong: tr.wrong, tryAgain: tr.tryAgain, recheckNote: tr.recheckNote, fixed: tr.fixed }} />
 
   <Hints client:load taskId={entry.id} lang={lang} scheme={d.scheme as Scheme | undefined} steps={d.steps[lang]} answer={d.answer}
     labels={{ hint: tr.hint, hintOf: tr.hintOf, scheme: tr.scheme, firstStep: tr.firstStep, solution: tr.solution, showSolution: tr.showSolution, answer: tr.answer }} />

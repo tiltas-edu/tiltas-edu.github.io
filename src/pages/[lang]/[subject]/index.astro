@@ -63,13 +63,20 @@ const groups = subjects[subject]
   <p><a href={`${base}/${lang}/review/`}><Icon name="bulb" /> {tr.myMistakes}</a></p>
   {groups.map((g) => (
     <>
-      <h3>{g.title}</h3>
+      <div class="group-head">
+        <h3>{g.title}</h3>
+        <span class="meter" data-meter={g.id} hidden>
+          <span class="meter__bar"><span class="meter__fill"></span></span>
+          <span class="meter__txt"></span>
+        </span>
+      </div>
       <div class="grid">
         {g.tasks.map((x, i) => (
-          <a class="card" href={`${base}/${lang}/tasks/${x.id}/`} data-task={x.id}>
+          <a class="card" href={`${base}/${lang}/tasks/${x.id}/`} data-task={x.id} data-group={x.data.group}>
             <strong>{tr.task} {i + 1}</strong>
             <span class="badge badge--done" data-solved hidden><Icon name="check" /> {tr.solved}</span>
-            <span class="badge badge--review" data-mistake hidden><Icon name="bulb" /> {tr.review}</span>
+            <span class="badge badge--review" data-review hidden><Icon name="bulb" /> {tr.review}</span>
+            <span class="badge badge--recheck" data-recheck hidden><Icon name="check" /> {tr.recheck}</span>
             <div class="note">{x.data.grade} {tr.grade} · {tr.level} {x.data.level}</div>
             <div lang="lt">{x.data.lt.slice(0, 90)}…</div>
           </a>
@@ -77,14 +84,28 @@ const groups = subjects[subject]
       </div>
     </>
   ))}
-  <script is:inline>
-    // Marks tasks solved, or to review after a wrong answer, in this browser (set by TaskCheck). Works without storage too.
-    document.querySelectorAll('[data-task]').forEach(function (card) {
-      try {
-        var id = card.getAttribute('data-task');
-        if (localStorage.getItem('tiltas:solved:' + id)) card.querySelector('[data-solved]').hidden = false;
-        else if (localStorage.getItem('tiltas:mistake:' + id)) card.querySelector('[data-mistake]').hidden = false;
-      } catch (e) {}
+  <span data-of={tr.progressOf} hidden></span>
+  <script>
+    import { count, loadAll } from '../../../lib/progress';
+
+    // Marks each task by its state in this browser (set by TaskCheck) and fills the "3 of 6" meter of each group.
+    const cards = [...document.querySelectorAll<HTMLElement>('[data-task]')];
+    const items = cards.map((c) => ({ id: c.dataset.task!, subject: '', group: c.dataset.group! }));
+    const logs = loadAll(items.map((x) => x.id));
+    for (const c of cards) {
+      const st = logs[c.dataset.task!]?.state;
+      for (const k of ['solved', 'review', 'recheck']) c.querySelector<HTMLElement>(`[data-${k}]`)!.hidden = st !== k;
+    }
+    const of = document.querySelector<HTMLElement>('[data-of]')!.dataset.of!;
+    const byGroup = count(items, logs, 'group');
+    // Shown once something in the subject was tried, so a first visit stays clean.
+    const tried = byGroup.all.solved + byGroup.all.review + byGroup.all.recheck > 0;
+    document.querySelectorAll<HTMLElement>('[data-meter]').forEach((m) => {
+      const c = byGroup[m.dataset.meter!];
+      if (!c || !tried) return;
+      m.querySelector<HTMLElement>('.meter__fill')!.style.width = `${(100 * c.solved) / c.total}%`;
+      m.querySelector('.meter__txt')!.textContent = of.replace('{n}', String(c.solved)).replace('{total}', String(c.total));
+      m.hidden = false;
     });
   </script>
 </Layout>

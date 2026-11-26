@@ -54,7 +54,11 @@ export default function Hints({ taskId, lang, scheme, steps, answer, labels }: P
         </section>
       )}
       {next && (
-        <button type="button" className="btn btn--soft" onClick={() => setLevel(level + 1)}>
+        <button type="button" className="btn btn--soft" onClick={() => {
+          setLevel(level + 1);
+          // TaskCheck counts a right answer after a hint as "solved with help".
+          window.dispatchEvent(new CustomEvent('tiltas:hint', { detail: { taskId } }));
+        }}>
           <Icon name="bulb" />{' '}
           {next === 'solution' ? labels.showSolution : labels.hint}{' '}
           {kinds.length > 1 && <span className="note">({labels.hintOf.replace('{n}', String(level + 1)).replace('{total}', String(kinds.length))})</span>}

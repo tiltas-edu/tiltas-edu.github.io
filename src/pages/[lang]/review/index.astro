@@ -3,50 +3,156 @@ import Layout from '../../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import Icon from '../../../components/Icon.astro';
 import { languages, t, type Lang, base } from '../../../i18n/ui';
-import type { Subject } from '../../../lib/subjects';
+import { subjects, groupKey, type Subject } from '../../../lib/subjects';
 
 export function getStaticPaths() {
   return Object.keys(languages).map((lang) => ({ params: { lang } }));
 }
 const lang = Astro.params.lang as Lang;
 const tr = t(lang);
-// Every task is rendered hidden; the script below shows the ones with a remembered wrong answer.
+// Every task is rendered hidden; the script below fills the lists from this browser's progress (src/lib/progress.ts).
 const tasks = await getCollection('tasks');
+const groups = (Object.entries(subjects) as [Subject, readonly string[]][]).flatMap(([subject, ids]) =>
+  ids.map((id) => ({ id, subject, title: tr[groupKey(id) as keyof typeof tr] ?? id })));
+const items = tasks.map((x) => ({ id: x.id, subject: x.data.subject, group: x.data.group, lt: x.data.lt.slice(0, 90) }));
 ---
 <Layout lang={lang} title={tr.myMistakes}>
   <h1><Icon name="bulb" /> {tr.myMistakes}</h1>
   <p class="lead">{tr.reviewLead}</p>
 
-  <div class="grid" data-review>
-    {tasks.map((x) => (
-      <a class="card" href={`${base}/${lang}/tasks/${x.id}/`} data-task={x.id} hidden>
-        <strong>{tr[x.data.subject as Subject]}</strong>
-        <div lang="lt">{x.data.lt.slice(0, 90)}…</div>
-        <div class="note">{tr.lastAnswer}: <span lang="lt" data-last></span></div>
-        <span class="badge badge--review"><Icon name="bulb" /> {tr.review}</span>
-      </a>
-    ))}
-  </div>
-  <p class="callout callout--ok" data-empty hidden><Icon name="check" /> {tr.noMistakes}</p>
-  <p class="note">{tr.storedHere}</p>
+  <section class="stats" aria-label={tr.progress} data-stats>
+    <div class="stat stat--done"><strong data-stat="solved">0</strong><span>{tr.statSolved} <span data-stat-of></span></span></div>
+    <div class="stat"><strong data-stat="first">0</strong><span>{tr.statFirst}</span></div>
+    <div class="stat stat--review"><strong data-stat="review">0</strong><span>{tr.statReview}</span></div>
+    <div class="stat stat--recheck"><strong data-stat="recheck">0</strong><span>{tr.statRecheck}</span></div>
+  </section>
 
-  <script is:inline>
-    // Shows tasks with a wrong answer saved by TaskCheck, newest first. Works without storage too.
-    (function () {
-      var list = document.querySelector('[data-review]');
-      var found = [];
-      list.querySelectorAll('[data-task]').forEach(function (card) {
-        try {
-          var saved = JSON.parse(localStorage.getItem('tiltas:mistake:' + card.getAttribute('data-task')) || 'null');
-          if (saved) {
-            card.querySelector('[data-last]').textContent = saved.value;
-            card.hidden = false;
-            found.push({ card: card, at: saved.at || 0 });
-          }
-        } catch (e) {}
-      });
-      found.sort(function (a, b) { return b.at - a.at; }).forEach(function (f) { list.appendChild(f.card); });
-      document.querySelector('[data-empty]').hidden = found.length > 0;
-    })();
+  <section data-list="review" hidden>
+    <h2>{tr.reviewTitle}</h2>
+    <div class="grid" data-cards></div>
+  </section>
+
+  <section data-list="recheck" hidden>
+    <h2>{tr.recheckTitle}</h2>
+    <p>{tr.recheckLead}</p>
+    <div class="grid" data-cards></div>
+  </section>
+
+  <section data-weak hidden>
+    <h2>{tr.weakGroups}</h2>
+    <ul class="weak" data-weak-list></ul>
+  </section>
+
+  <p class="callout callout--ok" data-empty hidden><Icon name="check" /> {tr.noMistakes}</p>
+
+  <template data-card-tpl>
+    <a class="card">
+      <strong data-subject></strong>
+      <div lang="lt" data-lt></div>
+      <div class="note" data-last-row>{tr.lastAnswer}: <span lang="lt" data-last></span></div>
+      <span class="badge badge--review" data-badge-review><Icon name="bulb" /> {tr.review}</span>
+      <span class="badge badge--recheck" data-badge-recheck><Icon name="check" /> {tr.recheck}</span>
+      <div class="note" data-come-back>{tr.comeBack}</div>
+    </a>
+  </template>
+
+  <div class="reset" data-reset>
+    <p class="note">{tr.storedHere}</p>
+    <button type="button" class="btn btn--soft" data-reset-ask>{tr.resetProgress}</button>
+    <div class="callout callout--bad" data-reset-confirm hidden>
+      <p>{tr.resetAsk}</p>
+      <div class="row">
+        <button type="button" class="btn" data-reset-yes>{tr.resetYes}</button>
+        <button type="button" class="btn btn--soft" data-reset-no>{tr.cancel}</button>
+      </div>
+    </div>
+    <p class="note" data-reset-done hidden role="status">{tr.resetDone}</p>
+  </div>
+
+  <script
+    type="application/json"
+    id="review-data"
+    set:html={JSON.stringify({
+      base: `${base}/${lang}`,
+      items,
+      groups,
+      subjectNames: Object.fromEntries(Object.keys(subjects).map((s) => [s, tr[s as Subject]])),
+      of: tr.progressOf,
+      mistakesN: tr.mistakesN,
+    })}
+  />
+  <script>
+    import { clearAll, count, day, loadAll, weakGroups, type Item } from '../../../lib/progress';
+
+    type Data = {
+      base: string; of: string; mistakesN: string;
+      items: (Item & { lt: string })[];
+      groups: { id: string; subject: string; title: string }[];
+      subjectNames: Record<string, string>;
+    };
+    const data = JSON.parse(document.getElementById('review-data')!.textContent!) as Data;
+    const $ = <T extends Element = HTMLElement>(sel: string, root: ParentNode = document) => root.querySelector<T>(sel)!;
+
+    function render() {
+      const logs = loadAll(data.items.map((x) => x.id));
+      const all = count(data.items, logs, 'subject').all;
+      for (const k of ['solved', 'first', 'review', 'recheck'] as const) $(`[data-stat="${k}"]`).textContent = String(all[k]);
+      $('[data-stat-of]').textContent = `(${data.of.replace('{n}', String(all.solved)).replace('{total}', String(all.total))})`;
+
+      const tpl = $<HTMLTemplateElement>('[data-card-tpl]');
+      const today = day(Date.now());
+      for (const state of ['review', 'recheck'] as const) {
+        const box = $(`[data-list="${state}"]`);
+        const cards = $('[data-cards]', box);
+        cards.replaceChildren();
+        const found = data.items.filter((x) => logs[x.id]?.state === state).sort((a, b) => logs[b.id]!.at - logs[a.id]!.at);
+        for (const x of found) {
+          const log = logs[x.id]!;
+          const a = tpl.content.firstElementChild!.cloneNode(true) as HTMLAnchorElement;
+          a.href = `${data.base}/tasks/${x.id}/`;
+          $('[data-subject]', a).textContent = data.subjectNames[x.subject] ?? x.subject;
+          $('[data-lt]', a).textContent = `${x.lt}…`;
+          $('[data-last]', a).textContent = log.wrong.join(', ');
+          $('[data-last-row]', a).hidden = log.wrong.length === 0;
+          $('[data-badge-review]', a).hidden = state !== 'review';
+          $('[data-badge-recheck]', a).hidden = state !== 'recheck';
+          // Fixed today: it comes back tomorrow.
+          $('[data-come-back]', a).hidden = !(state === 'recheck' && log.day === today);
+          cards.append(a);
+        }
+        box.hidden = found.length === 0;
+      }
+
+      const weak = weakGroups(data.items, logs);
+      const list = $('[data-weak-list]');
+      list.replaceChildren(...weak.map((w) => {
+        const g = data.groups.find((x) => x.id === w.group);
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = `${data.base}/${g?.subject ?? ''}/`;
+        a.textContent = g?.title ?? w.group;
+        const n = document.createElement('span');
+        n.className = 'badge badge--review';
+        n.textContent = data.mistakesN.replace('{n}', String(w.mistakes));
+        li.append(a, ' ', n);
+        return li;
+      }));
+      $('[data-weak]').hidden = weak.length === 0;
+      $('[data-empty]').hidden = all.review + all.recheck > 0;
+    }
+
+    render();
+    // Reset asks on the page itself (no browser dialogs).
+    const ask = $('[data-reset-ask]');
+    const confirmBox = $('[data-reset-confirm]');
+    ask.addEventListener('click', () => { confirmBox.hidden = false; ask.hidden = true; $('[data-reset-done]').hidden = true; $('[data-reset-no]').focus(); });
+    $('[data-reset-no]').addEventListener('click', () => { confirmBox.hidden = true; ask.hidden = false; ask.focus(); });
+    $('[data-reset-yes]').addEventListener('click', () => {
+      clearAll();
+      render();
+      confirmBox.hidden = true;
+      ask.hidden = false;
+      $('[data-reset-done]').hidden = false;
+    });
   </script>
 </Layout>

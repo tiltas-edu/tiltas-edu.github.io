@@ -169,6 +169,25 @@ input[type='text']:focus-visible { border-color: var(--c-brand); }
 .choice input { accent-color: var(--c-brand); width: 1.25rem; height: 1.25rem; }
 .btn:disabled { opacity: 0.55; cursor: not-allowed; }
 .badge--review { background: var(--c-hint-bg); color: var(--c-ink); margin-left: var(--s-2); }
+.badge--recheck { background: var(--c-surface-2); color: var(--c-brand); margin-left: var(--s-2); }
+
+/* ---- Progress (src/lib/progress.ts): meters on subject tiles and group heads, stats and lists on "My mistakes" ---- */
+.meter { display: inline-flex; align-items: center; gap: var(--s-2); font-size: var(--fs-small); font-weight: 800; color: var(--c-muted); font-variant-numeric: tabular-nums; }
+.meter[hidden] { display: none; }
+.meter__bar { position: relative; display: inline-block; width: 6rem; height: 0.6rem; border-radius: 999px; background: var(--c-surface-2); border: 1px solid var(--c-line); overflow: hidden; }
+.meter__fill { position: absolute; inset: 0 auto 0 0; width: 0; background: var(--c-success); border-radius: 999px; }
+.group-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--s-2) var(--s-4); }
+.group-head h3 { margin-bottom: var(--s-2); }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: var(--s-3); margin-block: var(--s-4); }
+.stat { display: flex; flex-direction: column; gap: var(--s-1); padding: var(--s-3) var(--s-4); border-radius: var(--radius); background: var(--c-surface); border: 2px solid var(--c-line); }
+.stat strong { font-size: var(--fs-big); line-height: 1; font-variant-numeric: tabular-nums; }
+.stat span { color: var(--c-muted); font-size: var(--fs-small); font-weight: 700; }
+.stat--done strong { color: var(--c-success); }
+.stat--review { background: var(--c-hint-bg); }
+.stat--recheck strong { color: var(--c-brand); }
+.weak { padding-left: 1.2rem; }
+.weak li { margin-block: var(--s-2); }
+.reset { margin-top: var(--s-6); display: flex; flex-direction: column; align-items: flex-start; gap: var(--s-3); }
 
 /* ---- Column arithmetic (ColumnMath): squared notebook, one digit per cell ---------- */
 .cm__input { width: 7rem !important; text-align: right; }

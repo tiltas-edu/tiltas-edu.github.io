@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Icon from '../../components/Icon.astro';
+import { getCollection } from 'astro:content';
 import { topWords } from '../../lib/frequency';
 import { languages, t, type Lang, base } from '../../i18n/ui';
 
@@ -10,6 +11,8 @@ export function getStaticPaths() {
 const lang = Astro.params.lang as Lang;
 const tr = t(lang);
 const ready = ['math', 'lithuanian', 'society'] as const;
+// Task ids per subject for the progress line on each tile (filled in the browser).
+const tasks = (await getCollection('tasks')).map((x) => ({ id: x.id, subject: x.data.subject, group: x.data.group }));
 const soon = [
   { id: 'nature', name: tr.nature },
   { id: 'physics', name: tr.physics },
@@ -33,6 +36,10 @@ const soon = [
       <a class={`card tile tile--${id}`} href={`${base}/${lang}/${id}/`}>
         <span class="tile__icon"><Icon name={id} /></span>
         <h3>{tr[id]}</h3>
+        <span class="meter" data-meter={id} hidden>
+          <span class="meter__bar"><span class="meter__fill"></span></span>
+          <span class="meter__txt"></span>
+        </span>
       </a>
     ))}
     {soon.map(({ id, name }) => (
@@ -46,4 +53,20 @@ const soon = [
   <h2>{tr.myMistakes}</h2>
   <p>{tr.reviewLead}</p>
   <a class="btn" href={`${base}/${lang}/review/`}><Icon name="bulb" /> {tr.myMistakes}</a>
+  <script type="application/json" id="home-tasks" data-of={tr.progressOf} set:html={JSON.stringify(tasks)} />
+  <script>
+    import { count, loadAll, type Item } from '../../lib/progress';
+
+    // "3 of 22" under each subject the child has started, from this browser's progress.
+    const el = document.getElementById('home-tasks')!;
+    const items = JSON.parse(el.textContent!) as Item[];
+    const by = count(items, loadAll(items.map((x) => x.id)), 'subject');
+    document.querySelectorAll<HTMLElement>('[data-meter]').forEach((m) => {
+      const c = by[m.dataset.meter!];
+      if (!c || c.solved + c.review + c.recheck === 0) return;
+      m.querySelector<HTMLElement>('.meter__fill')!.style.width = `${(100 * c.solved) / c.total}%`;
+      m.querySelector('.meter__txt')!.textContent = el.dataset.of!.replace('{n}', String(c.solved)).replace('{total}', String(c.total));
+      m.hidden = false;
+    });
+  </script>
 </Layout>

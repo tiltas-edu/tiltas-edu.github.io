@@ -15,7 +15,3 @@ export const isCorrect = (accepted: string[], given: string) => accepted.some((a
 /** The hint for a known wrong answer, or null. */
 export const hintFor = (mistakes: { value: string; hint: string }[], given: string) =>
   mistakes.find((m) => same(m.value, given))?.hint ?? null;
-
-// Remembered per browser: solved tasks, and the last wrong answer of a task not solved yet.
-export const solvedKey = (id: string) => `tiltas:solved:${id}`;
-export const mistakeKey = (id: string) => `tiltas:mistake:${id}`;
