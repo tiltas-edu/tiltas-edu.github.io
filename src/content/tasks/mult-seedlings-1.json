@@ -1,0 +1,87 @@
+{
+  "subject": "math",
+  "topic": "multiplication",
+  "group": "multiply-column",
+  "grade": 4,
+  "level": 2,
+  "lt": "Vienoje lysvėje ūkininkė pasodino 156 svogūnų daigus. Kiek daigų reikės 34 tokioms lysvėms? Apskaičiuok stulpeliu.",
+  "translation": {
+    "ru": "На одной грядке фермерша посадила 156 ростков лука. Сколько ростков нужно на 34 такие грядки? Посчитай столбиком.",
+    "en": "A farmer planted 156 onion seedlings in one bed. How many seedlings are needed for 34 such beds? Work it out in a column."
+  },
+  "steps": {
+    "ru": [
+      "156 · 4 = 624 — первая строка.",
+      "156 · 3 = 468 — вторая строка, сдвинута на одну клетку влево (это 156 · 30 = 4 680).",
+      "624 + 4 680 = 5 304.",
+      "Прикидка: 150 · 30 = 4 500, 160 · 35 = 5 600. 5 304 между ними."
+    ],
+    "en": [
+      "156 · 4 = 624: the first row.",
+      "156 · 3 = 468: the second row, shifted one cell left (it is 156 · 30 = 4 680).",
+      "624 + 4 680 = 5 304.",
+      "Estimate: 150 · 30 = 4 500 and 160 · 35 = 5 600. 5 304 is between them."
+    ]
+  },
+  "answer": "5 304 daigai",
+  "check": [
+    "5304"
+  ],
+  "keywords": [
+    "lysvėje",
+    "daigus",
+    "stulpeliu"
+  ],
+  "mistakes": [
+    {
+      "value": "1092",
+      "hint": {
+        "ru": "Вторую строку (468) надо сдвинуть на клетку влево: это 4 680, а не 468.",
+        "en": "Shift the second row (468) one cell left: it is 4 680, not 468."
+      }
+    },
+    {
+      "value": "5204",
+      "hint": {
+        "ru": "Проверь сложение 624 + 4 680 по разрядам: сотни 6 + 6 = 12.",
+        "en": "Check 624 + 4 680 place by place: hundreds 6 + 6 = 12."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "daigų iš viso",
+        "ru": "ростков всего",
+        "en": "seedlings in total",
+        "value": "5 304",
+        "find": true
+      },
+      "op": "+",
+      "kids": [
+        {
+          "lbl": {
+            "lt": "156 · 4",
+            "ru": "156 · 4",
+            "en": "156 · 4",
+            "value": "624",
+            "find": true
+          }
+        },
+        {
+          "lbl": {
+            "lt": "156 · 30",
+            "ru": "156 · 30",
+            "en": "156 · 30",
+            "value": "4 680",
+            "find": true
+          }
+        }
+      ]
+    }
+  },
+  "see": [
+    "column"
+  ]
+}

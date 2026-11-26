@@ -1,0 +1,86 @@
+{
+  "subject": "math",
+  "title": {
+    "ru": "Умножение и прикидка",
+    "en": "Multiplication and estimating"
+  },
+  "terms": [
+    {
+      "lt": "daugyba",
+      "ru": "умножение",
+      "en": "multiplication"
+    },
+    {
+      "lt": "daugiklis",
+      "ru": "множитель",
+      "en": "factor"
+    },
+    {
+      "lt": "sandauga",
+      "ru": "произведение (результат умножения)",
+      "en": "product",
+      "note": {
+        "ru": "«Apskaičiuok 47 ir 21 sandaugą» = 47 · 21.",
+        "en": "\"Find the product of 47 and 21\" = 47 · 21."
+      }
+    },
+    {
+      "lt": "stulpeliu",
+      "ru": "столбиком",
+      "en": "in a column"
+    },
+    {
+      "lt": "padaugink",
+      "ru": "умножь",
+      "en": "multiply"
+    },
+    {
+      "lt": "po",
+      "ru": "по (каждому, в каждом)",
+      "en": "each, per",
+      "note": {
+        "ru": "«3 padėklai po 30 kiaušinių» — в каждом лотке 30 яиц: 3 · 30.",
+        "en": "\"3 trays of 30 eggs each\": 30 eggs in every tray, 3 · 30."
+      }
+    },
+    {
+      "lt": "tiksliai",
+      "ru": "точно",
+      "en": "exactly",
+      "like": [
+        "apytiksliai"
+      ]
+    },
+    {
+      "lt": "apytiksliai",
+      "ru": "примерно, приблизительно",
+      "en": "roughly, about",
+      "note": {
+        "ru": "Прикидка: 47 · 21 ≈ 50 · 20 = 1 000.",
+        "en": "Estimate: 47 · 21 ≈ 50 · 20 = 1 000."
+      },
+      "like": [
+        "tiksliai"
+      ]
+    },
+    {
+      "lt": "paskutinis skaitmuo",
+      "ru": "последняя цифра",
+      "en": "last digit",
+      "note": {
+        "ru": "Последняя цифра произведения = последняя цифра произведения последних цифр: 64 · 15 → 4 · 5 = 20 → 0.",
+        "en": "The last digit of a product comes from the last digits: 64 · 15 → 4 · 5 = 20 → 0."
+      }
+    },
+    {
+      "lt": "baigiasi nuliu",
+      "ru": "оканчивается нулём",
+      "en": "ends in zero"
+    },
+    {
+      "lt": "sau",
+      "ru": "себе",
+      "en": "for oneself"
+    }
+  ]
+}

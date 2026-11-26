@@ -39,6 +39,7 @@ export function labels(s: Scheme): Lbl[] {
 // "ilgis — длина" pairs under the picture, each Lithuanian word once.
 export function legend(s: Scheme, lang: 'ru' | 'en') {
   const seen = new Map<string, string>();
-  for (const l of labels(s)) if (l.lt && l[lang] && !seen.has(l.lt)) seen.set(l.lt, l[lang]!);
+  // Formulas and numbers ("40 : 4", "≈ 50") read the same in every language: no legend line for them.
+  for (const l of labels(s)) if (l.lt && l[lang] && l[lang] !== l.lt && !seen.has(l.lt)) seen.set(l.lt, l[lang]!);
   return [...seen].map(([lt, tr]) => ({ lt, tr }));
 }

@@ -1,0 +1,67 @@
+{
+  "subject": "math",
+  "title": {
+    "ru": "Уравнения",
+    "en": "Equations"
+  },
+  "terms": [
+    {
+      "lt": "lygtis",
+      "ru": "уравнение",
+      "en": "equation"
+    },
+    {
+      "lt": "išspręsk lygtį",
+      "ru": "реши уравнение",
+      "en": "solve the equation"
+    },
+    {
+      "lt": "sudaryk lygtį",
+      "ru": "составь уравнение",
+      "en": "make an equation"
+    },
+    {
+      "lt": "lygties sprendinys",
+      "ru": "корень (решение) уравнения",
+      "en": "solution of the equation"
+    },
+    {
+      "lt": "pasitikrink",
+      "ru": "проверь себя",
+      "en": "check yourself",
+      "note": {
+        "ru": "Подставь ответ в уравнение: 154 · 6 = 924.",
+        "en": "Put the answer back into the equation: 154 · 6 = 924."
+      }
+    },
+    {
+      "lt": "nežinomas skaičius",
+      "ru": "неизвестное число",
+      "en": "unknown number"
+    },
+    {
+      "lt": "žymėk raide y",
+      "ru": "обозначь буквой y",
+      "en": "call it the letter y"
+    },
+    {
+      "lt": "iš kokio skaičiaus atėmę",
+      "ru": "из какого числа вычтя",
+      "en": "from which number, subtracting",
+      "note": {
+        "ru": "Ищем уменьшаемое: оно = разность + вычитаемое.",
+        "en": "We look for the number we subtract from: difference + what is subtracted."
+      }
+    },
+    {
+      "lt": "prie kokio skaičiaus pridėję",
+      "ru": "к какому числу прибавив",
+      "en": "to which number, adding"
+    },
+    {
+      "lt": "vienodus",
+      "ru": "одинаковые",
+      "en": "identical"
+    }
+  ]
+}

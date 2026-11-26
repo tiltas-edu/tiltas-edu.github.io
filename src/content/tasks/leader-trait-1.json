@@ -1,0 +1,50 @@
+{
+  "subject": "society",
+  "topic": "people-together",
+  "group": "people-together",
+  "grade": 4,
+  "level": 1,
+  "lt": "Kuri savybė būdinga geram lyderiui?",
+  "translation": {
+    "ru": "Какое качество характерно для хорошего лидера?",
+    "en": "Which quality is typical of a good leader?"
+  },
+  "steps": {
+    "ru": [
+      "Лидер ведёт команду: слушает других, помогает, решает вместе."
+    ],
+    "en": [
+      "A leader leads a team: listens to others, helps, decides together."
+    ]
+  },
+  "choices": [
+    "Visada sprendžia vienas",
+    "Moka išklausyti kitus",
+    "Pyksta, kai kiti klysta"
+  ],
+  "check": [
+    "Moka išklausyti kitus"
+  ],
+  "answer": "Moka išklausyti kitus",
+  "keywords": [
+    "savybė",
+    "lyderiui",
+    "išklausyti"
+  ],
+  "mistakes": [
+    {
+      "value": "Visada sprendžia vienas",
+      "hint": {
+        "ru": "Лидер решает вместе с командой, а не за неё.",
+        "en": "A leader decides together with the team, not for it."
+      }
+    },
+    {
+      "value": "Pyksta, kai kiti klysta",
+      "hint": {
+        "ru": "Хороший лидер спокойно помогает исправить ошибку.",
+        "en": "A good leader calmly helps to fix a mistake."
+      }
+    }
+  ]
+}

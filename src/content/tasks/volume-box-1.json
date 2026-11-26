@@ -1,0 +1,102 @@
+{
+  "subject": "math",
+  "topic": "solids",
+  "group": "volume",
+  "grade": 4,
+  "level": 2,
+  "lt": "Dėžės ilgis – 5 kubeliai, plotis – 3 kubeliai, aukštis – 4 kubeliai. Kiek daugiausia kubelių tilptų į šią dėžę?",
+  "translation": {
+    "ru": "Длина коробки — 5 кубиков, ширина — 3 кубика, высота — 4 кубика. Сколько больше всего кубиков поместится в коробку?",
+    "en": "A box is 5 cubes long, 3 cubes wide and 4 cubes high. What is the largest number of cubes that fit in the box?"
+  },
+  "steps": {
+    "ru": [
+      "Один слой на дне: 5 · 3 = 15 кубиков.",
+      "Слоёв 4: 15 · 4 = 60."
+    ],
+    "en": [
+      "One layer on the bottom: 5 · 3 = 15 cubes.",
+      "There are 4 layers: 15 · 4 = 60."
+    ]
+  },
+  "answer": "60 kubelių",
+  "check": [
+    "60"
+  ],
+  "keywords": [
+    "ilgis",
+    "plotis",
+    "aukštis",
+    "kubelių"
+  ],
+  "mistakes": [
+    {
+      "value": "12",
+      "hint": {
+        "ru": "Ты сложил 5 + 3 + 4. Кубики заполняют коробку слоями — умножай.",
+        "en": "You added 5 + 3 + 4. Cubes fill the box in layers, so multiply."
+      }
+    },
+    {
+      "value": "15",
+      "hint": {
+        "ru": "15 — один слой на дне. Слоёв 4.",
+        "en": "15 is one layer on the bottom. There are 4 layers."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "kubelių iš viso",
+        "ru": "кубиков всего",
+        "en": "cubes in total",
+        "value": "60",
+        "find": true
+      },
+      "op": "·",
+      "kids": [
+        {
+          "lbl": {
+            "lt": "vienas sluoksnis",
+            "ru": "один слой",
+            "en": "one layer",
+            "value": "15",
+            "find": true
+          },
+          "op": "·",
+          "kids": [
+            {
+              "lbl": {
+                "lt": "ilgis",
+                "ru": "длина",
+                "en": "length",
+                "value": "5"
+              }
+            },
+            {
+              "lbl": {
+                "lt": "plotis",
+                "ru": "ширина",
+                "en": "width",
+                "value": "3"
+              }
+            }
+          ]
+        },
+        {
+          "lbl": {
+            "lt": "aukštis",
+            "ru": "высота",
+            "en": "height",
+            "value": "4"
+          }
+        }
+      ]
+    }
+  },
+  "see": [
+    "times-table"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "subject": "math",
+  "topic": "multiplication",
+  "group": "multiply-column",
+  "grade": 4,
+  "level": 3,
+  "lt": "Vienai suknelei pasiūti reikia 2 m 45 cm medžiagos. Kiek centimetrų medžiagos reikės 16 tokių suknelių?",
+  "translation": {
+    "ru": "На одно платье нужно 2 м 45 см ткани. Сколько сантиметров ткани нужно на 16 таких платьев?",
+    "en": "One dress needs 2 m 45 cm of fabric. How many centimetres of fabric are needed for 16 such dresses?"
+  },
+  "steps": {
+    "ru": [
+      "Переводим в сантиметры: 2 м 45 см = 200 + 45 = 245 см.",
+      "245 · 16 = 3 920 (см).",
+      "Это 39 м 20 см."
+    ],
+    "en": [
+      "Change to centimetres: 2 m 45 cm = 200 + 45 = 245 cm.",
+      "245 · 16 = 3 920 (cm).",
+      "That is 39 m 20 cm."
+    ]
+  },
+  "answer": "3 920 cm (39 m 20 cm)",
+  "check": [
+    "3920"
+  ],
+  "keywords": [
+    "medžiagos",
+    "centimetrų"
+  ],
+  "mistakes": [
+    {
+      "value": "752",
+      "hint": {
+        "ru": "752 = 47 · 16 — метры и сантиметры сложились как числа. Сначала 2 м 45 см = 245 см.",
+        "en": "752 = 47 · 16: metres and centimetres were added as numbers. First 2 m 45 cm = 245 cm."
+      }
+    },
+    {
+      "value": "39",
+      "hint": {
+        "ru": "39 — это метры. Спрашивают сантиметры: 3 920.",
+        "en": "39 is metres. The task asks for centimetres: 3 920."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "medžiagos iš viso",
+        "ru": "ткани всего",
+        "en": "fabric in total",
+        "value": "3 920 cm",
+        "find": true
+      },
+      "op": "·",
+      "kids": [
+        {
+          "lbl": {
+            "lt": "vienai suknelei",
+            "ru": "на одно платье",
+            "en": "for one dress",
+            "value": "245 cm",
+            "find": true
+          }
+        },
+        {
+          "lbl": {
+            "lt": "suknelių",
+            "ru": "платьев",
+            "en": "dresses",
+            "value": "16"
+          }
+        }
+      ]
+    }
+  },
+  "see": [
+    "column",
+    "units"
+  ]
+}

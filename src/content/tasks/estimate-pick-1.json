@@ -1,0 +1,87 @@
+{
+  "subject": "math",
+  "topic": "multiplication",
+  "group": "estimate",
+  "grade": 4,
+  "level": 1,
+  "lt": "Neskaičiuodamas tiksliai, pasirink teisingą sandaugą 47 · 21.",
+  "translation": {
+    "ru": "Не считая точно, выбери верное произведение 47 · 21.",
+    "en": "Without exact working, pick the right product of 47 · 21."
+  },
+  "steps": {
+    "ru": [
+      "Прикидка: 47 ≈ 50, 21 ≈ 20. 50 · 20 = 1 000. Ответ около тысячи.",
+      "Последняя цифра: 7 · 1 = 7. Ответ оканчивается на 7.",
+      "Подходит 987."
+    ],
+    "en": [
+      "Estimate: 47 ≈ 50, 21 ≈ 20. 50 · 20 = 1 000. The answer is about a thousand.",
+      "Last digit: 7 · 1 = 7. The answer ends in 7.",
+      "987 fits."
+    ]
+  },
+  "choices": [
+    "887",
+    "987",
+    "9 870"
+  ],
+  "check": [
+    "987"
+  ],
+  "answer": "987",
+  "keywords": [
+    "sandaugą",
+    "tiksliai"
+  ],
+  "mistakes": [
+    {
+      "value": "887",
+      "hint": {
+        "ru": "Последняя цифра верная, но прикинь: 50 · 20 = 1 000. 887 слишком мало.",
+        "en": "The last digit is right, but estimate: 50 · 20 = 1 000. 887 is too small."
+      }
+    },
+    {
+      "value": "9 870",
+      "hint": {
+        "ru": "Прикидка 50 · 20 = 1 000, а 9 870 почти в 10 раз больше.",
+        "en": "The estimate is 50 · 20 = 1 000; 9 870 is almost 10 times more."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "sandauga",
+        "ru": "произведение",
+        "en": "product",
+        "value": "987",
+        "find": true
+      },
+      "op": "·",
+      "kids": [
+        {
+          "lbl": {
+            "lt": "≈ 50",
+            "ru": "≈ 50",
+            "en": "≈ 50",
+            "value": "47"
+          }
+        },
+        {
+          "lbl": {
+            "lt": "≈ 20",
+            "ru": "≈ 20",
+            "en": "≈ 20",
+            "value": "21"
+          }
+        }
+      ]
+    }
+  },
+  "see": [
+    "times-table"
+  ]
+}

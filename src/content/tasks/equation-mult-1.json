@@ -1,0 +1,82 @@
+{
+  "subject": "math",
+  "topic": "equations",
+  "group": "equations",
+  "grade": 4,
+  "level": 1,
+  "lt": "Išspręsk lygtį ir pasitikrink: x · 6 = 924.",
+  "translation": {
+    "ru": "Реши уравнение и проверь: x · 6 = 924.",
+    "en": "Solve the equation and check: x · 6 = 924."
+  },
+  "steps": {
+    "ru": [
+      "x — неизвестный множитель. Чтобы найти множитель, произведение делим на известный множитель.",
+      "x = 924 : 6 = 154.",
+      "Проверка: 154 · 6 = 924. Верно."
+    ],
+    "en": [
+      "x is an unknown factor. To find a factor, divide the product by the known factor.",
+      "x = 924 : 6 = 154.",
+      "Check: 154 · 6 = 924. Right."
+    ]
+  },
+  "answer": "x = 154",
+  "check": [
+    "154"
+  ],
+  "keywords": [
+    "lygtį",
+    "pasitikrink"
+  ],
+  "mistakes": [
+    {
+      "value": "5544",
+      "hint": {
+        "ru": "Ты умножил. Чтобы найти множитель, произведение делят: 924 : 6.",
+        "en": "You multiplied. To find a factor, divide the product: 924 : 6."
+      }
+    },
+    {
+      "value": "918",
+      "hint": {
+        "ru": "Ты вычел 6. Здесь знак ·, значит, делим: 924 : 6.",
+        "en": "You subtracted 6. The sign is ·, so divide: 924 : 6."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "sandauga",
+        "ru": "произведение",
+        "en": "product",
+        "value": "924"
+      },
+      "op": "·",
+      "kids": [
+        {
+          "lbl": {
+            "lt": "nežinomas daugiklis",
+            "ru": "неизвестный множитель",
+            "en": "unknown factor",
+            "value": "x = 154",
+            "find": true
+          }
+        },
+        {
+          "lbl": {
+            "lt": "daugiklis",
+            "ru": "множитель",
+            "en": "factor",
+            "value": "6"
+          }
+        }
+      ]
+    }
+  },
+  "see": [
+    "column"
+  ]
+}

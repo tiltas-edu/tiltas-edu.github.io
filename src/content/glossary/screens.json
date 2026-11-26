@@ -1,0 +1,83 @@
+{
+  "subject": "society",
+  "title": {
+    "ru": "Люди у экранов",
+    "en": "People at screens"
+  },
+  "terms": [
+    {
+      "lt": "ekranas",
+      "ru": "экран",
+      "en": "screen"
+    },
+    {
+      "lt": "kompiuteris",
+      "ru": "компьютер",
+      "en": "computer"
+    },
+    {
+      "lt": "kompiuteriniai žaidimai",
+      "ru": "компьютерные игры",
+      "en": "computer games"
+    },
+    {
+      "lt": "internetas",
+      "ru": "интернет",
+      "en": "the internet"
+    },
+    {
+      "lt": "slaptažodis",
+      "ru": "пароль",
+      "en": "password",
+      "note": {
+        "ru": "Пароль никому не сообщают, даже друзьям.",
+        "en": "A password is never shared, not even with friends."
+      }
+    },
+    {
+      "lt": "nepažįstamasis",
+      "ru": "незнакомец",
+      "en": "stranger"
+    },
+    {
+      "lt": "apgaulė",
+      "ru": "обман",
+      "en": "trick, fraud"
+    },
+    {
+      "lt": "sveikata",
+      "ru": "здоровье",
+      "en": "health"
+    },
+    {
+      "lt": "neigiama įtaka",
+      "ru": "вредное (негативное) влияние",
+      "en": "bad effect"
+    },
+    {
+      "lt": "pertrauka",
+      "ru": "перерыв",
+      "en": "break"
+    },
+    {
+      "lt": "įprotis",
+      "ru": "привычка",
+      "en": "habit"
+    },
+    {
+      "lt": "patarimas",
+      "ru": "совет",
+      "en": "advice"
+    },
+    {
+      "lt": "skauda akis",
+      "ru": "болят глаза",
+      "en": "eyes hurt"
+    },
+    {
+      "lt": "skauda nugarą",
+      "ru": "болит спина",
+      "en": "back hurts"
+    }
+  ]
+}

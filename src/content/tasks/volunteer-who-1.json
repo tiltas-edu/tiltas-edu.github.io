@@ -1,0 +1,51 @@
+{
+  "subject": "society",
+  "topic": "people-together",
+  "group": "people-together",
+  "grade": 4,
+  "level": 1,
+  "lt": "Kas yra savanoris?",
+  "translation": {
+    "ru": "Кто такой волонтёр (savanoris)?",
+    "en": "Who is a volunteer (savanoris)?"
+  },
+  "steps": {
+    "ru": [
+      "Savanoris помогает добровольно, по своему желанию.",
+      "Он не получает за это денег (be atlygio — без вознаграждения)."
+    ],
+    "en": [
+      "A savanoris helps of their own free will.",
+      "They get no money for it (be atlygio means without pay)."
+    ]
+  },
+  "choices": [
+    "Žmogus, kuris dirba už didelį atlyginimą",
+    "Žmogus, kuris padeda kitiems be atlygio",
+    "Žmogus, kuris tik stebi, kaip dirba kiti"
+  ],
+  "check": [
+    "Žmogus, kuris padeda kitiems be atlygio"
+  ],
+  "answer": "Žmogus, kuris padeda kitiems be atlygio",
+  "keywords": [
+    "savanoris",
+    "be atlygio"
+  ],
+  "mistakes": [
+    {
+      "value": "Žmogus, kuris dirba už didelį atlyginimą",
+      "hint": {
+        "ru": "За зарплату — это работа. Волонтёр помогает без оплаты.",
+        "en": "Working for pay is a job. A volunteer helps without pay."
+      }
+    },
+    {
+      "value": "Žmogus, kuris tik stebi, kaip dirba kiti",
+      "hint": {
+        "ru": "Волонтёр сам помогает, а не наблюдает.",
+        "en": "A volunteer helps; they do not just watch."
+      }
+    }
+  ]
+}

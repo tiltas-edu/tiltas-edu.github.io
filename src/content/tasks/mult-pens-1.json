@@ -1,0 +1,111 @@
+{
+  "subject": "math",
+  "topic": "multiplication",
+  "group": "multiply-column",
+  "grade": 4,
+  "level": 2,
+  "lt": "Ugnė nupirko po rašiklį sau, mokytojai ir 23 klasės draugams. Vienas rašiklis kainuoja 38 ct. Kiek centų Ugnė sumokėjo už visus rašiklius?",
+  "translation": {
+    "ru": "Угне купила по ручке себе, учительнице и 23 одноклассникам. Одна ручка стоит 38 центов. Сколько центов Угне заплатила за все ручки?",
+    "en": "Ugnė bought a pen for herself, for the teacher and for 23 classmates. One pen costs 38 ct. How many cents did Ugnė pay for all the pens?"
+  },
+  "steps": {
+    "ru": [
+      "Сколько ручек: себе 1, учительнице 1, друзьям 23. 1 + 1 + 23 = 25.",
+      "Цена всех: 38 · 25 = 950 (ct). Удобно: 38 · 100 = 3 800, 3 800 : 4 = 950.",
+      "Проверь последнюю цифру: 8 · 5 = 40, ответ оканчивается на 0."
+    ],
+    "en": [
+      "How many pens: 1 for herself, 1 for the teacher, 23 for friends. 1 + 1 + 23 = 25.",
+      "Price of all: 38 · 25 = 950 (ct). Easy way: 38 · 100 = 3 800, 3 800 : 4 = 950.",
+      "Check the last digit: 8 · 5 = 40, so the answer ends in 0."
+    ]
+  },
+  "answer": "950 ct (9 Eur 50 ct)",
+  "check": [
+    "950"
+  ],
+  "keywords": [
+    "sau",
+    "mokytojai",
+    "ct"
+  ],
+  "mistakes": [
+    {
+      "value": "874",
+      "hint": {
+        "ru": "874 — это ручки только для 23 друзей. Перечитай: ещё себе и учительнице.",
+        "en": "874 is the pens for the 23 friends only. Read again: one for herself and one for the teacher too."
+      }
+    },
+    {
+      "value": "912",
+      "hint": {
+        "ru": "Ручек не 24, а 25: себе, учительнице и 23 друзьям.",
+        "en": "There are 25 pens, not 24: herself, the teacher and 23 friends."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "kaina už visus",
+        "ru": "цена за все",
+        "en": "price of all",
+        "value": "950 ct",
+        "find": true
+      },
+      "op": "·",
+      "kids": [
+        {
+          "lbl": {
+            "lt": "rašiklių skaičius",
+            "ru": "число ручек",
+            "en": "number of pens",
+            "value": "25",
+            "find": true
+          },
+          "op": "+",
+          "kids": [
+            {
+              "lbl": {
+                "lt": "sau",
+                "ru": "себе",
+                "en": "for herself",
+                "value": "1"
+              }
+            },
+            {
+              "lbl": {
+                "lt": "mokytojai",
+                "ru": "учительнице",
+                "en": "for the teacher",
+                "value": "1"
+              }
+            },
+            {
+              "lbl": {
+                "lt": "draugams",
+                "ru": "друзьям",
+                "en": "for friends",
+                "value": "23"
+              }
+            }
+          ]
+        },
+        {
+          "lbl": {
+            "lt": "vieno kaina",
+            "ru": "цена одной",
+            "en": "price of one",
+            "value": "38 ct"
+          }
+        }
+      ]
+    }
+  },
+  "see": [
+    "column"
+  ]
+}

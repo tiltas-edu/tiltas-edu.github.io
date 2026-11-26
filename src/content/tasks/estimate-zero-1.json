@@ -1,0 +1,83 @@
+{
+  "subject": "math",
+  "topic": "multiplication",
+  "group": "estimate",
+  "grade": 4,
+  "level": 1,
+  "lt": "Kuri sandauga baigiasi nuliu? Pasirink neskaičiuodamas visos sandaugos.",
+  "translation": {
+    "ru": "Какое произведение оканчивается нулём? Выбери, не считая всё произведение.",
+    "en": "Which product ends in zero? Pick it without working out the whole product."
+  },
+  "steps": {
+    "ru": [
+      "Смотрим только на последние цифры множителей.",
+      "36 · 15: 6 · 5 = 30 → 0. 27 · 13: 7 · 3 = 21 → 1. 41 · 19: 1 · 9 = 9 → 9.",
+      "Нулём оканчивается 36 · 15 (= 540)."
+    ],
+    "en": [
+      "Look only at the last digits of the factors.",
+      "36 · 15: 6 · 5 = 30 → 0. 27 · 13: 7 · 3 = 21 → 1. 41 · 19: 1 · 9 = 9 → 9.",
+      "36 · 15 ends in zero (= 540)."
+    ]
+  },
+  "choices": [
+    "27 · 13",
+    "36 · 15",
+    "41 · 19"
+  ],
+  "check": [
+    "36 · 15"
+  ],
+  "answer": "36 · 15",
+  "keywords": [
+    "baigiasi nuliu",
+    "sandauga"
+  ],
+  "mistakes": [
+    {
+      "value": "27 · 13",
+      "hint": {
+        "ru": "7 · 3 = 21 — на конце 1, не 0.",
+        "en": "7 · 3 = 21: it ends in 1, not 0."
+      }
+    },
+    {
+      "value": "41 · 19",
+      "hint": {
+        "ru": "1 · 9 = 9 — на конце 9.",
+        "en": "1 · 9 = 9: it ends in 9."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "paskutinis skaitmuo",
+        "ru": "последняя цифра",
+        "en": "last digit",
+        "value": "36 · 15 → 0",
+        "find": true
+      },
+      "op": "·",
+      "kids": [
+        {
+          "lbl": {
+            "lt": "",
+            "value": "6"
+          }
+        },
+        {
+          "lbl": {
+            "lt": "",
+            "value": "5"
+          }
+        }
+      ]
+    }
+  },
+  "see": [
+    "times-table"
+  ]
+}

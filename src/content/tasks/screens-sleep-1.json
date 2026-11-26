@@ -1,0 +1,52 @@
+{
+  "subject": "society",
+  "topic": "screens",
+  "group": "screens",
+  "grade": 4,
+  "level": 1,
+  "lt": "Kuris įprotis padeda išvengti neigiamos ekranų įtakos sveikatai?",
+  "translation": {
+    "ru": "Какая привычка помогает избежать вредного влияния экранов на здоровье?",
+    "en": "Which habit helps to avoid the bad effect of screens on health?"
+  },
+  "steps": {
+    "ru": [
+      "Свет экрана перед сном мешает заснуть.",
+      "Час без экрана перед сном — сон крепче."
+    ],
+    "en": [
+      "Screen light before bed makes it hard to fall asleep.",
+      "An hour without a screen before bed: deeper sleep."
+    ]
+  },
+  "choices": [
+    "Valandą prieš miegą nežiūrėti į ekraną",
+    "Valgyti sėdint prie kompiuterio",
+    "Sėdėti prie ekrano susikūprinus"
+  ],
+  "check": [
+    "Valandą prieš miegą nežiūrėti į ekraną"
+  ],
+  "answer": "Valandą prieš miegą nežiūrėti į ekraną",
+  "keywords": [
+    "įprotis",
+    "neigiamos",
+    "sveikatai"
+  ],
+  "mistakes": [
+    {
+      "value": "Valgyti sėdint prie kompiuterio",
+      "hint": {
+        "ru": "Еда у экрана — привычка вредная: не замечаешь, сколько съел.",
+        "en": "Eating at the screen is a bad habit: you do not notice how much you eat."
+      }
+    },
+    {
+      "value": "Sėdėti prie ekrano susikūprinus",
+      "hint": {
+        "ru": "Сутулость — от неё болит спина. Сиди прямо.",
+        "en": "Slouching makes the back hurt. Sit up straight."
+      }
+    }
+  ]
+}

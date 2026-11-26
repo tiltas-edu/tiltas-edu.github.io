@@ -1,0 +1,103 @@
+{
+  "subject": "math",
+  "topic": "equations",
+  "group": "equations",
+  "grade": 4,
+  "level": 2,
+  "lt": "Mantas nupirko 8 vienodus sąsiuvinius ir sumokėjo 4 Eur 16 ct. Sudaryk lygtį (vieno sąsiuvinio kainą žymėk y) ir apskaičiuok, kiek centų kainuoja vienas sąsiuvinis.",
+  "translation": {
+    "ru": "Мантас купил 8 одинаковых тетрадей и заплатил 4 евро 16 центов. Составь уравнение (цену одной тетради обозначь y) и посчитай, сколько центов стоит одна тетрадь.",
+    "en": "Mantas bought 8 identical notebooks and paid 4 Eur 16 ct. Make an equation (call the price of one notebook y) and work out how many cents one notebook costs."
+  },
+  "steps": {
+    "ru": [
+      "Переводим в центы: 4 Eur 16 ct = 400 + 16 = 416 ct.",
+      "Уравнение: y · 8 = 416.",
+      "y = 416 : 8 = 52 (ct). Проверка: 52 · 8 = 416."
+    ],
+    "en": [
+      "Change to cents: 4 Eur 16 ct = 400 + 16 = 416 ct.",
+      "Equation: y · 8 = 416.",
+      "y = 416 : 8 = 52 (ct). Check: 52 · 8 = 416."
+    ]
+  },
+  "answer": "y = 52 ct",
+  "check": [
+    "52"
+  ],
+  "keywords": [
+    "vienodus",
+    "lygtį",
+    "žymėk"
+  ],
+  "mistakes": [
+    {
+      "value": "3328",
+      "hint": {
+        "ru": "Это 416 · 8 — цена восьми тетрадей уже 416. Делим: 416 : 8.",
+        "en": "That is 416 · 8; 416 is already the price of 8 notebooks. Divide: 416 : 8."
+      }
+    },
+    {
+      "value": "2",
+      "hint": {
+        "ru": "Ты разделил 16 центов, а евро забыл. Сначала 4 Eur 16 ct = 416 ct.",
+        "en": "You divided only the 16 cents. First 4 Eur 16 ct = 416 ct."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "bar",
+    "total": {
+      "lt": "sumokėjo",
+      "ru": "заплатил",
+      "en": "paid",
+      "value": "416 ct"
+    },
+    "parts": [
+      {
+        "w": 1,
+        "lbl": {
+          "lt": "y",
+          "ru": "y",
+          "en": "y",
+          "value": "52 ct",
+          "find": true
+        },
+        "mark": true
+      },
+      {
+        "w": 1,
+        "mark": false
+      },
+      {
+        "w": 1,
+        "mark": false
+      },
+      {
+        "w": 1,
+        "mark": false
+      },
+      {
+        "w": 1,
+        "mark": false
+      },
+      {
+        "w": 1,
+        "mark": false
+      },
+      {
+        "w": 1,
+        "mark": false
+      },
+      {
+        "w": 1,
+        "mark": false
+      }
+    ]
+  },
+  "see": [
+    "column",
+    "units"
+  ]
+}

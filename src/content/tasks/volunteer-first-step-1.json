@@ -1,0 +1,54 @@
+{
+  "subject": "society",
+  "topic": "people-together",
+  "group": "people-together",
+  "grade": 4,
+  "level": 1,
+  "lt": "Vaikai nori įgyvendinti savanorišką projektą. Nuo ko geriausia pradėti?",
+  "translation": {
+    "ru": "Дети хотят провести волонтёрский проект. С чего лучше всего начать?",
+    "en": "Children want to carry out a volunteer project. What is the best way to start?"
+  },
+  "steps": {
+    "ru": [
+      "Сначала узнаём, кому и какая помощь нужна.",
+      "Потом план: что делаем, кто что делает, когда.",
+      "Потом делаем и рассказываем о результате."
+    ],
+    "en": [
+      "First find out who needs help and what kind.",
+      "Then a plan: what we do, who does what, when.",
+      "Then do it and tell about the result."
+    ]
+  },
+  "choices": [
+    "Išsiaiškinti, kam reikia pagalbos",
+    "Iškart nupirkti dovanų",
+    "Papasakoti visiems, kad projektas jau baigtas"
+  ],
+  "check": [
+    "Išsiaiškinti, kam reikia pagalbos"
+  ],
+  "answer": "Išsiaiškinti, kam reikia pagalbos",
+  "keywords": [
+    "įgyvendinti",
+    "savanorišką projektą",
+    "pagalbos"
+  ],
+  "mistakes": [
+    {
+      "value": "Iškart nupirkti dovanų",
+      "hint": {
+        "ru": "Покупать рано: ещё неизвестно, что людям нужно.",
+        "en": "Too early to buy: we do not know yet what people need."
+      }
+    },
+    {
+      "value": "Papasakoti visiems, kad projektas jau baigtas",
+      "hint": {
+        "ru": "Рассказывают в конце, когда дело сделано.",
+        "en": "We tell about it at the end, when the work is done."
+      }
+    }
+  ]
+}

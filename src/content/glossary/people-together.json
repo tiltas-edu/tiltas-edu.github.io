@@ -1,0 +1,69 @@
+{
+  "subject": "society",
+  "title": {
+    "ru": "Люди среди людей",
+    "en": "People together"
+  },
+  "terms": [
+    {
+      "lt": "savanoris",
+      "ru": "волонтёр",
+      "en": "volunteer"
+    },
+    {
+      "lt": "savanorystė",
+      "ru": "волонтёрство",
+      "en": "volunteering"
+    },
+    {
+      "lt": "savanoriška veikla",
+      "ru": "волонтёрская деятельность",
+      "en": "volunteer work"
+    },
+    {
+      "lt": "be atlygio",
+      "ru": "без вознаграждения, бесплатно",
+      "en": "without pay"
+    },
+    {
+      "lt": "lyderis",
+      "ru": "лидер",
+      "en": "leader"
+    },
+    {
+      "lt": "savybė",
+      "ru": "качество (черта характера)",
+      "en": "quality, trait"
+    },
+    {
+      "lt": "išklausyti",
+      "ru": "выслушать",
+      "en": "to listen to"
+    },
+    {
+      "lt": "pagalba",
+      "ru": "помощь",
+      "en": "help"
+    },
+    {
+      "lt": "padėti kitiems",
+      "ru": "помогать другим",
+      "en": "to help others"
+    },
+    {
+      "lt": "projektas",
+      "ru": "проект",
+      "en": "project"
+    },
+    {
+      "lt": "įgyvendinti",
+      "ru": "осуществить, провести",
+      "en": "to carry out"
+    },
+    {
+      "lt": "komanda",
+      "ru": "команда",
+      "en": "team"
+    }
+  ]
+}

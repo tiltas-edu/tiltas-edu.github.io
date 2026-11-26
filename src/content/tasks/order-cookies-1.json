@@ -1,0 +1,103 @@
+{
+  "subject": "math",
+  "topic": "expressions",
+  "group": "expressions",
+  "grade": 4,
+  "level": 2,
+  "lt": "Ema iškepė 60 sausainių ir sudėjo juos po lygiai į 5 dėžutes. Iš vienos dėžutės brolis paėmė 4 sausainius. Kiek sausainių liko toje dėžutėje? Užrašyk sprendimą reiškiniu.",
+  "translation": {
+    "ru": "Эма испекла 60 печений и разложила их поровну в 5 коробочек. Из одной коробочки брат взял 4 печенья. Сколько печений осталось в этой коробочке? Запиши решение выражением.",
+    "en": "Ema baked 60 cookies and put them equally into 5 boxes. Her brother took 4 cookies from one box. How many cookies were left in that box? Write the solution as an expression."
+  },
+  "steps": {
+    "ru": [
+      "В одной коробочке: 60 : 5 = 12.",
+      "Осталось в ней: 12 − 4 = 8.",
+      "Выражение: 60 : 5 − 4 = 8."
+    ],
+    "en": [
+      "One box: 60 : 5 = 12.",
+      "Left in it: 12 − 4 = 8.",
+      "Expression: 60 : 5 − 4 = 8."
+    ]
+  },
+  "answer": "8 sausainiai",
+  "check": [
+    "8"
+  ],
+  "keywords": [
+    "po lygiai",
+    "toje dėžutėje",
+    "reiškiniu"
+  ],
+  "mistakes": [
+    {
+      "value": "56",
+      "hint": {
+        "ru": "56 = 60 − 4 — это осталось во всех коробочках вместе. Спрашивают про одну.",
+        "en": "56 = 60 − 4 is what is left in all boxes together. The task asks about one box."
+      }
+    },
+    {
+      "value": "12",
+      "hint": {
+        "ru": "12 — было в коробочке. Брат взял 4.",
+        "en": "12 was in the box. The brother took 4."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "liko dėžutėje",
+        "ru": "осталось в коробочке",
+        "en": "left in the box",
+        "value": "8",
+        "find": true
+      },
+      "op": "−",
+      "kids": [
+        {
+          "lbl": {
+            "lt": "vienoje dėžutėje",
+            "ru": "в одной коробочке",
+            "en": "in one box",
+            "value": "12",
+            "find": true
+          },
+          "op": ":",
+          "kids": [
+            {
+              "lbl": {
+                "lt": "sausainių",
+                "ru": "печений",
+                "en": "cookies",
+                "value": "60"
+              }
+            },
+            {
+              "lbl": {
+                "lt": "dėžučių",
+                "ru": "коробочек",
+                "en": "boxes",
+                "value": "5"
+              }
+            }
+          ]
+        },
+        {
+          "lbl": {
+            "lt": "paėmė",
+            "ru": "взял",
+            "en": "took",
+            "value": "4"
+          }
+        }
+      ]
+    }
+  },
+  "see": [
+    "times-table"
+  ]
+}

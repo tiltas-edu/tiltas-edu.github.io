@@ -1,0 +1,80 @@
+{
+  "subject": "math",
+  "topic": "solids",
+  "group": "volume",
+  "grade": 4,
+  "level": 2,
+  "lt": "Statinį sudaro 14 vienodų kubelių. Vieno kubelio tūris – 8 cm³. Apskaičiuok statinio tūrį kubiniais centimetrais.",
+  "translation": {
+    "ru": "Постройка состоит из 14 одинаковых кубиков. Объём одного кубика — 8 см³. Найди объём постройки в кубических сантиметрах.",
+    "en": "A building is made of 14 identical cubes. One cube has a volume of 8 cm³. Find the volume of the building in cubic centimetres."
+  },
+  "steps": {
+    "ru": [
+      "Объём всей постройки = объём кубика · число кубиков.",
+      "8 · 14 = 112 (см³)."
+    ],
+    "en": [
+      "Volume of the building = volume of one cube · number of cubes.",
+      "8 · 14 = 112 (cm³)."
+    ]
+  },
+  "answer": "112 cm³",
+  "check": [
+    "112"
+  ],
+  "keywords": [
+    "tūris",
+    "kubiniais centimetrais"
+  ],
+  "mistakes": [
+    {
+      "value": "22",
+      "hint": {
+        "ru": "Ты сложил 14 + 8. Каждый кубик даёт 8 см³ — умножай.",
+        "en": "You added 14 + 8. Each cube gives 8 cm³, so multiply."
+      }
+    },
+    {
+      "value": "14",
+      "hint": {
+        "ru": "14 — число кубиков. Спрашивают объём в см³.",
+        "en": "14 is the number of cubes. The task asks for the volume in cm³."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "statinio tūris",
+        "ru": "объём постройки",
+        "en": "volume of the building",
+        "value": "112 cm³",
+        "find": true
+      },
+      "op": "·",
+      "kids": [
+        {
+          "lbl": {
+            "lt": "kubelio tūris",
+            "ru": "объём кубика",
+            "en": "volume of a cube",
+            "value": "8 cm³"
+          }
+        },
+        {
+          "lbl": {
+            "lt": "kubelių",
+            "ru": "кубиков",
+            "en": "cubes",
+            "value": "14"
+          }
+        }
+      ]
+    }
+  },
+  "see": [
+    "times-table"
+  ]
+}

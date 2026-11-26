@@ -1,0 +1,105 @@
+{
+  "subject": "math",
+  "topic": "multiplication",
+  "group": "multiply-column",
+  "grade": 4,
+  "level": 3,
+  "lt": "Į parduotuvę atvežė 18 dėžių kiaušinių. Kiekvienoje dėžėje yra 3 padėklai po 30 kiaušinių. Kiek iš viso kiaušinių atvežė? Užrašyk sprendimą reiškiniu.",
+  "translation": {
+    "ru": "В магазин привезли 18 коробок яиц. В каждой коробке 3 лотка по 30 яиц. Сколько всего яиц привезли? Запиши решение выражением.",
+    "en": "18 boxes of eggs came to a shop. Each box has 3 trays of 30 eggs. How many eggs came in total? Write the solution as an expression."
+  },
+  "steps": {
+    "ru": [
+      "В одной коробке: 3 · 30 = 90 яиц.",
+      "В 18 коробках: 90 · 18 = 1 620.",
+      "Выражение: 3 · 30 · 18 = 1 620."
+    ],
+    "en": [
+      "One box: 3 · 30 = 90 eggs.",
+      "18 boxes: 90 · 18 = 1 620.",
+      "Expression: 3 · 30 · 18 = 1 620."
+    ]
+  },
+  "answer": "1 620 kiaušinių",
+  "check": [
+    "1620"
+  ],
+  "keywords": [
+    "dėžių",
+    "padėklai",
+    "po",
+    "iš viso"
+  ],
+  "mistakes": [
+    {
+      "value": "540",
+      "hint": {
+        "ru": "540 = 18 · 30 — это как будто в коробке один лоток. А их 3.",
+        "en": "540 = 18 · 30, as if a box had one tray. It has 3."
+      }
+    },
+    {
+      "value": "90",
+      "hint": {
+        "ru": "90 яиц — в одной коробке. Коробок 18.",
+        "en": "90 eggs are in one box. There are 18 boxes."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "kiaušinių iš viso",
+        "ru": "яиц всего",
+        "en": "eggs in total",
+        "value": "1 620",
+        "find": true
+      },
+      "op": "·",
+      "kids": [
+        {
+          "lbl": {
+            "lt": "vienoje dėžėje",
+            "ru": "в одной коробке",
+            "en": "in one box",
+            "value": "90",
+            "find": true
+          },
+          "op": "·",
+          "kids": [
+            {
+              "lbl": {
+                "lt": "padėklų",
+                "ru": "лотков",
+                "en": "trays",
+                "value": "3"
+              }
+            },
+            {
+              "lbl": {
+                "lt": "kiaušinių padėkle",
+                "ru": "яиц в лотке",
+                "en": "eggs per tray",
+                "value": "30"
+              }
+            }
+          ]
+        },
+        {
+          "lbl": {
+            "lt": "dėžių",
+            "ru": "коробок",
+            "en": "boxes",
+            "value": "18"
+          }
+        }
+      ]
+    }
+  },
+  "see": [
+    "column",
+    "times-table"
+  ]
+}

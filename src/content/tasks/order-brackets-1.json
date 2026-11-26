@@ -1,0 +1,101 @@
+{
+  "subject": "math",
+  "topic": "expressions",
+  "group": "expressions",
+  "grade": 4,
+  "level": 2,
+  "lt": "Apskaičiuok reiškinio reikšmę: (500 − 140) : 6 + 25 · 2.",
+  "translation": {
+    "ru": "Найди значение выражения: (500 − 140) : 6 + 25 · 2.",
+    "en": "Find the value of the expression: (500 − 140) : 6 + 25 · 2."
+  },
+  "steps": {
+    "ru": [
+      "Скобки: 500 − 140 = 360.",
+      "Деление и умножение: 360 : 6 = 60, 25 · 2 = 50.",
+      "Сложение: 60 + 50 = 110."
+    ],
+    "en": [
+      "Brackets: 500 − 140 = 360.",
+      "Division and multiplication: 360 : 6 = 60, 25 · 2 = 50.",
+      "Addition: 60 + 50 = 110."
+    ]
+  },
+  "answer": "110",
+  "check": [
+    "110"
+  ],
+  "keywords": [
+    "reiškinio reikšmę"
+  ],
+  "mistakes": [
+    {
+      "value": "170",
+      "hint": {
+        "ru": "Ты сложил 60 + 25 раньше умножения. Сначала 25 · 2 = 50.",
+        "en": "You added 60 + 25 before multiplying. First 25 · 2 = 50."
+      }
+    },
+    {
+      "value": "526",
+      "hint": {
+        "ru": "Скобки идут первыми: 500 − 140, и только потом : 6.",
+        "en": "Brackets come first: 500 − 140, only then : 6."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "reikšmė",
+        "ru": "значение",
+        "en": "value",
+        "value": "110",
+        "find": true
+      },
+      "op": "+",
+      "kids": [
+        {
+          "lbl": {
+            "lt": "(500 − 140) : 6",
+            "ru": "(500 − 140) : 6",
+            "en": "(500 − 140) : 6",
+            "value": "60",
+            "find": true
+          },
+          "op": ":",
+          "kids": [
+            {
+              "lbl": {
+                "lt": "skliaustai",
+                "ru": "скобки",
+                "en": "brackets",
+                "value": "360",
+                "find": true
+              }
+            },
+            {
+              "lbl": {
+                "lt": "",
+                "value": "6"
+              }
+            }
+          ]
+        },
+        {
+          "lbl": {
+            "lt": "25 · 2",
+            "ru": "25 · 2",
+            "en": "25 · 2",
+            "value": "50",
+            "find": true
+          }
+        }
+      ]
+    }
+  },
+  "see": [
+    "column"
+  ]
+}

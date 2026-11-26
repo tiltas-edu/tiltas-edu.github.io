@@ -1,0 +1,101 @@
+{
+  "subject": "math",
+  "title": {
+    "ru": "Объёмные фигуры и объём",
+    "en": "Solid shapes and volume"
+  },
+  "terms": [
+    {
+      "lt": "kubas",
+      "ru": "куб",
+      "en": "cube"
+    },
+    {
+      "lt": "kubelis",
+      "ru": "кубик",
+      "en": "small cube"
+    },
+    {
+      "lt": "stačiakampis gretasienis",
+      "ru": "прямоугольный параллелепипед",
+      "en": "cuboid"
+    },
+    {
+      "lt": "trikampė prizmė",
+      "ru": "треугольная призма",
+      "en": "triangular prism"
+    },
+    {
+      "lt": "keturkampė piramidė",
+      "ru": "четырёхугольная пирамида",
+      "en": "square-based pyramid"
+    },
+    {
+      "lt": "kūgis",
+      "ru": "конус",
+      "en": "cone"
+    },
+    {
+      "lt": "cilindras",
+      "ru": "цилиндр",
+      "en": "cylinder"
+    },
+    {
+      "lt": "rutulys",
+      "ru": "шар",
+      "en": "sphere"
+    },
+    {
+      "lt": "siena",
+      "ru": "грань",
+      "en": "face",
+      "note": {
+        "ru": "Siena — плоская часть фигуры. У куба 6 граней (sienų).",
+        "en": "A siena is a flat side of the shape. A cube has 6 faces (sienų)."
+      }
+    },
+    {
+      "lt": "briauna",
+      "ru": "ребро",
+      "en": "edge",
+      "note": {
+        "ru": "У куба 12 рёбер (briaunų), у треугольной призмы 9.",
+        "en": "A cube has 12 edges (briaunų), a triangular prism 9."
+      }
+    },
+    {
+      "lt": "viršūnė",
+      "ru": "вершина",
+      "en": "vertex"
+    },
+    {
+      "lt": "pagrindas",
+      "ru": "основание",
+      "en": "base"
+    },
+    {
+      "lt": "išklotinė",
+      "ru": "развёртка",
+      "en": "net (of a solid)"
+    },
+    {
+      "lt": "tūris",
+      "ru": "объём",
+      "en": "volume",
+      "note": {
+        "ru": "Tūris считают в кубических единицах: cm³ — kubinis centimetras.",
+        "en": "Volume is counted in cubic units: cm³ is a kubinis centimetras."
+      }
+    },
+    {
+      "lt": "kubinis centimetras",
+      "ru": "кубический сантиметр",
+      "en": "cubic centimetre"
+    },
+    {
+      "lt": "aukštis",
+      "ru": "высота",
+      "en": "height"
+    }
+  ]
+}

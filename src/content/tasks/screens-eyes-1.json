@@ -1,0 +1,52 @@
+{
+  "subject": "society",
+  "topic": "screens",
+  "group": "screens",
+  "grade": 4,
+  "level": 1,
+  "lt": "Po ilgo žaidimo kompiuteriu vaikui pradėjo skaudėti akis. Kuris patarimas jam tinka?",
+  "translation": {
+    "ru": "После долгой игры за компьютером у ребёнка заболели глаза. Какой совет ему подходит?",
+    "en": "After a long computer game a child's eyes started to hurt. Which advice suits him?"
+  },
+  "steps": {
+    "ru": [
+      "Глазам нужен отдых: каждые 20–30 минут перерыв.",
+      "Посмотреть вдаль (в окно) — мышцы глаз расслабляются."
+    ],
+    "en": [
+      "Eyes need rest: a break every 20–30 minutes.",
+      "Look far away (out of the window): the eye muscles relax."
+    ]
+  },
+  "choices": [
+    "Priartėti prie ekrano, kad geriau matytų",
+    "Daryti pertraukas ir pažiūrėti į tolį",
+    "Žaisti dar ilgiau, kad akys priprastų"
+  ],
+  "check": [
+    "Daryti pertraukas ir pažiūrėti į tolį"
+  ],
+  "answer": "Daryti pertraukas ir pažiūrėti į tolį",
+  "keywords": [
+    "skaudėti akis",
+    "patarimas",
+    "pertraukas"
+  ],
+  "mistakes": [
+    {
+      "value": "Priartėti prie ekrano, kad geriau matytų",
+      "hint": {
+        "ru": "Близко к экрану глаза устают ещё сильнее.",
+        "en": "Close to the screen the eyes get even more tired."
+      }
+    },
+    {
+      "value": "Žaisti dar ilgiau, kad akys priprastų",
+      "hint": {
+        "ru": "Глаза не привыкают к усталости. Им нужен перерыв.",
+        "en": "Eyes do not get used to tiredness. They need a break."
+      }
+    }
+  ]
+}

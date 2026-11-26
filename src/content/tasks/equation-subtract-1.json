@@ -1,0 +1,84 @@
+{
+  "subject": "math",
+  "topic": "equations",
+  "group": "equations",
+  "grade": 4,
+  "level": 2,
+  "lt": "Iš kokio skaičiaus atėmę 3 875 gausime 2 649? Sudaryk lygtį ir ją išspręsk.",
+  "translation": {
+    "ru": "Из какого числа надо вычесть 3 875, чтобы получить 2 649? Составь уравнение и реши его.",
+    "en": "From which number do we subtract 3 875 to get 2 649? Make an equation and solve it."
+  },
+  "steps": {
+    "ru": [
+      "Уравнение: x − 3 875 = 2 649. x — уменьшаемое.",
+      "Уменьшаемое = разность + вычитаемое: x = 2 649 + 3 875 = 6 524.",
+      "Проверка: 6 524 − 3 875 = 2 649."
+    ],
+    "en": [
+      "Equation: x − 3 875 = 2 649. x is the number we subtract from.",
+      "It equals the difference plus what we subtract: x = 2 649 + 3 875 = 6 524.",
+      "Check: 6 524 − 3 875 = 2 649."
+    ]
+  },
+  "answer": "x = 6 524",
+  "check": [
+    "6524"
+  ],
+  "keywords": [
+    "iš kokio skaičiaus",
+    "atėmę",
+    "lygtį"
+  ],
+  "mistakes": [
+    {
+      "value": "1226",
+      "hint": {
+        "ru": "Ты вычел. Мы ищем число, из которого вычитали, — оно больше: 2 649 + 3 875.",
+        "en": "You subtracted. We look for the number we subtracted from; it is bigger: 2 649 + 3 875."
+      }
+    },
+    {
+      "value": "6424",
+      "hint": {
+        "ru": "Проверь сложение 2 649 + 3 875 по разрядам: десятки 4 + 7 + 1 = 12.",
+        "en": "Check 2 649 + 3 875 place by place: tens 4 + 7 + 1 = 12."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "bar",
+    "total": {
+      "lt": "nežinomas skaičius",
+      "ru": "неизвестное число",
+      "en": "unknown number",
+      "value": "x = 6 524",
+      "find": true
+    },
+    "parts": [
+      {
+        "w": 3875,
+        "lbl": {
+          "lt": "atimame",
+          "ru": "вычитаем",
+          "en": "we subtract",
+          "value": "3 875"
+        },
+        "mark": false
+      },
+      {
+        "w": 2649,
+        "lbl": {
+          "lt": "lieka",
+          "ru": "остаётся",
+          "en": "is left",
+          "value": "2 649"
+        },
+        "mark": false
+      }
+    ]
+  },
+  "see": [
+    "column"
+  ]
+}

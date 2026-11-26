@@ -1,0 +1,53 @@
+{
+  "subject": "math",
+  "title": {
+    "ru": "Выражения и порядок действий",
+    "en": "Expressions and order of operations"
+  },
+  "terms": [
+    {
+      "lt": "reiškinys",
+      "ru": "выражение",
+      "en": "expression"
+    },
+    {
+      "lt": "reiškinio reikšmė",
+      "ru": "значение выражения",
+      "en": "value of the expression"
+    },
+    {
+      "lt": "skaitinis reiškinys",
+      "ru": "числовое выражение",
+      "en": "numerical expression"
+    },
+    {
+      "lt": "veiksmų tvarka",
+      "ru": "порядок действий",
+      "en": "order of operations",
+      "note": {
+        "ru": "Скобки → умножение и деление слева направо → сложение и вычитание слева направо.",
+        "en": "Brackets → multiplication and division left to right → addition and subtraction left to right."
+      }
+    },
+    {
+      "lt": "skliaustai",
+      "ru": "скобки",
+      "en": "brackets"
+    },
+    {
+      "lt": "užrašyk sprendimą reiškiniu",
+      "ru": "запиши решение выражением",
+      "en": "write the solution as an expression"
+    },
+    {
+      "lt": "po lygiai",
+      "ru": "поровну",
+      "en": "equally"
+    },
+    {
+      "lt": "liko",
+      "ru": "осталось",
+      "en": "was left"
+    }
+  ]
+}

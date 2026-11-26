@@ -1,0 +1,96 @@
+{
+  "subject": "math",
+  "topic": "expressions",
+  "group": "expressions",
+  "grade": 4,
+  "level": 1,
+  "lt": "Apskaičiuok reiškinio reikšmę: 120 − 40 : 4 · 3.",
+  "translation": {
+    "ru": "Найди значение выражения: 120 − 40 : 4 · 3.",
+    "en": "Find the value of the expression: 120 − 40 : 4 · 3."
+  },
+  "steps": {
+    "ru": [
+      "Сначала умножение и деление слева направо: 40 : 4 = 10, 10 · 3 = 30.",
+      "Потом вычитание: 120 − 30 = 90."
+    ],
+    "en": [
+      "First multiplication and division, left to right: 40 : 4 = 10, 10 · 3 = 30.",
+      "Then subtraction: 120 − 30 = 90."
+    ]
+  },
+  "answer": "90",
+  "check": [
+    "90"
+  ],
+  "keywords": [
+    "reiškinio reikšmę"
+  ],
+  "mistakes": [
+    {
+      "value": "60",
+      "hint": {
+        "ru": "Ты начал с вычитания: (120 − 40) : 4 · 3. Без скобок сначала : и ·.",
+        "en": "You started with the subtraction: (120 − 40) : 4 · 3. Without brackets, : and · come first."
+      }
+    },
+    {
+      "value": "117",
+      "hint": {
+        "ru": "Деление и умножение идут слева направо: сначала 40 : 4, потом · 3.",
+        "en": "Division and multiplication go left to right: first 40 : 4, then · 3."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "reikšmė",
+        "ru": "значение",
+        "en": "value",
+        "value": "90",
+        "find": true
+      },
+      "op": "−",
+      "kids": [
+        {
+          "lbl": {
+            "lt": "",
+            "value": "120"
+          }
+        },
+        {
+          "lbl": {
+            "lt": "40 : 4 · 3",
+            "ru": "40 : 4 · 3",
+            "en": "40 : 4 · 3",
+            "value": "30",
+            "find": true
+          },
+          "op": "·",
+          "kids": [
+            {
+              "lbl": {
+                "lt": "40 : 4",
+                "ru": "40 : 4",
+                "en": "40 : 4",
+                "value": "10",
+                "find": true
+              }
+            },
+            {
+              "lbl": {
+                "lt": "",
+                "value": "3"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "see": [
+    "times-table"
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "subject": "math",
+  "topic": "multiplication",
+  "group": "estimate",
+  "grade": 4,
+  "level": 2,
+  "lt": "Tomas apskaičiavo: 64 · 15 = 965. Patikrink paskutinį skaitmenį. Parašyk teisingą sandaugą.",
+  "translation": {
+    "ru": "Томас посчитал: 64 · 15 = 965. Проверь последнюю цифру. Напиши верное произведение.",
+    "en": "Tomas worked out 64 · 15 = 965. Check the last digit. Write the right product."
+  },
+  "steps": {
+    "ru": [
+      "Последние цифры множителей: 4 и 5. 4 · 5 = 20 — ответ должен оканчиваться на 0, а не на 5.",
+      "Считаем: 64 · 10 = 640, 64 · 5 = 320. 640 + 320 = 960."
+    ],
+    "en": [
+      "Last digits of the factors: 4 and 5. 4 · 5 = 20, so the answer must end in 0, not 5.",
+      "Work it out: 64 · 10 = 640, 64 · 5 = 320. 640 + 320 = 960."
+    ]
+  },
+  "answer": "960",
+  "check": [
+    "960"
+  ],
+  "keywords": [
+    "paskutinį skaitmenį",
+    "sandaugą"
+  ],
+  "mistakes": [
+    {
+      "value": "965",
+      "hint": {
+        "ru": "Это ответ Томаса. 4 · 5 = 20 — значит, на конце 0.",
+        "en": "That is Tomas's answer. 4 · 5 = 20, so it ends in 0."
+      }
+    },
+    {
+      "value": "970",
+      "hint": {
+        "ru": "Последняя цифра верная, проверь сумму 640 + 320.",
+        "en": "The last digit is right; check 640 + 320."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "sandauga",
+        "ru": "произведение",
+        "en": "product",
+        "value": "960",
+        "find": true
+      },
+      "op": "+",
+      "kids": [
+        {
+          "lbl": {
+            "lt": "64 · 10",
+            "ru": "64 · 10",
+            "en": "64 · 10",
+            "value": "640",
+            "find": true
+          }
+        },
+        {
+          "lbl": {
+            "lt": "64 · 5",
+            "ru": "64 · 5",
+            "en": "64 · 5",
+            "value": "320",
+            "find": true
+          }
+        }
+      ]
+    }
+  },
+  "see": [
+    "times-table",
+    "column"
+  ]
+}

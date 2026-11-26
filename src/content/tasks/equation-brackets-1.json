@@ -1,0 +1,108 @@
+{
+  "subject": "math",
+  "topic": "equations",
+  "group": "equations",
+  "grade": 4,
+  "level": 3,
+  "lt": "Apskaičiuok lygties sprendinį: (m − 15) · 6 = 72.",
+  "translation": {
+    "ru": "Найди корень уравнения: (m − 15) · 6 = 72.",
+    "en": "Find the solution of the equation: (m − 15) · 6 = 72."
+  },
+  "steps": {
+    "ru": [
+      "Скобка — неизвестный множитель: (m − 15) = 72 : 6 = 12.",
+      "m − 15 = 12, значит m = 12 + 15 = 27.",
+      "Проверка: (27 − 15) · 6 = 12 · 6 = 72."
+    ],
+    "en": [
+      "The bracket is an unknown factor: (m − 15) = 72 : 6 = 12.",
+      "m − 15 = 12, so m = 12 + 15 = 27.",
+      "Check: (27 − 15) · 6 = 12 · 6 = 72."
+    ]
+  },
+  "answer": "m = 27",
+  "check": [
+    "27"
+  ],
+  "keywords": [
+    "lygties sprendinį"
+  ],
+  "mistakes": [
+    {
+      "value": "12",
+      "hint": {
+        "ru": "12 — это значение скобки m − 15. Остался ещё шаг: m = 12 + 15.",
+        "en": "12 is the value of the bracket m − 15. One more step: m = 12 + 15."
+      }
+    },
+    {
+      "value": "-3",
+      "hint": {
+        "ru": "Ты вычел 15. Если m − 15 = 12, то m больше 12: m = 12 + 15.",
+        "en": "You subtracted 15. If m − 15 = 12, m is bigger than 12: m = 12 + 15."
+      }
+    },
+    {
+      "value": "87",
+      "hint": {
+        "ru": "Сначала делим на 6 (скобка — множитель), потом прибавляем 15.",
+        "en": "First divide by 6 (the bracket is a factor), then add 15."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "sandauga",
+        "ru": "произведение",
+        "en": "product",
+        "value": "72"
+      },
+      "op": "·",
+      "kids": [
+        {
+          "lbl": {
+            "lt": "skliaustai",
+            "ru": "скобка",
+            "en": "bracket",
+            "value": "m − 15 = 12",
+            "find": true
+          },
+          "op": "−",
+          "kids": [
+            {
+              "lbl": {
+                "lt": "nežinomasis",
+                "ru": "неизвестное",
+                "en": "unknown",
+                "value": "m = 27",
+                "find": true
+              }
+            },
+            {
+              "lbl": {
+                "lt": "atėmėme",
+                "ru": "вычли",
+                "en": "subtracted",
+                "value": "15"
+              }
+            }
+          ]
+        },
+        {
+          "lbl": {
+            "lt": "daugiklis",
+            "ru": "множитель",
+            "en": "factor",
+            "value": "6"
+          }
+        }
+      ]
+    }
+  },
+  "see": [
+    "times-table"
+  ]
+}
