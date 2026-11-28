@@ -7,6 +7,8 @@ import type { Scheme } from '../../../lib/scheme';
 import { getCollection } from 'astro:content';
 import { languages, t, type Lang, base } from '../../../i18n/ui';
 import type { Subject } from '../../../lib/subjects';
+import { frequency } from '../../../lib/frequency';
+import { wordsInText } from '../../../lib/pos';
 
 export async function getStaticPaths() {
   const tasks = await getCollection('tasks');
@@ -19,9 +21,10 @@ const tr = t(lang);
 const { entry } = Astro.props;
 const d = entry.data;
 
-// Terms of the task's topic first, then the general task-wording terms.
+// Terms of the task's topic first, then the general ones: task wording and the small words.
+const general = ['task-wording', 'small-words'];
 const glossaries = (await getCollection('glossary'))
-  .filter((g) => g.id === d.topic || g.id === 'task-wording')
+  .filter((g) => g.id === d.topic || general.includes(g.id))
   .sort((a, b) => Number(b.id === d.topic) - Number(a.id === d.topic));
 
 const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]!));
@@ -44,6 +47,12 @@ const words = glossaries.flatMap((g) => g.data.terms).filter((term) => {
   seen.add(term.lt);
   return true;
 });
+// Words of real textbook tasks met in this text that no glossary row above explains, most frequent first.
+const explained = new Set(words.flatMap((w) => w.lt.toLowerCase().match(/[\p{L}\p{M}]+/gu) ?? []));
+const often = wordsInText(frequency.words, d.lt, explained).slice(0, 8);
+// The form as written in this task, when it is not the dictionary form: "būti (yra)".
+const ltLower = new Set(d.lt.toLowerCase().match(/[\p{L}\p{M}]+/gu) ?? []);
+const asWritten = (w: { lemma: string; forms: string[] }) => w.forms.find((f) => ltLower.has(f.toLowerCase()) && f.toLowerCase() !== w.lemma.toLowerCase());
 // A unit only for typed numeric answers: "2 500 m²" → "m²".
 // Visual maths pages that show the idea behind this task.
 const v = visual[lang];
@@ -72,6 +81,20 @@ const unit = d.choices || !/^\d/.test(d.answer) ? undefined : d.answer.replace(/
       <table class="terms">
         <tbody>
           {words.map((w) => (<tr><td><strong>{w.lt}</strong></td><td>{w[lang]}</td></tr>))}
+        </tbody>
+      </table>
+    </>
+  )}
+
+  {often.length > 0 && (
+    <>
+      <h2>{tr.oftenWords}</h2>
+      <p class="note">{tr.oftenWordsLead} <a href={`${base}/${lang}/words/`}>{tr.topWords}</a></p>
+      <table class="terms">
+        <tbody>
+          {often.map((w) => (
+            <tr><td><strong lang="lt">{w.lemma}</strong>{asWritten(w) && <span class="note" lang="lt"> ({asWritten(w)})</span>}</td><td>{w[lang]}</td><td class="note nowrap">{tr.inTasks.replace('{count}', String(w.tasks)).replace('{total}', String(frequency.tasks))}</td></tr>
+          ))}
         </tbody>
       </table>
     </>

@@ -39,3 +39,11 @@ export function studyDeck(words: RankedWord[], filter: Filter) {
   const rest = words.filter((w) => !picked.includes(w));
   return [...picked, ...rest].slice(0, DECK_SIZE);
 }
+
+// Ranked words met in a task text, most frequent first. Forms are the exact spellings seen in real
+// tasks, so a word matches only as written; `skip` holds words the glossary rows already explain.
+export function wordsInText(words: RankedWord[], text: string, skip: Set<string> = new Set(), minTasks = 3): RankedWord[] {
+  const seen = new Set(text.toLowerCase().match(/[\p{L}\p{M}]+/gu) ?? []);
+  return words.filter((w) => w.tasks >= minTasks && !skip.has(w.lemma.toLowerCase())
+    && !w.forms.some((f) => skip.has(f.toLowerCase())) && w.forms.some((f) => seen.has(f.toLowerCase())));
+}

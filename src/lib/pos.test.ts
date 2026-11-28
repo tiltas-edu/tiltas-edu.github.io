@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { forSubject, type RankedWord } from './pos';
+import { forSubject, wordsInText, type RankedWord } from './pos';
 import { frequency } from './frequency';
 
 const word = (lemma: string, tasks: number, bySubject: Record<string, number>): RankedWord =>
@@ -25,5 +25,18 @@ describe('public ranking', () => {
       for (const [s, n] of Object.entries(w.bySubject)) expect(n).toBeLessThanOrEqual(frequency.subjects[s]);
     }
     expect(Object.values(frequency.subjects).reduce((a, b) => a + b, 0)).toBe(frequency.tasks);
+  });
+});
+
+describe('wordsInText', () => {
+  const w = (lemma: string, forms: string[], tasks: number): RankedWord => ({ lemma, pos: 'other', ru: '', en: '', forms, tasks, bySubject: {} });
+  const words = [w('apskaičiuoti', ['apskaičiuok'], 48), w('kiekvienas', ['kiekvienoje', 'kiekvieną'], 19), w('retas', ['retą'], 2)];
+
+  it('finds the forms written in the text, most frequent first, and skips rare words', () => {
+    expect(wordsInText(words, 'Kiekvienoje dėžėje po 6. Apskaičiuok, retą.').map((x) => x.lemma)).toEqual(['apskaičiuoti', 'kiekvienas']);
+  });
+  it('does not match a part of a word or a word the glossary already explains', () => {
+    expect(wordsInText(words, 'kiekvienoj apskaičiuokime')).toEqual([]);
+    expect(wordsInText(words, 'Apskaičiuok kiekvieną', new Set(['apskaičiuok'])).map((x) => x.lemma)).toEqual(['kiekvienas']);
   });
 });
