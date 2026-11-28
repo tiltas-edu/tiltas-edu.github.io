@@ -1,0 +1,87 @@
+{
+  "subject": "math",
+  "topic": "chance",
+  "group": "chance",
+  "grade": 4,
+  "level": 2,
+  "lt": "Maišelyje yra 4 raudoni ir 2 mėlyni kamuoliukai. Nežiūrėdamas ištrauki vieną kamuoliuką. Kuris įvykis būtinas?",
+  "translation": {
+    "ru": "В мешочке 4 красных и 2 синих шарика. Не глядя, ты вытаскиваешь один шарик. Какое событие обязательно произойдёт?",
+    "en": "A bag has 4 red and 2 blue balls. Without looking you take out one ball. Which event is certain?"
+  },
+  "steps": {
+    "ru": [
+      "Būtinas įvykis — то, что случится обязательно.",
+      "Все 6 шариков красные или синие. Значит, вытащенный шарик точно будет красным или синим."
+    ],
+    "en": [
+      "A būtinas įvykis is something that is sure to happen.",
+      "All 6 balls are red or blue. So the ball you take is sure to be red or blue."
+    ]
+  },
+  "answer": "Kamuoliukas bus raudonas arba mėlynas",
+  "check": [
+    "Kamuoliukas bus raudonas arba mėlynas"
+  ],
+  "keywords": [
+    "būtinas",
+    "įvykis",
+    "nežiūrėdamas"
+  ],
+  "mistakes": [
+    {
+      "value": "Kamuoliukas bus raudonas",
+      "hint": {
+        "ru": "Красный вероятен, но не обязателен: можно вытащить синий.",
+        "en": "Red is likely but not sure: you could take a blue one."
+      }
+    },
+    {
+      "value": "Kamuoliukas bus žalias",
+      "hint": {
+        "ru": "Зелёных в мешочке нет — это невозможное событие.",
+        "en": "There are no green balls in the bag: that event is impossible."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "bar",
+    "total": {
+      "lt": "visi kamuoliukai",
+      "ru": "все шарики",
+      "en": "all balls",
+      "value": "6",
+      "find": true
+    },
+    "parts": [
+      {
+        "w": 4,
+        "lbl": {
+          "lt": "raudoni",
+          "ru": "красные",
+          "en": "red",
+          "value": "4"
+        },
+        "mark": false
+      },
+      {
+        "w": 2,
+        "lbl": {
+          "lt": "mėlyni",
+          "ru": "синие",
+          "en": "blue",
+          "value": "2"
+        },
+        "mark": false
+      }
+    ]
+  },
+  "see": [
+    "fractions"
+  ],
+  "choices": [
+    "Kamuoliukas bus raudonas",
+    "Kamuoliukas bus raudonas arba mėlynas",
+    "Kamuoliukas bus žalias"
+  ]
+}

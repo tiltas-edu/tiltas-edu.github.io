@@ -1,0 +1,89 @@
+{
+  "subject": "math",
+  "topic": "triangles",
+  "group": "triangles",
+  "grade": 4,
+  "level": 1,
+  "lt": "Lygiakraščio trikampio kraštinė yra 14 cm. Apskaičiuok šio trikampio perimetrą.",
+  "translation": {
+    "ru": "Сторона равностороннего треугольника 14 см. Вычисли периметр этого треугольника.",
+    "en": "The side of an equilateral triangle is 14 cm. Calculate the perimeter of this triangle."
+  },
+  "steps": {
+    "ru": [
+      "У равностороннего треугольника все 3 стороны равны.",
+      "P = 14 · 3 = 42 (см)."
+    ],
+    "en": [
+      "An equilateral triangle has all 3 sides equal.",
+      "P = 14 · 3 = 42 (cm)."
+    ]
+  },
+  "answer": "42 cm",
+  "check": [
+    "42"
+  ],
+  "keywords": [
+    "lygiakraščio",
+    "trikampio",
+    "perimetrą"
+  ],
+  "mistakes": [
+    {
+      "value": "28",
+      "hint": {
+        "ru": "28 — это две стороны. У треугольника их 3.",
+        "en": "28 is two sides. A triangle has 3."
+      }
+    },
+    {
+      "value": "56",
+      "hint": {
+        "ru": "56 = 14 · 4 — так считают периметр квадрата. У треугольника 3 стороны.",
+        "en": "56 = 14 · 4 is the perimeter of a square. A triangle has 3 sides."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "perimetras",
+        "ru": "периметр",
+        "en": "perimeter",
+        "value": "42 cm",
+        "find": true
+      },
+      "op": "+",
+      "kids": [
+        {
+          "lbl": {
+            "lt": "kraštinė",
+            "ru": "сторона",
+            "en": "side",
+            "value": "14 cm"
+          }
+        },
+        {
+          "lbl": {
+            "lt": "kraštinė",
+            "ru": "сторона",
+            "en": "side",
+            "value": "14 cm"
+          }
+        },
+        {
+          "lbl": {
+            "lt": "kraštinė",
+            "ru": "сторона",
+            "en": "side",
+            "value": "14 cm"
+          }
+        }
+      ]
+    }
+  },
+  "see": [
+    "formulas"
+  ]
+}

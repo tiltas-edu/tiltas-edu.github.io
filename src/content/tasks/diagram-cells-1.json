@@ -1,0 +1,101 @@
+{
+  "subject": "math",
+  "topic": "data",
+  "group": "data",
+  "grade": 4,
+  "level": 3,
+  "lt": "Diagramoje vienas langelis reiškia 5 mokinius. Futbolo būrelio stulpelis yra 7 langelių aukščio, o šachmatų būrelio – 3 langelių. Kiek iš viso mokinių lanko šiuos du būrelius?",
+  "translation": {
+    "ru": "На диаграмме одна клетка означает 5 учеников. Столбик футбольного кружка высотой 7 клеток, а шахматного — 3 клетки. Сколько всего учеников ходит в эти два кружка?",
+    "en": "In a chart one cell stands for 5 pupils. The football club bar is 7 cells high and the chess club bar is 3 cells. How many pupils go to these two clubs in total?"
+  },
+  "steps": {
+    "ru": [
+      "Клеток вместе: 7 + 3 = 10.",
+      "Каждая клетка — 5 учеников: 10 · 5 = 50."
+    ],
+    "en": [
+      "Cells together: 7 + 3 = 10.",
+      "Each cell is 5 pupils: 10 · 5 = 50."
+    ]
+  },
+  "answer": "50 mokinių",
+  "check": [
+    "50"
+  ],
+  "keywords": [
+    "langelis reiškia",
+    "stulpelis",
+    "iš viso"
+  ],
+  "mistakes": [
+    {
+      "value": "10",
+      "hint": {
+        "ru": "10 — это клетки. Одна клетка — 5 учеников: 10 · 5.",
+        "en": "10 is the cells. One cell is 5 pupils: 10 · 5."
+      }
+    },
+    {
+      "value": "35",
+      "hint": {
+        "ru": "35 — только футбол (7 · 5). Добавь шахматы: 3 · 5.",
+        "en": "35 is football only (7 · 5). Add chess: 3 · 5."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "mokinių iš viso",
+        "ru": "учеников всего",
+        "en": "pupils in total",
+        "value": "50",
+        "find": true
+      },
+      "op": "·",
+      "kids": [
+        {
+          "lbl": {
+            "lt": "langelių",
+            "ru": "клеток",
+            "en": "cells",
+            "value": "10",
+            "find": true
+          },
+          "op": "+",
+          "kids": [
+            {
+              "lbl": {
+                "lt": "futbolas",
+                "ru": "футбол",
+                "en": "football",
+                "value": "7"
+              }
+            },
+            {
+              "lbl": {
+                "lt": "šachmatai",
+                "ru": "шахматы",
+                "en": "chess",
+                "value": "3"
+              }
+            }
+          ]
+        },
+        {
+          "lbl": {
+            "lt": "vienas langelis",
+            "ru": "одна клетка",
+            "en": "one cell",
+            "value": "5"
+          }
+        }
+      ]
+    }
+  },
+  "see": [
+    "times-table"
+  ]
+}

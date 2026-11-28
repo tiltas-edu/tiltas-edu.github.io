@@ -1,0 +1,101 @@
+{
+  "subject": "math",
+  "topic": "data",
+  "group": "data",
+  "grade": 4,
+  "level": 1,
+  "lt": "Lentelėje užrašyta, kiek knygų iš bibliotekos paėmė ketvirtokai: pirmadienį – 12, antradienį – 9, trečiadienį – 15, ketvirtadienį – 6. Kiek knygų jie paėmė per šias keturias dienas?",
+  "translation": {
+    "ru": "В таблице записано, сколько книг взяли в библиотеке четвероклассники: в понедельник 12, во вторник 9, в среду 15, в четверг 6. Сколько книг они взяли за эти четыре дня?",
+    "en": "A table shows how many library books the fourth-graders took: Monday 12, Tuesday 9, Wednesday 15, Thursday 6. How many books did they take over these four days?"
+  },
+  "steps": {
+    "ru": [
+      "«Per keturias dienas» — складываем все четыре числа.",
+      "Удобно парами: 12 + 9 = 21, 15 + 6 = 21. 21 + 21 = 42."
+    ],
+    "en": [
+      "\"Over four days\" means add all four numbers.",
+      "Pairs are easy: 12 + 9 = 21, 15 + 6 = 21. 21 + 21 = 42."
+    ]
+  },
+  "answer": "42 knygos",
+  "check": [
+    "42"
+  ],
+  "keywords": [
+    "lentelėje",
+    "per šias keturias dienas"
+  ],
+  "mistakes": [
+    {
+      "value": "36",
+      "hint": {
+        "ru": "Ты сложил три дня. Не забудь четверг: ещё 6.",
+        "en": "You added three days. Do not forget Thursday: 6 more."
+      }
+    },
+    {
+      "value": "15",
+      "hint": {
+        "ru": "15 — самый большой день. Спрашивают про все дни вместе.",
+        "en": "15 is the biggest day. The task asks about all days together."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "bar",
+    "total": {
+      "lt": "iš viso",
+      "ru": "всего",
+      "en": "in total",
+      "value": "42",
+      "find": true
+    },
+    "parts": [
+      {
+        "w": 12,
+        "lbl": {
+          "lt": "pirmadienį",
+          "ru": "в понедельник",
+          "en": "Monday",
+          "value": "12"
+        },
+        "mark": false
+      },
+      {
+        "w": 9,
+        "lbl": {
+          "lt": "antradienį",
+          "ru": "во вторник",
+          "en": "Tuesday",
+          "value": "9"
+        },
+        "mark": false
+      },
+      {
+        "w": 15,
+        "lbl": {
+          "lt": "trečiadienį",
+          "ru": "в среду",
+          "en": "Wednesday",
+          "value": "15"
+        },
+        "mark": false
+      },
+      {
+        "w": 6,
+        "lbl": {
+          "lt": "ketvirtadienį",
+          "ru": "в четверг",
+          "en": "Thursday",
+          "value": "6"
+        },
+        "mark": false
+      }
+    ]
+  },
+  "see": [
+    "column"
+  ]
+}

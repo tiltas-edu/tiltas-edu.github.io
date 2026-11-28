@@ -1,0 +1,86 @@
+{
+  "subject": "math",
+  "topic": "chance",
+  "group": "chance",
+  "grade": 4,
+  "level": 1,
+  "lt": "Maišelyje yra 7 geltoni ir 2 balti saldainiai. Nežiūrėdamas ištrauki vieną saldainį. Kokios spalvos saldainį labiau tikėtina ištraukti?",
+  "translation": {
+    "ru": "В мешочке 7 жёлтых и 2 белые конфеты. Не глядя, ты вытаскиваешь одну. Конфету какого цвета вытащить вероятнее?",
+    "en": "A bag has 7 yellow and 2 white sweets. Without looking you take out one. Which colour are you more likely to take?"
+  },
+  "steps": {
+    "ru": [
+      "Labiau tikėtina — то, чего больше.",
+      "Жёлтых 7, белых 2. Жёлтых больше — жёлтую вытащить вероятнее."
+    ],
+    "en": [
+      "Labiau tikėtina means more likely: the colour there is more of.",
+      "7 yellow, 2 white. There are more yellow, so yellow is more likely."
+    ]
+  },
+  "answer": "Geltoną",
+  "check": [
+    "Geltoną"
+  ],
+  "keywords": [
+    "labiau tikėtina",
+    "nežiūrėdamas"
+  ],
+  "mistakes": [
+    {
+      "value": "Baltą",
+      "hint": {
+        "ru": "Белых только 2 из 9 — их вытащить труднее.",
+        "en": "Only 2 of 9 are white: they are harder to take."
+      }
+    },
+    {
+      "value": "Abiejų spalvų vienodai",
+      "hint": {
+        "ru": "Вероятность одинакова, только когда конфет поровну. Здесь 7 и 2.",
+        "en": "The chances are equal only when there are as many of each. Here it is 7 and 2."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "bar",
+    "total": {
+      "lt": "visi saldainiai",
+      "ru": "все конфеты",
+      "en": "all sweets",
+      "value": "9"
+    },
+    "parts": [
+      {
+        "w": 7,
+        "lbl": {
+          "lt": "geltoni",
+          "ru": "жёлтые",
+          "en": "yellow",
+          "value": "7",
+          "find": true
+        },
+        "mark": true
+      },
+      {
+        "w": 2,
+        "lbl": {
+          "lt": "balti",
+          "ru": "белые",
+          "en": "white",
+          "value": "2"
+        },
+        "mark": false
+      }
+    ]
+  },
+  "see": [
+    "fractions"
+  ],
+  "choices": [
+    "Geltoną",
+    "Baltą",
+    "Abiejų spalvų vienodai"
+  ]
+}

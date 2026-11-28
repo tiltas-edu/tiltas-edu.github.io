@@ -1,0 +1,91 @@
+{
+  "subject": "math",
+  "topic": "fractions",
+  "group": "fractions",
+  "grade": 4,
+  "level": 2,
+  "lt": "Šeštadalis (1/6) juostelės yra 9 cm ilgio. Kokio ilgio visa juostelė?",
+  "translation": {
+    "ru": "Шестая часть (1/6) ленточки длиной 9 см. Какой длины вся ленточка?",
+    "en": "One sixth (1/6) of a ribbon is 9 cm long. How long is the whole ribbon?"
+  },
+  "steps": {
+    "ru": [
+      "Вся ленточка — это 6 таких частей по 9 см.",
+      "9 · 6 = 54 (см)."
+    ],
+    "en": [
+      "The whole ribbon is 6 such parts of 9 cm.",
+      "9 · 6 = 54 (cm)."
+    ]
+  },
+  "answer": "54 cm",
+  "check": [
+    "54"
+  ],
+  "keywords": [
+    "šeštadalis",
+    "visa"
+  ],
+  "mistakes": [
+    {
+      "value": "15",
+      "hint": {
+        "ru": "Ты сложил 9 + 6. Целое — это 6 частей по 9 см: умножай.",
+        "en": "You added 9 + 6. The whole is 6 parts of 9 cm, so multiply."
+      }
+    },
+    {
+      "value": "9",
+      "hint": {
+        "ru": "9 см — только одна шестая. Частей 6.",
+        "en": "9 cm is only one sixth. There are 6 parts."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "bar",
+    "total": {
+      "lt": "visa juostelė",
+      "ru": "вся ленточка",
+      "en": "the whole ribbon",
+      "value": "54 cm",
+      "find": true
+    },
+    "parts": [
+      {
+        "w": 1,
+        "lbl": {
+          "lt": "1/6",
+          "ru": "1/6",
+          "en": "1/6",
+          "value": "9 cm"
+        },
+        "mark": true
+      },
+      {
+        "w": 1,
+        "mark": false
+      },
+      {
+        "w": 1,
+        "mark": false
+      },
+      {
+        "w": 1,
+        "mark": false
+      },
+      {
+        "w": 1,
+        "mark": false
+      },
+      {
+        "w": 1,
+        "mark": false
+      }
+    ]
+  },
+  "see": [
+    "fractions"
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "subject": "math",
+  "topic": "data",
+  "group": "data",
+  "grade": 4,
+  "level": 2,
+  "lt": "Stulpelinėje diagramoje pavaizduota, kiek kilogramų obuolių surinko trys šeimos: Petraičiai – 45 kg, Jonaičiai – 30 kg, Kazlauskai – 60 kg. Keliais kilogramais daugiau surinko daugiausia surinkusi šeima negu mažiausiai surinkusi?",
+  "translation": {
+    "ru": "На столбчатой диаграмме показано, сколько килограммов яблок собрали три семьи: Пятрайтисы 45 кг, Йонайтисы 30 кг, Казлаускасы 60 кг. На сколько килограммов больше собрала семья, собравшая больше всех, чем семья, собравшая меньше всех?",
+    "en": "A bar chart shows how many kilograms of apples three families picked: the Petraičiai 45 kg, the Jonaičiai 30 kg, the Kazlauskai 60 kg. How many kilograms more did the family that picked the most get than the family that picked the least?"
+  },
+  "steps": {
+    "ru": [
+      "Больше всех: Kazlauskai, 60 кг (самый высокий столбик). Меньше всех: Jonaičiai, 30 кг.",
+      "«Keliais daugiau» — вычитаем: 60 − 30 = 30 (кг)."
+    ],
+    "en": [
+      "The most: the Kazlauskai, 60 kg (the tallest bar). The least: the Jonaičiai, 30 kg.",
+      "\"How many more\" means subtract: 60 − 30 = 30 (kg)."
+    ]
+  },
+  "answer": "30 kg",
+  "check": [
+    "30"
+  ],
+  "keywords": [
+    "stulpelinėje diagramoje",
+    "daugiausia",
+    "mažiausiai",
+    "keliais daugiau"
+  ],
+  "mistakes": [
+    {
+      "value": "15",
+      "hint": {
+        "ru": "15 = 60 − 45: это разница с Petraičiai. Меньше всех собрали Jonaičiai (30 кг).",
+        "en": "15 = 60 − 45 is the gap to the Petraičiai. The Jonaičiai picked the least (30 kg)."
+      }
+    },
+    {
+      "value": "135",
+      "hint": {
+        "ru": "Ты сложил всё. «Keliais daugiau» — это разность: 60 − 30.",
+        "en": "You added everything. \"How many more\" is a difference: 60 − 30."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "bar",
+    "total": {
+      "lt": "daugiausia (Kazlauskai)",
+      "ru": "больше всех (Казлаускасы)",
+      "en": "the most (Kazlauskai)",
+      "value": "60 kg"
+    },
+    "parts": [
+      {
+        "w": 30,
+        "lbl": {
+          "lt": "mažiausiai (Jonaičiai)",
+          "ru": "меньше всех (Йонайтисы)",
+          "en": "the least (Jonaičiai)",
+          "value": "30 kg"
+        },
+        "mark": false
+      },
+      {
+        "w": 30,
+        "lbl": {
+          "lt": "skirtumas",
+          "ru": "разность",
+          "en": "difference",
+          "value": "30 kg",
+          "find": true
+        },
+        "mark": true
+      }
+    ]
+  },
+  "see": [
+    "column"
+  ]
+}

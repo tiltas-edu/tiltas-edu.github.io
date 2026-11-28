@@ -1,0 +1,106 @@
+{
+  "subject": "math",
+  "title": {
+    "ru": "Числа до 10 000",
+    "en": "Numbers to 10 000"
+  },
+  "terms": [
+    {
+      "lt": "skaičius",
+      "ru": "число",
+      "en": "number",
+      "like": [
+        "skyrius"
+      ]
+    },
+    {
+      "lt": "skaitmuo",
+      "ru": "цифра",
+      "en": "digit",
+      "note": {
+        "ru": "В числе 7 049 четыре цифры (skaitmenys): 7, 0, 4, 9.",
+        "en": "7 049 has four digits (skaitmenys): 7, 0, 4, 9."
+      }
+    },
+    {
+      "lt": "tūkstančiai",
+      "ru": "тысячи",
+      "en": "thousands"
+    },
+    {
+      "lt": "šimtai",
+      "ru": "сотни",
+      "en": "hundreds"
+    },
+    {
+      "lt": "dešimtys",
+      "ru": "десятки",
+      "en": "tens"
+    },
+    {
+      "lt": "vienetai",
+      "ru": "единицы",
+      "en": "ones"
+    },
+    {
+      "lt": "skyrius",
+      "ru": "разряд",
+      "en": "place (of a digit)",
+      "note": {
+        "ru": "Не путай: skyrius (разряд) и skaičius (число).",
+        "en": "Do not mix up skyrius (place) and skaičius (number)."
+      },
+      "like": [
+        "skaičius"
+      ]
+    },
+    {
+      "lt": "keturženklis skaičius",
+      "ru": "четырёхзначное число",
+      "en": "four-digit number",
+      "note": {
+        "ru": "От 1 000 до 9 999.",
+        "en": "From 1 000 to 9 999."
+      }
+    },
+    {
+      "lt": "suapvalink",
+      "ru": "округли",
+      "en": "round"
+    },
+    {
+      "lt": "šimtų tikslumu",
+      "ru": "до сотен",
+      "en": "to the nearest hundred",
+      "note": {
+        "ru": "Смотрим на цифру десятков: 0–4 — вниз, 5–9 — вверх.",
+        "en": "Look at the tens digit: 0–4 round down, 5–9 round up."
+      }
+    },
+    {
+      "lt": "didžiausias",
+      "ru": "самый большой",
+      "en": "largest",
+      "like": [
+        "mažiausias"
+      ]
+    },
+    {
+      "lt": "mažiausias",
+      "ru": "самый маленький",
+      "en": "smallest",
+      "like": [
+        "didžiausias"
+      ]
+    },
+    {
+      "lt": "kiek didesnis",
+      "ru": "на сколько больше",
+      "en": "how much bigger",
+      "note": {
+        "ru": "Ищем разность: вычитаем.",
+        "en": "We look for the difference: subtract."
+      }
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "subject": "math",
+  "title": {
+    "ru": "Доли и дроби",
+    "en": "Fractions"
+  },
+  "terms": [
+    {
+      "lt": "trupmena",
+      "ru": "дробь",
+      "en": "fraction"
+    },
+    {
+      "lt": "skaitiklis",
+      "ru": "числитель",
+      "en": "numerator",
+      "note": {
+        "ru": "Верхнее число: в 3/5 это 3.",
+        "en": "The top number: in 3/5 it is 3."
+      }
+    },
+    {
+      "lt": "vardiklis",
+      "ru": "знаменатель",
+      "en": "denominator",
+      "note": {
+        "ru": "Нижнее число: на сколько частей делим.",
+        "en": "The bottom number: how many parts we cut into."
+      }
+    },
+    {
+      "lt": "lygios dalys",
+      "ru": "равные части",
+      "en": "equal parts"
+    },
+    {
+      "lt": "pusė",
+      "ru": "половина",
+      "en": "half"
+    },
+    {
+      "lt": "trečdalis",
+      "ru": "треть",
+      "en": "third"
+    },
+    {
+      "lt": "ketvirtadalis",
+      "ru": "четверть",
+      "en": "quarter"
+    },
+    {
+      "lt": "penktadalis",
+      "ru": "пятая часть",
+      "en": "fifth"
+    },
+    {
+      "lt": "šeštadalis",
+      "ru": "шестая часть",
+      "en": "sixth"
+    },
+    {
+      "lt": "aštuntadalis",
+      "ru": "восьмая часть",
+      "en": "eighth"
+    },
+    {
+      "lt": "visuma",
+      "ru": "целое",
+      "en": "the whole"
+    },
+    {
+      "lt": "perskaitė",
+      "ru": "прочитал(а)",
+      "en": "has read"
+    }
+  ]
+}

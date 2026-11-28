@@ -1,0 +1,77 @@
+{
+  "subject": "math",
+  "topic": "chance",
+  "group": "chance",
+  "grade": 4,
+  "level": 1,
+  "lt": "Metamas lošimo kauliukas. Ant jo sienelių yra nuo 1 iki 6 akučių. Kuris įvykis negalimas?",
+  "translation": {
+    "ru": "Бросают игральный кубик. На его гранях от 1 до 6 точек. Какое событие невозможно?",
+    "en": "A dice is thrown. Its faces have from 1 to 6 dots. Which event is impossible?"
+  },
+  "steps": {
+    "ru": [
+      "Negalimas įvykis — то, что не может случиться никогда.",
+      "На кубике есть 1, 2, 3, 4, 5 и 6 точек. 7 точек нет ни на одной грани."
+    ],
+    "en": [
+      "A negalimas įvykis is something that can never happen.",
+      "The dice has 1, 2, 3, 4, 5 and 6 dots. No face has 7 dots."
+    ]
+  },
+  "answer": "Iškris 7 akutės",
+  "check": [
+    "Iškris 7 akutės"
+  ],
+  "keywords": [
+    "negalimas",
+    "įvykis",
+    "akučių"
+  ],
+  "mistakes": [
+    {
+      "value": "Iškris 1 akutė",
+      "hint": {
+        "ru": "Грань с 1 точкой есть, так может выпасть. Это galimas (возможное) событие.",
+        "en": "There is a face with 1 dot, so it can happen. It is a galimas (possible) event."
+      }
+    },
+    {
+      "value": "Iškris 6 akutės",
+      "hint": {
+        "ru": "Грань с 6 точками есть — событие возможное.",
+        "en": "There is a face with 6 dots, so the event is possible."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "negalimas įvykis",
+        "ru": "невозможное событие",
+        "en": "impossible event",
+        "value": "7 akutės",
+        "find": true
+      },
+      "kids": [
+        {
+          "lbl": {
+            "lt": "sienelės",
+            "ru": "грани",
+            "en": "faces",
+            "value": "1, 2, 3, 4, 5, 6"
+          }
+        }
+      ]
+    }
+  },
+  "see": [
+    "fractions"
+  ],
+  "choices": [
+    "Iškris 1 akutė",
+    "Iškris 6 akutės",
+    "Iškris 7 akutės"
+  ]
+}

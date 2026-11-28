@@ -1,0 +1,66 @@
+{
+  "subject": "math",
+  "topic": "triangles",
+  "group": "triangles",
+  "grade": 4,
+  "level": 1,
+  "lt": "Vienas trikampio kampas yra status (90°). Koks tai trikampis?",
+  "translation": {
+    "ru": "Один угол треугольника прямой (90°). Какой это треугольник?",
+    "en": "One angle of a triangle is a right angle (90°). What kind of triangle is it?"
+  },
+  "steps": {
+    "ru": [
+      "По углам треугольники бывают: statusis (есть прямой угол), bukasis (есть тупой), smailusis (все углы острые).",
+      "Есть прямой угол — statusis (прямоугольный)."
+    ],
+    "en": [
+      "By angles a triangle is statusis (it has a right angle), bukasis (it has an obtuse angle) or smailusis (all angles are acute).",
+      "It has a right angle, so it is statusis (right-angled)."
+    ]
+  },
+  "answer": "Statusis",
+  "check": [
+    "Statusis"
+  ],
+  "keywords": [
+    "kampas",
+    "status"
+  ],
+  "mistakes": [
+    {
+      "value": "Smailusis",
+      "hint": {
+        "ru": "Smailusis — все углы острые, меньше 90°. Здесь есть угол 90°.",
+        "en": "Smailusis means all angles are acute, less than 90°. Here one is 90°."
+      }
+    },
+    {
+      "value": "Bukasis",
+      "hint": {
+        "ru": "Bukasis — есть угол больше 90°. Прямой угол ровно 90°.",
+        "en": "Bukasis means one angle is more than 90°. A right angle is exactly 90°."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "status kampas",
+        "ru": "прямой угол",
+        "en": "right angle",
+        "value": "90°",
+        "find": true
+      }
+    }
+  },
+  "see": [
+    "formulas"
+  ],
+  "choices": [
+    "Statusis",
+    "Smailusis",
+    "Bukasis"
+  ]
+}

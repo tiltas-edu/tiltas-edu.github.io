@@ -1,0 +1,83 @@
+{
+  "subject": "math",
+  "topic": "chance",
+  "group": "chance",
+  "grade": 4,
+  "level": 3,
+  "lt": "Dėžėje yra 5 raudonos ir 5 žalios kojinės. Tamsoje imi kojines nežiūrėdamas. Kiek mažiausiai kojinių reikia paimti, kad tikrai turėtum dvi tos pačios spalvos kojines?",
+  "translation": {
+    "ru": "В ящике 5 красных и 5 зелёных носков. В темноте ты берёшь носки не глядя. Какое наименьшее число носков надо взять, чтобы точно было два носка одного цвета?",
+    "en": "A box has 5 red and 5 green socks. In the dark you take socks without looking. What is the smallest number of socks you must take to be sure of two socks of the same colour?"
+  },
+  "steps": {
+    "ru": [
+      "Самый неудачный случай: первые два носка разных цветов (красный и зелёный).",
+      "Третий носок будет красным или зелёным — и совпадёт с одним из них.",
+      "Значит, 2 + 1 = 3."
+    ],
+    "en": [
+      "The unluckiest case: the first two socks are different (one red, one green).",
+      "The third sock is red or green, so it matches one of them.",
+      "So 2 + 1 = 3."
+    ]
+  },
+  "answer": "3 kojinės",
+  "check": [
+    "3"
+  ],
+  "keywords": [
+    "mažiausiai",
+    "tikrai",
+    "tos pačios spalvos"
+  ],
+  "mistakes": [
+    {
+      "value": "2",
+      "hint": {
+        "ru": "Двух мало: они могут оказаться разного цвета. «Tikrai» — даже в самом неудачном случае.",
+        "en": "Two are not enough: they can be different colours. \"Tikrai\" means even in the unluckiest case."
+      }
+    },
+    {
+      "value": "6",
+      "hint": {
+        "ru": "Так тоже получится, но можно меньше. Подумай: первые два разные, а третий?",
+        "en": "That works too, but fewer are enough. Think: the first two differ, and the third?"
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "mažiausiai kojinių",
+        "ru": "наименьшее число носков",
+        "en": "fewest socks",
+        "value": "3",
+        "find": true
+      },
+      "op": "+",
+      "kids": [
+        {
+          "lbl": {
+            "lt": "po vieną kiekvienos spalvos",
+            "ru": "по одному каждого цвета",
+            "en": "one of each colour",
+            "value": "2"
+          }
+        },
+        {
+          "lbl": {
+            "lt": "dar viena",
+            "ru": "ещё один",
+            "en": "one more",
+            "value": "1"
+          }
+        }
+      ]
+    }
+  },
+  "see": [
+    "fractions"
+  ]
+}

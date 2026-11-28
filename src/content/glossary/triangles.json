@@ -1,0 +1,93 @@
+{
+  "subject": "math",
+  "title": {
+    "ru": "Треугольники",
+    "en": "Triangles"
+  },
+  "terms": [
+    {
+      "lt": "trikampis",
+      "ru": "треугольник",
+      "en": "triangle"
+    },
+    {
+      "lt": "kraštinė",
+      "ru": "сторона",
+      "en": "side"
+    },
+    {
+      "lt": "kampas",
+      "ru": "угол",
+      "en": "angle"
+    },
+    {
+      "lt": "lygiakraštis",
+      "ru": "равносторонний",
+      "en": "equilateral",
+      "note": {
+        "ru": "Все 3 стороны равны.",
+        "en": "All 3 sides are equal."
+      }
+    },
+    {
+      "lt": "lygiašonis",
+      "ru": "равнобедренный",
+      "en": "isosceles",
+      "note": {
+        "ru": "2 стороны равны.",
+        "en": "2 sides are equal."
+      }
+    },
+    {
+      "lt": "įvairiakraštis",
+      "ru": "разносторонний",
+      "en": "scalene",
+      "note": {
+        "ru": "Все стороны разные.",
+        "en": "All sides differ."
+      }
+    },
+    {
+      "lt": "šoninė kraštinė",
+      "ru": "боковая сторона",
+      "en": "equal side (of an isosceles triangle)"
+    },
+    {
+      "lt": "pagrindas",
+      "ru": "основание",
+      "en": "base"
+    },
+    {
+      "lt": "status kampas",
+      "ru": "прямой угол",
+      "en": "right angle",
+      "note": {
+        "ru": "Ровно 90°, как угол тетради.",
+        "en": "Exactly 90°, like the corner of a notebook."
+      }
+    },
+    {
+      "lt": "statusis trikampis",
+      "ru": "прямоугольный треугольник",
+      "en": "right-angled triangle"
+    },
+    {
+      "lt": "smailusis trikampis",
+      "ru": "остроугольный треугольник",
+      "en": "acute triangle",
+      "note": {
+        "ru": "Все углы меньше 90°.",
+        "en": "All angles are less than 90°."
+      }
+    },
+    {
+      "lt": "bukasis trikampis",
+      "ru": "тупоугольный треугольник",
+      "en": "obtuse triangle",
+      "note": {
+        "ru": "Один угол больше 90°.",
+        "en": "One angle is more than 90°."
+      }
+    }
+  ]
+}

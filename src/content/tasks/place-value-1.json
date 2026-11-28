@@ -1,0 +1,100 @@
+{
+  "subject": "math",
+  "topic": "numbers",
+  "group": "numbers",
+  "grade": 4,
+  "level": 1,
+  "lt": "Užrašyk skaitmenimis skaičių, kuriame yra 7 tūkstančiai, 0 šimtų, 4 dešimtys ir 9 vienetai.",
+  "translation": {
+    "ru": "Запиши цифрами число, в котором 7 тысяч, 0 сотен, 4 десятка и 9 единиц.",
+    "en": "Write in digits the number that has 7 thousands, 0 hundreds, 4 tens and 9 ones."
+  },
+  "steps": {
+    "ru": [
+      "Пишем разряды слева направо: тысячи, сотни, десятки, единицы.",
+      "7 тысяч → 7, сотен нет → 0, 4 десятка → 4, 9 единиц → 9.",
+      "Получаем 7 049 = 7 000 + 40 + 9."
+    ],
+    "en": [
+      "Write the places from left to right: thousands, hundreds, tens, ones.",
+      "7 thousands → 7, no hundreds → 0, 4 tens → 4, 9 ones → 9.",
+      "That gives 7 049 = 7 000 + 40 + 9."
+    ]
+  },
+  "answer": "7 049",
+  "check": [
+    "7049"
+  ],
+  "keywords": [
+    "tūkstančiai",
+    "šimtų",
+    "dešimtys",
+    "vienetai"
+  ],
+  "mistakes": [
+    {
+      "value": "749",
+      "hint": {
+        "ru": "Потерялся ноль: сотен нет, но место для них остаётся. 749 — это всего семь сотен.",
+        "en": "The zero got lost: there are no hundreds, but their place stays. 749 is only seven hundred."
+      }
+    },
+    {
+      "value": "7490",
+      "hint": {
+        "ru": "Цифры сдвинулись: 4 — это десятки, 9 — единицы. Сотни — 0.",
+        "en": "The digits moved: 4 is tens, 9 is ones. The hundreds digit is 0."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "skaičius",
+        "ru": "число",
+        "en": "number",
+        "value": "7 049",
+        "find": true
+      },
+      "op": "+",
+      "kids": [
+        {
+          "lbl": {
+            "lt": "tūkstančiai",
+            "ru": "тысячи",
+            "en": "thousands",
+            "value": "7 000"
+          }
+        },
+        {
+          "lbl": {
+            "lt": "šimtai",
+            "ru": "сотни",
+            "en": "hundreds",
+            "value": "0"
+          }
+        },
+        {
+          "lbl": {
+            "lt": "dešimtys",
+            "ru": "десятки",
+            "en": "tens",
+            "value": "40"
+          }
+        },
+        {
+          "lbl": {
+            "lt": "vienetai",
+            "ru": "единицы",
+            "en": "ones",
+            "value": "9"
+          }
+        }
+      ]
+    }
+  },
+  "see": [
+    "column"
+  ]
+}

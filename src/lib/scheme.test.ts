@@ -34,7 +34,9 @@ describe('task schemes', () => {
       for (const l of all) if (l.lt) expect(l.ru && l.en, `${t.id}: ${l.lt}`).toBeTruthy();
       const asked = all.filter((l) => l.find);
       expect(asked.length, t.id).toBeGreaterThan(0);
-      expect(asked.flatMap((l) => nums(l.value)), t.id).toContain(nums(t.answer)[0]);
+      // A picked option without a number ("Lygiašonis") has no number to match.
+      const n = nums(t.answer)[0];
+      if (n) expect(asked.flatMap((l) => nums(l.value)), t.id).toContain(n);
     });
   }
 });

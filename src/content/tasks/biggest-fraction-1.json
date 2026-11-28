@@ -1,0 +1,84 @@
+{
+  "subject": "math",
+  "topic": "fractions",
+  "group": "fractions",
+  "grade": 4,
+  "level": 1,
+  "lt": "Trys vienodi pyragai padalyti į lygias dalis: pirmasis – į 3, antrasis – į 5, trečiasis – į 8. Kuri dalis didžiausia?",
+  "translation": {
+    "ru": "Три одинаковых пирога разрезали на равные части: первый на 3, второй на 5, третий на 8. Какая часть самая большая?",
+    "en": "Three equal cakes are cut into equal parts: the first into 3, the second into 5, the third into 8. Which part is the biggest?"
+  },
+  "steps": {
+    "ru": [
+      "Чем на большее число частей делим, тем каждая часть меньше.",
+      "Меньше всего частей у первого пирога: 3. Значит, 1/3 — самая большая."
+    ],
+    "en": [
+      "The more parts we cut into, the smaller each part.",
+      "The first cake has the fewest parts, 3. So 1/3 is the biggest."
+    ]
+  },
+  "answer": "Trečdalis",
+  "check": [
+    "Trečdalis"
+  ],
+  "keywords": [
+    "lygias dalis",
+    "didžiausia"
+  ],
+  "mistakes": [
+    {
+      "value": "Aštuntadalis",
+      "hint": {
+        "ru": "8 частей — пирог порезан мельче всего, кусочек самый маленький.",
+        "en": "8 parts: the cake is cut the finest, so the piece is the smallest."
+      }
+    },
+    {
+      "value": "Penktadalis",
+      "hint": {
+        "ru": "1/5 больше, чем 1/8, но меньше, чем 1/3: на 3 части кусочки крупнее.",
+        "en": "1/5 is bigger than 1/8 but smaller than 1/3: cutting into 3 gives bigger pieces."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "bar",
+    "total": {
+      "lt": "visas pyragas",
+      "ru": "весь пирог",
+      "en": "the whole cake",
+      "value": "1"
+    },
+    "parts": [
+      {
+        "w": 1,
+        "lbl": {
+          "lt": "trečdalis",
+          "ru": "треть",
+          "en": "a third",
+          "value": "1/3",
+          "find": true
+        },
+        "mark": true
+      },
+      {
+        "w": 1,
+        "mark": false
+      },
+      {
+        "w": 1,
+        "mark": false
+      }
+    ]
+  },
+  "see": [
+    "fractions"
+  ],
+  "choices": [
+    "Trečdalis",
+    "Penktadalis",
+    "Aštuntadalis"
+  ]
+}

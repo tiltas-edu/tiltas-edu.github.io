@@ -1,0 +1,99 @@
+{
+  "subject": "math",
+  "topic": "numbers",
+  "group": "numbers",
+  "grade": 4,
+  "level": 2,
+  "lt": "Iš skaitmenų 3, 0, 8 ir 5 sudaryk didžiausią keturženklį skaičių. Kiekvieną skaitmenį panaudok vieną kartą.",
+  "translation": {
+    "ru": "Из цифр 3, 0, 8 и 5 составь самое большое четырёхзначное число. Каждую цифру используй один раз.",
+    "en": "Make the largest four-digit number from the digits 3, 0, 8 and 5. Use each digit once."
+  },
+  "steps": {
+    "ru": [
+      "Самая большая цифра идёт в самый старший разряд — в тысячи: 8.",
+      "Дальше по убыванию: 5 в сотни, 3 в десятки, 0 в единицы.",
+      "Получаем 8 530."
+    ],
+    "en": [
+      "The biggest digit goes to the highest place, the thousands: 8.",
+      "Then from big to small: 5 hundreds, 3 tens, 0 ones.",
+      "That gives 8 530."
+    ]
+  },
+  "answer": "8 530",
+  "check": [
+    "8530"
+  ],
+  "keywords": [
+    "skaitmenų",
+    "didžiausią",
+    "keturženklį"
+  ],
+  "mistakes": [
+    {
+      "value": "3058",
+      "hint": {
+        "ru": "3 058 — самое маленькое из этих чисел. Для самого большого начинаем с самой большой цифры.",
+        "en": "3 058 is the smallest of these numbers. For the largest, start with the biggest digit."
+      }
+    },
+    {
+      "value": "8503",
+      "hint": {
+        "ru": "Почти: 3 больше 0, поэтому 3 ставим в десятки, а 0 — в единицы.",
+        "en": "Nearly: 3 is bigger than 0, so 3 goes to the tens and 0 to the ones."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "didžiausias skaičius",
+        "ru": "самое большое число",
+        "en": "largest number",
+        "value": "8 530",
+        "find": true
+      },
+      "op": "+",
+      "kids": [
+        {
+          "lbl": {
+            "lt": "tūkstančiai",
+            "ru": "тысячи",
+            "en": "thousands",
+            "value": "8 000"
+          }
+        },
+        {
+          "lbl": {
+            "lt": "šimtai",
+            "ru": "сотни",
+            "en": "hundreds",
+            "value": "500"
+          }
+        },
+        {
+          "lbl": {
+            "lt": "dešimtys",
+            "ru": "десятки",
+            "en": "tens",
+            "value": "30"
+          }
+        },
+        {
+          "lbl": {
+            "lt": "vienetai",
+            "ru": "единицы",
+            "en": "ones",
+            "value": "0"
+          }
+        }
+      ]
+    }
+  },
+  "see": [
+    "column"
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "subject": "math",
+  "topic": "fractions",
+  "group": "fractions",
+  "grade": 4,
+  "level": 1,
+  "lt": "Klasėje mokosi 28 mokiniai. Ketvirtadalis (1/4) jų lanko krepšinio būrelį. Kiek mokinių lanko krepšinio būrelį?",
+  "translation": {
+    "ru": "В классе учатся 28 учеников. Четверть (1/4) из них ходит на баскетбол. Сколько учеников ходит на баскетбол?",
+    "en": "There are 28 pupils in a class. A quarter (1/4) of them go to the basketball club. How many pupils go to basketball?"
+  },
+  "steps": {
+    "ru": [
+      "1/4 — это одна из 4 равных частей. Делим на знаменатель: 28 : 4 = 7."
+    ],
+    "en": [
+      "1/4 is one of 4 equal parts. Divide by the denominator: 28 : 4 = 7."
+    ]
+  },
+  "answer": "7 mokiniai",
+  "check": [
+    "7"
+  ],
+  "keywords": [
+    "ketvirtadalis",
+    "jų"
+  ],
+  "mistakes": [
+    {
+      "value": "24",
+      "hint": {
+        "ru": "Ты вычел 4. Четверть — это разделить на 4 равные части: 28 : 4.",
+        "en": "You subtracted 4. A quarter means splitting into 4 equal parts: 28 : 4."
+      }
+    },
+    {
+      "value": "112",
+      "hint": {
+        "ru": "Ты умножил. Часть меньше целого: 28 : 4.",
+        "en": "You multiplied. A part is smaller than the whole: 28 : 4."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "bar",
+    "total": {
+      "lt": "visi mokiniai",
+      "ru": "все ученики",
+      "en": "all pupils",
+      "value": "28"
+    },
+    "parts": [
+      {
+        "w": 1,
+        "lbl": {
+          "lt": "1/4",
+          "ru": "1/4",
+          "en": "1/4",
+          "value": "7",
+          "find": true
+        },
+        "mark": true
+      },
+      {
+        "w": 1,
+        "mark": false
+      },
+      {
+        "w": 1,
+        "mark": false
+      },
+      {
+        "w": 1,
+        "mark": false
+      }
+    ]
+  },
+  "see": [
+    "fractions"
+  ]
+}

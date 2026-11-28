@@ -1,0 +1,82 @@
+{
+  "subject": "math",
+  "topic": "numbers",
+  "group": "numbers",
+  "grade": 4,
+  "level": 1,
+  "lt": "Suapvalink skaičių 6 483 šimtų tikslumu.",
+  "translation": {
+    "ru": "Округли число 6 483 до сотен.",
+    "en": "Round 6 483 to the nearest hundred."
+  },
+  "steps": {
+    "ru": [
+      "Округляем до сотен: смотрим на цифру десятков. В 6 483 это 8.",
+      "8 ≥ 5, значит, сотен становится на одну больше: 6 400 → 6 500.",
+      "6 483 ближе к 6 500, чем к 6 400."
+    ],
+    "en": [
+      "To round to hundreds, look at the tens digit. In 6 483 it is 8.",
+      "8 ≥ 5, so the hundreds go up by one: 6 400 → 6 500.",
+      "6 483 is closer to 6 500 than to 6 400."
+    ]
+  },
+  "answer": "6 500",
+  "check": [
+    "6500"
+  ],
+  "keywords": [
+    "suapvalink",
+    "šimtų tikslumu"
+  ],
+  "mistakes": [
+    {
+      "value": "6400",
+      "hint": {
+        "ru": "Цифра десятков 8 — это 5 или больше, поэтому округляем вверх.",
+        "en": "The tens digit is 8, that is 5 or more, so we round up."
+      }
+    },
+    {
+      "value": "6480",
+      "hint": {
+        "ru": "6 480 — округление до десятков. Спрашивают до сотен: на конце два нуля.",
+        "en": "6 480 is rounded to tens. The task asks for hundreds: two zeros at the end."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "suapvalintas skaičius",
+        "ru": "округлённое число",
+        "en": "rounded number",
+        "value": "6 500",
+        "find": true
+      },
+      "op": "→",
+      "kids": [
+        {
+          "lbl": {
+            "lt": "skaičius",
+            "ru": "число",
+            "en": "number",
+            "value": "6 483"
+          }
+        },
+        {
+          "lbl": {
+            "lt": "dešimčių skaitmuo",
+            "ru": "цифра десятков",
+            "en": "tens digit",
+            "value": "8 ≥ 5"
+          }
+        }
+      ]
+    }
+  },
+  "see": [
+    "column"
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "subject": "math",
+  "topic": "triangles",
+  "group": "triangles",
+  "grade": 4,
+  "level": 1,
+  "lt": "Trikampio kraštinės yra 5 cm, 8 cm ir 5 cm. Koks tai trikampis?",
+  "translation": {
+    "ru": "Стороны треугольника 5 см, 8 см и 5 см. Какой это треугольник?",
+    "en": "The sides of a triangle are 5 cm, 8 cm and 5 cm. What kind of triangle is it?"
+  },
+  "steps": {
+    "ru": [
+      "Сравниваем стороны: две равны (5 см и 5 см), третья другая (8 см).",
+      "Две равные стороны — lygiašonis (равнобедренный)."
+    ],
+    "en": [
+      "Compare the sides: two are equal (5 cm and 5 cm), the third is different (8 cm).",
+      "Two equal sides: lygiašonis (isosceles)."
+    ]
+  },
+  "answer": "Lygiašonis",
+  "check": [
+    "Lygiašonis"
+  ],
+  "keywords": [
+    "kraštinės",
+    "trikampis"
+  ],
+  "mistakes": [
+    {
+      "value": "Lygiakraštis",
+      "hint": {
+        "ru": "Lygiakraštis — все три стороны равны. Здесь 8 см отличается.",
+        "en": "Lygiakraštis means all three sides are equal. Here 8 cm is different."
+      }
+    },
+    {
+      "value": "Įvairiakraštis",
+      "hint": {
+        "ru": "Įvairiakraštis — все стороны разные. Здесь две по 5 см.",
+        "en": "Įvairiakraštis means all sides differ. Here two are 5 cm."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "lygios kraštinės",
+        "ru": "равные стороны",
+        "en": "equal sides",
+        "value": "5 cm = 5 cm",
+        "find": true
+      },
+      "kids": [
+        {
+          "lbl": {
+            "lt": "kraštinė",
+            "ru": "сторона",
+            "en": "side",
+            "value": "5 cm"
+          }
+        },
+        {
+          "lbl": {
+            "lt": "kraštinė",
+            "ru": "сторона",
+            "en": "side",
+            "value": "8 cm"
+          }
+        },
+        {
+          "lbl": {
+            "lt": "kraštinė",
+            "ru": "сторона",
+            "en": "side",
+            "value": "5 cm"
+          }
+        }
+      ]
+    }
+  },
+  "see": [
+    "formulas"
+  ],
+  "choices": [
+    "Lygiašonis",
+    "Lygiakraštis",
+    "Įvairiakraštis"
+  ]
+}

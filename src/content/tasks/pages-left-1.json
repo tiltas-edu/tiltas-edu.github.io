@@ -1,0 +1,84 @@
+{
+  "subject": "math",
+  "topic": "fractions",
+  "group": "fractions",
+  "grade": 4,
+  "level": 2,
+  "lt": "Knygoje yra 120 puslapių. Rūta perskaitė 3/5 knygos. Kiek puslapių jai dar liko perskaityti?",
+  "translation": {
+    "ru": "В книге 120 страниц. Рута прочитала 3/5 книги. Сколько страниц ей ещё осталось прочитать?",
+    "en": "A book has 120 pages. Rūta has read 3/5 of the book. How many pages are left for her to read?"
+  },
+  "steps": {
+    "ru": [
+      "Одна пятая: 120 : 5 = 24 страницы.",
+      "Прочитала 3/5: 24 · 3 = 72 страницы.",
+      "Осталось: 120 − 72 = 48. Или сразу 2/5: 24 · 2 = 48."
+    ],
+    "en": [
+      "One fifth: 120 : 5 = 24 pages.",
+      "She read 3/5: 24 · 3 = 72 pages.",
+      "Left: 120 − 72 = 48. Or straight away 2/5: 24 · 2 = 48."
+    ]
+  },
+  "answer": "48 puslapiai",
+  "check": [
+    "48"
+  ],
+  "keywords": [
+    "perskaitė",
+    "liko",
+    "3/5"
+  ],
+  "mistakes": [
+    {
+      "value": "72",
+      "hint": {
+        "ru": "72 страницы Рута уже прочитала. Спрашивают, сколько осталось.",
+        "en": "Rūta has already read 72 pages. The task asks how many are left."
+      }
+    },
+    {
+      "value": "24",
+      "hint": {
+        "ru": "24 — одна пятая книги. Осталось 2/5: 24 · 2.",
+        "en": "24 is one fifth of the book. 2/5 are left: 24 · 2."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "bar",
+    "total": {
+      "lt": "visa knyga",
+      "ru": "вся книга",
+      "en": "the whole book",
+      "value": "120"
+    },
+    "parts": [
+      {
+        "w": 3,
+        "lbl": {
+          "lt": "perskaitė 3/5",
+          "ru": "прочитала 3/5",
+          "en": "read 3/5",
+          "value": "72"
+        },
+        "mark": false
+      },
+      {
+        "w": 2,
+        "lbl": {
+          "lt": "liko 2/5",
+          "ru": "осталось 2/5",
+          "en": "left 2/5",
+          "value": "48",
+          "find": true
+        },
+        "mark": true
+      }
+    ]
+  },
+  "see": [
+    "fractions"
+  ]
+}

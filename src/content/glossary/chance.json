@@ -1,0 +1,86 @@
+{
+  "subject": "math",
+  "title": {
+    "ru": "Возможные и невозможные события",
+    "en": "Possible and impossible events"
+  },
+  "terms": [
+    {
+      "lt": "įvykis",
+      "ru": "событие",
+      "en": "event"
+    },
+    {
+      "lt": "galimas įvykis",
+      "ru": "возможное событие",
+      "en": "possible event",
+      "note": {
+        "ru": "Может случиться, а может и нет.",
+        "en": "It may happen or may not."
+      }
+    },
+    {
+      "lt": "negalimas įvykis",
+      "ru": "невозможное событие",
+      "en": "impossible event",
+      "note": {
+        "ru": "Не случится никогда.",
+        "en": "It never happens."
+      }
+    },
+    {
+      "lt": "būtinas įvykis",
+      "ru": "обязательное (достоверное) событие",
+      "en": "certain event",
+      "note": {
+        "ru": "Случится точно.",
+        "en": "It is sure to happen."
+      }
+    },
+    {
+      "lt": "labiau tikėtina",
+      "ru": "более вероятно",
+      "en": "more likely"
+    },
+    {
+      "lt": "mažiau tikėtina",
+      "ru": "менее вероятно",
+      "en": "less likely"
+    },
+    {
+      "lt": "vienodai tikėtina",
+      "ru": "одинаково вероятно",
+      "en": "equally likely"
+    },
+    {
+      "lt": "nežiūrėdamas",
+      "ru": "не глядя",
+      "en": "without looking"
+    },
+    {
+      "lt": "ištraukti",
+      "ru": "вытащить",
+      "en": "to take out"
+    },
+    {
+      "lt": "lošimo kauliukas",
+      "ru": "игральный кубик",
+      "en": "dice"
+    },
+    {
+      "lt": "akutė",
+      "ru": "точка (на кубике)",
+      "en": "dot (on a dice)"
+    },
+    {
+      "lt": "maišelis",
+      "ru": "мешочек",
+      "en": "small bag"
+    },
+    {
+      "lt": "tikrai",
+      "ru": "точно, наверняка",
+      "en": "for sure"
+    }
+  ]
+}

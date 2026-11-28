@@ -1,0 +1,68 @@
+{
+  "subject": "math",
+  "title": {
+    "ru": "Таблицы и диаграммы",
+    "en": "Tables and charts"
+  },
+  "terms": [
+    {
+      "lt": "lentelė",
+      "ru": "таблица",
+      "en": "table"
+    },
+    {
+      "lt": "diagrama",
+      "ru": "диаграмма",
+      "en": "chart"
+    },
+    {
+      "lt": "stulpelinė diagrama",
+      "ru": "столбчатая диаграмма",
+      "en": "bar chart"
+    },
+    {
+      "lt": "stulpelis",
+      "ru": "столбик",
+      "en": "bar, column"
+    },
+    {
+      "lt": "langelis",
+      "ru": "клетка",
+      "en": "cell, square"
+    },
+    {
+      "lt": "reiškia",
+      "ru": "означает",
+      "en": "stands for",
+      "note": {
+        "ru": "«Vienas langelis reiškia 5 mokinius» — одна клетка = 5 учеников.",
+        "en": "\"One cell stands for 5 pupils\": one cell = 5 pupils."
+      }
+    },
+    {
+      "lt": "pavaizduota",
+      "ru": "изображено, показано",
+      "en": "is shown"
+    },
+    {
+      "lt": "daugiausia",
+      "ru": "больше всего",
+      "en": "the most"
+    },
+    {
+      "lt": "mažiausiai",
+      "ru": "меньше всего",
+      "en": "the least"
+    },
+    {
+      "lt": "keliais daugiau",
+      "ru": "на сколько больше",
+      "en": "how many more"
+    },
+    {
+      "lt": "būrelis",
+      "ru": "кружок (секция)",
+      "en": "club"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "subject": "math",
+  "topic": "triangles",
+  "group": "triangles",
+  "grade": 4,
+  "level": 2,
+  "lt": "Lygiašonio trikampio perimetras yra 32 cm, o pagrindas – 10 cm. Apskaičiuok šoninės kraštinės ilgį.",
+  "translation": {
+    "ru": "Периметр равнобедренного треугольника 32 см, а основание 10 см. Вычисли длину боковой стороны.",
+    "en": "The perimeter of an isosceles triangle is 32 cm and its base is 10 cm. Calculate the length of a side."
+  },
+  "steps": {
+    "ru": [
+      "У равнобедренного треугольника две боковые стороны равны.",
+      "Две боковые вместе: 32 − 10 = 22 (см).",
+      "Одна боковая: 22 : 2 = 11 (см)."
+    ],
+    "en": [
+      "An isosceles triangle has two equal sides.",
+      "The two equal sides together: 32 − 10 = 22 (cm).",
+      "One of them: 22 : 2 = 11 (cm)."
+    ]
+  },
+  "answer": "11 cm",
+  "check": [
+    "11"
+  ],
+  "keywords": [
+    "lygiašonio",
+    "pagrindas",
+    "šoninės kraštinės"
+  ],
+  "mistakes": [
+    {
+      "value": "22",
+      "hint": {
+        "ru": "22 см — это обе боковые стороны вместе. Одна — вдвое меньше.",
+        "en": "22 cm is both equal sides together. One is half of that."
+      }
+    },
+    {
+      "value": "16",
+      "hint": {
+        "ru": "Ты разделил весь периметр на 2, а основание осталось внутри. Сначала 32 − 10.",
+        "en": "You halved the whole perimeter, with the base still in it. First 32 − 10."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "šoninė kraštinė",
+        "ru": "боковая сторона",
+        "en": "equal side",
+        "value": "11 cm",
+        "find": true
+      },
+      "op": ":",
+      "kids": [
+        {
+          "lbl": {
+            "lt": "dvi šoninės",
+            "ru": "две боковые",
+            "en": "two equal sides",
+            "value": "22 cm",
+            "find": true
+          },
+          "op": "−",
+          "kids": [
+            {
+              "lbl": {
+                "lt": "perimetras",
+                "ru": "периметр",
+                "en": "perimeter",
+                "value": "32 cm"
+              }
+            },
+            {
+              "lbl": {
+                "lt": "pagrindas",
+                "ru": "основание",
+                "en": "base",
+                "value": "10 cm"
+              }
+            }
+          ]
+        },
+        {
+          "lbl": {
+            "lt": "",
+            "value": "2"
+          }
+        }
+      ]
+    }
+  },
+  "see": [
+    "formulas"
+  ]
+}
