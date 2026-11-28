@@ -1,0 +1,78 @@
+{
+  "subject": "math",
+  "topic": "units",
+  "group": "units",
+  "grade": 4,
+  "level": 1,
+  "lt": "Kelio ruožas yra 3 km 45 m ilgio. Kiek tai metrų?",
+  "translation": {
+    "ru": "Участок дороги длиной 3 км 45 м. Сколько это метров?",
+    "en": "A stretch of road is 3 km 45 m long. How many metres is that?"
+  },
+  "steps": {
+    "ru": [
+      "1 км = 1 000 м, значит 3 км = 3 000 м.",
+      "3 000 + 45 = 3 045 (м). Сотен нет, на их месте 0."
+    ],
+    "en": [
+      "1 km = 1 000 m, so 3 km = 3 000 m.",
+      "3 000 + 45 = 3 045 (m). There are no hundreds, so their place is 0."
+    ]
+  },
+  "answer": "3 045 m",
+  "check": [
+    "3045"
+  ],
+  "keywords": [
+    "kelio ruožas",
+    "metrų"
+  ],
+  "mistakes": [
+    {
+      "value": "345",
+      "hint": {
+        "ru": "Потерялся ноль: 3 км — это 3 000 м, а не 300. 3 000 + 45 = 3 045.",
+        "en": "A zero got lost: 3 km is 3 000 m, not 300. 3 000 + 45 = 3 045."
+      }
+    },
+    {
+      "value": "3450",
+      "hint": {
+        "ru": "45 м — это 4 десятка и 5 единиц, они стоят в конце: 3 045.",
+        "en": "45 m is 4 tens and 5 ones, they go at the end: 3 045."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "metrų iš viso",
+        "ru": "метров всего",
+        "en": "metres in total",
+        "value": "3 045 m",
+        "find": true
+      },
+      "op": "+",
+      "kids": [
+        {
+          "lbl": {
+            "lt": "3 km",
+            "ru": "3 км",
+            "en": "3 km",
+            "value": "3 000 m"
+          }
+        },
+        {
+          "lbl": {
+            "lt": "",
+            "value": "45 m"
+          }
+        }
+      ]
+    }
+  },
+  "see": [
+    "units"
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "subject": "math",
+  "topic": "units",
+  "group": "units",
+  "grade": 4,
+  "level": 1,
+  "lt": "Kuris pirkinių krepšys sunkesnis: 2 kg 480 g ar 2 840 g?",
+  "translation": {
+    "ru": "Какая сумка с покупками тяжелее: 2 кг 480 г или 2 840 г?",
+    "en": "Which shopping bag is heavier: 2 kg 480 g or 2 840 g?"
+  },
+  "steps": {
+    "ru": [
+      "Переводим в одни единицы: 2 кг 480 г = 2 000 + 480 = 2 480 г.",
+      "Сравниваем: 2 480 г < 2 840 г. Тяжелее 2 840 г."
+    ],
+    "en": [
+      "Change to the same unit: 2 kg 480 g = 2 000 + 480 = 2 480 g.",
+      "Compare: 2 480 g < 2 840 g. 2 840 g is heavier."
+    ]
+  },
+  "answer": "2 840 g",
+  "check": [
+    "2 840 g"
+  ],
+  "keywords": [
+    "sunkesnis"
+  ],
+  "mistakes": [
+    {
+      "value": "2 kg 480 g",
+      "hint": {
+        "ru": "2 кг 480 г = 2 480 г. Это меньше, чем 2 840 г: сравни сотни, 4 < 8.",
+        "en": "2 kg 480 g = 2 480 g. That is less than 2 840 g: compare the hundreds, 4 < 8."
+      }
+    },
+    {
+      "value": "Abu vienodi",
+      "hint": {
+        "ru": "Цифры похожи, но стоят на разных местах: 2 480 и 2 840.",
+        "en": "The digits look alike but stand in different places: 2 480 and 2 840."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "sunkesnis",
+        "ru": "тяжелее",
+        "en": "heavier",
+        "value": "2 840 g",
+        "find": true
+      },
+      "op": ">",
+      "kids": [
+        {
+          "lbl": {
+            "lt": "",
+            "value": "2 840 g"
+          }
+        },
+        {
+          "lbl": {
+            "lt": "",
+            "value": "2 kg 480 g = 2 480 g"
+          }
+        }
+      ]
+    }
+  },
+  "see": [
+    "units"
+  ],
+  "choices": [
+    "2 kg 480 g",
+    "2 840 g",
+    "Abu vienodi"
+  ]
+}

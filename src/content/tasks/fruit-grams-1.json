@@ -1,0 +1,80 @@
+{
+  "subject": "math",
+  "topic": "units",
+  "group": "units",
+  "grade": 4,
+  "level": 3,
+  "lt": "Mama nupirko 1 kg 750 g obuolių ir 2 kg 400 g kriaušių. Kiek gramų vaisių ji nupirko iš viso?",
+  "translation": {
+    "ru": "Мама купила 1 кг 750 г яблок и 2 кг 400 г груш. Сколько граммов фруктов она купила всего?",
+    "en": "Mum bought 1 kg 750 g of apples and 2 kg 400 g of pears. How many grams of fruit did she buy in total?"
+  },
+  "steps": {
+    "ru": [
+      "Переводим в граммы: 1 кг 750 г = 1 750 г, 2 кг 400 г = 2 400 г.",
+      "1 750 + 2 400 = 4 150 (г). Это 4 кг 150 г."
+    ],
+    "en": [
+      "Change to grams: 1 kg 750 g = 1 750 g, 2 kg 400 g = 2 400 g.",
+      "1 750 + 2 400 = 4 150 (g). That is 4 kg 150 g."
+    ]
+  },
+  "answer": "4 150 g (4 kg 150 g)",
+  "check": [
+    "4150"
+  ],
+  "keywords": [
+    "gramų",
+    "iš viso"
+  ],
+  "mistakes": [
+    {
+      "value": "3150",
+      "hint": {
+        "ru": "750 + 400 = 1 150 г — это больше килограмма. Лишняя тысяча граммов — ещё 1 кг.",
+        "en": "750 + 400 = 1 150 g, more than a kilogram. The extra thousand grams is 1 more kg."
+      }
+    },
+    {
+      "value": "1150",
+      "hint": {
+        "ru": "1 150 — только граммы, без килограммов. Добавь 1 кг и 2 кг.",
+        "en": "1 150 is only the grams without the kilograms. Add the 1 kg and 2 kg."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "vaisių iš viso",
+        "ru": "фруктов всего",
+        "en": "fruit in total",
+        "value": "4 150 g",
+        "find": true
+      },
+      "op": "+",
+      "kids": [
+        {
+          "lbl": {
+            "lt": "obuoliai",
+            "ru": "яблоки",
+            "en": "apples",
+            "value": "1 750 g"
+          }
+        },
+        {
+          "lbl": {
+            "lt": "kriaušės",
+            "ru": "груши",
+            "en": "pears",
+            "value": "2 400 g"
+          }
+        }
+      ]
+    }
+  },
+  "see": [
+    "units"
+  ]
+}

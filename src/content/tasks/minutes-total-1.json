@@ -1,0 +1,98 @@
+{
+  "subject": "math",
+  "topic": "units",
+  "group": "units",
+  "grade": 4,
+  "level": 2,
+  "lt": "Ema skaitė knygą 1 h 25 min, o paskui piešė 50 min. Kiek iš viso minučių Ema skaitė ir piešė?",
+  "translation": {
+    "ru": "Эма читала книгу 1 ч 25 мин, а потом рисовала 50 мин. Сколько всего минут Эма читала и рисовала?",
+    "en": "Ema read a book for 1 h 25 min and then drew for 50 min. How many minutes did Ema read and draw in total?"
+  },
+  "steps": {
+    "ru": [
+      "1 ч = 60 мин, значит 1 ч 25 мин = 60 + 25 = 85 мин.",
+      "Вместе: 85 + 50 = 135 (мин). Это 2 ч 15 мин."
+    ],
+    "en": [
+      "1 h = 60 min, so 1 h 25 min = 60 + 25 = 85 min.",
+      "Together: 85 + 50 = 135 (min). That is 2 h 15 min."
+    ]
+  },
+  "answer": "135 min (2 h 15 min)",
+  "check": [
+    "135"
+  ],
+  "keywords": [
+    "iš viso minučių",
+    "o paskui"
+  ],
+  "mistakes": [
+    {
+      "value": "175",
+      "hint": {
+        "ru": "В часе 60 минут, а не 100. 1 ч 25 мин = 85 мин.",
+        "en": "An hour has 60 minutes, not 100. 1 h 25 min = 85 min."
+      }
+    },
+    {
+      "value": "75",
+      "hint": {
+        "ru": "Час потерялся: 25 + 50 = 75, но ещё 60 минут.",
+        "en": "The hour got lost: 25 + 50 = 75, plus 60 more minutes."
+      }
+    }
+  ],
+  "scheme": {
+    "kind": "tree",
+    "root": {
+      "lbl": {
+        "lt": "iš viso",
+        "ru": "всего",
+        "en": "in total",
+        "value": "135 min",
+        "find": true
+      },
+      "op": "+",
+      "kids": [
+        {
+          "lbl": {
+            "lt": "skaitė",
+            "ru": "читала",
+            "en": "read",
+            "value": "85 min",
+            "find": true
+          },
+          "op": "+",
+          "kids": [
+            {
+              "lbl": {
+                "lt": "1 h",
+                "ru": "1 ч",
+                "en": "1 h",
+                "value": "60 min"
+              }
+            },
+            {
+              "lbl": {
+                "lt": "",
+                "value": "25 min"
+              }
+            }
+          ]
+        },
+        {
+          "lbl": {
+            "lt": "piešė",
+            "ru": "рисовала",
+            "en": "drew",
+            "value": "50 min"
+          }
+        }
+      ]
+    }
+  },
+  "see": [
+    "units"
+  ]
+}

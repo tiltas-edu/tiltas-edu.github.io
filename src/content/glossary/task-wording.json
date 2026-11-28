@@ -147,6 +147,98 @@
       "lt": "kokio ilgio",
       "ru": "какой длины",
       "en": "how long"
+    },
+    {
+      "lt": "uždavinys",
+      "ru": "задача",
+      "en": "word problem",
+      "note": {
+        "ru": "«Išspręsk uždavinį» — реши задачу.",
+        "en": "\"Išspręsk uždavinį\": solve the problem."
+      }
+    },
+    {
+      "lt": "išspręsk",
+      "ru": "реши",
+      "en": "solve"
+    },
+    {
+      "lt": "atlik",
+      "ru": "выполни",
+      "en": "do, carry out",
+      "note": {
+        "ru": "«Atlik veiksmus» — выполни действия (посчитай).",
+        "en": "\"Atlik veiksmus\": do the operations (work them out)."
+      }
+    },
+    {
+      "lt": "nurodyk",
+      "ru": "укажи",
+      "en": "point out, give"
+    },
+    {
+      "lt": "remdamasis paveikslėliu",
+      "ru": "по картинке, опираясь на картинку",
+      "en": "using the picture"
+    },
+    {
+      "lt": "paveikslėlis",
+      "ru": "картинка",
+      "en": "picture"
+    },
+    {
+      "lt": "sakinys",
+      "ru": "предложение",
+      "en": "sentence"
+    },
+    {
+      "lt": "klausimas",
+      "ru": "вопрос",
+      "en": "question"
+    },
+    {
+      "lt": "teiginys",
+      "ru": "утверждение",
+      "en": "statement",
+      "note": {
+        "ru": "«Pažymėk teisingus teiginius» — отметь верные утверждения.",
+        "en": "\"Pažymėk teisingus teiginius\": mark the true statements."
+      }
+    },
+    {
+      "lt": "trūksta",
+      "ru": "не хватает",
+      "en": "is missing"
+    },
+    {
+      "lt": "sužinok",
+      "ru": "узнай",
+      "en": "find out"
+    },
+    {
+      "lt": "atsakyk į klausimą",
+      "ru": "ответь на вопрос",
+      "en": "answer the question"
+    },
+    {
+      "lt": "dviveiksmis uždavinys",
+      "ru": "задача в два действия",
+      "en": "two-step problem"
+    },
+    {
+      "lt": "pateiktas",
+      "ru": "данный, приведённый",
+      "en": "given"
+    },
+    {
+      "lt": "užteks",
+      "ru": "хватит",
+      "en": "will be enough"
+    },
+    {
+      "lt": "tilps",
+      "ru": "поместится",
+      "en": "will fit"
     }
   ]
 }

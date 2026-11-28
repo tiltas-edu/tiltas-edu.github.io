@@ -1,0 +1,84 @@
+{
+  "subject": "math",
+  "title": {
+    "ru": "Единицы измерения",
+    "en": "Units of measure"
+  },
+  "terms": [
+    {
+      "lt": "matavimo vienetas",
+      "ru": "единица измерения",
+      "en": "unit of measure"
+    },
+    {
+      "lt": "ilgis",
+      "ru": "длина",
+      "en": "length"
+    },
+    {
+      "lt": "masė",
+      "ru": "масса (вес)",
+      "en": "mass, weight"
+    },
+    {
+      "lt": "sveria",
+      "ru": "весит",
+      "en": "weighs"
+    },
+    {
+      "lt": "sunkesnis",
+      "ru": "тяжелее",
+      "en": "heavier"
+    },
+    {
+      "lt": "lengvesnis",
+      "ru": "легче",
+      "en": "lighter"
+    },
+    {
+      "lt": "trukmė",
+      "ru": "продолжительность",
+      "en": "duration",
+      "like": [
+        "truko"
+      ]
+    },
+    {
+      "lt": "truko",
+      "ru": "длился, продолжался",
+      "en": "lasted",
+      "like": [
+        "trukmė"
+      ]
+    },
+    {
+      "lt": "prasidėjo",
+      "ru": "начался",
+      "en": "started"
+    },
+    {
+      "lt": "baigėsi",
+      "ru": "закончился",
+      "en": "ended"
+    },
+    {
+      "lt": "kiek tai metrų",
+      "ru": "сколько это метров",
+      "en": "how many metres is that",
+      "note": {
+        "ru": "Сначала всё в одних единицах: 3 km 45 m = 3 000 m + 45 m.",
+        "en": "First everything in one unit: 3 km 45 m = 3 000 m + 45 m."
+      }
+    },
+    {
+      "lt": "kelio ruožas",
+      "ru": "участок дороги",
+      "en": "stretch of road"
+    },
+    {
+      "lt": "pirkinių krepšys",
+      "ru": "сумка с покупками",
+      "en": "shopping bag"
+    }
+  ]
+}

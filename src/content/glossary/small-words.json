@@ -1,0 +1,144 @@
+{
+  "subject": "math",
+  "title": {
+    "ru": "Маленькие слова, которые меняют смысл",
+    "en": "Small words that change the meaning"
+  },
+  "terms": [
+    {
+      "lt": "kiekvienas",
+      "ru": "каждый",
+      "en": "each, every",
+      "note": {
+        "ru": "«Kiekvienoje dėžėje po 6» — в каждой коробке 6: умножаем на число коробок.",
+        "en": "\"6 in each box\": multiply by the number of boxes."
+      }
+    },
+    {
+      "lt": "o",
+      "ru": "а",
+      "en": "and, while",
+      "note": {
+        "ru": "«Ilgis 20 m, o plotis 8 m» — «o» соединяет два данных, это не «или».",
+        "en": "\"The length is 20 m, o the width 8 m\": o joins two facts, it is not \"or\"."
+      }
+    },
+    {
+      "lt": "ar",
+      "ru": "или; ли (в вопросе)",
+      "en": "or; whether",
+      "note": {
+        "ru": "«2 kg ar 2 500 g?» — выбери одно из двух.",
+        "en": "\"2 kg ar 2 500 g?\": pick one of the two."
+      }
+    },
+    {
+      "lt": "arba",
+      "ru": "или",
+      "en": "or"
+    },
+    {
+      "lt": "už",
+      "ru": "за",
+      "en": "for (a price); behind",
+      "note": {
+        "ru": "«Sumokėjo 5 Eur už 2 sąsiuvinius» — 5 € за обе тетради, а не за одну.",
+        "en": "\"Paid 5 Eur for 2 notebooks\": 5 € for both, not for one."
+      }
+    },
+    {
+      "lt": "po",
+      "ru": "по (каждому)",
+      "en": "each, per",
+      "note": {
+        "ru": "«Po 3 obuolius» — каждому по 3.",
+        "en": "\"Po 3 apples\": 3 apples for each one."
+      }
+    },
+    {
+      "lt": "dar",
+      "ru": "ещё",
+      "en": "more, still",
+      "note": {
+        "ru": "«Dar 15» — прибавь 15 к тому, что было.",
+        "en": "\"Dar 15\": add 15 to what there was."
+      }
+    },
+    {
+      "lt": "jau",
+      "ru": "уже",
+      "en": "already"
+    },
+    {
+      "lt": "tik",
+      "ru": "только",
+      "en": "only"
+    },
+    {
+      "lt": "šis / ši",
+      "ru": "этот / эта",
+      "en": "this"
+    },
+    {
+      "lt": "toks / tokia",
+      "ru": "такой / такая",
+      "en": "such, the same kind",
+      "note": {
+        "ru": "«8 tokių dėžių» — 8 таких же коробок, как в начале задачи.",
+        "en": "\"8 such boxes\": 8 boxes like the one at the start of the task."
+      }
+    },
+    {
+      "lt": "kuris / kuri",
+      "ru": "который / которая; какой",
+      "en": "which",
+      "note": {
+        "ru": "«Kuris skaičius didesnis?» — нужно назвать один из данных, а не посчитать разницу.",
+        "en": "\"Which number is bigger?\": name one of them, do not work out the difference."
+      }
+    },
+    {
+      "lt": "jei / jeigu",
+      "ru": "если",
+      "en": "if"
+    },
+    {
+      "lt": "kad",
+      "ru": "что; чтобы",
+      "en": "that; so that",
+      "note": {
+        "ru": "«Kiek reikia, kad užtektų?» — сколько нужно, чтобы хватило.",
+        "en": "\"How many are needed so that it is enough?\""
+      }
+    },
+    {
+      "lt": "tarp",
+      "ru": "между",
+      "en": "between"
+    },
+    {
+      "lt": "su",
+      "ru": "с",
+      "en": "with"
+    },
+    {
+      "lt": "be",
+      "ru": "без",
+      "en": "without"
+    },
+    {
+      "lt": "kas",
+      "ru": "кто; что",
+      "en": "who; what"
+    },
+    {
+      "lt": "jie / jos",
+      "ru": "они",
+      "en": "they",
+      "note": {
+        "ru": "Jie — мужской или смешанный род, jos — только женский.",
+        "en": "Jie is masculine or mixed, jos is feminine only."
+      }
+    }
+  ]
+}
